@@ -43,5 +43,10 @@ namespace UWPStation
                 rootFrame.GoBack();
             }
         }
+
+        private void VMSettings_Click(object sender, RoutedEventArgs e)
+        {
+            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        }
     }
 }

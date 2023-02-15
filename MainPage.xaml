@@ -1,0 +1,233 @@
+﻿<Page
+    x:Class="UWPStation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+    <Page.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="TabViewItemHeaderBackgroundSelected" Color="Transparent"/>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="AppTitleBar"
+              Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="16" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="16" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Source="/Assets/StoreLogo.png"
+                   Width="16"
+                   Height="16"
+                   Grid.Column="1" />
+            <TextBlock Text="{x:Bind FullString}"
+                       Style="{StaticResource CaptionTextBlockStyle}"
+                       VerticalAlignment="Center"
+                       Grid.Column="3"
+                       x:Name="tea" />
+        </Grid>
+        <StackPanel x:Name="MenuStack"
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+            <muxc:MenuBar>
+                <muxc:MenuBarItem Title="File">
+                    <MenuFlyoutItem Text="New Virtual Machine..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="New Window" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Open..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Scan for Virtual Machines..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Configure Auto Start VMs" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Close Tab" IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Connect to Server..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Export to OVF..." IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Exit" Click="Exit_Click"/>
+                </muxc:MenuBarItem>
+                <muxc:MenuBarItem Title="Edit">
+                    <MenuFlyoutItem Text="Cut" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Copy" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Paste" IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Virtual Network Editor..." Click="VirtualNetEditor_Click"/>
+                    <MenuFlyoutItem Text="Preferences..." Click="Preferences_Click"/>
+                </muxc:MenuBarItem>
+                <muxc:MenuBarItem Title="View">
+                    <MenuFlyoutItem Text="Full Screen" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Unity" IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Console View" IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Fit Guest Now" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Fit Window Now" IsEnabled="False"/>
+                    <MenuFlyoutSubItem Text="Autosize">
+                        <muxc:RadioMenuFlyoutItem Text="Autofit Guest" IsChecked="True" IsEnabled="False"/>
+                        <muxc:RadioMenuFlyoutItem Text="Center Guest" IsEnabled="False"/>
+                        <MenuFlyoutSeparator/>
+                        <ToggleMenuFlyoutItem Text="Autofit Window" IsChecked="True" IsEnabled="False"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutSubItem Text="Customize">
+                        <ToggleMenuFlyoutItem Text="Library" IsEnabled="False"/>
+                        <ToggleMenuFlyoutItem Text="Thumbnail Bar" IsEnabled="False"/>
+                        <ToggleMenuFlyoutItem Text="Toolbar" IsChecked="True" IsEnabled="False"/>
+                        <ToggleMenuFlyoutItem Text="Tabs" IsChecked="True" IsEnabled="False"/>
+                        <ToggleMenuFlyoutItem Text="Status Bar" IsChecked="True" IsEnabled="False"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutSubItem Text="Thumbnail Bar Options">
+                            <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines" IsEnabled="False"/>
+                            <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True" IsEnabled="False"/>
+                        </MenuFlyoutSubItem>
+                    </MenuFlyoutSubItem>
+                </muxc:MenuBarItem>
+                <muxc:MenuBarItem Title="VM">
+                    <MenuFlyoutSubItem Text="Power">
+                        <MenuFlyoutItem Text="Not available" IsEnabled="False"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSubItem Text="Removable Devices">
+                        <MenuFlyoutItem Text="Not available" IsEnabled="False"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutItem Text="Pause" IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Send Ctrl+Alt+Del" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Grab Input" IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutSubItem Text="Manage">
+                        <MenuFlyoutItem Text="Not available" IsEnabled="False"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutItem Text="Install UWPTools..." IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Settings..." IsEnabled="False"/>
+                </muxc:MenuBarItem>
+                <muxc:MenuBarItem Title="Tabs">
+                    <MenuFlyoutItem Text="No tabs" IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Go to Home Tab" IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Next Tab" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Previous Tab" IsEnabled="False"/>
+                </muxc:MenuBarItem>
+                <muxc:MenuBarItem Title="Help">
+                    <MenuFlyoutItem Text="Help Topics" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Online Documentaion" IsEnabled="False"/>
+                    <MenuFlyoutSubItem Text="Support">
+                        <MenuFlyoutItem Text="Online Community" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Product Support Center" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Submit Support Request" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Collect Support Data..." IsEnabled="False"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutSubItem Text="Hints">
+                        <MenuFlyoutItem Text="Enable All Hints" IsEnabled="False"/>
+                        <ToggleMenuFlyoutItem Text="Show Enabled Hints" IsChecked="True" IsEnabled="False"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Enter a License Key" Click="LicenseKey_Click"/>
+                    <MenuFlyoutItem Text="Register UWPStation" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Software Updates" IsEnabled="False"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="About UWPStation" Click="About_Click"/>
+                </muxc:MenuBarItem>
+            </muxc:MenuBar>
+            <AppBarSeparator/>
+            <muxc:SplitButton FontFamily="Segoe Fluent Icons" Content="&#xE102;" ToolTipService.ToolTip="Start up this guest operating system">
+                <muxc:SplitButton.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Start Up Guest" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Shut Down Guest" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Suspend Guest" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Restart Guest" IsEnabled="False"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Text="Power On" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Power Off" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Suspend" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Reset" IsEnabled="False"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Text="Power On to Firmware" IsEnabled="False"/>
+                    </MenuFlyout>
+                </muxc:SplitButton.Flyout>
+            </muxc:SplitButton>
+            <AppBarSeparator/>
+            <Button FontFamily="Segoe Fluent Icons" Content="&#xF5AC;" ToolTipService.ToolTip="Send Ctrl+Alt+Del to this virtual machine" Style="{StaticResource TransparentButton}"/>
+            <AppBarSeparator/>
+            <Button FontFamily="Segoe Fluent Icons" Content="&#xE109;" ToolTipService.ToolTip="Take a snapshot of this virtual machine" Style="{StaticResource TransparentButton}"/>
+            <Button FontFamily="Segoe Fluent Icons" Content="&#xF738;" ToolTipService.ToolTip="Revert this virtual machine to its parent snapshot" Style="{StaticResource TransparentButton}"/>
+            <Button FontFamily="Segoe Fluent Icons" Content="&#xF739;" ToolTipService.ToolTip="Manage snapshots for this virtual machine" Style="{StaticResource TransparentButton}"/>
+            <AppBarSeparator/>
+            <ToggleButton x:Name="ShowHideLibrary" FontFamily="Segoe Fluent Icons" Content="&#xE90C;" IsChecked="True" ToolTipService.ToolTip="Show or hide library" Style="{StaticResource TransparentToggleButton}"/>
+            <ToggleButton FontFamily="Segoe Fluent Icons" Content="&#xE90E;" ToolTipService.ToolTip="Show or hide thumbnail bar" Style="{StaticResource TransparentToggleButton}"/>
+            <Button FontFamily="Segoe Fluent Icons" Content="&#xE1D9;" ToolTipService.ToolTip="Enter full screen mode" Style="{StaticResource TransparentButton}"/>
+            <Button FontFamily="Segoe Fluent Icons" Content="&#xE2AE;" ToolTipService.ToolTip="Enter Unity mode" Style="{StaticResource TransparentButton}"/>
+            <AppBarSeparator/>
+            <ToggleButton FontFamily="Segoe Fluent Icons" Content="&#xE756;" ToolTipService.ToolTip="Show or hide console view" Style="{StaticResource TransparentToggleButton}"/>
+            <AppBarSeparator/>
+            <muxc:ToggleSplitButton FontFamily="Segoe Fluent Icons" Content="&#xE2B4;" ToolTipService.ToolTip="Free stretch / Keep aspect ratio stretch">
+                <muxc:ToggleSplitButton.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Keep aspect ratio stretch" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Free stretch" IsEnabled="False"/>
+                    </MenuFlyout>
+                </muxc:ToggleSplitButton.Flyout>
+            </muxc:ToggleSplitButton>
+            <AppBarSeparator/>
+        </StackPanel>
+        <Grid x:Name="LibraryPanel" Grid.Row="2" Width="200" HorizontalAlignment="Left" Grid.RowSpan="2">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Library" TextAlignment="Center" Margin="10,10,0,0"/>
+            <Button Style="{StaticResource TransparentButton}" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"/>
+            <AutoSuggestBox HorizontalAlignment="Center" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="0,44,0,0" />
+            <ListView Margin="0,90,0,0">
+                <ListViewItem Content="My Computer" IsSelected="True"/>
+            </ListView>
+        </Grid>
+        <Grid Grid.RowSpan="2" Grid.Row="2" Margin="200,0,0,0">
+            <muxc:TabView  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsAddTabButtonVisible="False"
+                          TabWidthMode="SizeToContent">
+
+                <muxc:TabView.TabItems>
+                    <muxc:TabViewItem Header="Home">
+                        <muxc:TabViewItem.IconSource>
+                            <muxc:SymbolIconSource Symbol="Home"/>
+                        </muxc:TabViewItem.IconSource>
+                        <Grid>
+                            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="UWPStation" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,21,0,0"/>
+                            <Button Style="{StaticResource AccentButtonStyle}" Content="Create a New Virtual Machine" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" Width="222" Click="CreateVM_Click"/>
+                        </Grid>
+                    </muxc:TabViewItem>
+                </muxc:TabView.TabItems>
+            </muxc:TabView>
+        </Grid>
+        <Border BackgroundSizing="OuterBorderEdge"
+                BorderThickness="0,0,0,0"
+                Height="32"
+                Grid.Row="4">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+                <HyperlinkButton Content="Go to Test VM" Click="GoToTestVM_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <AppBarSeparator/>
+                <Button Style="{StaticResource TransparentButton}"
+                        FontFamily="Segoe Fluent Icons" Content="&#xE15F;" 
+                        ToolTipService.ToolTip="Message log" RightTapped="Button_RightTapped" Tapped="Button_Tapped" Height="32">
+                    <FlyoutBase.AttachedFlyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem Text="Open Message Log" Click="MessageLog_Click"/>
+                            <MenuFlyoutItem Text="Clear Messages" IsEnabled="False"/>
+                        </MenuFlyout>
+                    </FlyoutBase.AttachedFlyout>
+                </Button>
+                <AppBarSeparator/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

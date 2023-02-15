@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="UWPStation.Pages.MemoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+
+    <Grid>
+        <TextBlock Text="Memory" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
+        <TextBlock Text="Reserved memory" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,92,0,0"/>
+        <TextBlock Text="How much host RAM should the system be able to reserve for all running virtual machines?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,116,0,0"/>
+        <Slider HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,140,0,0" Width="300" 
+                TickFrequency="8136" TickPlacement="BottomRight" Value="6356" Minimum="128" Maximum="8136"/>
+        <muxc:NumberBox SpinButtonPlacementMode="Compact" Text="6356" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="331,140,0,0"/>
+        <muxc:RadioButtons Header="Additional memory" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="1" Margin="19,183,0,0">
+            <RadioButton Content="Fit all virtual machine memory into reserved host RAM"/>
+            <RadioButton Content="Allow some virtual machine memory to be swapped"/>
+            <RadioButton Content="Allow most virtual machine memory to be swapped"/>
+        </muxc:RadioButtons>
+        <TextBlock Text="Swapping virtual machine memory allows more virtual machines to run but can degrade system perfomance if the virtual machines use their memory intensively." 
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,327,0,0" TextWrapping="Wrap"/>
+    </Grid>
+</Page>

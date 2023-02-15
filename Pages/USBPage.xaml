@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="UWPStation.Pages.USBPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+
+    <Grid>
+        <TextBlock Text="USB" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,92,0,0">
+            <TextBlock Text="Connections" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Text="When a new USB device is detected, UWPStation should:"/>
+            <RadioButton Content="Ask me what to do" IsChecked="True"/>
+            <RadioButton Content="Connect the device to the host" />
+            <RadioButton Content="Connect the device to the foreground virtual machine"/>
+        </StackPanel>
+    </Grid>
+</Page>

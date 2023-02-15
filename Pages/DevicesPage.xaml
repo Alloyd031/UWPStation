@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="UWPStation.Pages.DevicesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+
+    <Grid>
+        <TextBlock Text="Devices" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,92,0,0">
+            <TextBlock Text="Removable media" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Text="The Autorun feature on the host opens and runs CDs and DVDs automatically when you insert them in the host CD/DVD drive. Autorun can cause unexpected behavior in virtual machines." 
+                       HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"/>
+            <CheckBox Content="Disable Autorun on the host when a virtual machine is running" VerticalAlignment="Top" IsChecked="True"/>
+        </StackPanel>
+        <TextBlock Text="Virtual printer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,173,0,0"/>
+        <TextBlock Text="The virtual printer device allows a virtual machine with UWPTools to print to any printers configured on your host." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,197,0,0"/>
+        <CheckBox Content="Enable virtual printers" IsChecked="True" IsEnabled="False" Margin="19,221,0,0" VerticalAlignment="Top"/>
+        <Button Content="Change settings" Margin="187,221,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Page>

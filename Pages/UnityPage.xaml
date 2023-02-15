@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="UWPStation.Pages.UnityPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+
+    <Grid>
+        <TextBlock Text="Unity" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,92,0,0">
+            <TextBlock Text="Unity applications menu hot key" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Text="Hot key:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox Text="Ctrl + Shift + U" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </StackPanel>
+        <CheckBox Content="Minimize UWPStation when entering Unity" IsChecked="True" Margin="19,167,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Page>

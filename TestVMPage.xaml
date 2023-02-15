@@ -43,7 +43,8 @@
                 AutomationProperties.Name="Back"
                 AutomationProperties.AutomationId="SettingsButton"
                 Canvas.ZIndex="2"
-                ToolTipService.ToolTip="VM Settings" Height="32" Width="40" Margin="43,0,0,0">
+                ToolTipService.ToolTip="VM Settings" Height="32" Width="40" Margin="43,0,0,0"
+                Click="VMSettings_Click">
             <muxc:AnimatedIcon x:Name="SettingsAnimatedIcon" Height="16" Width="16">
                 <muxc:AnimatedIcon.Source>
                     <animatedvisuals:AnimatedSettingsVisualSource/>
@@ -52,6 +53,11 @@
                     <muxc:FontIconSource FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;"/>
                 </muxc:AnimatedIcon.FallbackIconSource>
             </muxc:AnimatedIcon>
+            <FlyoutBase.AttachedFlyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem Text="No settings for this VM is available at this time." IsEnabled="False"/>
+                </MenuFlyout>
+            </FlyoutBase.AttachedFlyout>
         </Button>
         <Button Style="{StaticResource TransparentButton}" Click="ExitTestVM_Click" ToolTipService.ToolTip="Exit Test VM" Height="32" Width="42">
             <muxc:AnimatedIcon x:Name="BackAnimatedIcon" Height="16" Width="16">
@@ -64,13 +70,7 @@
             </muxc:AnimatedIcon>
         </Button>
         <StackPanel Grid.Row="3" Height="40" VerticalAlignment="Bottom">
-            <Button Style="{StaticResource TransparentButton}" FontFamily="Hololens MDL2 Assets" Content="&#xE782;" Height="32" Width="40" Click="VMSettings_Click">
-                <FlyoutBase.AttachedFlyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem Text="No settings for this VM is available at this time." IsEnabled="False"/>
-                    </MenuFlyout>
-                </FlyoutBase.AttachedFlyout>
-            </Button>
+            <Button Style="{StaticResource TransparentButton}" FontFamily="Hololens MDL2 Assets" Content="&#xE782;" Height="32" Width="40"/>
         </StackPanel>
     </Grid>
 </Page>

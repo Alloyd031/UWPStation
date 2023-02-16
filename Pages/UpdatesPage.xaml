@@ -21,7 +21,7 @@
         <HyperlinkButton Content="Learn More" Margin="401,225,0,0" VerticalAlignment="Top"/>
         <TextBlock Text="UWPTools updates" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,271,0,0"/>
         <CheckBox Content="Automatically update UWPTools on a virtual machine" Margin="19,295,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="If a new version of UWPTools is available, it will be updated the next time a virtual machine is powered on or off. This configuraion may be overriden in each virtual machine's settings." 
+        <TextBlock Text="If a new version of UWPTools is available, it will be updated the next time a virtual machine is powered on or off. This configuration may be overriden in each virtual machine's settings." 
                    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,332,0,0" TextWrapping="Wrap"/>
     </Grid>
 </Page>

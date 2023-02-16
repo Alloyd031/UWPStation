@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using UWPStation.Dialogs;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -44,7 +45,13 @@ namespace UWPStation
             }
         }
 
-        private void VMSettings_Click(object sender, RoutedEventArgs e)
+        private async void VMSettings_Click(object sender, RoutedEventArgs e)
+        {
+            VMSettingsDialog dialog = new VMSettingsDialog();
+            await dialog.ShowAsync();
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }

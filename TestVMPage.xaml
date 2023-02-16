@@ -39,7 +39,8 @@
         </Grid>
         <Button x:Name="SettingsButton"
                 Style="{StaticResource TransparentButton}"
-                AutomationProperties.Name="Settings"
+                IsEnabled="{x:Bind Frame.CanGoBack, Mode=OneWay}" 
+                AutomationProperties.Name="Back"
                 AutomationProperties.AutomationId="SettingsButton"
                 Canvas.ZIndex="2"
                 ToolTipService.ToolTip="VM Settings" Height="32" Width="40" Margin="42,0,0,0"

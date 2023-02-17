@@ -47,8 +47,7 @@ namespace UWPStation
 
         private async void VMSettings_Click(object sender, RoutedEventArgs e)
         {
-            VMSettingsDialog dialog = new VMSettingsDialog();
-            await dialog.ShowAsync();
+            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)

@@ -183,6 +183,9 @@
     <Compile Include="TestVMPage.xaml.cs">
       <DependentUpon>TestVMPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VMSettingsPages\VMSettings_Memory.xaml.cs">
+      <DependentUpon>VMSettings_Memory.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -285,6 +288,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TestVMPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMSettingsPages\VMSettings_Memory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

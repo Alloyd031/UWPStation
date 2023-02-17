@@ -64,6 +64,7 @@
                 <AutoSuggestBox QueryIcon="Find" PlaceholderText="Search settings"/>
             </muxc:NavigationView.AutoSuggestBox>
             <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItemHeader Content="Main preferences"/>
                 <muxc:NavigationViewItem x:Name="WorkspaceItem" Tag="Workspace" Content="Workspace" IsSelected="True">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE821;"/>
@@ -120,6 +121,14 @@
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>
+            <muxc:NavigationView.FooterMenuItems>
+                <muxc:NavigationViewItemHeader Content="Other preferences"/>
+                <muxc:NavigationViewItem x:Name="LanguageItem" Content="Language">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE128;"/>
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+            </muxc:NavigationView.FooterMenuItems>
             <Frame x:Name="ContentFrame"/>
         </muxc:NavigationView>
     </Grid>

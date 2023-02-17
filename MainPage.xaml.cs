@@ -18,7 +18,6 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Enumeration;
 using UWPStation.Pages;
 using UWPStation.Dialogs;
-using muxc = Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls;
 using System.Collections.ObjectModel;
 

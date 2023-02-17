@@ -45,7 +45,7 @@ namespace UWPStation
             }
         }
 
-        private async void VMSettings_Click(object sender, RoutedEventArgs e)
+        private void VMSettings_Click(object sender, RoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }

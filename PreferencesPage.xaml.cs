@@ -100,6 +100,10 @@ namespace UWPStation
             {
                 pageType = typeof(DevicesPage);
             }
+            else if (args.SelectedItem == LanguageItem)
+            {
+                pageType = typeof(LanguagePage);
+            }
             ContentFrame.NavigateToType(pageType, null, navOptions);
         }
     }

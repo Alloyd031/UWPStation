@@ -69,7 +69,14 @@
                 </muxc:AnimatedIcon.FallbackIconSource>
             </muxc:AnimatedIcon>
         </Button>
-        <Grid Grid.Row="2" Background="LightGray" Grid.RowSpan="2" Margin="0,0,0,40">
+        <Grid Grid.Row="2" Grid.RowSpan="2" Margin="0,0,0,40">
+            <Image Source="/Assets/StoreLogo.png"
+                   Width="16"
+                   Height="16" 
+                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,9,0,0"/>
+            <TextBlock Text="HelloWindow"
+                       Style="{StaticResource CaptionTextBlockStyle}"
+                       VerticalAlignment="Top" HorizontalAlignment="Left" Margin="38,9,0,0"/>
             <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="Hello! Thank you for opening this Test VM page." HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Button Style="{StaticResource TransparentButton}" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" HorizontalAlignment="Right" VerticalAlignment="Top"
                     Height="33" Width="49" ToolTipService.ToolTip="Close"/>

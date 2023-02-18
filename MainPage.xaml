@@ -142,7 +142,7 @@
                 </muxc:MenuBarItem>
             </muxc:MenuBar>
             <AppBarSeparator/>
-            <muxc:SplitButton FontFamily="Segoe Fluent Icons" Content="&#xE102;" ToolTipService.ToolTip="Start up this guest operating system">
+            <muxc:SplitButton Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE102;" ToolTipService.ToolTip="Start up this guest operating system">
                 <muxc:SplitButton.Flyout>
                     <MenuFlyout>
                         <MenuFlyoutItem Text="Start Up Guest" IsEnabled="False"/>
@@ -160,20 +160,20 @@
                 </muxc:SplitButton.Flyout>
             </muxc:SplitButton>
             <AppBarSeparator/>
-            <Button FontFamily="Segoe Fluent Icons" Content="&#xF5AC;" ToolTipService.ToolTip="Send Ctrl+Alt+Del to this virtual machine" Style="{StaticResource TransparentButton}"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF5AC;" ToolTipService.ToolTip="Send Ctrl+Alt+Del to this virtual machine"/>
             <AppBarSeparator/>
-            <Button FontFamily="Segoe Fluent Icons" Content="&#xE109;" ToolTipService.ToolTip="Take a snapshot of this virtual machine" Style="{StaticResource TransparentButton}"/>
-            <Button FontFamily="Segoe Fluent Icons" Content="&#xF738;" ToolTipService.ToolTip="Revert this virtual machine to its parent snapshot" Style="{StaticResource TransparentButton}"/>
-            <Button FontFamily="Segoe Fluent Icons" Content="&#xF739;" ToolTipService.ToolTip="Manage snapshots for this virtual machine" Style="{StaticResource TransparentButton}"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE109;" ToolTipService.ToolTip="Take a snapshot of this virtual machine"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF738;" ToolTipService.ToolTip="Revert this virtual machine to its parent snapshot"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF739;" ToolTipService.ToolTip="Manage snapshots for this virtual machine"/>
             <AppBarSeparator/>
-            <ToggleButton x:Name="ShowHideLibrary" FontFamily="Segoe Fluent Icons" Content="&#xE90C;" IsChecked="True" ToolTipService.ToolTip="Show or hide library" Style="{StaticResource TransparentToggleButton}"/>
-            <ToggleButton FontFamily="Segoe Fluent Icons" Content="&#xE90E;" ToolTipService.ToolTip="Show or hide thumbnail bar" Style="{StaticResource TransparentToggleButton}"/>
-            <Button FontFamily="Segoe Fluent Icons" Content="&#xE1D9;" ToolTipService.ToolTip="Enter full screen mode" Style="{StaticResource TransparentButton}"/>
-            <Button FontFamily="Segoe Fluent Icons" Content="&#xE2AE;" ToolTipService.ToolTip="Enter Unity mode" Style="{StaticResource TransparentButton}"/>
+            <ToggleButton Background="Transparent" BorderBrush="Transparent" x:Name="ShowHideLibrary" FontFamily="Segoe Fluent Icons" Content="&#xE90C;" IsChecked="True" ToolTipService.ToolTip="Show or hide library"/>
+            <ToggleButton Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE90E;" ToolTipService.ToolTip="Show or hide thumbnail bar"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE1D9;" ToolTipService.ToolTip="Enter full screen mode"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE2AE;" ToolTipService.ToolTip="Enter Unity mode"/>
             <AppBarSeparator/>
-            <ToggleButton FontFamily="Segoe Fluent Icons" Content="&#xE756;" ToolTipService.ToolTip="Show or hide console view" Style="{StaticResource TransparentToggleButton}"/>
+            <ToggleButton Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE756;" ToolTipService.ToolTip="Show or hide console view"/>
             <AppBarSeparator/>
-            <muxc:ToggleSplitButton FontFamily="Segoe Fluent Icons" Content="&#xE2B4;" ToolTipService.ToolTip="Free stretch / Keep aspect ratio stretch">
+            <muxc:ToggleSplitButton Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE2B4;" ToolTipService.ToolTip="Free stretch / Keep aspect ratio stretch">
                 <muxc:ToggleSplitButton.Flyout>
                     <MenuFlyout>
                         <MenuFlyoutItem Text="Keep aspect ratio stretch" IsEnabled="False"/>
@@ -185,7 +185,7 @@
         </StackPanel>
         <Grid x:Name="LibraryPanel" Grid.Row="2" Width="200" HorizontalAlignment="Left" Grid.RowSpan="2">
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Library" TextAlignment="Center" Margin="10,10,0,0"/>
-            <Button Style="{StaticResource TransparentButton}" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"/>
             <AutoSuggestBox HorizontalAlignment="Center" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="0,44,0,0" />
             <ListView Margin="0,90,0,0">
                 <ListViewItem Content="My Computer" IsSelected="True"/>
@@ -216,7 +216,7 @@
                         HorizontalAlignment="Right">
                 <HyperlinkButton Content="Go to Test VM" Click="GoToTestVM_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
                 <AppBarSeparator/>
-                <Button Style="{StaticResource TransparentButton}"
+                <Button Background="Transparent" BorderBrush="Transparent"
                         FontFamily="Segoe Fluent Icons" Content="&#xE15F;" 
                         ToolTipService.ToolTip="Message log" RightTapped="Button_RightTapped" Tapped="Button_Tapped" Height="32">
                     <FlyoutBase.AttachedFlyout>

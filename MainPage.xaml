@@ -166,7 +166,7 @@
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF738;" ToolTipService.ToolTip="Revert this virtual machine to its parent snapshot"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF739;" ToolTipService.ToolTip="Manage snapshots for this virtual machine"/>
             <AppBarSeparator/>
-            <ToggleButton Background="Transparent" BorderBrush="Transparent" x:Name="ShowHideLibrary" FontFamily="Segoe Fluent Icons" Content="&#xE90C;" IsChecked="True" ToolTipService.ToolTip="Show or hide library"/>
+            <Button Background="Transparent" BorderBrush="Transparent" x:Name="ShowHideLibrary" FontFamily="Segoe Fluent Icons" Content="&#xE90C;" ToolTipService.ToolTip="Show or hide library" Click="ShowHideLibrary_Click"/>
             <ToggleButton Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE90E;" ToolTipService.ToolTip="Show or hide thumbnail bar"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE1D9;" ToolTipService.ToolTip="Enter full screen mode"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE2AE;" ToolTipService.ToolTip="Enter Unity mode"/>
@@ -185,14 +185,15 @@
         </StackPanel>
         <Grid x:Name="LibraryPanel" Grid.Row="2" Width="200" HorizontalAlignment="Left" Grid.RowSpan="2">
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Library" TextAlignment="Center" Margin="10,10,0,0"/>
-            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"
+                    Click="HideLibrary_Click"/>
             <AutoSuggestBox HorizontalAlignment="Center" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="0,44,0,0" />
             <ListView Margin="0,90,0,0">
                 <ListViewItem Content="My Computer" IsSelected="True"/>
             </ListView>
         </Grid>
-        <Grid Grid.RowSpan="2" Grid.Row="2" Margin="200,0,0,0">
-            <muxc:TabView  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsAddTabButtonVisible="False"
+        <Grid x:Name="TabGrid" Grid.RowSpan="2" Grid.Row="2" Margin="200,0,0,0">
+            <muxc:TabView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsAddTabButtonVisible="False"
                           TabWidthMode="SizeToContent">
 
                 <muxc:TabView.TabItems>

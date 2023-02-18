@@ -112,5 +112,25 @@ namespace UWPStation
         {
             this.Frame.Navigate(typeof(TestVMPage));
         }
+        private void HideLibrary_Click(object sender, RoutedEventArgs e)
+        {
+            this.LibraryPanel.Visibility = Visibility.Collapsed;
+            this.TabGrid.Margin = new Thickness (0, 0, 0, 0);
+        }
+
+        private void ShowHideLibrary_Click(object sender, RoutedEventArgs e)
+        {
+            Button btnE = sender as Button;
+            if (this.LibraryPanel.Visibility == Visibility.Visible)
+            {
+                this.LibraryPanel.Visibility = Visibility.Collapsed;
+                this.TabGrid.Margin = new Thickness(0, 0, 0, 0);
+            }
+            else
+            {
+                this.LibraryPanel.Visibility = Visibility.Visible;
+                this.TabGrid.Margin = new Thickness(200, 0, 0, 0);
+            }
+        }
     }
 }

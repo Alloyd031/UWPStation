@@ -96,8 +96,7 @@
             </Button>
             <Button Width="38" Height="38" Margin="45,0,0,0" Background="{ThemeResource LayerOnAccentAcrylicFillColorDefault}" CornerRadius="4" Padding="0" BorderBrush="Transparent" BorderThickness="0">
                 <Grid>
-                    <Image Source="ms-appx:///Assets/StoreLogo.png" Height="26" Width="26" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Border Width="20" Height="3" Background="ForestGreen" CornerRadius="2" VerticalAlignment="Bottom" Margin="0,0,0,-5"/>
+                    <Image Source="/Assets/StoreLogo.png" Height="26" Width="26" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
             </Button>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe MDL2 Assets" Content="&#xE91C;" Height="40" Width="40" HorizontalAlignment="Right"

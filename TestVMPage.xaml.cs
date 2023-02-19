@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using UWPStation.Dialogs;
+using Windows.Foundation.Metadata;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -58,6 +59,43 @@ namespace UWPStation
         private void ActionCenter_Click(object sender, RoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        }
+
+        private void ShowHelloWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.HelloWindow.Visibility = Visibility.Visible;
+            this.HelloWindowIcon.Visibility = Visibility.Visible;
+        }
+
+        private void CloseWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.HelloWindow.Visibility = Visibility.Collapsed;
+            this.HelloWindowIcon.Visibility = Visibility.Collapsed;
+        }
+
+        private void MinimizeWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.HelloWindow.Visibility = Visibility.Collapsed;
+            this.HelloWindowIcon.Visibility = Visibility.Visible;
+        }
+
+        private void ShowWindow_Click(object sender, RoutedEventArgs e)
+        {
+            Button btnE = sender as Button;
+            if (this.HelloWindow.Visibility == Visibility.Visible)
+            {
+                this.HelloWindow.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                this.HelloWindow.Visibility = Visibility.Visible;
+            }
+        }
+
+        private async void MaximizeWindow_Click(object sender, RoutedEventArgs e)
+        {
+            MaximizeWindowDialog dialog = new MaximizeWindowDialog();
+            await dialog.ShowAsync();
         }
     }
 }

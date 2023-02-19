@@ -125,6 +125,9 @@
     <Compile Include="Dialogs\EnterKeyDialog.xaml.cs">
       <DependentUpon>EnterKeyDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\MaximizeWindowDialog.xaml.cs">
+      <DependentUpon>MaximizeWindowDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\MessageLogDialog.xaml.cs">
       <DependentUpon>MessageLogDialog.xaml</DependentUpon>
     </Compile>
@@ -209,6 +212,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\EnterKeyDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\MaximizeWindowDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

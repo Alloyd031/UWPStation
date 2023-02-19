@@ -193,20 +193,18 @@
             </ListView>
         </Grid>
         <Grid x:Name="TabGrid" Grid.RowSpan="2" Grid.Row="2" Margin="200,0,0,0">
-            <muxc:TabView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsAddTabButtonVisible="False"
+            <muxc:TabView x:Name="Tabs" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsAddTabButtonVisible="False"
                           TabWidthMode="SizeToContent">
 
-                <muxc:TabView.TabItems>
-                    <muxc:TabViewItem Header="Home">
-                        <muxc:TabViewItem.IconSource>
-                            <muxc:SymbolIconSource Symbol="Home"/>
-                        </muxc:TabViewItem.IconSource>
-                        <Grid>
-                            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="UWPStation" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,21,0,0"/>
-                            <Button Style="{StaticResource AccentButtonStyle}" Content="Create a New Virtual Machine" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" Width="222" Click="CreateVM_Click"/>
-                        </Grid>
-                    </muxc:TabViewItem>
-                </muxc:TabView.TabItems>
+                <muxc:TabViewItem x:Name="HomeTab" Header="Home">
+                    <muxc:TabViewItem.IconSource>
+                        <muxc:SymbolIconSource Symbol="Home"/>
+                    </muxc:TabViewItem.IconSource>
+                    <Grid>
+                        <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="UWPStation" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,21,0,0"/>
+                        <Button Style="{StaticResource AccentButtonStyle}" Content="Create a New Virtual Machine" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" Width="222" Click="CreateVM_Click" Height="111"/>
+                    </Grid>
+                </muxc:TabViewItem>
             </muxc:TabView>
         </Grid>
         <Border BackgroundSizing="OuterBorderEdge"

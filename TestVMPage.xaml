@@ -69,7 +69,7 @@
                 </muxc:AnimatedIcon.FallbackIconSource>
             </muxc:AnimatedIcon>
         </Button>
-        <Grid Grid.Row="2" Grid.RowSpan="2" Margin="0,0,0,40">
+        <Grid Grid.Row="2" Margin="151,105,150,136" Grid.RowSpan="2" Background="{StaticResource SystemControlAcrylicWindowBrush}">
             <Image Source="/Assets/StoreLogo.png"
                    Width="16"
                    Height="16" 
@@ -80,19 +80,28 @@
             <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="Hello! Thank you for opening this Test VM page." HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" HorizontalAlignment="Right" VerticalAlignment="Top"
                     Height="33" Width="49" ToolTipService.ToolTip="Close"/>
-            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE923;" HorizontalAlignment="Right" VerticalAlignment="Top"
-                    Height="33" Width="49" Margin="0,0,49,0" ToolTipService.ToolTip="Restore"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE922;" HorizontalAlignment="Right" VerticalAlignment="Top"
+                    Height="33" Width="49" Margin="0,0,49,0" ToolTipService.ToolTip="Maximize"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE921;" HorizontalAlignment="Right" VerticalAlignment="Top"
                     Height="33" Width="49" Margin="0,0,98,0" ToolTipService.ToolTip="Minimize"/>
         </Grid>
-        <StackPanel Grid.Row="3" Height="40" VerticalAlignment="Bottom">
-            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Hololens MDL2 Assets" Content="&#xE782;" Height="40" Width="40" Click="StartButton_Click">
+        <Grid Grid.Row="3" Height="40" VerticalAlignment="Bottom" Background="{StaticResource SystemControlAcrylicWindowBrush}">
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Hololens MDL2 Assets" Content="&#xE782;" Height="40" Width="40" Click="StartButton_Click" HorizontalAlignment="Left"
+                    ToolTipService.ToolTip="Start">
                 <FlyoutBase.AttachedFlyout>
                     <MenuFlyout>
                         <MenuFlyoutItem Text="Start Menu is not available." IsEnabled="False"/>
                     </MenuFlyout>
                 </FlyoutBase.AttachedFlyout>
             </Button>
-        </StackPanel>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe MDL2 Assets" Content="&#xE91C;" Height="40" Width="40" HorizontalAlignment="Right"
+                    ToolTipService.ToolTip="Action Center" Click="ActionCenter_Click">
+                <FlyoutBase.AttachedFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Action Center is not available." IsEnabled="False"/>
+                    </MenuFlyout>
+                </FlyoutBase.AttachedFlyout>
+            </Button>
+        </Grid>
     </Grid>
 </Page>

@@ -20,6 +20,7 @@ using UWPStation.Pages;
 using UWPStation.Dialogs;
 using Microsoft.UI.Xaml.Controls;
 using System.Collections.ObjectModel;
+using System.Reflection;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -95,13 +96,6 @@ namespace UWPStation
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
         }
-
-        private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            NotAvailableDialog dialog = new NotAvailableDialog();
-            await dialog.ShowAsync();
-        }
-
         private async void CreateVM_Click(object sender, RoutedEventArgs e)
         {
             NotAvailableDialog dialog = new NotAvailableDialog();

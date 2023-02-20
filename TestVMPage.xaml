@@ -69,7 +69,7 @@
                 </muxc:AnimatedIcon.FallbackIconSource>
             </muxc:AnimatedIcon>
         </Button>
-        <Grid x:Name="HelloWindow" Grid.Row="2" Margin="151,105,150,136" Grid.RowSpan="2" Background="{StaticResource SystemControlAcrylicWindowBrush}">
+        <Grid x:Name="HelloWindow" CornerRadius="4" Grid.Row="2" Margin="151,105,150,136" Grid.RowSpan="2" Background="{StaticResource SystemControlAcrylicWindowBrush}">
             <Image Source="/Assets/StoreLogo.png"
                    Width="16"
                    Height="16" 

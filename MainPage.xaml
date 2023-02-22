@@ -213,8 +213,6 @@
                 Grid.Row="4">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right">
-                <HyperlinkButton Content="Go to Test VM" Click="GoToTestVM_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                <AppBarSeparator/>
                 <Button Background="Transparent" BorderBrush="Transparent"
                         FontFamily="Segoe Fluent Icons" Content="&#xE15F;" 
                         ToolTipService.ToolTip="Message log" RightTapped="Button_RightTapped" Tapped="Button_Tapped" Height="32">

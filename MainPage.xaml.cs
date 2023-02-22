@@ -96,16 +96,13 @@ namespace UWPStation
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
         }
+
         private async void CreateVM_Click(object sender, RoutedEventArgs e)
         {
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
         }
 
-        private void GoToTestVM_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(TestVMPage));
-        }
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             this.LibraryPanel.Visibility = Visibility.Collapsed;

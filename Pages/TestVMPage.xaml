@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="UWPStation.Pages.TestVMPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+
+    <Grid>
+        <TextBlock Text="Test VM" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
+        <HyperlinkButton Content="Power on this virtual machine" Margin="19,90,0,0" VerticalAlignment="Top"/>
+        <HyperlinkButton Content="Edit virtual machine settings" Margin="19,122,0,0" VerticalAlignment="Top"/>
+        <muxc:Expander Header="Devices" Content="Not available" Margin="19,164,0,0" VerticalAlignment="Top" Width="206"/>
+        <muxc:Expander Header="Description" Margin="19,217,0,0" VerticalAlignment="Top">
+            <RichEditBox PlaceholderText="Type here to enter a description of this virtual machine."/>
+        </muxc:Expander>
+    </Grid>
+</Page>

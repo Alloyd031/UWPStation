@@ -164,6 +164,9 @@
     <Compile Include="Pages\MemoryPage.xaml.cs">
       <DependentUpon>MemoryPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MyComputerPage.xaml.cs">
+      <DependentUpon>MyComputerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PriorityPage.xaml.cs">
       <DependentUpon>PriorityPage.xaml</DependentUpon>
     </Compile>
@@ -267,6 +270,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MemoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MyComputerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

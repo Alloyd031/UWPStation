@@ -130,6 +130,10 @@ namespace UWPStation
             {
                 pageType = typeof(HomePage);
             }
+            else if (args.SelectedItem == MyComputerItem)
+            {
+                pageType = typeof(MyComputerPage);
+            }
             else if (args.SelectedItem == TestVMItem)
             {
                 pageType = typeof(TestVMPage);

@@ -189,13 +189,18 @@
                     Click="HideLibrary_Click"/>
             <AutoSuggestBox HorizontalAlignment="Center" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="0,44,0,0" />
             <ListView Margin="0,90,0,0">
-                <ListViewItem Content="My Computer"/>
+                <ListViewItem Content="My Computer" IsSelected="True"/>
             </ListView>
         </Grid>
         <Grid x:Name="NavGrid" Grid.RowSpan="2" Grid.Row="2" Margin="200,0,0,0">
             <muxc:NavigationView PaneDisplayMode="Top" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="NavigationView_SelectionChanged">
                 <muxc:NavigationView.MenuItems>
                     <muxc:NavigationViewItem x:Name="HomeItem" Content="Home" Icon="Home" IsSelected="True"/>
+                    <muxc:NavigationViewItem x:Name="MyComputerItem" Content="My Computer">
+                        <muxc:NavigationViewItem.Icon>
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEC4E;"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
                     <muxc:NavigationViewItem x:Name="TestVMItem" Content="Test VM" Icon="Placeholder"/>
                 </muxc:NavigationView.MenuItems>
                 <Frame x:Name="ContentFrame"/>

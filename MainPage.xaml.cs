@@ -21,7 +21,6 @@ using UWPStation.Dialogs;
 using Microsoft.UI.Xaml.Controls;
 using System.Collections.ObjectModel;
 using System.Reflection;
-using UWPStation.TabPages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -101,7 +100,7 @@ namespace UWPStation
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             this.LibraryPanel.Visibility = Visibility.Collapsed;
-            this.NavGrid.Margin = new Thickness (0, 0, 0, 0);
+            this.TabsGrid.Margin = new Thickness (0, 0, 0, 0);
         }
 
         private void ShowHideLibrary_Click(object sender, RoutedEventArgs e)
@@ -110,35 +109,18 @@ namespace UWPStation
             if (this.LibraryPanel.Visibility == Visibility.Visible)
             {
                 this.LibraryPanel.Visibility = Visibility.Collapsed;
-                this.NavGrid.Margin = new Thickness(0, 0, 0, 0);
+                this.TabsGrid.Margin = new Thickness(0, 0, 0, 0);
             }
             else
             {
                 this.LibraryPanel.Visibility = Visibility.Visible;
-                this.NavGrid.Margin = new Thickness(200, 0, 0, 0);
+                this.TabsGrid.Margin = new Thickness(200, 0, 0, 0);
             }
         }
-
-        private void NavigationView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
+        private async void CreateVM_Click(object sender, RoutedEventArgs e)
         {
-            FrameNavigationOptions navOptions = new FrameNavigationOptions();
-            navOptions.TransitionInfoOverride = args.RecommendedNavigationTransitionInfo;
-            navOptions.IsNavigationStackEnabled = false;
-
-            Type pageType = null;
-            if (args.SelectedItem == HomeItem)
-            {
-                pageType = typeof(HomePage);
-            }
-            else if (args.SelectedItem == MyComputerItem)
-            {
-                pageType = typeof(MyComputerPage);
-            }
-            else if (args.SelectedItem == TestVMItem)
-            {
-                pageType = typeof(TestVMPage);
-            }
-            ContentFrame.NavigateToType(pageType, null, navOptions);
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
         }
     }
 }

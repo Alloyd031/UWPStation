@@ -164,14 +164,8 @@
     <Compile Include="Pages\MemoryPage.xaml.cs">
       <DependentUpon>MemoryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MyComputerPage.xaml.cs">
-      <DependentUpon>MyComputerPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\PriorityPage.xaml.cs">
       <DependentUpon>PriorityPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\TestVMPage.xaml.cs">
-      <DependentUpon>TestVMPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\UnityPage.xaml.cs">
       <DependentUpon>UnityPage.xaml</DependentUpon>
@@ -189,9 +183,6 @@
       <DependentUpon>PreferencesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pages\HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -273,15 +264,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\MyComputerPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\PriorityPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\TestVMPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -302,10 +285,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PreferencesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

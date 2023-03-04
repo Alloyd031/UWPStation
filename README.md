@@ -1,6 +1,6 @@
 # UWPStation
 
-UWPStation is an app that looks almost like VMware Workstation.
+UWPStation is an app that looks like VMware Workstation.
 
 # Known Issues
 

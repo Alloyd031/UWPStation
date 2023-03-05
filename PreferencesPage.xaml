@@ -61,7 +61,7 @@
                              IsSettingsVisible="False"
                              SelectionChanged="NavigationView_SelectionChanged">
             <muxc:NavigationView.AutoSuggestBox>
-                <AutoSuggestBox QueryIcon="Find" PlaceholderText="Search settings"/>
+                <AutoSuggestBox QueryIcon="Find" PlaceholderText="Search preferences"/>
             </muxc:NavigationView.AutoSuggestBox>
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItemHeader Content="Main preferences"/>

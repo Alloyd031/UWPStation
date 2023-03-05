@@ -11,7 +11,7 @@
 
     <Grid>
         <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="Info" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
-        <TextBlock Text="UWPStation, Version 0.1 - PREVIEW" Style="{StaticResource HeaderTextBlockStyle}"
-                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="UWPStation, Version 0.1 - PREVIEW" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <HyperlinkButton Content="Visit GitHub page" NavigateUri="https://github.com/Alloyd031/UWPStation" Margin="1357,10,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

@@ -23,5 +23,24 @@ namespace UWPStation.Dialogs
         {
             this.InitializeComponent();
         }
+
+        public bool sign;
+        private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            sign = true;
+        }
+
+        private void ContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            sign = false;
+        }
+
+        private void ContentDialog_Closing(ContentDialog sender, ContentDialogClosingEventArgs args)
+        {
+            if (sign)
+            {
+                args.Cancel = true;
+            }
+        }
     }
 }

@@ -10,12 +10,15 @@
     Title="Enter License Key"
     PrimaryButtonText="OK"
     CloseButtonText="Cancel"
-    PrimaryButtonStyle="{StaticResource AccentButtonStyle}">
+    PrimaryButtonStyle="{StaticResource AccentButtonStyle}"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    CloseButtonClick="ContentDialog_CloseButtonClick"
+    Closing="ContentDialog_Closing">
 
-    <Grid  HorizontalAlignment="Center" VerticalAlignment="Center" Width="386">
-        <TextBlock Text="Enter your 25-character license key." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <TextBlock Text="License Key:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
-        <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="89,45,0,0"/>
-        <TextBlock Text="Lol, that's fake :D" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,100,0,0"/>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="386">
+        <TextBlock Text="Enter your 25-character license key." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0"/>
+        <TextBlock Text="License Key:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="79,0,0,0"/>
+        <TextBlock Text="Lol, that's fake :D" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,100,0,0"/>
     </Grid>
 </ContentDialog>

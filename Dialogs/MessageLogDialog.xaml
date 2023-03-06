@@ -11,7 +11,7 @@
     PrimaryButtonText="OK"
     PrimaryButtonStyle="{StaticResource AccentButtonStyle}">
 
-    <Grid>
-        <TextBlock Text="Message logs are not available." VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBlock Text="Message logs are not available." VerticalAlignment="Center" HorizontalAlignment="Left"/>
     </Grid>
 </ContentDialog>

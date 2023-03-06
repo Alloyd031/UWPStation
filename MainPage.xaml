@@ -187,7 +187,7 @@
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Library" TextAlignment="Center" Margin="10,10,0,0"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"
                     Click="HideLibrary_Click"/>
-            <AutoSuggestBox HorizontalAlignment="Center" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="0,44,0,0" />
+            <AutoSuggestBox HorizontalAlignment="Stretch" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="0,44,0,0" />
             <ListView Margin="0,90,0,0">
                 <ListViewItem Content="My Computer" IsSelected="True"/>
             </ListView>

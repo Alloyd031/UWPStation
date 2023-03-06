@@ -38,7 +38,6 @@ namespace UWPStation
 
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ButtonBackgroundColor = Colors.Transparent;
-
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

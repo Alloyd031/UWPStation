@@ -38,7 +38,8 @@
                        x:Name="tea" Grid.ColumnSpan="2" Margin="10,0,6,0" />
         </Grid>
         <Button x:Name="BackButton"
-                Style="{StaticResource TransparentButton}"
+                Background="Transparent"
+                BorderBrush="Transparent"
                 Click="BackButton_Click"
                 IsEnabled="{x:Bind Frame.CanGoBack, Mode=OneWay}"
                 AutomationProperties.Name="Back"

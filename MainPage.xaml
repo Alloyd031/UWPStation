@@ -211,6 +211,8 @@
                 Grid.Row="4">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right">
+                <HyperlinkButton Content="Visit project page on GitHub" Click="GoToProjectPage_Click"/>
+                <AppBarSeparator/>
                 <Button Background="Transparent" BorderBrush="Transparent"
                         FontFamily="Segoe Fluent Icons" Content="&#xE15F;" 
                         ToolTipService.ToolTip="Message log" RightTapped="Button_RightTapped" Tapped="Button_Tapped" Height="32">
@@ -221,7 +223,6 @@
                         </MenuFlyout>
                     </FlyoutBase.AttachedFlyout>
                 </Button>
-                <AppBarSeparator/>
             </StackPanel>
         </Border>
     </Grid>

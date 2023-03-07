@@ -140,5 +140,10 @@ namespace UWPStation
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
         }
+
+        private async void GoToTestVM_Click(object sender, RoutedEventArgs e)
+        {
+            await OpenPageAsWindowAsync(typeof(TestVMPage));
+        }
     }
 }

@@ -47,5 +47,9 @@ namespace UWPStation
         {
             WebView2.Reload();
         }
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            WebView2.Source = new Uri("https://github.com/Alloyd031/UWPStation");
+        }
     }
 }

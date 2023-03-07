@@ -58,6 +58,13 @@
                 ToolTipService.ToolTip="Reload page" Margin="89,0,0,0">
                 <SymbolIcon Symbol="Refresh"/>
             </Button>
+            <Button x:Name="HomeButton"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Click="HomeButton_Click"
+                ToolTipService.ToolTip="Home" Margin="133,0,0,0">
+                <SymbolIcon Symbol="Home"/>
+            </Button>
         </Grid>
         <muxc:WebView2 x:Name="WebView2" Grid.Row="2" Source="https://github.com/Alloyd031/UWPStation" Grid.RowSpan="2"/>
     </Grid>

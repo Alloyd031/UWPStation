@@ -137,7 +137,7 @@ namespace UWPStation
         }
         private async void CreateVM_Click(object sender, RoutedEventArgs e)
         {
-            NotAvailableDialog dialog = new NotAvailableDialog();
+            NewVMDialog dialog = new NewVMDialog();
             await dialog.ShowAsync();
         }
 

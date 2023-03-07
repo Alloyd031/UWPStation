@@ -50,7 +50,7 @@
             </Button>
         </Grid>
         <Grid Grid.Row="2" Grid.RowSpan="2" Background="{StaticResource SystemColorBackgroundColor}">
-            <Border x:Name="Taskbar" Height="40" VerticalAlignment="Top" Margin="0,895,0,0">
+            <Border x:Name="Taskbar" VerticalAlignment="Bottom">
                 <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="StartButton">
                     <Button.Content>
                         <TextBlock FontFamily="HoloLens MDL2 Assets" Text="&#xE782;" VerticalAlignment="Center" Margin="0" FontSize="16"/>

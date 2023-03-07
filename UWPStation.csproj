@@ -128,6 +128,9 @@
     <Compile Include="Dialogs\MessageLogDialog.xaml.cs">
       <DependentUpon>MessageLogDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\NewVMDialog.xaml.cs">
+      <DependentUpon>NewVMDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\NotAvailableDialog.xaml.cs">
       <DependentUpon>NotAvailableDialog.xaml</DependentUpon>
     </Compile>
@@ -219,6 +222,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\MessageLogDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\NewVMDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

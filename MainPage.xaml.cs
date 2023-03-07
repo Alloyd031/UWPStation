@@ -122,9 +122,5 @@ namespace UWPStation
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
         }
-        private void GoToProjectPage_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(ProjectPage));
-        }
     }
 }

@@ -43,5 +43,9 @@ namespace UWPStation
         {
             WebView2.GoForward();
         }
+        private void ReloadButton_Click(object sender, RoutedEventArgs e)
+        {
+            WebView2.Reload();
+        }
     }
 }

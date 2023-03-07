@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +29,26 @@ namespace UWPStation.Pages
         public InfoPage()
         {
             this.InitializeComponent();
+        }
+        private async Task<bool> OpenPageAsWindowAsync(Type t)
+        {
+            var view = CoreApplication.CreateNewView();
+            int id = 0;
+
+            await view.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                var frame = new Frame();
+                frame.Navigate(t, null);
+                Window.Current.Content = frame;
+                Window.Current.Activate();
+                id = ApplicationView.GetForCurrentView().Id;
+            });
+
+            return await ApplicationViewSwitcher.TryShowAsStandaloneAsync(id);
+        }
+        private async void GoToProjectPage_Click(object sender, RoutedEventArgs e)
+        {
+            await OpenPageAsWindowAsync(typeof(ProjectPage));
         }
     }
 }

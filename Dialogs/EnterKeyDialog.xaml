@@ -5,6 +5,7 @@
     xmlns:local="using:UWPStation.Dialogs"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Style="{StaticResource DefaultContentDialogStyle}"
     mc:Ignorable="d">
     <ContentDialog.Resources>
@@ -52,9 +53,11 @@
             </Grid>
             <TextBlock Text="Enter your 25-character license key." HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Margin="10,10,0,0"/>
             <TextBlock Text="License Key:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,55,0,0" Grid.Row="1"/>
-            <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="89,50,0,0" Grid.Row="1" MaxWidth="247" Width="247"/>
-            <TextBlock Text="Lol, that's fake :D" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,147,0,0" Grid.Row="1"/>
-            <Button x:Name="OKButton" Content="OK" Margin="277,134,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource AccentButtonStyle}"/>
+            <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="89,50,10,0" Grid.Row="1"/>
+            <Button x:Name="OKButton" Content="OK" Margin="277,134,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click"/>
+            <muxc:TeachingTip x:Name="ButtonTip" Target="{x:Bind OKButton}"
+                              Title="Lol" Subtitle="That's fake :D">
+            </muxc:TeachingTip>
             <Button x:Name="CancelButton" Content="Cancel" Margin="325,134,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CancelButton_Click"/>
         </Grid>
     </Border>

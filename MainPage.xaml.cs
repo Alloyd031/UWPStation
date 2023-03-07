@@ -21,6 +21,8 @@ using UWPStation.Dialogs;
 using Microsoft.UI.Xaml.Controls;
 using System.Collections.ObjectModel;
 using System.Reflection;
+using System.Threading.Tasks;
+using Windows.UI.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -45,19 +47,35 @@ namespace UWPStation
             titleBar.ButtonBackgroundColor = Colors.Transparent;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
+        private async Task<bool> OpenPageAsWindowAsync(Type t)
+        {
+            var view = CoreApplication.CreateNewView();
+            int id = 0;
+
+            await view.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                var frame = new Frame();
+                frame.Navigate(t, null);
+                Window.Current.Content = frame;
+                Window.Current.Activate();
+                id = ApplicationView.GetForCurrentView().Id;
+            });
+
+            return await ApplicationViewSwitcher.TryShowAsStandaloneAsync(id);
+        }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             CoreApplication.Exit();
         }
 
-        private void Preferences_Click(object sender, RoutedEventArgs e)
+        private async void Preferences_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(PreferencesPage));
+            await OpenPageAsWindowAsync(typeof(PreferencesPage));
         }
 
-        private void About_Click(object sender, RoutedEventArgs e)
+        private async void About_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AboutPage));
+            await OpenPageAsWindowAsync(typeof(AboutPage));
         }
 
         private void Button_RightTapped(object sender, RightTappedRoutedEventArgs e)

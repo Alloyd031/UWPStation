@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -32,6 +33,11 @@ namespace UWPStation.Dialogs
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
+        }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonTip.IsOpen = true;
         }
     }
 }

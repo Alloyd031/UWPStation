@@ -38,12 +38,6 @@ namespace UWPStation
             titleBar.ButtonBackgroundColor = Colors.Transparent;
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Frame.CanGoBack)
-                Frame.GoBack();
-        }
-
         private void NavigationView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
             FrameNavigationOptions navOptions = new FrameNavigationOptions();

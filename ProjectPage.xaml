@@ -65,7 +65,7 @@
                 ToolTipService.ToolTip="Home" Margin="133,0,0,0">
                 <SymbolIcon Symbol="Home"/>
             </Button>
-            <AutoSuggestBox Margin="177,0,44,0" QueryIcon="Forward" HorizontalAlignment="Stretch" />
+            <TextBox x:Name="URLBox" PlaceholderText="Some URL" IsReadOnly="True" Margin="177,0,44,0" HorizontalAlignment="Stretch"/>
             <Button x:Name="SettingsButton"
                 Background="Transparent"
                 BorderBrush="Transparent"

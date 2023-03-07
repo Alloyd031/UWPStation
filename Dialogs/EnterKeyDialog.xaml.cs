@@ -24,23 +24,14 @@ namespace UWPStation.Dialogs
             this.InitializeComponent();
         }
 
-        public bool sign;
-        private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        private void CloseDialogButton_Click(object sender, RoutedEventArgs e)
         {
-            sign = true;
+            Hide();
         }
 
-        private void ContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            sign = false;
-        }
-
-        private void ContentDialog_Closing(ContentDialog sender, ContentDialogClosingEventArgs args)
-        {
-            if (sign)
-            {
-                args.Cancel = true;
-            }
+            Hide();
         }
     }
 }

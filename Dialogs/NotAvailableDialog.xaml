@@ -6,12 +6,51 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Style="{StaticResource DefaultContentDialogStyle}"
-    mc:Ignorable="d"
-    Title="Error"
-    PrimaryButtonText="OK"
-    PrimaryButtonStyle="{StaticResource AccentButtonStyle}">
+    mc:Ignorable="d">
 
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <TextBlock Text="This feature is not available." VerticalAlignment="Center" HorizontalAlignment="Left"/>
-    </Grid>
+    <ContentDialog.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="ContentDialogMaxWidth">1100</x:Double>
+            <Thickness x:Key="ContentDialogPadding">0</Thickness>
+        </ResourceDictionary>
+    </ContentDialog.Resources>
+    <Border>
+        <Grid
+			x:Name="ContainerGrid"
+			MaxHeight="790"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="44" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid
+				Grid.Row="0"
+				Padding="8,0"
+				HorizontalAlignment="Stretch">
+                <TextBlock
+					Padding="8,0,0,0"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontWeight="SemiBold"
+					Text="Error"/>
+
+                <Button
+					x:Name="CloseDialogButton"
+					Width="36"
+					Height="36"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Center"
+					AutomationProperties.Name="Close"
+					Background="Transparent"
+					BorderBrush="Transparent"
+					Click="CloseDialogButton_Click"
+					ToolTipService.ToolTip="Close">
+                    <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
+                </Button>
+            </Grid>
+            <TextBlock Text="This feature is not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        </Grid>
+    </Border>
 </ContentDialog>

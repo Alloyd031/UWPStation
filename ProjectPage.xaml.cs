@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using UWPStation.Dialogs;
+using System.Security.Cryptography;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -50,6 +52,11 @@ namespace UWPStation
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             WebView2.Source = new Uri("https://github.com/Alloyd031/UWPStation");
+        }
+        private async void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsDialog dialog = new SettingsDialog();
+            await dialog.ShowAsync();
         }
     }
 }

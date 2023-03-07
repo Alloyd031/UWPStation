@@ -17,9 +17,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace UWPStation.Dialogs
 {
-    public sealed partial class NotAvailableDialog : ContentDialog
+    public sealed partial class SettingsDialog : ContentDialog
     {
-        public NotAvailableDialog()
+        public SettingsDialog()
         {
             this.InitializeComponent();
         }

@@ -1,5 +1,5 @@
 ﻿<ContentDialog
-    x:Class="UWPStation.Dialogs.EnterKeyDialog"
+    x:Class="UWPStation.Dialogs.SettingsDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPStation.Dialogs"
@@ -33,7 +33,7 @@
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
-					Text="Enter License Key"/>
+					Text="Settings" />
 
                 <Button
 					x:Name="CloseDialogButton"
@@ -49,12 +49,7 @@
                     <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
                 </Button>
             </Grid>
-            <TextBlock Text="Enter your 25-character license key." HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Margin="10,10,0,0"/>
-            <TextBlock Text="License Key:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,37,0,0" Grid.Row="1"/>
-            <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,57,0,0" Grid.Row="1"/>
-            <TextBlock Text="Lol, that's fake :D" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,108,0,0" Grid.Row="1"/>
-            <Button x:Name="OKButton" Content="OK" Margin="195,95,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource AccentButtonStyle}"/>
-            <Button x:Name="CancelButton" Content="Cancel" Margin="243,95,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CancelButton_Click"/>
+            <TextBlock Text="Settings are not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
         </Grid>
     </Border>
 </ContentDialog>

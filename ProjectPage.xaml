@@ -65,6 +65,15 @@
                 ToolTipService.ToolTip="Home" Margin="133,0,0,0">
                 <SymbolIcon Symbol="Home"/>
             </Button>
+            <AutoSuggestBox Margin="177,0,44,0" QueryIcon="Forward" HorizontalAlignment="Stretch" />
+            <Button x:Name="SettingsButton"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Click="SettingsButton_Click"
+                ToolTipService.ToolTip="Settings"
+                HorizontalAlignment="Right">
+                <SymbolIcon Symbol="Setting"/>
+            </Button>
         </Grid>
         <muxc:WebView2 x:Name="WebView2" Grid.Row="2" Source="https://github.com/Alloyd031/UWPStation" Grid.RowSpan="2"/>
     </Grid>

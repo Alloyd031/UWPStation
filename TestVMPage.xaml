@@ -50,13 +50,32 @@
             </Button>
         </Grid>
         <Grid Grid.Row="2" Grid.RowSpan="2" Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-            <Border x:Name="Taskbar" VerticalAlignment="Bottom">
-                <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="StartButton">
+            <StackPanel x:Name="Taskbar" VerticalAlignment="Bottom" Orientation="Horizontal">
+                <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="StartButton" ToolTipService.ToolTip="Start">
                     <Button.Content>
                         <TextBlock FontFamily="HoloLens MDL2 Assets" Text="&#xE782;" VerticalAlignment="Center" Margin="0" FontSize="16"/>
                     </Button.Content>
+                    <Button.Flyout>
+                        <Flyout>
+                            <Grid>
+                                <AutoSuggestBox PlaceholderText="Search for apps, settings and documents" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Grid>
+                        </Flyout>
+                    </Button.Flyout>
                 </Button>
-            </Border>
+                <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="SearchButton" ToolTipService.ToolTip="Search">
+                    <Button.Content>
+                        <TextBlock FontFamily="Segoe Fluent Icons" Text="&#xE721;" VerticalAlignment="Center" Margin="0" FontSize="16"/>
+                    </Button.Content>
+                    <Button.Flyout>
+                        <Flyout>
+                            <Grid>
+                                <AutoSuggestBox PlaceholderText="Type here to search" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Grid>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>

@@ -129,8 +129,14 @@
     <Compile Include="Dialogs\MessageLogDialog.xaml.cs">
       <DependentUpon>MessageLogDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\NewVMDialog.xaml.cs">
-      <DependentUpon>NewVMDialog.xaml</DependentUpon>
+    <Compile Include="NewVMWizardDialogs\Compatibility.xaml.cs">
+      <DependentUpon>Compatibility.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewVMWizardDialogs\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewVMWizardDialogs\Installation.xaml.cs">
+      <DependentUpon>Installation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\NotAvailableDialog.xaml.cs">
       <DependentUpon>NotAvailableDialog.xaml</DependentUpon>
@@ -223,7 +229,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dialogs\NewVMDialog.xaml">
+    <Page Include="NewVMWizardDialogs\Compatibility.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewVMWizardDialogs\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewVMWizardDialogs\Installation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -15,11 +15,11 @@ using Windows.UI.Xaml.Navigation;
 
 // The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace UWPStation.Dialogs
+namespace UWPStation.NewVMWizardDialogs
 {
-    public sealed partial class NewVMDialog : ContentDialog
+    public sealed partial class Installation : ContentDialog
     {
-        public NewVMDialog()
+        public Installation()
         {
             this.InitializeComponent();
         }
@@ -32,12 +32,17 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
+        private async void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Main dialog = new Main();
+            await dialog.ShowAsync();
+        }
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
             NextButtonTip.IsOpen = true;
         }
-
         private void HelpButton_Click(object sender, RoutedEventArgs e)
         {
             HelpButtonTip.IsOpen = true;

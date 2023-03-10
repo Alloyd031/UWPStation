@@ -28,8 +28,7 @@ namespace UWPStation
         {
             Hide();
         }
-
-        private void ContentDialog_Loaded(object sender, RoutedEventArgs e)
+        private void NewVMDialog_Loaded(object sender, RoutedEventArgs e)
         {
             this.ContentFrame.Navigate(typeof(Main));
         }

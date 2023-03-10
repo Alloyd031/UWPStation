@@ -20,29 +20,19 @@ namespace UWPStation.NewVMWizardPages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Installation : Page
+    public sealed partial class DiskCapacity : Page
     {
-        public Installation()
+        public DiskCapacity()
         {
             this.InitializeComponent();
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
-            {
-                this.Frame.GoBack();
-            }
-            else
-            {
-                this.Frame.Navigate(typeof(Installation));
-            }            
+            this.Frame.GoBack();
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.InstallLaterCheck.IsChecked == true)
-            {
-                this.Frame.Navigate(typeof(OperatingSystem));
-            }
+            this.Frame.Navigate(typeof(ReadyToCreate));
         }
     }
 }

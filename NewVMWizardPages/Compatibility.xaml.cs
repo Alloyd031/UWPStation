@@ -26,7 +26,6 @@ namespace UWPStation.NewVMWizardPages
         {
             this.InitializeComponent();
         }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();

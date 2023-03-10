@@ -27,6 +27,6 @@
         <TextBox Text="No limitations" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,186,0,0"/>
         <Button Content="Help" Margin="10,458,0,0" VerticalAlignment="Top"/>
         <Button x:Name="BackButton" Content="Back" Margin="319,458,0,0" VerticalAlignment="Top" Click="BackButton_Click"/>
-        <Button x:Name="NextButton" Content="Next" Style="{StaticResource AccentButtonStyle}" Margin="377,458,0,0" VerticalAlignment="Top" Click="NextButton_Click"/>
+        <Button x:Name="NextButton"  Content="Next" Style="{StaticResource AccentButtonStyle}" Margin="377,458,0,0" VerticalAlignment="Top" Click="NextButton_Click"/>
     </Grid>
 </Page>

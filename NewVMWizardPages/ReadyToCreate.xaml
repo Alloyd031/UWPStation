@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="UWPStation.NewVMWizardPages.ReadyToCreate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation.NewVMWizardPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
+    Width="440"
+	Height="500">
+
+    <Grid>
+        <TextBlock Text="Ready to Create Virtual Machine" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <TextBlock Text="Click Finish to create the virtual machine. Then you can install Alloyd's OS." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,34,0,0" TextWrapping="Wrap" Width="420"/>
+        <Button Content="Help" Margin="10,458,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BackButton" Content="Back" Margin="312,458,0,0" VerticalAlignment="Top" Click="BackButton_Click"/>
+        <Button x:Name="FinishButton" Content="Finish" Style="{StaticResource AccentButtonStyle}" Margin="370,458,0,0" VerticalAlignment="Top" Click="FinishButton_Click"/>
+        <muxc:TeachingTip x:Name="FinishTip" Target="{x:Bind FinishButton}" Title="Error" Subtitle="You can't finish this process for now."/>
+    </Grid>
+</Page>

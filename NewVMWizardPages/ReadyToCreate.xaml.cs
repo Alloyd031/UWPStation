@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using UWPStation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -20,29 +21,19 @@ namespace UWPStation.NewVMWizardPages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Installation : Page
+    public sealed partial class ReadyToCreate : Page
     {
-        public Installation()
+        public ReadyToCreate()
         {
             this.InitializeComponent();
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
-            {
-                this.Frame.GoBack();
-            }
-            else
-            {
-                this.Frame.Navigate(typeof(Installation));
-            }            
+            this.Frame.GoBack();
         }
-        private void NextButton_Click(object sender, RoutedEventArgs e)
+        private void FinishButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.InstallLaterCheck.IsChecked == true)
-            {
-                this.Frame.Navigate(typeof(OperatingSystem));
-            }
+            FinishTip.IsOpen = true;
         }
     }
 }

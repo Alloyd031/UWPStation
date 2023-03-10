@@ -5,8 +5,9 @@
     xmlns:local="using:UWPStation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="NewVMDialog"
     Style="{StaticResource DefaultContentDialogStyle}"
-    Loaded="ContentDialog_Loaded"
+    Loaded="NewVMDialog_Loaded"
     mc:Ignorable="d">
     <ContentDialog.Resources>
         <ResourceDictionary>

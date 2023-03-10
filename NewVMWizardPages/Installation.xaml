@@ -13,8 +13,17 @@
 
     <Grid>
         <TextBlock Text="Guest Operating System Installation" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <TextBlock Text="A virtual machine is like a physical computer; it needs an operating system. How will you install the operating system?" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Margin="10,34,0,0"/>
+        <TextBlock Text="Install from:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,85,0,0"/>
+        <RadioButton Content="Installer disc:" Margin="19,118,0,0" VerticalAlignment="Top"/>
+        <ComboBox Text="No drives available" Margin="37,150,0,0" IsEnabled="False"/>
+        <RadioButton Content="Installer disc image file (iso):" Margin="19,196,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <TextBox Text="Some location" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,228,0,0" Width="310"/>
+        <Button Content="Browse..." Margin="352,228,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="InstallLaterCheck" Content="I will install the operating system later." Margin="19,274,0,0" VerticalAlignment="Top"/>
+        <TextBlock Text="The virtual machine will be created with a blank hard disk." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,306,0,0"/>
         <Button Content="Help" Margin="10,458,0,0" VerticalAlignment="Top"/>
         <Button x:Name="BackButton" Content="Back" Margin="319,458,0,0" VerticalAlignment="Top" Click="BackButton_Click"/>
-        <Button Content="Next" Style="{StaticResource AccentButtonStyle}" Margin="377,458,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="NextButton" Content="Next" Style="{StaticResource AccentButtonStyle}" Margin="377,458,0,0" VerticalAlignment="Top" Click="NextButton_Click"/>
     </Grid>
 </Page>

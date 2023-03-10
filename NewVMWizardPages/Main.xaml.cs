@@ -26,7 +26,6 @@ namespace UWPStation.NewVMWizardPages
         {
             this.InitializeComponent();
         }
-
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.TypicalRadioButton.IsChecked == true)

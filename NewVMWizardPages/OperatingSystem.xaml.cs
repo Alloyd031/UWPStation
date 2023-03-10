@@ -20,29 +20,37 @@ namespace UWPStation.NewVMWizardPages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Installation : Page
+    public sealed partial class OperatingSystem : Page
     {
-        public Installation()
+        public OperatingSystem()
         {
             this.InitializeComponent();
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
+            this.Frame.GoBack();
+        }
+        private void HandleCheck(object sender, RoutedEventArgs e)
+        {
+            if (this.OSSelectionBox != null && this.WindowsOS.IsChecked == true)
             {
-                this.Frame.GoBack();
+                this.OSSelectionBox.IsEnabled = false;
             }
-            else
+            if (this.OSSelectionBox != null && this.LinuxOS.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(Installation));
-            }            
+                this.OSSelectionBox.IsEnabled = false;
+            }
+            if (this.OSSelectionBox != null && this.OtherOS.IsChecked == true)
+            {
+                this.OSSelectionBox.IsEnabled = true;
+            }
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.InstallLaterCheck.IsChecked == true)
+            if (this.OtherOS.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(OperatingSystem));
-            }
+                this.Frame.Navigate(typeof(NameVirtualMachine));
+            }           
         }
     }
 }

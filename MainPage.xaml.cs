@@ -18,7 +18,6 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Enumeration;
 using UWPStation.Pages;
 using UWPStation.Dialogs;
-using UWPStation.NewVMWizardDialogs;
 using Microsoft.UI.Xaml.Controls;
 using System.Collections.ObjectModel;
 using System.Reflection;
@@ -137,7 +136,7 @@ namespace UWPStation
         }
         private async void CreateVM_Click(object sender, RoutedEventArgs e)
         {
-            Main dialog = new Main();
+            NewVMWizard dialog = new NewVMWizard();
             await dialog.ShowAsync();
         }
 

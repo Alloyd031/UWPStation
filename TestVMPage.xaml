@@ -49,7 +49,7 @@
                 <SymbolIcon Symbol="Stop"/>
             </Button>
         </Grid>
-        <Grid Grid.Row="2" Grid.RowSpan="2" Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+        <Grid Grid.Row="2" Grid.RowSpan="2" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <StackPanel x:Name="Taskbar" VerticalAlignment="Bottom" Orientation="Horizontal">
                 <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="StartButton" ToolTipService.ToolTip="Start">
                     <Button.Content>

@@ -12,14 +12,15 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using UWPStation.NewVMWizardPages;
 
 // The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace UWPStation.NewVMWizardDialogs
+namespace UWPStation
 {
-    public sealed partial class Installation : ContentDialog
+    public sealed partial class NewVMWizard : ContentDialog
     {
-        public Installation()
+        public NewVMWizard()
         {
             this.InitializeComponent();
         }
@@ -28,24 +29,9 @@ namespace UWPStation.NewVMWizardDialogs
             Hide();
         }
 
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        private void ContentDialog_Loaded(object sender, RoutedEventArgs e)
         {
-            Hide();
-        }
-        private async void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            Main dialog = new Main();
-            await dialog.ShowAsync();
-        }
-
-        private void NextButton_Click(object sender, RoutedEventArgs e)
-        {
-            NextButtonTip.IsOpen = true;
-        }
-        private void HelpButton_Click(object sender, RoutedEventArgs e)
-        {
-            HelpButtonTip.IsOpen = true;
+            this.ContentFrame.Navigate(typeof(Main));
         }
     }
 }

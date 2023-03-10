@@ -129,14 +129,8 @@
     <Compile Include="Dialogs\MessageLogDialog.xaml.cs">
       <DependentUpon>MessageLogDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NewVMWizardDialogs\Compatibility.xaml.cs">
-      <DependentUpon>Compatibility.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NewVMWizardDialogs\Main.xaml.cs">
-      <DependentUpon>Main.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NewVMWizardDialogs\Installation.xaml.cs">
-      <DependentUpon>Installation.xaml</DependentUpon>
+    <Compile Include="NewVMWizard.xaml.cs">
+      <DependentUpon>NewVMWizard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\NotAvailableDialog.xaml.cs">
       <DependentUpon>NotAvailableDialog.xaml</DependentUpon>
@@ -146,6 +140,15 @@
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewVMWizardPages\Compatibility.xaml.cs">
+      <DependentUpon>Compatibility.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewVMWizardPages\Installation.xaml.cs">
+      <DependentUpon>Installation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewVMWizardPages\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CreatorsPage.xaml.cs">
       <DependentUpon>CreatorsPage.xaml</DependentUpon>
@@ -229,15 +232,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NewVMWizardDialogs\Compatibility.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="NewVMWizardDialogs\Main.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="NewVMWizardDialogs\Installation.xaml">
+    <Page Include="NewVMWizard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -252,6 +247,18 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewVMWizardPages\Compatibility.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewVMWizardPages\Installation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewVMWizardPages\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CreatorsPage.xaml">
       <SubType>Designer</SubType>

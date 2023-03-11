@@ -47,7 +47,7 @@
                     <MenuFlyoutItem Text="New Virtual Machine..." IsEnabled="False"/>
                     <MenuFlyoutItem Text="New Window" IsEnabled="False"/>
                     <MenuFlyoutItem Text="Open..." IsEnabled="False"/>
-                    <MenuFlyoutItem Text="Scan for Virtual Machines..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Scan for Virtual Machines..." Click="ScanForVMs_Click"/>
                     <MenuFlyoutItem Text="Configure Auto Start VMs" IsEnabled="False"/>
                     <MenuFlyoutItem Text="Close Tab" IsEnabled="False"/>
                     <MenuFlyoutSeparator/>

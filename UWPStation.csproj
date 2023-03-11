@@ -136,6 +136,9 @@
     <Compile Include="Dialogs\MessageLogDialog.xaml.cs">
       <DependentUpon>MessageLogDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ScanForVMs.xaml.cs">
+      <DependentUpon>ScanForVMs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\SnapshotManagerDialog.xaml.cs">
       <DependentUpon>SnapshotManagerDialog.xaml</DependentUpon>
     </Compile>
@@ -224,6 +227,12 @@
       <DependentUpon>ProjectPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScanForVMsPages\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScanForVMsPages\SelectVMs.xaml.cs">
+      <DependentUpon>SelectVMs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TestVMPage.xaml.cs">
       <DependentUpon>TestVMPage.xaml</DependentUpon>
     </Compile>
@@ -301,6 +310,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\MessageLogDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScanForVMs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -417,6 +430,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScanForVMsPages\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScanForVMsPages\SelectVMs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -148,5 +148,11 @@ namespace UWPStation
             TakeSnapshotDialog dialog = new TakeSnapshotDialog();
             await dialog.ShowAsync();
         }
+
+        private async void ScanForVMs_Click(object sender, RoutedEventArgs e)
+        {
+            ScanForVMs dialog = new ScanForVMs();
+            await dialog.ShowAsync();
+        }
     }
 }

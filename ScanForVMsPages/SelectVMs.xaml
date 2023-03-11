@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="UWPStation.ScanForVMsPages.SelectVMs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation.ScanForVMsPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
+    Width="600"
+	Height="550">
+
+    <Grid>
+        <TextBlock Text="Select virtual machines" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <TextBlock Text="Select virtual machines that you want to add into the library." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0"/>
+        <TextBlock Text="Virtual machines to add" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,66,0,0"/>
+        <TextBlock Text="VM Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,98,0,0"/>
+        <TextBlock Text="Path" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,98,0,0"/>
+        <Button Content="Select All" Margin="21,355,0,0" VerticalAlignment="Top"/>
+        <Button Content="Unselect All" Margin="107,355,0,0" VerticalAlignment="Top"/>
+        <TextBlock Text="Add to library" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,401,0,0"/>
+        <TextBlock Text="Add to:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,432,0,0"/>
+        <TextBox Text="My Computer" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" Margin="60,425,0,0" Width="434"/>
+        <Button Content="Browse..." Margin="499,425,0,0" VerticalAlignment="Top" Height="32"/>
+        <CheckBox Content="Match the file system folder hierarchy in the library" Margin="10,462,0,0" VerticalAlignment="Top"/>
+        <Button Content="Help" Margin="10,508,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BackButton" Content="Back" Margin="472,508,0,0" VerticalAlignment="Top" Click="BackButton_Click"/>
+        <Button x:Name="FinishButton" Content="Finish" Style="{StaticResource AccentButtonStyle}" Margin="530,508,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Page>

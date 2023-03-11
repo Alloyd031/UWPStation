@@ -66,33 +66,27 @@ namespace UWPStation
         {
             CoreApplication.Exit();
         }
-
         private async void Preferences_Click(object sender, RoutedEventArgs e)
         {
             await OpenPageAsWindowAsync(typeof(PreferencesPage));
         }
-
         private async void About_Click(object sender, RoutedEventArgs e)
         {
             await OpenPageAsWindowAsync(typeof(AboutPage));
         }
-
         private void Button_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
-
         private void Button_Tapped(object sender, TappedRoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
-
         private async void MessageLog_Click(object sender, RoutedEventArgs e)
         {
             MessageLogDialog dialog = new MessageLogDialog();
             await dialog.ShowAsync();
         }
-
         private async void LicenseKey_Click(object sender, RoutedEventArgs e)
         {
             EnterKeyDialog dialog = new EnterKeyDialog();
@@ -102,24 +96,20 @@ namespace UWPStation
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
-
         private void ActionCenter_Click(object sender, RoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
-
         private async void VirtualNetEditor_Click(object sender, RoutedEventArgs e)
         {
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
         }
-
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             this.LibraryPanel.Visibility = Visibility.Collapsed;
             this.TabsGrid.Margin = new Thickness (0, 0, 0, 0);
         }
-
         private void ShowHideLibrary_Click(object sender, RoutedEventArgs e)
         {
             Button btnE = sender as Button;
@@ -139,10 +129,24 @@ namespace UWPStation
             NewVMWizard dialog = new NewVMWizard();
             await dialog.ShowAsync();
         }
-
         private async void GoToTestVM_Click(object sender, RoutedEventArgs e)
         {
             await OpenPageAsWindowAsync(typeof(TestVMPage));
+        }
+        private async void SoftwareUpdates_Click(object sender, RoutedEventArgs e)
+        {
+            SoftwareUpdatesDialog dialog = new SoftwareUpdatesDialog();
+            await dialog.ShowAsync();
+        }
+        private async void SnapshotManager_Click(object sender, RoutedEventArgs e)
+        {
+            SnapshotManagerDialog dialog = new SnapshotManagerDialog();
+            await dialog.ShowAsync();
+        }
+        private async void TakeSnapshot_Click(object sender, RoutedEventArgs e)
+        {
+            TakeSnapshotDialog dialog = new TakeSnapshotDialog();
+            await dialog.ShowAsync();
         }
     }
 }

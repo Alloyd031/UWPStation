@@ -1,5 +1,5 @@
 ﻿<ContentDialog
-    x:Class="UWPStation.Dialogs.MessageLogDialog"
+    x:Class="UWPStation.Dialogs.SoftwareUpdatesDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPStation.Dialogs"
@@ -17,7 +17,7 @@
     <Border>
         <Grid
 			x:Name="ContainerGrid"
-            Width="440"
+		    Width="440"
 			Height="500"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
@@ -35,7 +35,7 @@
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
-					Text="Message Logs"/>
+					Text="Software Updates"/>
 
                 <Button
 					x:Name="CloseDialogButton"
@@ -51,8 +51,12 @@
                     <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
                 </Button>
             </Grid>
-            <TextBlock Text="Message Logs are not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
-            <Button x:Name="OKButton" Content="OK" Margin="387,414,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click"/>
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC5;" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,24,0,0"/>
+            <TextBlock Text="No pending updates." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,24,0,0" Grid.Row="1"/>
+            <ProgressBar Margin="67,64,10,0" Grid.Row="1" VerticalAlignment="Top" Height="22"/>
+            <RichEditBox Margin="67,91,10,47" Grid.Row="1" IsReadOnly="True"/>
+            <Button Content="Check for Updates" Margin="229,414,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+            <Button x:Name="CloseButton" Content="Close" Margin="372,414,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseButton_Click"/>
         </Grid>
     </Border>
 </ContentDialog>

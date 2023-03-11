@@ -17,9 +17,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace UWPStation.Dialogs
 {
-    public sealed partial class MessageLogDialog : ContentDialog
+    public sealed partial class SnapshotManagerDialog : ContentDialog
     {
-        public MessageLogDialog()
+        public SnapshotManagerDialog()
         {
             this.InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
-        private void OKButton_Click(object sender, RoutedEventArgs e)
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
         }

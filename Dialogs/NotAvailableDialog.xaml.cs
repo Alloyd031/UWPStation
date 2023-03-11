@@ -27,5 +27,9 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
     }
 }

@@ -55,8 +55,7 @@
             <TextBlock Text="License Key:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,55,0,0" Grid.Row="1"/>
             <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="89,50,10,0" Grid.Row="1"/>
             <Button x:Name="OKButton" Content="OK" Margin="277,134,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click"/>
-            <muxc:TeachingTip x:Name="ButtonTip" Target="{x:Bind OKButton}"
-                              Title="Lol" Subtitle="That's fake :D">
+            <muxc:TeachingTip x:Name="ButtonTip" Target="{x:Bind OKButton}" Title="Lol" Subtitle="That's fake :D">
             </muxc:TeachingTip>
             <Button x:Name="CancelButton" Content="Cancel" Margin="325,134,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CancelButton_Click"/>
         </Grid>

@@ -17,7 +17,8 @@
     <Border>
         <Grid
 			x:Name="ContainerGrid"
-			MaxHeight="790"
+		    Width="440"
+			Height="500"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
             <Grid.RowDefinitions>
@@ -51,6 +52,7 @@
                 </Button>
             </Grid>
             <TextBlock Text="This feature is not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+            <Button x:Name="OKButton" Content="OK" Margin="387,414,0,10" Grid.Row="1" VerticalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click"/>
         </Grid>
     </Border>
 </ContentDialog>

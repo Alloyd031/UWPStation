@@ -19,7 +19,7 @@
         </StackPanel>
         <TextBlock Text="Virtual printer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,181,0,0"/>
         <TextBlock Text="The virtual printer device allows a virtual machine with UWPTools to print to any printers configured on your host." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,205,0,0"/>
-        <CheckBox Content="Enable virtual printers" IsChecked="True" IsEnabled="False" Margin="19,229,0,0" VerticalAlignment="Top"/>
-        <Button Content="Change settings" Margin="187,229,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="EnablePrinters" Content="Enable virtual printers" IsChecked="True" IsEnabled="False" Margin="19,229,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ChangeSettingsButton" Content="Change settings" Margin="187,229,0,0" VerticalAlignment="Top" Click="ChangeSettingsButton_Click"/>
     </Grid>
 </Page>

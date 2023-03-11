@@ -17,9 +17,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace UWPStation.Dialogs
 {
-    public sealed partial class MessageLogDialog : ContentDialog
+    public sealed partial class TakeSnapshotDialog : ContentDialog
     {
-        public MessageLogDialog()
+        public TakeSnapshotDialog()
         {
             this.InitializeComponent();
         }
@@ -27,9 +27,13 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
-        private void OKButton_Click(object sender, RoutedEventArgs e)
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
+        }
+        private void TakeSnapshotButton_Click(object sender, RoutedEventArgs e)
+        {
+            TakeSnapshotButtonTip.IsOpen = true;
         }
     }
 }

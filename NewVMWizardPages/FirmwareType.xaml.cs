@@ -15,27 +15,20 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace UWPStation.Pages
+namespace UWPStation.NewVMWizardPages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class DevicesPage : Page
+    public sealed partial class FirmwareType : Page
     {
-        public DevicesPage()
+        public FirmwareType()
         {
             this.InitializeComponent();
         }
-        private void ChangeSettingsButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.EnablePrinters != null)
-            {
-                this.EnablePrinters.IsEnabled = true;
-            }        
-            if (this.ChangeSettingsButton != null)
-            {
-                this.ChangeSettingsButton.IsEnabled = false;
-            }     
+            this.Frame.GoBack();
         }
     }
 }

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -18,9 +17,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace UWPStation.Dialogs
 {
-    public sealed partial class EnterKeyDialog : ContentDialog
+    public sealed partial class ConnectToRemoteServer : ContentDialog
     {
-        public EnterKeyDialog()
+        public ConnectToRemoteServer()
         {
             this.InitializeComponent();
         }
@@ -34,7 +33,7 @@ namespace UWPStation.Dialogs
         }
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
-            OKButtonTip.IsOpen = true;
+            ConnectButtonTip.IsOpen = true;
         }
     }
 }

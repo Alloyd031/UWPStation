@@ -130,6 +130,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\ConnectToRemoteServer.xaml.cs">
+      <DependentUpon>ConnectToRemoteServer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\EnterKeyDialog.xaml.cs">
       <DependentUpon>EnterKeyDialog.xaml</DependentUpon>
     </Compile>
@@ -305,6 +308,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\ConnectToRemoteServer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

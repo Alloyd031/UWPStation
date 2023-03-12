@@ -44,14 +44,14 @@
                     Orientation="Horizontal">
             <muxc:MenuBar>
                 <muxc:MenuBarItem Title="File">
-                    <MenuFlyoutItem Text="New Virtual Machine..." IsEnabled="False"/>
-                    <MenuFlyoutItem Text="New Window" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="New Virtual Machine..." Click="CreateNewVM_Click"/>
+                    <MenuFlyoutItem Text="New Window" Click="NewWindow_Click"/>
                     <MenuFlyoutItem Text="Open..." IsEnabled="False"/>
                     <MenuFlyoutItem Text="Scan for Virtual Machines..." Click="ScanForVMs_Click"/>
                     <MenuFlyoutItem Text="Configure Auto Start VMs" IsEnabled="False"/>
                     <MenuFlyoutItem Text="Close Tab" IsEnabled="False"/>
                     <MenuFlyoutSeparator/>
-                    <MenuFlyoutItem Text="Connect to Server..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Connect to Server..." Click="ConnectToRemoteServer_Click"/>
                     <MenuFlyoutItem Text="Export to OVF..." IsEnabled="False"/>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="Exit" Click="Exit_Click"/>
@@ -199,9 +199,26 @@
                         <muxc:SymbolIconSource Symbol="Home"/>
                     </muxc:TabViewItem.IconSource>
                     <Grid>
-                        <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="UWPStation" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
-                        <Button Style="{StaticResource AccentButtonStyle}" Content="Create a New Virtual Machine" VerticalAlignment="Top" Width="222" Click="CreateVM_Click" Height="111" Margin="0,89,0,0" HorizontalAlignment="Center"/>
-                        <Button Content="Go to Test Virtual Machine" VerticalAlignment="Top" HorizontalAlignment="Center" Width="222" Height="111" Click="GoToTestVM_Click" Margin="0,205,0,0"/>
+                        <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="UWPStation" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,26,0,0"/>
+                        <Button Width="150" Click="CreateVM_Click" Height="150" Margin="0,105,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Grid>
+                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC8;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock Text="Create a New Virtual Machine" TextWrapping="Wrap" Margin="0,26,0,0" Height="38" VerticalAlignment="Top"/>
+                            </Grid>
+                        </Button>
+                        <Button Width="150" Height="150" Margin="0,260,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Grid>
+                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8A7;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock Text="Open a Virtual Machine" TextWrapping="Wrap" Margin="0,26,0,0" Height="38" VerticalAlignment="Top"/>
+                            </Grid>
+                        </Button>
+                        <Button Width="150" Height="150" Margin="0,415,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ConnectToRemoteServerButton_Click">
+                            <Grid>
+                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE13C;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock Text="Connect to a Remote Server" TextWrapping="Wrap" Margin="0,26,0,0" Height="38" VerticalAlignment="Top"/>
+                            </Grid>
+                        </Button>
+                        <Button Background="Transparent" BorderBrush="Transparent" Content="Go to Test Virtual Machine" VerticalAlignment="Top" HorizontalAlignment="Right" Click="GoToTestVM_Click" Margin="0,10,10,0"/>
                     </Grid>
                 </muxc:TabViewItem>
                 <muxc:TabViewItem x:Name="AlloydsOSTab" Header="Alloyd's OS">

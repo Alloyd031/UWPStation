@@ -136,6 +136,9 @@
     <Compile Include="Dialogs\MessageLogDialog.xaml.cs">
       <DependentUpon>MessageLogDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\RestoreSnapshot.xaml.cs">
+      <DependentUpon>RestoreSnapshot.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ScanForVMs.xaml.cs">
       <DependentUpon>ScanForVMs.xaml</DependentUpon>
     </Compile>
@@ -310,6 +313,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\MessageLogDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\RestoreSnapshot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

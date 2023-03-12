@@ -24,17 +24,14 @@ namespace UWPStation.Dialogs
         {
             this.InitializeComponent();
         }
-
         private void CloseDialogButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
         }
-
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
         }
-
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
             ButtonTip.IsOpen = true;

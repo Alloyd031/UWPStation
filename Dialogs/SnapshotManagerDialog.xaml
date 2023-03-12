@@ -57,9 +57,7 @@
             <Button Content="AutoProtect..." Margin="361,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
             <Button Content="Help" Margin="537,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
             <Button x:Name="CloseButton" Content="Close" Margin="474,488,0,0" Grid.Row="1" Click="CloseButton_Click" VerticalAlignment="Top"/>
-            <Border Grid.Row="1" VerticalAlignment="Top" Height="31" Margin="0,525,0,0">
-                <TextBlock Text="No snapshots selected" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="11,0,0,0"/>
-            </Border>
+
         </Grid>
     </Border>
 </ContentDialog>

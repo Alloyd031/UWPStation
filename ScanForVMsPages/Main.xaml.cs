@@ -28,7 +28,10 @@ namespace UWPStation.ScanForVMsPages
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SelectVMs));
+            if (this.LocationBox.Text == "Some location")
+            {
+                this.Frame.Navigate(typeof(SelectVMs));
+            }        
         }
     }
 }

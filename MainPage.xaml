@@ -163,7 +163,7 @@
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF5AC;" ToolTipService.ToolTip="Send Ctrl+Alt+Del to this virtual machine"/>
             <AppBarSeparator/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE109;" ToolTipService.ToolTip="Take a snapshot of this virtual machine" Click="TakeSnapshot_Click"/>
-            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF738;" ToolTipService.ToolTip="Revert this virtual machine to its parent snapshot"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF738;" ToolTipService.ToolTip="Revert this virtual machine to its parent snapshot" Click="RestoreSnapshot_Click"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF739;" ToolTipService.ToolTip="Manage snapshots for this virtual machine" Click="SnapshotManager_Click"/>
             <AppBarSeparator/>
             <Button Background="Transparent" BorderBrush="Transparent" x:Name="ShowHideLibrary" FontFamily="Segoe Fluent Icons" Content="&#xE90C;" ToolTipService.ToolTip="Show or hide library" Click="ShowHideLibrary_Click"/>
@@ -196,12 +196,20 @@
             <muxc:TabView VerticalAlignment="Stretch" HorizontalAlignment="Stretch" IsAddTabButtonVisible="False" TabWidthMode="SizeToContent">
                 <muxc:TabViewItem x:Name="HomeTab" Header="Home">
                     <muxc:TabViewItem.IconSource>
-                        <muxc:SymbolIconSource Symbol="Home" />
+                        <muxc:SymbolIconSource Symbol="Home"/>
                     </muxc:TabViewItem.IconSource>
                     <Grid>
                         <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="UWPStation" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
                         <Button Style="{StaticResource AccentButtonStyle}" Content="Create a New Virtual Machine" VerticalAlignment="Top" Width="222" Click="CreateVM_Click" Height="111" Margin="0,89,0,0" HorizontalAlignment="Center"/>
                         <Button Content="Go to Test Virtual Machine" VerticalAlignment="Top" HorizontalAlignment="Center" Width="222" Height="111" Click="GoToTestVM_Click" Margin="0,205,0,0"/>
+                    </Grid>
+                </muxc:TabViewItem>
+                <muxc:TabViewItem x:Name="AlloydsOSTab" Header="Alloyd's OS">
+                    <muxc:TabViewItem.IconSource>
+                        <muxc:SymbolIconSource Symbol="Placeholder"/>
+                    </muxc:TabViewItem.IconSource>
+                    <Grid>
+                        <TextBlock Text="Not available." Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </muxc:TabViewItem>
             </muxc:TabView>

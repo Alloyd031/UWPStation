@@ -154,5 +154,11 @@ namespace UWPStation
             ScanForVMs dialog = new ScanForVMs();
             await dialog.ShowAsync();
         }
+
+        private async void RestoreSnapshot_Click(object sender, RoutedEventArgs e)
+        {
+            RestoreSnapshot dialog = new RestoreSnapshot();
+            await dialog.ShowAsync();
+        }
     }
 }

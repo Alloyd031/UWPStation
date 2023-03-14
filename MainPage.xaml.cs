@@ -68,11 +68,13 @@ namespace UWPStation
         }
         private async void Preferences_Click(object sender, RoutedEventArgs e)
         {
-            await OpenPageAsWindowAsync(typeof(PreferencesPage));
+            PreferencesDialog dialog = new PreferencesDialog();
+            await dialog.ShowAsync();
         }
         private async void About_Click(object sender, RoutedEventArgs e)
         {
-            await OpenPageAsWindowAsync(typeof(AboutPage));
+            AboutDialog dialog = new AboutDialog();
+            await dialog.ShowAsync();
         }
         private void Button_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {

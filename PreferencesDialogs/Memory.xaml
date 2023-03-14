@@ -1,12 +1,13 @@
 ﻿<ContentDialog
-    x:Class="UWPStation.Dialogs.SnapshotManagerDialog"
+    x:Class="UWPStation.PreferencesDialogs.Memory"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UWPStation.Dialogs"
+    xmlns:local="using:UWPStation.PreferencesDialogs"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Style="{StaticResource DefaultContentDialogStyle}"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="ContentDialog_Loaded">
 
     <ContentDialog.Resources>
         <ResourceDictionary>
@@ -17,8 +18,8 @@
     <Border>
         <Grid
 			x:Name="ContainerGrid"
-		    Width="600"
-			Height="600"
+		    Width="1000"
+			Height="750"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
             <Grid.RowDefinitions>
@@ -30,12 +31,25 @@
 				Grid.Row="0"
 				Padding="8,0"
 				HorizontalAlignment="Stretch">
+                <Button
+                    x:Name="BackButton"
+					Width="36"
+					Height="36"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					AutomationProperties.Name="Back"
+					Background="Transparent"
+					BorderBrush="Transparent"
+					Click="BackButton_Click"
+					ToolTipService.ToolTip="Back">
+                    <FontIcon FontSize="12" Glyph="&#xE112;"/>
+                </Button>
+
                 <TextBlock
-					Padding="8,0,0,0"
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
-					Text="Snapshot Manager"/>
+					Text="Memory" Margin="49,0,0,0"/>
 
                 <Button
 					x:Name="CloseDialogButton"
@@ -51,15 +65,7 @@
                     <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
                 </Button>
             </Grid>
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC5;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,494,0,0" Grid.Row="1"/>
-            <CheckBox Content="Show AutoProtect snapshots" Margin="41,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-            <Button Content="Go To" Margin="296,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-            <Button Content="AutoProtect..." Margin="361,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-            <Button Content="Help" Margin="537,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-            <Button x:Name="CloseButton" Content="Close" Margin="474,488,0,0" Grid.Row="1" Click="CloseButton_Click" VerticalAlignment="Top"/>
-            <Border Grid.Row="1" VerticalAlignment="Bottom" Height="31">
-                <TextBlock Text="No items" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="11,0,0,0"/>
-            </Border>
+            <Frame x:Name="ContentFrame" Grid.Row="1"/>
         </Grid>
     </Border>
 </ContentDialog>

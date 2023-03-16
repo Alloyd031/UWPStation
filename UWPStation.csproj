@@ -145,39 +145,6 @@
     <Compile Include="PreferencesDialog.xaml.cs">
       <DependentUpon>PreferencesDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PreferencesDialogs\Devices.xaml.cs">
-      <DependentUpon>Devices.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\Display.xaml.cs">
-      <DependentUpon>Display.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\Feedback.xaml.cs">
-      <DependentUpon>Feedback.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\HotKeys.xaml.cs">
-      <DependentUpon>HotKeys.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\Input.xaml.cs">
-      <DependentUpon>Input.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\Memory.xaml.cs">
-      <DependentUpon>Memory.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\Priority.xaml.cs">
-      <DependentUpon>Priority.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\Unity.xaml.cs">
-      <DependentUpon>Unity.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\Updates.xaml.cs">
-      <DependentUpon>Updates.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\USB.xaml.cs">
-      <DependentUpon>USB.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PreferencesDialogs\Workspace.xaml.cs">
-      <DependentUpon>Workspace.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ScanForVMs.xaml.cs">
       <DependentUpon>ScanForVMs.xaml</DependentUpon>
     </Compile>
@@ -361,50 +328,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PreferencesDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\Devices.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\Display.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\Feedback.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\HotKeys.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\Input.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\Memory.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\Priority.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\Unity.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\Updates.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\USB.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PreferencesDialogs\Workspace.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

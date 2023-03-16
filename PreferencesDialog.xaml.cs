@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UWPStation.PreferencesDialogs;
+using UWPStation.Pages;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -28,71 +28,58 @@ namespace UWPStation
         {
             Hide();
         }
-        private async void WorkspaceButton_Click(object sender, RoutedEventArgs e)
+        private void NavigationView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
-            Hide();
-            Workspace dialog = new Workspace();
-            await dialog.ShowAsync();
-        }
-        private async void InputButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            Input dialog = new Input();
-            await dialog.ShowAsync();
-        }
-        private async void HotKeysButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            HotKeys dialog = new HotKeys();
-            await dialog.ShowAsync();
-        }
-        private async void DisplayButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            Display dialog = new Display();
-            await dialog.ShowAsync();
-        }
-        private async void UnityButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            Unity dialog = new Unity();
-            await dialog.ShowAsync();
-        }
-        private async void USBButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            USB dialog = new USB();
-            await dialog.ShowAsync();
-        }
-        private async void UpdatesButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            Updates dialog = new Updates();
-            await dialog.ShowAsync();
-        }
-        private async void FeedbackButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            Feedback dialog = new Feedback();
-            await dialog.ShowAsync();
-        }
-        private async void MemoryButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            Memory dialog = new Memory();
-            await dialog.ShowAsync();
-        }
-        private async void PriorityButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            Priority dialog = new Priority();
-            await dialog.ShowAsync();
-        }
-        private async void DevicesButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            Devices dialog = new Devices();
-            await dialog.ShowAsync();
+            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            navOptions.TransitionInfoOverride = args.RecommendedNavigationTransitionInfo;
+            navOptions.IsNavigationStackEnabled = false;
+
+            Type pageType = null;
+            if (args.SelectedItem == WorkspaceItem)
+            {
+                pageType = typeof(WorkspacePage);
+            }
+            else if (args.SelectedItem == InputItem)
+            {
+                pageType = typeof(InputPage);
+            }
+            else if (args.SelectedItem == HotKeysItem)
+            {
+                pageType = typeof(HotKeysPage);
+            }
+            else if (args.SelectedItem == DisplayItem)
+            {
+                pageType = typeof(DisplayPage);
+            }
+            else if (args.SelectedItem == UnityItem)
+            {
+                pageType = typeof(UnityPage);
+            }
+            else if (args.SelectedItem == USBItem)
+            {
+                pageType = typeof(USBPage);
+            }
+            else if (args.SelectedItem == UpdatesItem)
+            {
+                pageType = typeof(UpdatesPage);
+            }
+            else if (args.SelectedItem == FeedbackItem)
+            {
+                pageType = typeof(FeedbackPage);
+            }
+            else if (args.SelectedItem == MemoryItem)
+            {
+                pageType = typeof(MemoryPage);
+            }
+            else if (args.SelectedItem == PriorityItem)
+            {
+                pageType = typeof(PriorityPage);
+            }
+            else if (args.SelectedItem == DevicesItem)
+            {
+                pageType = typeof(DevicesPage);
+            }
+            ContentFrame.NavigateToType(pageType, null, navOptions);
         }
     }
 }

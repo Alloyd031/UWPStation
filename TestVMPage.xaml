@@ -11,7 +11,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="32" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="120" />
             <RowDefinition Height="*" />
@@ -26,56 +26,43 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Image Source="/Assets/StoreLogo.png"
-                   Width="16"
-                   Height="16"
-                   Grid.Column="1" />
-            <TextBlock Text="Test Virtual Machine"
-                       Style="{StaticResource CaptionTextBlockStyle}"
-                       VerticalAlignment="Center"
-                       Grid.Column="3"
-                       x:Name="tea" />
+                   Width="32"
+                   Height="23" Grid.ColumnSpan="2" Margin="10,13,6,14"/>
         </Grid>
-        <Grid Grid.Row="1">
-            <Button x:Name="PowerOnButton"
+        <Grid Grid.Row="2" Grid.RowSpan="2" Background="{ThemeResource SystemControlAcrylicWindowBrush}" Margin="0,0,0,40"/>
+        <Button x:Name="PowerOnButton"
                 Background="Transparent"
                 BorderBrush="Transparent"
-                ToolTipService.ToolTip="Power On Virtual Machine">
-                <SymbolIcon Symbol="Play"/>
-            </Button>
-            <Button x:Name="TButton"
+                ToolTipService.ToolTip="Power On Virtual Machine" Margin="54,0,0,0">
+            <SymbolIcon Symbol="Play"/>
+        </Button>
+        <Button x:Name="TButton"
                 Background="Transparent"
                 BorderBrush="Transparent"
-                ToolTipService.ToolTip="Shut Down Virtual Machine" Margin="44,0,0,0">
-                <SymbolIcon Symbol="Stop"/>
+                ToolTipService.ToolTip="Shut Down Virtual Machine" Margin="98,0,0,0">
+            <SymbolIcon Symbol="Stop"/>
+        </Button>
+        <Grid x:Name="Taskbar" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Grid.Row="3" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+            <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="StartButton" ToolTipService.ToolTip="Start">
+                <Button.Flyout>
+                    <Flyout>
+                        <Grid>
+                            <AutoSuggestBox PlaceholderText="Search for apps, settings and documents" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        </Grid>
+                    </Flyout>
+                </Button.Flyout>
+                <TextBlock FontFamily="HoloLens MDL2 Assets" Text="&#xE782;" VerticalAlignment="Center" Margin="0" FontSize="16"/>
             </Button>
-        </Grid>
-        <Grid Grid.Row="2" Grid.RowSpan="2" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <StackPanel x:Name="Taskbar" VerticalAlignment="Bottom" Orientation="Horizontal">
-                <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="StartButton" ToolTipService.ToolTip="Start">
-                    <Button.Content>
-                        <TextBlock FontFamily="HoloLens MDL2 Assets" Text="&#xE782;" VerticalAlignment="Center" Margin="0" FontSize="16"/>
-                    </Button.Content>
-                    <Button.Flyout>
-                        <Flyout>
-                            <Grid>
-                                <AutoSuggestBox PlaceholderText="Search for apps, settings and documents" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                            </Grid>
-                        </Flyout>
-                    </Button.Flyout>
-                </Button>
-                <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="SearchButton" ToolTipService.ToolTip="Search">
-                    <Button.Content>
-                        <TextBlock FontFamily="Segoe Fluent Icons" Text="&#xE721;" VerticalAlignment="Center" Margin="0" FontSize="16"/>
-                    </Button.Content>
-                    <Button.Flyout>
-                        <Flyout>
-                            <Grid>
-                                <AutoSuggestBox PlaceholderText="Type here to search" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                            </Grid>
-                        </Flyout>
-                    </Button.Flyout>
-                </Button>
-            </StackPanel>
+            <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="SearchButton" ToolTipService.ToolTip="Search" Margin="40,0,0,0">
+                <Button.Flyout>
+                    <Flyout>
+                        <Grid>
+                            <AutoSuggestBox PlaceholderText="Type here to search" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        </Grid>
+                    </Flyout>
+                </Button.Flyout>
+                <TextBlock FontFamily="Segoe Fluent Icons" Text="&#xE721;" VerticalAlignment="Center" Margin="0" FontSize="16"/>
+            </Button>
         </Grid>
     </Grid>
 </Page>

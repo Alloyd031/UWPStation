@@ -26,29 +26,22 @@
                 <RowDefinition Height="44" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-
-            <Grid
-				Grid.Row="0"
-				Padding="8,0"
-				HorizontalAlignment="Stretch">
+            <Grid>
+                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
                 <TextBlock
-					Padding="8,0,0,0"
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
-					Text="Scan for Virtual Machines"/>
-
+					Text="Scan for Virtual Machines" Margin="49,0,0,0"/>
                 <Button
 					x:Name="CloseDialogButton"
-					Width="36"
-					Height="36"
-					HorizontalAlignment="Right"
-					VerticalAlignment="Center"
+					Width="44"
+					Height="44"
 					AutomationProperties.Name="Close"
 					Background="Transparent"
 					BorderBrush="Transparent"
 					Click="CloseDialogButton_Click"
-					ToolTipService.ToolTip="Close">
+					ToolTipService.ToolTip="Close" Margin="556,0,0,0">
                     <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
                 </Button>
             </Grid>

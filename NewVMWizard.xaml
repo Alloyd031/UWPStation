@@ -26,7 +26,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid>
-                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
+                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC8;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
                 <TextBlock
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"

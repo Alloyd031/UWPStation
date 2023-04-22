@@ -90,35 +90,35 @@
                 </Grid>
             </Button>
             <Button x:Name="UpdatesButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="UpdatesButton_Click" HorizontalAlignment="Center" Margin="0,257,0,0">
+                    Background="Transparent" BorderBrush="Transparent" Click="UpdatesButton_Click" HorizontalAlignment="Center" Margin="0,252,0,0">
                 <Grid Margin="-75,-21,-75,-21" >
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE777;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
                     <TextBlock Text="Updates" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Grid>
             </Button>
             <Button x:Name="FeedbackButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="FeedbackButton_Click" HorizontalAlignment="Center" Margin="0,299,0,0">
+                    Background="Transparent" BorderBrush="Transparent" Click="FeedbackButton_Click" HorizontalAlignment="Center" Margin="0,294,0,0">
                 <Grid Margin="-75,-21,-75,-21" >
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xed15;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
                     <TextBlock Text="Feedback" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Grid>
             </Button>
             <Button x:Name="MemoryButton" Height="42" Width="150"
-                    Background="Transparent" BorderBrush="Transparent" Click="MemoryButton_Click" HorizontalAlignment="Center" Margin="0,341,0,0" VerticalAlignment="Top">
+                    Background="Transparent" BorderBrush="Transparent" Click="MemoryButton_Click" HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top">
                 <Grid Margin="-75,-21,-75,-21" >
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE950;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
                     <TextBlock Text="Memory" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Grid>
             </Button>
             <Button x:Name="PriorityButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="PriorityButton_Click" Margin="0,383,0,0" HorizontalAlignment="Center">
+                    Background="Transparent" BorderBrush="Transparent" Click="PriorityButton_Click" Margin="0,378,0,0" HorizontalAlignment="Center">
                 <Grid Margin="-75,-21,-75,-21" >
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE182;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
                     <TextBlock Text="Priority" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Grid>
             </Button>
             <Button x:Name="DevicesButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="DevicesButton_Click" HorizontalAlignment="Center" Margin="0,425,0,0">
+                    Background="Transparent" BorderBrush="Transparent" Click="DevicesButton_Click" HorizontalAlignment="Center" Margin="0,420,0,0">
                 <Grid Margin="-75,-21,-75,-21" >
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE772;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
                     <TextBlock Text="Devices" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>

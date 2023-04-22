@@ -161,6 +161,11 @@ namespace UWPStation
             NewVMWizard dialog = new NewVMWizard();
             await dialog.ShowAsync();
         }
+        private async void OpenVM_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
         private async void NewWindow_Click(object sender, RoutedEventArgs e)
         {
             await OpenPageAsWindowAsync(typeof(MainPage));

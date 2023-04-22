@@ -242,6 +242,9 @@
     <Compile Include="TestVMPage.xaml.cs">
       <DependentUpon>TestVMPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WelcomeInDialog.xaml.cs">
+      <DependentUpon>WelcomeInDialog.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -456,6 +459,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TestVMPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WelcomeInDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

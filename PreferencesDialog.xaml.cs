@@ -28,58 +28,61 @@ namespace UWPStation
         {
             Hide();
         }
-        private void NavigationView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
+        private void OKButton_Click(object sender, RoutedEventArgs e)
         {
-            FrameNavigationOptions navOptions = new FrameNavigationOptions();
-            navOptions.TransitionInfoOverride = args.RecommendedNavigationTransitionInfo;
-            navOptions.IsNavigationStackEnabled = false;
-
-            Type pageType = null;
-            if (args.SelectedItem == WorkspaceItem)
-            {
-                pageType = typeof(WorkspacePage);
-            }
-            else if (args.SelectedItem == InputItem)
-            {
-                pageType = typeof(InputPage);
-            }
-            else if (args.SelectedItem == HotKeysItem)
-            {
-                pageType = typeof(HotKeysPage);
-            }
-            else if (args.SelectedItem == DisplayItem)
-            {
-                pageType = typeof(DisplayPage);
-            }
-            else if (args.SelectedItem == UnityItem)
-            {
-                pageType = typeof(UnityPage);
-            }
-            else if (args.SelectedItem == USBItem)
-            {
-                pageType = typeof(USBPage);
-            }
-            else if (args.SelectedItem == UpdatesItem)
-            {
-                pageType = typeof(UpdatesPage);
-            }
-            else if (args.SelectedItem == FeedbackItem)
-            {
-                pageType = typeof(FeedbackPage);
-            }
-            else if (args.SelectedItem == MemoryItem)
-            {
-                pageType = typeof(MemoryPage);
-            }
-            else if (args.SelectedItem == PriorityItem)
-            {
-                pageType = typeof(PriorityPage);
-            }
-            else if (args.SelectedItem == DevicesItem)
-            {
-                pageType = typeof(DevicesPage);
-            }
-            ContentFrame.NavigateToType(pageType, null, navOptions);
+            Hide();
+        }
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
+        private void ContentDialog_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(WorkspacePage));
+        }
+        private void WorkspaceButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(WorkspacePage));
+        }
+        private void InputButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(InputPage));
+        }
+        private void HotKeysButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(HotKeysPage));
+        }
+        private void DisplayButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(DisplayPage));
+        }
+        private void UnityButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(UnityPage));
+        }
+        private void USBButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(USBPage));
+        }
+        private void UpdatesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(UpdatesPage));
+        }
+        private void FeedbackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(FeedbackPage));
+        }
+        private void MemoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(MemoryPage));
+        }
+        private void PriorityButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(PriorityPage));
+        }
+        private void DevicesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(DevicesPage));
         }
     }
 }

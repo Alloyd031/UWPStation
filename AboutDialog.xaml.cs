@@ -36,22 +36,13 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
-        private void NavigationView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
+        private void InfoButton_Click(object sender, RoutedEventArgs e)
         {
-            FrameNavigationOptions navOptions = new FrameNavigationOptions();
-            navOptions.TransitionInfoOverride = args.RecommendedNavigationTransitionInfo;
-            navOptions.IsNavigationStackEnabled = false;
-
-            Type pageType = null;
-            if (args.SelectedItem == InfoItem)
-            {
-                pageType = typeof(InfoPage);
-            }
-            else if (args.SelectedItem == CreatorsItem)
-            {
-                pageType = typeof(CreatorsPage);
-            }
-            ContentFrame.NavigateToType(pageType, null, navOptions);
+            this.ContentFrame.Navigate(typeof(InfoPage));
+        }
+        private void CreatorsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContentFrame.Navigate(typeof(CreatorsPage));
         }
     }
 }

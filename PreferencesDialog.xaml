@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Style="{StaticResource DefaultContentDialogStyle}"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="ContentDialog_Loaded">
 
     <ContentDialog.Resources>
         <ResourceDictionary>
@@ -15,110 +16,120 @@
             <Thickness x:Key="ContentDialogPadding">0</Thickness>
         </ResourceDictionary>
     </ContentDialog.Resources>
-    <Border>
-        <Grid
+    <Grid
 			x:Name="ContainerGrid"
-		    Width="1100"
+		    Width="900"
 			Height="750"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="44" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-            <Grid
-				Grid.Row="0"
-				Padding="8,0"
-				HorizontalAlignment="Stretch">
-                <TextBlock
-					Padding="8,0,0,0"
+        <Grid>
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE115;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
+            <TextBlock
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
-					Text="Preferences"/>
-
-                <Button
+					Text="Preferences" Margin="49,0,0,0"/>
+            <Button
 					x:Name="CloseDialogButton"
-					Width="36"
-					Height="36"
-					HorizontalAlignment="Right"
-					VerticalAlignment="Center"
+					Width="44"
+					Height="44"
 					AutomationProperties.Name="Close"
 					Background="Transparent"
 					BorderBrush="Transparent"
 					Click="CloseDialogButton_Click"
-					ToolTipService.ToolTip="Close">
-                    <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
-                </Button>
-            </Grid>
-            <muxc:NavigationView IsBackButtonVisible="Collapsed" 
-                             IsPaneToggleButtonVisible="False"
-                             Grid.Row="1"
-                             IsSettingsVisible="False"
-                             PaneDisplayMode="Left"
-                             SelectionChanged="NavigationView_SelectionChanged">
-                <muxc:NavigationView.MenuItems>
-                    <muxc:NavigationViewItem x:Name="WorkspaceItem" Tag="Info" Content="Workspace" IsSelected="True">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE821;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="InputItem" Tag="Input" Content="Input">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE961;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="HotKeysItem" Tag="Input" Content="Hot Keys">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE84B;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="DisplayItem" Tag="Input" Content="Display">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE770;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="UnityItem" Tag="Input" Content="Unity">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE2AE;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="USBItem" Tag="Input" Content="USB">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE88E;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="UpdatesItem" Tag="Input" Content="Updates">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE777;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="FeedbackItem" Tag="Input" Content="Feedback">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xed15;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="MemoryItem" Tag="Input" Content="Memory">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE950;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="PriorityItem" Tag="Input" Content="Priority">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE182;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="DevicesItem" Tag="Input" Content="Devices">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE772;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                </muxc:NavigationView.MenuItems>
-                <ScrollViewer>
-                    <Frame x:Name="ContentFrame"/>
-                </ScrollViewer>
-            </muxc:NavigationView>
+					ToolTipService.ToolTip="Close" Margin="856,0,0,0">
+                <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
+            </Button>
         </Grid>
-    </Border>
+        <Grid Grid.Row="1" Width="150" HorizontalAlignment="Left">
+            <Button x:Name="WorkspaceButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="WorkspaceButton_Click" HorizontalAlignment="Center">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE821;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Workspace" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="InputButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="InputButton_Click" HorizontalAlignment="Center" Margin="0,42,0,0">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE961;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Input" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="HotKeysButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="HotKeysButton_Click" HorizontalAlignment="Center" Margin="0,84,0,0">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE84B;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Hot Keys" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="DisplayButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="DisplayButton_Click" HorizontalAlignment="Center" Margin="0,126,0,0">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE770;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Display" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="UnityButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="UnityButton_Click" HorizontalAlignment="Center" Margin="0,168,0,0">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE2AE;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Unity" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="USBButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="USBButton_Click" HorizontalAlignment="Center" Margin="0,210,0,0">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE88E;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="USB" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="UpdatesButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="UpdatesButton_Click" HorizontalAlignment="Center" Margin="0,257,0,0">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE777;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Updates" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="FeedbackButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="FeedbackButton_Click" HorizontalAlignment="Center" Margin="0,299,0,0">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xed15;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Feedback" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="MemoryButton" Height="42" Width="150"
+                    Background="Transparent" BorderBrush="Transparent" Click="MemoryButton_Click" HorizontalAlignment="Center" Margin="0,341,0,0" VerticalAlignment="Top">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE950;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Memory" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="PriorityButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="PriorityButton_Click" Margin="0,383,0,0" HorizontalAlignment="Center">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE182;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Priority" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="DevicesButton" Height="42" Width="150" VerticalAlignment="Top"
+                    Background="Transparent" BorderBrush="Transparent" Click="DevicesButton_Click" HorizontalAlignment="Center" Margin="0,425,0,0">
+                <Grid Margin="-75,-21,-75,-21" >
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE772;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
+                    <TextBlock Text="Devices" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Margin="150,0,0,50">
+            <Frame x:Name="ContentFrame"/>
+        </ScrollViewer>
+        <Button x:Name="HelpButton" Content="Help" Grid.Row="1" VerticalAlignment="Top" Margin="837,664,0,0"/>
+        <Button x:Name="CancelButton" Content="Cancel" Grid.Row="1" Click="CancelButton_Click" VerticalAlignment="Top" Margin="767,664,0,0"/>
+        <Button x:Name="OKButton" Content="OK" Grid.Row="1" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click" VerticalAlignment="Top" Margin="719,664,0,0"/>
+    </Grid>
 </ContentDialog>

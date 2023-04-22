@@ -15,19 +15,15 @@ using Windows.UI.Xaml.Navigation;
 
 // The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace UWPStation.Dialogs
+namespace UWPStation
 {
-    public sealed partial class SettingsDialog : ContentDialog
+    public sealed partial class WelcomeInDialog : ContentDialog
     {
-        public SettingsDialog()
+        public WelcomeInDialog()
         {
             this.InitializeComponent();
         }
-        private void CloseDialogButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-        }
-        private void OKButton_Click(object sender, RoutedEventArgs e)
+        private void CloseWindow_Click(object sender, RoutedEventArgs e)
         {
             Hide();
         }

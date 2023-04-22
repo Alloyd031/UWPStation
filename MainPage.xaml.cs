@@ -33,10 +33,6 @@ namespace UWPStation
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public string FullString => ApplicationName + SeparatorType + PlaceholderString;
-        public string PlaceholderString => "PREVIEW";
-        public string SeparatorType => " - ";
-        public string ApplicationName => "UWPStation";
         public MainPage()
         {
             this.InitializeComponent();
@@ -150,36 +146,30 @@ namespace UWPStation
             TakeSnapshotDialog dialog = new TakeSnapshotDialog();
             await dialog.ShowAsync();
         }
-
         private async void ScanForVMs_Click(object sender, RoutedEventArgs e)
         {
             ScanForVMs dialog = new ScanForVMs();
             await dialog.ShowAsync();
         }
-
         private async void RestoreSnapshot_Click(object sender, RoutedEventArgs e)
         {
             RestoreSnapshot dialog = new RestoreSnapshot();
             await dialog.ShowAsync();
         }
-
         private async void CreateNewVM_Click(object sender, RoutedEventArgs e)
         {
             NewVMWizard dialog = new NewVMWizard();
             await dialog.ShowAsync();
         }
-
         private async void NewWindow_Click(object sender, RoutedEventArgs e)
         {
             await OpenPageAsWindowAsync(typeof(MainPage));
         }
-
         private async void ConnectToRemoteServerButton_Click(object sender, RoutedEventArgs e)
         {
             ConnectToRemoteServer dialog = new ConnectToRemoteServer();
             await dialog.ShowAsync();
         }
-
         private async void ConnectToRemoteServer_Click(object sender, RoutedEventArgs e)
         {
             ConnectToRemoteServer dialog = new ConnectToRemoteServer();

@@ -15,54 +15,46 @@
             <Thickness x:Key="ContentDialogPadding">0</Thickness>
         </ResourceDictionary>
     </ContentDialog.Resources>
-    <Border>
-        <Grid
+    <Grid
 			x:Name="ContainerGrid"
 			Height="300"
             Width="500"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="44" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-            <Grid
-				Grid.Row="0"
-				Padding="8,0"
-				HorizontalAlignment="Stretch">
-                <TextBlock
-					Padding="8,0,0,0"
+        <Grid>
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE13C;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
+            <TextBlock
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
-					Text="Connect to Server"/>
-
-                <Button
+					Text="Connect to Remote Server" Margin="49,0,0,0"/>
+            <Button
 					x:Name="CloseDialogButton"
-					Width="36"
-					Height="36"
-					HorizontalAlignment="Right"
-					VerticalAlignment="Center"
+					Width="44"
+					Height="44"
 					AutomationProperties.Name="Close"
 					Background="Transparent"
 					BorderBrush="Transparent"
 					Click="CloseDialogButton_Click"
-					ToolTipService.ToolTip="Close">
-                    <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
-                </Button>
-            </Grid>
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE192;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,17,0,0" Grid.Row="1"/>
-            <TextBlock Text="Select the remote server that you want to connect to." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="54,17,0,0" Grid.Row="1"/>
-            <TextBlock Text="Server name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,48,0,0" Grid.Row="1"/>
-            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,41,0,0" Grid.Row="1" Width="388"/>
-            <TextBlock Text="User name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,85,0,0" Grid.Row="1"/>
-            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,78,0,0" Grid.Row="1" Width="388"/>
-            <TextBlock Text="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,122,0,0" Grid.Row="1"/>
-            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,115,0,0" Grid.Row="1" Width="388"/>
-            <Button x:Name="ConnectButton" Content="Connect" Margin="344,214,0,0" Grid.Row="1" VerticalAlignment="Top" Click="OKButton_Click"/>
-            <muxc:TeachingTip x:Name="ConnectButtonTip" Target="{x:Bind ConnectButton}" Title="Error" Subtitle="Connecting to remote servers is not supported." Margin="10,192,-10,20" Grid.Row="1"/>
-            <Button x:Name="CancelButton" Content="Cancel" Margin="425,214,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CancelButton_Click"/>
+					ToolTipService.ToolTip="Close" Margin="456,0,0,0">
+                <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
+            </Button>
         </Grid>
-    </Border>
+        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE192;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,17,0,0" Grid.Row="1"/>
+        <TextBlock Text="Select the remote server that you want to connect to." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="54,17,0,0" Grid.Row="1"/>
+        <TextBlock Text="Server name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,48,0,0" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,41,0,0" Grid.Row="1" Width="388"/>
+        <TextBlock Text="User name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,85,0,0" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,78,0,0" Grid.Row="1" Width="388"/>
+        <TextBlock Text="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,122,0,0" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,115,0,0" Grid.Row="1" Width="388"/>
+        <Button x:Name="ConnectButton" Content="Connect" Margin="344,214,0,0" Grid.Row="1" VerticalAlignment="Top" Click="OKButton_Click"/>
+        <muxc:TeachingTip x:Name="ConnectButtonTip" Target="{x:Bind ConnectButton}" Title="Error" Subtitle="Connecting to remote servers is not supported." Margin="10,192,-10,20" Grid.Row="1"/>
+        <Button x:Name="CancelButton" Content="Cancel" Margin="425,214,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CancelButton_Click"/>
+    </Grid>
 </ContentDialog>

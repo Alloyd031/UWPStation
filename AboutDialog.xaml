@@ -28,51 +28,42 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Grid
-				Grid.Row="0"
-				Padding="8,0"
-				HorizontalAlignment="Stretch">
+            <Grid>
+                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE946;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
                 <TextBlock
-					Padding="8,0,0,0"
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
-					Text="About UWPStation"/>
-
+					Text="About UWPStation" Margin="49,0,0,0"/>
                 <Button
 					x:Name="CloseDialogButton"
-					Width="36"
-					Height="36"
-					HorizontalAlignment="Right"
-					VerticalAlignment="Center"
+					Width="44"
+					Height="44"
 					AutomationProperties.Name="Close"
 					Background="Transparent"
 					BorderBrush="Transparent"
 					Click="CloseDialogButton_Click"
-					ToolTipService.ToolTip="Close">
+					ToolTipService.ToolTip="Close" Margin="756,0,0,0">
                     <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
                 </Button>
             </Grid>
-            <muxc:NavigationView IsBackButtonVisible="Collapsed" 
-                             IsPaneToggleButtonVisible="False"
-                             Grid.Row="1"
-                             IsSettingsVisible="False"
-                             PaneDisplayMode="Top"
-                             SelectionChanged="NavigationView_SelectionChanged" Margin="0,0,0,47">
-                <muxc:NavigationView.MenuItems>
-                    <muxc:NavigationViewItem x:Name="InfoItem" Tag="Info" Content="Info" IsSelected="True">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE946;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                    <muxc:NavigationViewItem x:Name="CreatorsItem" Tag="Creators" Content="Creators">
-                        <muxc:NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE125;"/>
-                        </muxc:NavigationViewItem.Icon>
-                    </muxc:NavigationViewItem>
-                </muxc:NavigationView.MenuItems>
-                <Frame x:Name="ContentFrame"/>
-            </muxc:NavigationView>
+            <Grid Grid.Row="1" Height="49" VerticalAlignment="Top">
+                <Button x:Name="InfoButton" Height="49" Width="112"
+                    Background="Transparent" BorderBrush="Transparent" Click="InfoButton_Click" Margin="10,0,0,0">
+                    <Grid Margin="-53,-24,-56,-25">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE946;" Width="29" Height="29" Margin="0,0,81,0"/>
+                        <TextBlock Text="Info" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
+                    </Grid>
+                </Button>
+                <Button x:Name="CreatorsButton" Height="49" Width="112"
+                    Background="Transparent" BorderBrush="Transparent" Click="CreatorsButton_Click" Margin="127,0,0,0">
+                    <Grid Margin="-53,-24,-56,-25">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE125;" Width="29" Height="29" Margin="0,0,81,0"/>
+                        <TextBlock Text="Creators" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
+                    </Grid>
+                </Button>
+            </Grid>
+            <Frame x:Name="ContentFrame" Margin="0,49,0,50" Grid.Row="1"/>
             <Button x:Name="OKButton" Content="OK" Margin="747,514,0,0" Grid.Row="1" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click" VerticalAlignment="Top"/>
         </Grid>
     </Border>

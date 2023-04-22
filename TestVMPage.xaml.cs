@@ -30,10 +30,19 @@ namespace UWPStation
             this.InitializeComponent();
             Window.Current.SetTitleBar(AppTitleBar);
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
-
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ButtonBackgroundColor = Colors.Transparent;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+        }
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            WelcomeInDialog dialog = new WelcomeInDialog();
+            await dialog.ShowAsync();
+        }
+        private async void WelcomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            WelcomeInDialog dialog = new WelcomeInDialog();
+            await dialog.ShowAsync();
         }
     }
 }

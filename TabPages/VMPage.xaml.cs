@@ -29,11 +29,6 @@ namespace UWPStation
         {
             this.InitializeComponent();
         }
-        private async void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            WelcomeInDialog dialog = new WelcomeInDialog();
-            await dialog.ShowAsync();
-        }
         private async void WelcomeButton_Click(object sender, RoutedEventArgs e)
         {
             WelcomeInDialog dialog = new WelcomeInDialog();

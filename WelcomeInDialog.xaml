@@ -70,7 +70,7 @@
                 <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
             </Button>
         </Grid>
-        <TextBlock Text="Welcome to the Test Virtual Machine page!" Grid.Row="1" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="Welcome to Alloyd's OS!" Grid.Row="1" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button x:Name="CloseWindow" Content="Close this window" Margin="754,10,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseWindow_Click"/>
     </Grid>
 </ContentDialog>

@@ -216,5 +216,17 @@ namespace UWPStation
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
+        private void GoToHomeTab_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(HomePage));
+        }
+        private void GoToVMTab_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(VMPage));
+        }
+        private void GoToHome_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(HomePage));
+        }
     }
 }

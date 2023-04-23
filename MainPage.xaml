@@ -112,9 +112,10 @@
                     <MenuFlyoutItem Text="Settings..." IsEnabled="False"/>
                 </muxc:MenuBarItem>
                 <muxc:MenuBarItem Title="Tabs">
-                    <MenuFlyoutItem Text="No tabs" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Home" Click="GoToHomeTab_Click"/>
+                    <MenuFlyoutItem Text="Alloyd's OS" Click="GoToVMTab_Click"/>
                     <MenuFlyoutSeparator/>
-                    <MenuFlyoutItem Text="Go to Home Tab" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Go to Home Tab" Click="GoToHome_Click"/>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="Next Tab" IsEnabled="False"/>
                     <MenuFlyoutItem Text="Previous Tab" IsEnabled="False"/>
@@ -195,7 +196,7 @@
         <Grid x:Name="TabsGrid" Grid.RowSpan="2" Grid.Row="2" Margin="200,0,0,0">
             <Grid x:Name="Tabs" VerticalAlignment="Top" Height="69">
                 <Button x:Name="HomeTab" Height="49" Width="175"
-                    Background="Transparent" BorderBrush="Transparent" Click="HomeTab_Click" Margin="10,0,0,0">
+                        Click="HomeTab_Click" Margin="10,0,0,0">
                     <Grid Margin="-88,-24,-87,-25">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE10F;" Width="29" Height="29" Margin="10,10,136,10"/>
                         <TextBlock Text="Home" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
@@ -205,7 +206,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="VMTab" Height="49" Width="175"
-                    Background="Transparent" BorderBrush="Transparent" Click="VMTab_Click" Margin="190,0,0,0">
+                        Click="VMTab_Click" Margin="190,0,0,0">
                     <Grid Margin="-88,-24,-87,-25">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" Width="29" Height="29" Margin="10,10,136,10"/>
                         <TextBlock Text="Alloyd's OS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>

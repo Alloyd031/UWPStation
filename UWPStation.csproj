@@ -130,6 +130,9 @@
     <Compile Include="AboutDialog.xaml.cs">
       <DependentUpon>AboutDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreatorsDialog.xaml.cs">
+      <DependentUpon>CreatorsDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\ConnectToRemoteServer.xaml.cs">
       <DependentUpon>ConnectToRemoteServer.xaml</DependentUpon>
     </Compile>
@@ -190,9 +193,6 @@
     <Compile Include="NewVMWizardPages\ReadyToCreate.xaml.cs">
       <DependentUpon>ReadyToCreate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CreatorsPage.xaml.cs">
-      <DependentUpon>CreatorsPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\DevicesPage.xaml.cs">
       <DependentUpon>DevicesPage.xaml</DependentUpon>
     </Compile>
@@ -204,9 +204,6 @@
     </Compile>
     <Compile Include="Pages\HotKeysPage.xaml.cs">
       <DependentUpon>HotKeysPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\InfoPage.xaml.cs">
-      <DependentUpon>InfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\InputPage.xaml.cs">
       <DependentUpon>InputPage.xaml</DependentUpon>
@@ -317,6 +314,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CreatorsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dialogs\ConnectToRemoteServer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -397,10 +398,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\CreatorsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\DevicesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -414,10 +411,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\HotKeysPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\InfoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

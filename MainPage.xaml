@@ -167,7 +167,7 @@
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF739;" ToolTipService.ToolTip="Manage snapshots for this virtual machine" Click="SnapshotManager_Click"/>
             <AppBarSeparator/>
             <Button Background="Transparent" BorderBrush="Transparent" x:Name="ShowHideLibrary" FontFamily="Segoe Fluent Icons" Content="&#xE90C;" ToolTipService.ToolTip="Show or hide library" Click="ShowHideLibrary_Click"/>
-            <ToggleButton Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE90E;" ToolTipService.ToolTip="Show or hide thumbnail bar"/>
+            <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE90E;" ToolTipService.ToolTip="Show or hide thumbnail bar" Click="ShowHideFolderView_Click"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE1D9;" ToolTipService.ToolTip="Enter full screen mode"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE2AE;" ToolTipService.ToolTip="Enter Unity mode"/>
             <AppBarSeparator/>
@@ -215,7 +215,21 @@
                     </Grid>
                 </Button>
             </Grid>
-            <Frame x:Name="TabsFrame" Margin="0,69,0,0"/>
+            <Frame x:Name="TabsFrame" Margin="0,69,0,147"/>
+            <Grid x:Name="FolderView" Height="147" VerticalAlignment="Bottom">
+                <TextBlock Text="No folder view virtual machines." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Button x:Name="HideFolderView" Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" HorizontalAlignment="Right" VerticalAlignment="Top" Height="39" Width="39" Click="HideFolderView_Click"/>
+                    <Button x:Name="FolderViewOptions" Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF08E;" HorizontalAlignment="Right" VerticalAlignment="Top" Height="39" Width="39" Click="FolderViewOptions_Click">
+                        <FlyoutBase.AttachedFlyout>
+                            <MenuFlyout Placement="BottomEdgeAlignedRight">
+                                <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines" IsEnabled="False"/>
+                                <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True" IsEnabled="False"/>
+                            </MenuFlyout>
+                        </FlyoutBase.AttachedFlyout>
+                    </Button>
+                </StackPanel>
+            </Grid>
         </Grid>
         <Border BackgroundSizing="OuterBorderEdge"
                 BorderThickness="0,0,0,0"

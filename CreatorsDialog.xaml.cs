@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UWPStation.Pages;
+using UWPStation.Dialogs;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -16,11 +16,11 @@ using Windows.UI.Xaml.Navigation;
 
 // The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace UWPStation.Dialogs
+namespace UWPStation
 {
-    public sealed partial class AboutDialog : ContentDialog
+    public sealed partial class CreatorsDialog : ContentDialog
     {
-        public AboutDialog()
+        public CreatorsDialog()
         {
             this.InitializeComponent();
         }
@@ -32,10 +32,10 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
-        private async void CreatorsButton_Click(object sender, RoutedEventArgs e)
+        private async void BackButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            CreatorsDialog dialog = new CreatorsDialog();
+            AboutDialog dialog = new AboutDialog();
             await dialog.ShowAsync();
         }
     }

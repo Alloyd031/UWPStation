@@ -188,6 +188,33 @@ namespace UWPStation
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             this.TabsFrame.Navigate(typeof(HomePage));
+            this.FolderView.Visibility = Visibility.Collapsed;
+            this.TabsFrame.Margin = new Thickness(0, 69, 0, 0);
+        }
+
+        private void HideFolderView_Click(object sender, RoutedEventArgs e)
+        {
+            this.FolderView.Visibility = Visibility.Collapsed;
+            this.TabsFrame.Margin = new Thickness(0, 69, 0, 0);
+        }
+
+        private void ShowHideFolderView_Click(object sender, RoutedEventArgs e)
+        {
+            Button btnE = sender as Button;
+            if (this.FolderView.Visibility == Visibility.Visible)
+            {
+                this.FolderView.Visibility = Visibility.Collapsed;
+                this.TabsFrame.Margin = new Thickness(0, 69, 0, 0);
+            }
+            else
+            {
+                this.FolderView.Visibility = Visibility.Visible;
+                this.TabsFrame.Margin = new Thickness(0, 69, 0, 147);
+            }
+        }
+        private void FolderViewOptions_Click(object sender, RoutedEventArgs e)
+        {
+            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
     }
 }

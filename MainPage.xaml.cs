@@ -23,6 +23,7 @@ using System.Collections.ObjectModel;
 using System.Reflection;
 using System.Threading.Tasks;
 using Windows.UI.Core;
+using UWPStation.TabPages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -127,10 +128,6 @@ namespace UWPStation
             NewVMWizard dialog = new NewVMWizard();
             await dialog.ShowAsync();
         }
-        private async void GoToTestVM_Click(object sender, RoutedEventArgs e)
-        {
-            await OpenPageAsWindowAsync(typeof(TestVMPage));
-        }
         private async void SoftwareUpdates_Click(object sender, RoutedEventArgs e)
         {
             SoftwareUpdatesDialog dialog = new SoftwareUpdatesDialog();
@@ -179,6 +176,18 @@ namespace UWPStation
         {
             ConnectToRemoteServer dialog = new ConnectToRemoteServer();
             await dialog.ShowAsync();
+        }
+        private void HomeTab_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(HomePage));
+        }
+        private void VMTab_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(VMPage));
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(HomePage));
         }
     }
 }

@@ -239,8 +239,11 @@
     <Compile Include="ScanForVMsPages\SelectVMs.xaml.cs">
       <DependentUpon>SelectVMs.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TestVMPage.xaml.cs">
-      <DependentUpon>TestVMPage.xaml</DependentUpon>
+    <Compile Include="TabPages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabPages\VMPage.xaml.cs">
+      <DependentUpon>VMPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WelcomeInDialog.xaml.cs">
       <DependentUpon>WelcomeInDialog.xaml</DependentUpon>
@@ -458,7 +461,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TestVMPage.xaml">
+    <Page Include="TabPages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabPages\VMPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -472,7 +479,7 @@
       <Version>6.2.14</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.8.2</Version>
+      <Version>2.8.3</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

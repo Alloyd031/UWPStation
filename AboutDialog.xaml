@@ -52,14 +52,14 @@
                     Background="Transparent" BorderBrush="Transparent" Click="InfoButton_Click" Margin="10,0,0,0">
                     <Grid Margin="-53,-24,-56,-25">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE946;" Width="29" Height="29" Margin="0,0,81,0"/>
-                        <TextBlock Text="Info" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
+                        <TextBlock Text="Info" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0"/>
                     </Grid>
                 </Button>
                 <Button x:Name="CreatorsButton" Height="49" Width="112"
                     Background="Transparent" BorderBrush="Transparent" Click="CreatorsButton_Click" Margin="127,0,0,0">
                     <Grid Margin="-53,-24,-56,-25">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE125;" Width="29" Height="29" Margin="0,0,81,0"/>
-                        <TextBlock Text="Creators" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
+                        <TextBlock Text="Creators" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0"/>
                     </Grid>
                 </Button>
             </Grid>

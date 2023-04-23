@@ -28,6 +28,11 @@
 
         <Grid>
             <Image Source="/Assets/StoreLogo.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="32" Height="32" Margin="10,0,0,0"/>
+            <TextBlock
+                       x:Name="AppTitle"
+                       Text="Welcome!" FontSize="24" HorizontalAlignment="Left"
+                       Style="{StaticResource CaptionTextBlockStyle}"
+                       VerticalAlignment="Center" Margin="54,0,0,0"/>
             <Button
 					x:Name="Menu"
 					Width="51"
@@ -65,7 +70,7 @@
                 <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
             </Button>
         </Grid>
-        <TextBlock Text="Welcome to Test Virtual Machine page!" Grid.Row="1" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button x:Name="CloseWindow" Content="Close this window" Margin="754,664,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseWindow_Click"/>
+        <TextBlock Text="Welcome to the Test Virtual Machine page!" Grid.Row="1" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="CloseWindow" Content="Close this window" Margin="754,10,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseWindow_Click"/>
     </Grid>
 </ContentDialog>

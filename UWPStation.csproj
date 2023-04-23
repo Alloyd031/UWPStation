@@ -142,6 +142,9 @@
     <Compile Include="Dialogs\MessageLogDialog.xaml.cs">
       <DependentUpon>MessageLogDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\NoSoftwareUpdates.xaml.cs">
+      <DependentUpon>NoSoftwareUpdates.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\RestoreSnapshot.xaml.cs">
       <DependentUpon>RestoreSnapshot.xaml</DependentUpon>
     </Compile>
@@ -239,6 +242,9 @@
     <Compile Include="TabPages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TabPages\MyComputerPage.xaml.cs">
+      <DependentUpon>MyComputerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TabPages\VMPage.xaml.cs">
       <DependentUpon>VMPage.xaml</DependentUpon>
     </Compile>
@@ -327,6 +333,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\MessageLogDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\NoSoftwareUpdates.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -455,6 +465,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TabPages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabPages\MyComputerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -46,10 +46,10 @@
             </Button>
         </Grid>
         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC5;" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,24,0,0"/>
-        <TextBlock Text="No pending updates." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,24,0,0" Grid.Row="1"/>
-        <ProgressBar Margin="67,64,10,0" Grid.Row="1" VerticalAlignment="Top" Height="22"/>
+        <TextBlock x:Name="PendingUpdatesText" Text="No pending updates." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,24,0,0" Grid.Row="1"/>
+        <ProgressBar x:Name="CheckForUpdatesProgress" Margin="67,64,10,0" Grid.Row="1" VerticalAlignment="Top" Height="22"/>
         <RichEditBox Margin="67,91,10,47" Grid.Row="1" IsReadOnly="True"/>
-        <Button Content="Check for Updates" Margin="229,414,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="CheckForUpdatesButton" Content="Check for Updates" Margin="229,414,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CheckForUpdatesButton_Click"/>
         <Button x:Name="CloseButton" Content="Close" Margin="372,414,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseButton_Click"/>
     </Grid>
 </ContentDialog>

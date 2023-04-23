@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -18,9 +17,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace UWPStation.Dialogs
 {
-    public sealed partial class SoftwareUpdatesDialog : ContentDialog
+    public sealed partial class NoSoftwareUpdates : ContentDialog
     {
-        public SoftwareUpdatesDialog()
+        public NoSoftwareUpdates()
         {
             this.InitializeComponent();
         }
@@ -28,20 +27,15 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        private async void BackButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-        }
-        private async void CheckForUpdatesButton_Click(object sender, RoutedEventArgs e)
-        {
-            CheckForUpdatesProgress.IsIndeterminate = true;
-            PendingUpdatesText.Text = "UWPStation is connecting to the update server..";
-            await Task.Delay(5000);
-            CheckForUpdatesProgress.IsIndeterminate = false;
-            PendingUpdatesText.Text = "No pending updates.";
-            Hide();
-            NoSoftwareUpdates dialog = new NoSoftwareUpdates();
+            SoftwareUpdatesDialog dialog = new SoftwareUpdatesDialog();
             await dialog.ShowAsync();
+        }
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
         }
     }
 }

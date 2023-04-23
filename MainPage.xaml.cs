@@ -185,19 +185,22 @@ namespace UWPStation
         {
             this.TabsFrame.Navigate(typeof(VMPage));
         }
+        private void MyComputerTab_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(MyComputerPage));
+        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             this.TabsFrame.Navigate(typeof(HomePage));
             this.FolderView.Visibility = Visibility.Collapsed;
             this.TabsFrame.Margin = new Thickness(0, 69, 0, 0);
+            this.MyComputerTab.Visibility = Visibility.Collapsed;
         }
-
         private void HideFolderView_Click(object sender, RoutedEventArgs e)
         {
             this.FolderView.Visibility = Visibility.Collapsed;
             this.TabsFrame.Margin = new Thickness(0, 69, 0, 0);
         }
-
         private void ShowHideFolderView_Click(object sender, RoutedEventArgs e)
         {
             Button btnE = sender as Button;
@@ -216,17 +219,27 @@ namespace UWPStation
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
-        private void GoToHomeTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(HomePage));
-        }
-        private void GoToVMTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(VMPage));
-        }
         private void GoToHome_Click(object sender, RoutedEventArgs e)
         {
             this.TabsFrame.Navigate(typeof(HomePage));
+        }
+        private void AlloydsOS_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(VMPage));
+        }
+        private void MyComputer_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(MyComputerPage));
+            Button btnE = sender as Button;
+            if (this.MyComputerTab.Visibility == Visibility.Collapsed)
+            {
+                this.MyComputerTab.Visibility = Visibility.Visible;
+            }
+        }
+        private void CloseMyComputerTab_Click(object sender, RoutedEventArgs e)
+        {           
+            MyComputerTab.Visibility = Visibility.Collapsed;
+            this.TabsFrame.GoBack();
         }
     }
 }

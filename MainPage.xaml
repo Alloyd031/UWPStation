@@ -112,8 +112,7 @@
                     <MenuFlyoutItem Text="Settings..." IsEnabled="False"/>
                 </muxc:MenuBarItem>
                 <muxc:MenuBarItem Title="Tabs">
-                    <MenuFlyoutItem Text="Home" Click="GoToHomeTab_Click"/>
-                    <MenuFlyoutItem Text="Alloyd's OS" Click="GoToVMTab_Click"/>
+                    <MenuFlyoutItem Text="Switching between tabs is not supported." IsEnabled="False"/>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="Go to Home Tab" Click="GoToHome_Click"/>
                     <MenuFlyoutSeparator/>
@@ -188,10 +187,24 @@
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Library" TextAlignment="Center" Margin="10,10,0,0"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"
                     Click="HideLibrary_Click"/>
-            <AutoSuggestBox HorizontalAlignment="Stretch" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="0,44,0,0" />
-            <ListView Margin="0,90,0,0">
-                <ListViewItem Content="My Computer" IsSelected="True"/>
-            </ListView>
+            <AutoSuggestBox VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="10,44,10,0"/>
+            <Button x:Name="MyComputer" Height="49" Width="180" Margin="0,81,0,0" Background="Transparent" BorderBrush="Transparent"
+                    VerticalAlignment="Top" HorizontalAlignment="Center" Click="MyComputer_Click">
+                <Grid Margin="-90,-25,-90,-25">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEC4E;" FontSize="15" Width="29" Margin="10,10,141,10"/>
+                    <TextBlock Text="My Computer" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+                </Grid>
+            </Button>
+            <Button x:Name="AlloydsOS" Height="49" Width="180" Margin="0,130,0,0" Background="Transparent" BorderBrush="Transparent"
+                    VerticalAlignment="Top" HorizontalAlignment="Center" Click="AlloydsOS_Click">
+                <Grid Margin="-90,-25,-90,-25">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" FontSize="15" Width="29" Margin="10,10,141,10"/>
+                    <TextBlock Text="Alloyd's OS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+                    <Button x:Name="Star" Height="31" Width="29" Background="Transparent" BorderBrush="Transparent" Margin="141,0,0,0">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE1CE;" FontSize="15" Margin="-15,-15,-14,-16"/>
+                    </Button>
+                </Grid>
+            </Button>
         </Grid>
         <Grid x:Name="TabsGrid" Grid.RowSpan="2" Grid.Row="2" Margin="200,0,0,0">
             <Grid x:Name="Tabs" VerticalAlignment="Top" Height="69">
@@ -211,6 +224,16 @@
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" Width="29" Height="29" Margin="10,10,136,10"/>
                         <TextBlock Text="Alloyd's OS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
                         <Button x:Name="CloseVMTab" Height="29" Width="29" Background="Transparent" BorderBrush="Transparent" Margin="136,0,0,0" ToolTipService.ToolTip="Close Tab">
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8BB;" FontSize="12" Margin="-15,-14,-14,-15"/>
+                        </Button>
+                    </Grid>
+                </Button>
+                <Button x:Name="MyComputerTab" Height="49" Width="175"
+                        Click="MyComputerTab_Click" Margin="370,0,0,0">
+                    <Grid Margin="-88,-24,-87,-25">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEC4E;" Width="29" Height="29" Margin="10,10,136,10"/>
+                        <TextBlock Text="My Computer" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+                        <Button x:Name="CloseMyComputerTab" Height="29" Width="29" Background="Transparent" BorderBrush="Transparent" Margin="136,0,0,0" ToolTipService.ToolTip="Close Tab" Click="CloseMyComputerTab_Click">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8BB;" FontSize="12" Margin="-15,-14,-14,-15"/>
                         </Button>
                     </Grid>
@@ -242,7 +265,7 @@
                         FontFamily="Segoe Fluent Icons" Content="&#xE15F;" 
                         ToolTipService.ToolTip="Message log" RightTapped="Button_RightTapped" Tapped="Button_Tapped" Height="32">
                     <FlyoutBase.AttachedFlyout>
-                        <MenuFlyout>
+                        <MenuFlyout Placement="TopEdgeAlignedRight">
                             <MenuFlyoutItem Text="Open Message Log" Click="MessageLog_Click"/>
                             <MenuFlyoutItem Text="Clear Messages" IsEnabled="False"/>
                         </MenuFlyout>

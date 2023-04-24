@@ -36,9 +36,17 @@ namespace UWPStation.Dialogs
         {
             CheckForUpdatesProgress.IsIndeterminate = true;
             PendingUpdatesText.Text = "UWPStation is connecting to the update server..";
+            if (this.CheckForUpdatesButton != null)
+            {
+                CheckForUpdatesButton.IsEnabled = false;
+            }           
             await Task.Delay(5000);
             CheckForUpdatesProgress.IsIndeterminate = false;
             PendingUpdatesText.Text = "No pending updates.";
+            if (this.CheckForUpdatesButton != null)
+            {
+                CheckForUpdatesButton.IsEnabled = true;
+            }
             Hide();
             NoSoftwareUpdates dialog = new NoSoftwareUpdates();
             await dialog.ShowAsync();

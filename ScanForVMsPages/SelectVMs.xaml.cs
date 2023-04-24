@@ -30,9 +30,5 @@ namespace UWPStation.ScanForVMsPages
         {
             this.Frame.GoBack();
         }
-        private void FinishButton_Click(object sender, RoutedEventArgs e)
-        {
-            FinishTip.IsOpen = true;
-        }
     }
 }

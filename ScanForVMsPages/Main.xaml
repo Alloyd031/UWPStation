@@ -17,8 +17,11 @@
         <TextBlock Text="Select a location to scan:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,72,0,0"/>
         <TextBox x:Name="LocationBox" Text="Some location" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,112,0,0" Width="439"/>
         <Button Content="Browse..." Margin="454,112,0,0" VerticalAlignment="Top"/>
-        <Button Content="Help" Margin="10,508,0,0" VerticalAlignment="Top"/>
-        <Button Content="Back" IsEnabled="False" Margin="479,508,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="NextButton" Content="Next" Style="{StaticResource AccentButtonStyle}" Margin="537,508,0,0" VerticalAlignment="Top" Click="NextButton_Click"/>
+        <Button Width="44" Height="44" Margin="10,496,0,0" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE11B;"/>
+        </Button>
+        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="546,496,0,0" VerticalAlignment="Top" Click="NextButton_Click">
+            <FontIcon Glyph="&#xE111;"/>
+        </Button>
     </Grid>
 </Page>

@@ -10,24 +10,28 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="UWPStation" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,26,0,0"/>
-        <Button Width="150" Click="CreateVM_Click" Height="150" Margin="0,105,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Grid>
-                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC8;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Text="Create a New Virtual Machine" TextWrapping="Wrap" Margin="0,26,0,0" Height="38" VerticalAlignment="Top"/>
-            </Grid>
-        </Button>
-        <Button Width="150" Click="OpenVM_Click" Height="150" Margin="0,260,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" >
-            <Grid>
-                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8A7;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Text="Open a Virtual Machine" TextWrapping="Wrap" Margin="0,26,0,0" Height="38" VerticalAlignment="Top"/>
-            </Grid>
-        </Button>
-        <Button Width="150" Click="ConnectToRemoteServerButton_Click" Height="150" Margin="0,415,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Grid>
-                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE13C;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Text="Connect to a Remote Server" TextWrapping="Wrap" Margin="0,26,0,0" Height="38" VerticalAlignment="Top"/>
-            </Grid>
-        </Button>
+        <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="UWPStation" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,19,0,0"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,94,0,0">
+            <Button Width="150" Click="CreateVM_Click" Height="150" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <Grid>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC8;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Create a New Virtual Machine" TextWrapping="Wrap" Margin="0,26,0,0" Height="38" VerticalAlignment="Top"/>
+                </Grid>
+            </Button>
+            <AppBarSeparator/>
+            <Button Width="150" Click="OpenVM_Click" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                <Grid>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8A7;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Open a Virtual Machine" TextWrapping="Wrap" Margin="0,26,0,0" Height="38" VerticalAlignment="Top"/>
+                </Grid>
+            </Button>
+            <AppBarSeparator/>
+            <Button Width="150" Click="ConnectToRemoteServerButton_Click" Height="150" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <Grid>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE13C;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Connect to a Remote Server" TextWrapping="Wrap" Margin="0,26,0,0" Height="38" VerticalAlignment="Top"/>
+                </Grid>
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>

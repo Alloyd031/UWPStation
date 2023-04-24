@@ -27,13 +27,5 @@ namespace UWPStation.NewVMWizardPages
         {
             this.InitializeComponent();
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.GoBack();
-        }
-        private void FinishButton_Click(object sender, RoutedEventArgs e)
-        {
-            FinishTip.IsOpen = true;
-        }
     }
 }

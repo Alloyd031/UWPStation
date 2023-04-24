@@ -26,17 +26,6 @@ namespace UWPStation.NewVMWizardPages
         {
             this.InitializeComponent();
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.Frame.CanGoBack)
-            {
-                this.Frame.GoBack();
-            }
-            else
-            {
-                this.Frame.Navigate(typeof(Installation));
-            }            
-        }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.InstallLaterCheck.IsChecked == true)

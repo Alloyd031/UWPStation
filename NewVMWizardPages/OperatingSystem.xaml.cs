@@ -26,10 +26,6 @@ namespace UWPStation.NewVMWizardPages
         {
             this.InitializeComponent();
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.GoBack();
-        }
         private void HandleCheck(object sender, RoutedEventArgs e)
         {
             if (this.OSSelectionBox != null && this.WindowsOS.IsChecked == true)

@@ -22,8 +22,11 @@
         <Button Content="Browse..." Margin="352,228,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="InstallLaterCheck" Content="I will install the operating system later." Margin="19,274,0,0" VerticalAlignment="Top"/>
         <TextBlock Text="The virtual machine will be created with a blank hard disk." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,306,0,0"/>
-        <Button Content="Help" Margin="10,458,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="BackButton" Content="Back" Margin="319,458,0,0" VerticalAlignment="Top" Click="BackButton_Click"/>
-        <Button x:Name="NextButton" Content="Next" Style="{StaticResource AccentButtonStyle}" Margin="377,458,0,0" VerticalAlignment="Top" Click="NextButton_Click"/>
+        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE11B;"/>
+        </Button>
+        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top" Click="NextButton_Click">
+            <FontIcon Glyph="&#xE111;"/>
+        </Button>
     </Grid>
 </Page>

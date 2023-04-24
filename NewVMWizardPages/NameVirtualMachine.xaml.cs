@@ -26,10 +26,6 @@ namespace UWPStation.NewVMWizardPages
         {
             this.InitializeComponent();
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.GoBack();
-        }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.OSName.Text == "Alloyd's OS")

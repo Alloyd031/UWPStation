@@ -18,8 +18,11 @@
         <TextBlock Text="Create a UWPStation 0.1.x virtual machine in a few easy steps." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,104,0,0"/>
         <RadioButton x:Name="CustomRadioButton" Content="Custom (Advanced)" Margin="10,132,0,0" VerticalAlignment="Top"/>
         <TextBlock Text="Create a virtual machine with advanced options." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,164,0,0"/>
-        <Button Content="Help" Margin="10,458,0,0" VerticalAlignment="Top"/>
-        <Button Content="Back" IsEnabled="False" Margin="319,458,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="NextButton" Content="Next" Style="{StaticResource AccentButtonStyle}" Margin="377,458,0,0" VerticalAlignment="Top" Click="NextButton_Click"/>
+        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE11B;"/>
+        </Button>
+        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top" Click="NextButton_Click">
+            <FontIcon Glyph="&#xE111;"/>
+        </Button>
     </Grid>
 </Page>

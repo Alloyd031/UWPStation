@@ -5,9 +5,12 @@
     xmlns:local="using:UWPStation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     Style="{StaticResource DefaultContentDialogStyle}"
     Loaded="NewVMDialog_Loaded"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    x:FieldModifier="public">
     <ContentDialog.Resources>
         <ResourceDictionary>
             <x:Double x:Key="ContentDialogMaxWidth">1100</x:Double>
@@ -26,12 +29,31 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid>
-                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC8;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
+                <Button
+					x:Name="BackButton"
+					Width="44"
+					Height="44"
+					AutomationProperties.Name="Back"
+                    IsEnabled="{x:Bind ContentFrame.CanGoBack, Mode=OneWay}"
+					Background="Transparent"
+					BorderBrush="Transparent"
+					Click="BackButton_Click"
+					ToolTipService.ToolTip="Back">
+                    <muxc:AnimatedIcon x:Name="BackAnimatedIcon">
+                        <muxc:AnimatedIcon.Source>
+                            <animatedvisuals:AnimatedBackVisualSource/>
+                        </muxc:AnimatedIcon.Source>
+                        <muxc:AnimatedIcon.FallbackIconSource>
+                            <muxc:SymbolIconSource Symbol="Back"/>
+                        </muxc:AnimatedIcon.FallbackIconSource>
+                    </muxc:AnimatedIcon>
+                </Button>
+                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC8;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44" Margin="44,0,0,0"/>
                 <TextBlock
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
-					Text="New Virtual Machine Wizard" Margin="49,0,0,0"/>
+					Text="New Virtual Machine Wizard" Margin="93,0,0,0"/>
                 <Button
 					x:Name="CloseDialogButton"
 					Width="44"

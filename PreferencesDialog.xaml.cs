@@ -36,6 +36,10 @@ namespace UWPStation
         {
             Hide();
         }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.GoBack();
+        }
         private void ContentDialog_Loaded(object sender, RoutedEventArgs e)
         {
             this.ContentFrame.Navigate(typeof(WorkspacePage));

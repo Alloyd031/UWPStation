@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Width="440"
@@ -24,8 +25,11 @@
                 <ComboBoxItem Content="Alloyd's OS" IsSelected="True"/>
             </ComboBox.Items>
         </ComboBox>
-        <Button Content="Help" Margin="10,458,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="BackButton" Content="Back" Margin="319,458,0,0" VerticalAlignment="Top" Click="BackButton_Click"/>
-        <Button x:Name="NextButton" Content="Next" Style="{StaticResource AccentButtonStyle}" Margin="377,458,0,0" VerticalAlignment="Top" Click="NextButton_Click"/>
+        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE11B;"/>
+        </Button>
+        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top" Click="NextButton_Click">
+            <FontIcon Glyph="&#xE111;"/>
+        </Button>
     </Grid>
 </Page>

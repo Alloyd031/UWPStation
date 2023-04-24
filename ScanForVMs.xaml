@@ -5,35 +5,56 @@
     xmlns:local="using:UWPStation.Dialogs"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     Style="{StaticResource DefaultContentDialogStyle}"
     Loaded="ContentDialog_Loaded"
     mc:Ignorable="d">
 
-    <ContentDialog.Resources>
-        <ResourceDictionary>
-            <x:Double x:Key="ContentDialogMaxWidth">1100</x:Double>
-            <Thickness x:Key="ContentDialogPadding">0</Thickness>
-        </ResourceDictionary>
-    </ContentDialog.Resources>
-    <Border>
-        <Grid
+	<ContentDialog.Resources>
+		<ResourceDictionary>
+			<x:Double x:Key="ContentDialogMaxWidth">1100</x:Double>
+			<Thickness x:Key="ContentDialogPadding">0</Thickness>
+		</ResourceDictionary>
+	</ContentDialog.Resources>
+	<Border>
+		<Grid
 			x:Name="ContainerGrid"
 		    Width="600"
 			Height="600"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="44" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid>
-                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
-                <TextBlock
+			<Grid.RowDefinitions>
+				<RowDefinition Height="44" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid>
+				<Button
+					x:Name="BackButton"
+					Width="44"
+					Height="44"
+					AutomationProperties.Name="Back"
+                    IsEnabled="{x:Bind ContentFrame.CanGoBack, Mode=OneWay}"
+					Background="Transparent"
+					BorderBrush="Transparent"
+					Click="BackButton_Click"
+					ToolTipService.ToolTip="Back">
+					<muxc:AnimatedIcon x:Name="BackAnimatedIcon">
+						<muxc:AnimatedIcon.Source>
+							<animatedvisuals:AnimatedBackVisualSource/>
+						</muxc:AnimatedIcon.Source>
+						<muxc:AnimatedIcon.FallbackIconSource>
+							<muxc:SymbolIconSource Symbol="Back"/>
+						</muxc:AnimatedIcon.FallbackIconSource>
+					</muxc:AnimatedIcon>
+				</Button>
+				<FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44" Margin="44,0,0,0"/>
+				<TextBlock
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
-					Text="Scan for Virtual Machines" Margin="49,0,0,0"/>
-                <Button
+					Text="Scan for Virtual Machines" Margin="93,0,0,0"/>
+				<Button
 					x:Name="CloseDialogButton"
 					Width="44"
 					Height="44"
@@ -42,10 +63,10 @@
 					BorderBrush="Transparent"
 					Click="CloseDialogButton_Click"
 					ToolTipService.ToolTip="Close" Margin="556,0,0,0">
-                    <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
-                </Button>
-            </Grid>
-            <Frame x:Name="ContentFrame" Grid.Row="1"/>
-        </Grid>
-    </Border>
+					<FontIcon FontSize="12" Glyph="&#xE8BB;"/>
+				</Button>
+			</Grid>
+			<Frame x:Name="ContentFrame" Grid.Row="1"/>
+		</Grid>
+	</Border>
 </ContentDialog>

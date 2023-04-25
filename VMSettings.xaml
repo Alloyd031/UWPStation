@@ -70,14 +70,14 @@
                         Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Click="HardwareTab_Click">
             <Grid Margin="-88,-24,-87,-25">
                 <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE10F;" Width="29" Height="29" Margin="10,10,136,10"/>
-                <TextBlock Text="Hardware" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+                <TextBlock Text="Hardware" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         </Button>
         <Button x:Name="OptionsTab" Height="49" Width="175"
                         Margin="190,10,0,0" Grid.Row="1" VerticalAlignment="Top" Click="OptionsTab_Click">
             <Grid Margin="-88,-24,-87,-25">
                 <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE15E;" Width="29" Height="29" Margin="10,10,136,10"/>
-                <TextBlock Text="Options" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+                <TextBlock Text="Options" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         </Button>
         <Frame x:Name="ContentFrame" Grid.Row="1" Margin="0,64,10,47"/>

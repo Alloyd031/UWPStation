@@ -66,86 +66,7 @@
                 <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
             </Button>
         </Grid>
-        <Grid Grid.Row="1" Width="150" HorizontalAlignment="Left">
-            <Button x:Name="WorkspaceButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="WorkspaceButton_Click" HorizontalAlignment="Center">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE821;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Workspace" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="InputButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="InputButton_Click" HorizontalAlignment="Center" Margin="0,42,0,0">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE961;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Input" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="HotKeysButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="HotKeysButton_Click" HorizontalAlignment="Center" Margin="0,84,0,0">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE84B;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Hot Keys" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="DisplayButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="DisplayButton_Click" HorizontalAlignment="Center" Margin="0,126,0,0">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE770;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Display" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="UnityButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="UnityButton_Click" HorizontalAlignment="Center" Margin="0,168,0,0">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE2AE;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Unity" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="USBButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="USBButton_Click" HorizontalAlignment="Center" Margin="0,210,0,0">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE88E;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="USB" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="UpdatesButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="UpdatesButton_Click" HorizontalAlignment="Center" Margin="0,252,0,0">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE777;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Updates" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="FeedbackButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="FeedbackButton_Click" HorizontalAlignment="Center" Margin="0,294,0,0">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xed15;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Feedback" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="MemoryButton" Height="42" Width="150"
-                    Background="Transparent" BorderBrush="Transparent" Click="MemoryButton_Click" HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE950;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Memory" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="PriorityButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="PriorityButton_Click" Margin="0,378,0,0" HorizontalAlignment="Center">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE182;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Priority" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-            <Button x:Name="DevicesButton" Height="42" Width="150" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" Click="DevicesButton_Click" HorizontalAlignment="Center" Margin="0,420,0,0">
-                <Grid Margin="-75,-21,-75,-21" >
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE772;" FontSize="16" Width="28" Height="28" Margin="10,7,112,7"/>
-                    <TextBlock Text="Devices" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </Button>
-        </Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Margin="150,0,0,50">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Margin="0,0,0,59">
             <Frame x:Name="ContentFrame"/>
         </ScrollViewer>
         <Button x:Name="HelpButton" Width="44" Height="44" Grid.Row="1" VerticalAlignment="Top" Margin="846,652,0,0"
@@ -157,8 +78,52 @@
             <FontIcon Glyph="&#xE10A;"/>
         </Button>
         <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Margin="748,652,0,0" Grid.Row="1"
-                ToolTipService.ToolTip="Finish">
+                ToolTipService.ToolTip="OK">
             <FontIcon Glyph="&#xE10B;"/>
+        </Button>
+        <Button x:Name="WorkspaceButton" Height="44" Width="44"
+                Click="WorkspaceButton_Click" Margin="10,652,0,0" Grid.Row="1" VerticalAlignment="Top" ToolTipService.ToolTip="Workspace">
+            <FontIcon Glyph="&#xE821;" Margin="-22,-22,-22,-22"/>
+        </Button>
+        <Button x:Name="InputButton" Height="44" Width="44" VerticalAlignment="Top"
+                Click="InputButton_Click" Margin="59,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Input">
+            <FontIcon Glyph="&#xE961;" Margin="-22,-22,-22,-22"/>
+        </Button>
+        <Button x:Name="HotKeysButton" Height="44" Width="44" VerticalAlignment="Top"
+                    Click="HotKeysButton_Click" Margin="108,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Hot Keys">
+            <FontIcon Glyph="&#xE84B;" Margin="-22,-22,-22,-22"/>
+        </Button>
+        <Button x:Name="DisplayButton" Height="44" Width="44" VerticalAlignment="Top"
+                Click="DisplayButton_Click" Margin="157,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Display">
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE770;" Margin="-22,-22,-22,-22"/>
+        </Button>
+        <Button x:Name="UnityButton" Height="44" Width="44" VerticalAlignment="Top"
+                Click="UnityButton_Click" Margin="206,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Unity">
+            <FontIcon Glyph="&#xE2AE;" Margin="-22,-22,-22,-22"/>
+        </Button>
+        <Button x:Name="USBButton" Height="44" Width="44" VerticalAlignment="Top"
+                Click="USBButton_Click" Margin="255,652,0,0" Grid.Row="1" ToolTipService.ToolTip="USB">
+            <FontIcon Glyph="&#xE88E;" Margin="-22,-22,-22,-22"/>
+        </Button>
+        <Button x:Name="UpdatesButton" Height="44" Width="44" VerticalAlignment="Top"
+                Click="UpdatesButton_Click" Margin="304,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Updates">
+            <FontIcon Glyph="&#xE777;" Margin="-22,-22,-22,-22"/>
+        </Button>
+        <Button x:Name="FeedbackButton" Height="44" Width="44" VerticalAlignment="Top"
+                Click="FeedbackButton_Click" Margin="353,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Feedback">
+            <FontIcon Glyph="&#xED15;" Margin="-22,-22,-22,-22"/>
+        </Button>
+        <Button x:Name="MemoryButton" Height="44" Width="44"
+                Click="MemoryButton_Click" Margin="402,652,0,0" VerticalAlignment="Top" Grid.Row="1" ToolTipService.ToolTip="Memory">
+            <FontIcon Glyph="&#xE950;"/>
+        </Button>
+        <Button x:Name="PriorityButton" Height="44" Width="44" VerticalAlignment="Top"
+                    Click="PriorityButton_Click" Margin="451,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Priority">
+            <FontIcon Glyph="&#xE182;"/>
+        </Button>
+        <Button x:Name="DevicesButton" Height="44" Width="44" VerticalAlignment="Top"
+                    Click="DevicesButton_Click" Margin="500,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Devices">
+            <FontIcon Glyph="&#xE772;"/>
         </Button>
     </Grid>
 </ContentDialog>

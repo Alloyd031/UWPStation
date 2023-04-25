@@ -68,6 +68,9 @@
         <TextBlock Grid.Row="1" Text="Made by:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,17,0,0"/>
         <TextBlock Grid.Row="1" Text="Alloyd" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,41,0,0"/>
         <TextBlock Grid.Row="1" Text="Lixkote" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,65,0,0"/>
-        <Button x:Name="OKButton" Content="OK" Margin="598,372,0,0" Grid.Row="1" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click" VerticalAlignment="Top"/>
+        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Grid.Row="1"
+                ToolTipService.ToolTip="OK" Margin="597,360,0,0">
+            <FontIcon Glyph="&#xE10B;"/>
+        </Button>
     </Grid>
 </ContentDialog>

@@ -109,7 +109,7 @@
                     </MenuFlyoutSubItem>
                     <MenuFlyoutItem Text="Install UWPTools..." IsEnabled="False"/>
                     <MenuFlyoutSeparator/>
-                    <MenuFlyoutItem Text="Settings..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Settings..." Click="VMSettings_Click"/>
                 </muxc:MenuBarItem>
                 <muxc:MenuBarItem Title="Tabs">
                     <MenuFlyoutItem Text="Switching between tabs is not supported." IsEnabled="False"/>

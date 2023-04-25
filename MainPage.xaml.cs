@@ -241,5 +241,11 @@ namespace UWPStation
             MyComputerTab.Visibility = Visibility.Collapsed;
             this.TabsFrame.GoBack();
         }
+
+        private async void VMSettings_Click(object sender, RoutedEventArgs e)
+        {
+            VMSettings dialog = new VMSettings();
+            await dialog.ShowAsync();
+        }
     }
 }

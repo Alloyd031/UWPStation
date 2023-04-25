@@ -1,0 +1,88 @@
+﻿<ContentDialog
+    x:Class="UWPStation.VMSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
+    Style="{StaticResource DefaultContentDialogStyle}"
+    mc:Ignorable="d"
+    Loaded="ContentDialog_Loaded">
+
+    <ContentDialog.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="ContentDialogMaxWidth">1100</x:Double>
+            <Thickness x:Key="ContentDialogPadding">0</Thickness>
+        </ResourceDictionary>
+    </ContentDialog.Resources>
+    <Grid
+			x:Name="ContainerGrid"
+		    Width="900"
+			Height="750"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Button
+					x:Name="BackButton"
+					Width="44"
+					Height="44"
+					AutomationProperties.Name="Back"
+                    IsEnabled="{x:Bind ContentFrame.CanGoBack, Mode=OneWay}"
+					Background="Transparent"
+					BorderBrush="Transparent"
+					Click="BackButton_Click"
+					ToolTipService.ToolTip="Back">
+                <muxc:AnimatedIcon x:Name="BackAnimatedIcon">
+                    <muxc:AnimatedIcon.Source>
+                        <animatedvisuals:AnimatedBackVisualSource/>
+                    </muxc:AnimatedIcon.Source>
+                    <muxc:AnimatedIcon.FallbackIconSource>
+                        <muxc:SymbolIconSource Symbol="Back"/>
+                    </muxc:AnimatedIcon.FallbackIconSource>
+                </muxc:AnimatedIcon>
+            </Button>
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE115;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44" Margin="49,0,0,0"/>
+            <TextBlock
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					FontWeight="SemiBold"
+					Text="Virtual Machine Settings" Margin="98,0,0,0"/>
+            <Button
+					x:Name="CloseDialogButton"
+					Width="44"
+					Height="44"
+					AutomationProperties.Name="Close"
+					Background="Transparent"
+					BorderBrush="Transparent"
+					Click="CloseDialogButton_Click"
+					ToolTipService.ToolTip="Close" Margin="856,0,0,0">
+                <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
+            </Button>
+        </Grid>
+        <Button x:Name="HardwareTab" Height="49" Width="175"
+                        Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Click="HardwareTab_Click">
+            <Grid Margin="-88,-24,-87,-25">
+                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE10F;" Width="29" Height="29" Margin="10,10,136,10"/>
+                <TextBlock Text="Hardware" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+            </Grid>
+        </Button>
+        <Button x:Name="OptionsTab" Height="49" Width="175"
+                        Margin="190,10,0,0" Grid.Row="1" VerticalAlignment="Top" Click="OptionsTab_Click">
+            <Grid Margin="-88,-24,-87,-25">
+                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE15E;" Width="29" Height="29" Margin="10,10,136,10"/>
+                <TextBlock Text="Options" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+            </Grid>
+        </Button>
+        <Frame x:Name="ContentFrame" Grid.Row="1" Margin="0,64,10,47"/>
+        <Button x:Name="HelpButton" Content="Help" Grid.Row="1" VerticalAlignment="Top" Margin="837,664,0,0"/>
+        <Button x:Name="CancelButton" Content="Cancel" Grid.Row="1" Click="CancelButton_Click" VerticalAlignment="Top" Margin="767,664,0,0"/>
+        <Button x:Name="OKButton" Content="OK" Grid.Row="1" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click" VerticalAlignment="Top" Margin="719,664,0,0"/>
+    </Grid>
+</ContentDialog>

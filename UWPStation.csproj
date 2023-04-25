@@ -248,6 +248,15 @@
     <Compile Include="TabPages\VMPage.xaml.cs">
       <DependentUpon>VMPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VMSettings.xaml.cs">
+      <DependentUpon>VMSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VMSettingsPages\Hardware.xaml.cs">
+      <DependentUpon>Hardware.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VMSettingsPages\Options.xaml.cs">
+      <DependentUpon>Options.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeInDialog.xaml.cs">
       <DependentUpon>WelcomeInDialog.xaml</DependentUpon>
     </Compile>
@@ -473,6 +482,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TabPages\VMPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMSettingsPages\Hardware.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMSettingsPages\Options.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

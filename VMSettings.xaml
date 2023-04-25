@@ -68,7 +68,7 @@
         </Grid>
         <Button x:Name="HardwareTab" Width="44" Height="44" Grid.Row="1" VerticalAlignment="Top" Click="HardwareTab_Click" Margin="10,652,0,0"
                 ToolTipService.ToolTip="Hardware">
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE10F;"/>
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE772;"/>
         </Button>
         <Button x:Name="OptionsTab" Width="44" Height="44" Margin="59,652,0,0" Grid.Row="1" VerticalAlignment="Top" Click="OptionsTab_Click"
                 ToolTipService.ToolTip="Options">

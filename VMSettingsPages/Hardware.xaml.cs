@@ -26,5 +26,41 @@ namespace UWPStation.VMSettingsPages
         {
             this.InitializeComponent();
         }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.HardwareFrame.Navigate(typeof(NotAvailable));
+        }
+        private void MemoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.HardwareFrame.Navigate(typeof(NotAvailable));
+        }
+        private void ProcessorsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.HardwareFrame.Navigate(typeof(NotAvailable));
+        }
+        private void HardDiskButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.HardwareFrame.Navigate(typeof(NotAvailable));
+        }
+        private void CDDVDButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.HardwareFrame.Navigate(typeof(NotAvailable));
+        }
+        private void NetworkAdapterButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.HardwareFrame.Navigate(typeof(NotAvailable));
+        }
+        private void USBControllerButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.HardwareFrame.Navigate(typeof(NotAvailable));
+        }
+        private void SoundCardButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.HardwareFrame.Navigate(typeof(NotAvailable));
+        }
+        private void DisplayButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.HardwareFrame.Navigate(typeof(NotAvailable));
+        }
     }
 }

@@ -254,6 +254,9 @@
     <Compile Include="VMSettingsPages\Hardware.xaml.cs">
       <DependentUpon>Hardware.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VMSettingsPages\NotAvailable.xaml.cs">
+      <DependentUpon>NotAvailable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VMSettingsPages\Options.xaml.cs">
       <DependentUpon>Options.xaml</DependentUpon>
     </Compile>
@@ -490,6 +493,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VMSettingsPages\Hardware.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMSettingsPages\NotAvailable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -26,5 +26,61 @@ namespace UWPStation.VMSettingsPages
         {
             this.InitializeComponent();
         }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void GeneralButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void PowerButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void SharedFolderButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void SnapshotsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void AutoProtectButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void GuestIsolationButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void AccessControlButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void UWPToolsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void VNCConnectionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void UnityButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void ApplianceViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void AutologinButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void AdvancedButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
     }
 }

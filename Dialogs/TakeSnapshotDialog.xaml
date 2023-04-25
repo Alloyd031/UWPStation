@@ -50,7 +50,7 @@
         <TextBlock Text="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,57,0,0" Grid.Row="1"/>
         <TextBox Text="Snapshot 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,51,0,0" Grid.Row="1" Width="375"/>
         <TextBlock Text="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,95,0,0" Grid.Row="1"/>
-        <RichEditBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,95,0,0" Grid.Row="1" Width="336" Height="271"/>
+        <RichEditBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,95,0,0" Grid.Row="1" Width="336" Height="302"/>
         <Button x:Name="TakeSnapshotButton" Width="44" Height="44" Margin="337,402,0,0" Grid.Row="1" VerticalAlignment="Top" Click="TakeSnapshotButton_Click"
                 ToolTipService.ToolTip="Take Snapshot">
             <FontIcon Glyph="&#xE109;"/>

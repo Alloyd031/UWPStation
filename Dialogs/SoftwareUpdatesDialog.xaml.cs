@@ -35,7 +35,7 @@ namespace UWPStation.Dialogs
         private async void CheckForUpdatesButton_Click(object sender, RoutedEventArgs e)
         {
             CheckForUpdatesProgress.IsIndeterminate = true;
-            PendingUpdatesText.Text = "UWPStation is connecting to the update server..";
+            PendingUpdatesText.Text = "UWPStation is connecting to the update server...";
             if (this.CheckForUpdatesButton != null)
             {
                 CheckForUpdatesButton.IsEnabled = false;

@@ -48,8 +48,14 @@
         </Grid>
         <TextBlock x:Name="PendingUpdatesText" Text="No pending updates." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,47,0,0" Grid.Row="1"/>
         <muxc:ProgressRing x:Name="CheckForUpdatesProgress" Margin="0,10,0,0" IsIndeterminate="False" Grid.Row="1" VerticalAlignment="Top"/>
-        <RichEditBox Margin="10,91,10,47" Grid.Row="1" IsReadOnly="True"/>
-        <Button x:Name="CheckForUpdatesButton" Content="Check for Updates" Margin="229,414,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CheckForUpdatesButton_Click"/>
-        <Button x:Name="CloseButton" Content="Close" Margin="372,414,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseButton_Click"/>
+        <RichEditBox Margin="10,91,10,59" Grid.Row="1" IsReadOnly="True"/>
+        <Button x:Name="CheckForUpdatesButton" Width="44" Height="44" VerticalAlignment="Top" Click="CheckForUpdatesButton_Click" Grid.Row="1"
+                ToolTipService.ToolTip="Check for updates" Margin="337,402,0,0">
+            <FontIcon Glyph="&#xECC5;"/>
+        </Button>
+        <Button x:Name="CloseButton" Width="44" Height="44" Margin="386,402,0,0" Grid.Row="1" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="CloseButton_Click"
+                ToolTipService.ToolTip="Close">
+            <FontIcon Glyph="&#xE8BB;"/>
+        </Button>
     </Grid>
 </ContentDialog>

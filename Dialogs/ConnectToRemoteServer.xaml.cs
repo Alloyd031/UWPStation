@@ -31,7 +31,7 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
-        private void OKButton_Click(object sender, RoutedEventArgs e)
+        private void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
             ConnectButtonTip.IsOpen = true;
         }

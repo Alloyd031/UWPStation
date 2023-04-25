@@ -47,8 +47,14 @@
         <TextBlock Text="Enter your 25-character license key." HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Margin="10,10,0,0"/>
         <TextBlock Text="License Key:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,55,0,0" Grid.Row="1"/>
         <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="89,50,10,0" Grid.Row="1"/>
-        <Button x:Name="OKButton" Content="OK" Margin="277,134,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click"/>
-        <muxc:TeachingTip x:Name="OKButtonTip" Target="{x:Bind OKButton}" Title="Lol" Subtitle="That's fake :D"/>
-        <Button x:Name="CancelButton" Content="Cancel" Margin="325,134,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CancelButton_Click"/>
+        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Grid.Row="1"
+                ToolTipService.ToolTip="OK" Margin="297,122,0,0">
+            <FontIcon Glyph="&#xE10B;"/>
+        </Button>
+        <muxc:TeachingTip x:Name="OKButtonTip" Target="{x:Bind OKButton}" Title="Lol" Subtitle="That's fake :D" Margin="0,82,0,50" Grid.Row="1"/>
+        <Button x:Name="CancelButton" Width="44" Height="44" Grid.Row="1" Click="CancelButton_Click" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Cancel" Margin="346,122,0,0">
+            <FontIcon Glyph="&#xE10A;"/>
+        </Button>
     </Grid>
 </ContentDialog>

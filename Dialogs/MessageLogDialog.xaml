@@ -47,9 +47,20 @@
         </Grid>
         <TextBlock Text="Summary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,16,0,0" Grid.Row="1"/>
         <TextBlock Text="Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,16,0,0" Grid.Row="1"/>
-        <Button Content="Remove" Margin="199,388,0,0" Grid.Row="1" VerticalAlignment="Top" IsEnabled="False"/>
-        <Button Content="Remove All" Margin="278,388,0,0" Grid.Row="1" VerticalAlignment="Top" IsEnabled="False"/>
-        <Button x:Name="CloseButton" Content="Close" Margin="377,388,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseButton_Click"/>
+        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="43" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,171,0,0"/>
+        <TextBlock Text="Message Logs are not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <Button Margin="288,376,0,0" Width="44" Height="44" Grid.Row="1" VerticalAlignment="Top" IsEnabled="False"
+                ToolTipService.ToolTip="Remove">
+            <FontIcon Glyph="&#xE108;"/>
+        </Button>
+        <Button Margin="337,376,0,0" Width="44" Height="44" Grid.Row="1" VerticalAlignment="Top" IsEnabled="False"
+                ToolTipService.ToolTip="Remove All">
+            <FontIcon Glyph="&#xECC9;"/>
+        </Button>
+        <Button x:Name="CloseButton" Width="44" Height="44" Margin="386,376,0,0" Grid.Row="1" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="CloseButton_Click"
+                ToolTipService.ToolTip="Close">
+            <FontIcon Glyph="&#xE8BB;"/>
+        </Button>
         <Border Grid.Row="1" VerticalAlignment="Bottom" Height="31">
             <TextBlock Text="No unread messages" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="11,0,0,0"/>
         </Border>

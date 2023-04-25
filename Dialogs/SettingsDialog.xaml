@@ -43,7 +43,11 @@
                 <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
             </Button>
         </Grid>
+        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="43" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,171,0,0"/>
         <TextBlock Text="Settings are not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
-        <Button x:Name="OKButton" Content="OK" Margin="387,414,0,10" Grid.Row="1" VerticalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click"/>
+        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Grid.Row="1"
+                ToolTipService.ToolTip="OK" Margin="386,402,0,0">
+            <FontIcon Glyph="&#xE10B;"/>
+        </Button>
     </Grid>
 </ContentDialog>

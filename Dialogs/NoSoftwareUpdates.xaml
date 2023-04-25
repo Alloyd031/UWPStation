@@ -64,9 +64,12 @@
                 <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
             </Button>
         </Grid>
-        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE946;" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <TextBlock x:Name="PendingUpdatesText" Text="There are no software updates available at this time." HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="43,10,0,0" Grid.Row="1" TextWrapping="Wrap"/>
-        <Button x:Name="OKButton" Content="OK" Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click" Margin="267,234,0,0"/>
+        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE946;" FontSize="43" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,47,0,0"/>
+        <TextBlock x:Name="PendingUpdatesText" Text="There are no software updates available at this time." HorizontalAlignment="Center" VerticalAlignment="Top" 
+                   Margin="0,101,0,0" Grid.Row="1" TextWrapping="Wrap"/>
+        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Grid.Row="1"
+                ToolTipService.ToolTip="OK" Margin="266,222,0,0">
+            <FontIcon Glyph="&#xE10B;"/>
+        </Button>
     </Grid>
 </ContentDialog>

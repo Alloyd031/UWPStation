@@ -48,7 +48,13 @@
         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Grid.Row="1"/>
         <TextBlock Text="By restoring the snapshot, the current state will be lost." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="49,10,0,0" Grid.Row="1"/>
         <TextBlock Text="Do you want to restore the snapshot?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="49,40,0,0" Grid.Row="1"/>
-        <Button x:Name="YesButton" Content="Yes" Margin="298,134,0,0" Grid.Row="1" VerticalAlignment="Top" Click="YesButton_Click"/>
-        <Button x:Name="NoButton" Content="No" Margin="347,134,0,0" Grid.Row="1" VerticalAlignment="Top" Click="NoButton_Click"/>
+        <Button x:Name="NoButton" Width="44" Height="44" Grid.Row="1" Click="NoButton_Click" VerticalAlignment="Top"
+                ToolTipService.ToolTip="No" Margin="346,122,0,0">
+            <FontIcon Glyph="&#xE10A;"/>
+        </Button>
+        <Button x:Name="YesButton" Width="44" Height="44" VerticalAlignment="Top" Click="YesButton_Click" Grid.Row="1"
+                ToolTipService.ToolTip="Yes" Margin="297,122,0,0">
+            <FontIcon Glyph="&#xE10B;"/>
+        </Button>
     </Grid>
 </ContentDialog>

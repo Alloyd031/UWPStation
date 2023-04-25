@@ -148,8 +148,17 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Margin="150,0,0,50">
             <Frame x:Name="ContentFrame"/>
         </ScrollViewer>
-        <Button x:Name="HelpButton" Content="Help" Grid.Row="1" VerticalAlignment="Top" Margin="837,664,0,0"/>
-        <Button x:Name="CancelButton" Content="Cancel" Grid.Row="1" Click="CancelButton_Click" VerticalAlignment="Top" Margin="767,664,0,0"/>
-        <Button x:Name="OKButton" Content="OK" Grid.Row="1" Style="{StaticResource AccentButtonStyle}" Click="OKButton_Click" VerticalAlignment="Top" Margin="719,664,0,0"/>
+        <Button x:Name="HelpButton" Width="44" Height="44" Grid.Row="1" VerticalAlignment="Top" Margin="846,652,0,0"
+                ToolTipService.ToolTip="Help">
+            <FontIcon Glyph="&#xE11B;"/>
+        </Button>
+        <Button x:Name="CancelButton" Width="44" Height="44" Grid.Row="1" Click="CancelButton_Click" VerticalAlignment="Top" Margin="797,652,0,0"
+                ToolTipService.ToolTip="Cancel">
+            <FontIcon Glyph="&#xE10A;"/>
+        </Button>
+        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Margin="748,652,0,0" Grid.Row="1"
+                ToolTipService.ToolTip="Finish">
+            <FontIcon Glyph="&#xE10B;"/>
+        </Button>
     </Grid>
 </ContentDialog>

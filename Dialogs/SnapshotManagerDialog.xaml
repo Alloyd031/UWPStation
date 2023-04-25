@@ -44,13 +44,24 @@
                 <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
             </Button>
         </Grid>
-        <TextBlock Text="Snapshot Manager is not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" TextWrapping="Wrap"/>
-        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC5;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,494,0,0" Grid.Row="1"/>
-        <CheckBox Content="Show AutoProtect snapshots" Margin="41,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Go To" Margin="296,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="AutoProtect..." Margin="361,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Help" Margin="537,488,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button x:Name="CloseButton" Content="Close" Margin="474,488,0,0" Grid.Row="1" Click="CloseButton_Click" VerticalAlignment="Top"/>
+        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="43" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,221,0,0"/>
+        <TextBlock Text="Snapshot Manager is not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC5;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,488,0,0" Grid.Row="1"/>
+        <CheckBox Content="Show AutoProtect snapshots" Margin="44,482,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button Margin="399,476,0,0" Width="44" Height="44" Grid.Row="1" VerticalAlignment="Top" ToolTipService.ToolTip="Go To">
+            <FontIcon Glyph="&#xE143;"/>
+        </Button>
+        <Button Margin="448,476,0,0" Width="44" Height="44" Grid.Row="1" VerticalAlignment="Top" ToolTipService.ToolTip="AutoProtect...">
+            <FontIcon Glyph="&#xF738;"/>
+        </Button>
+        <Button x:Name="HelpButton" Width="44" Height="44" Grid.Row="1" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Help" Margin="546,476,0,0">
+            <FontIcon Glyph="&#xE11B;"/>
+        </Button>
+        <Button x:Name="CloseButton" Width="44" Height="44" Margin="497,476,0,0" Grid.Row="1" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="CloseButton_Click"
+                ToolTipService.ToolTip="Close">
+            <FontIcon Glyph="&#xE8BB;"/>
+        </Button>
         <Border Grid.Row="1" VerticalAlignment="Bottom" Height="31">
             <TextBlock Text="No items" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="11,0,0,0"/>
         </Border>

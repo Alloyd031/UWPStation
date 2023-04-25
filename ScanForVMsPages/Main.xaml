@@ -15,8 +15,11 @@
         <TextBlock Text="Welcome to the Scan for Virtual Machines Wizard" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
         <TextBlock Text="This wizard will scan your system for virtual machines outside of virtual machine library." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0"/>
         <TextBlock Text="Select a location to scan:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,72,0,0"/>
-        <TextBox x:Name="LocationBox" Text="Some location" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,112,0,0" Width="439"/>
-        <Button Content="Browse..." Margin="454,112,0,0" VerticalAlignment="Top"/>
+        <AutoSuggestBox x:Name="LocationBox" Text="Some location" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" VerticalContentAlignment="Center" Margin="10,96,0,0" Width="468" Height="44"/>
+        <Button Margin="483,96,0,0" Width="44" Height="44" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Browse...">
+            <FontIcon Glyph="&#xE11A;"/>
+        </Button>
         <Button Width="44" Height="44" Margin="10,496,0,0" VerticalAlignment="Top">
             <FontIcon Glyph="&#xE11B;"/>
         </Button>

@@ -17,17 +17,30 @@
         <TextBlock Text="Virtual machines to add" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,66,0,0"/>
         <TextBlock Text="VM Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,98,0,0"/>
         <TextBlock Text="Path" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,98,0,0"/>
-        <Button Content="Select All" Margin="21,355,0,0" VerticalAlignment="Top"/>
-        <Button Content="Unselect All" Margin="107,355,0,0" VerticalAlignment="Top"/>
+        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="43" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,218,0,0"/>
+        <TextBlock Text="Scanning for VMs is not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <Button Margin="10,349,0,0" Width="44" Height="44" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Select All">
+            <FontIcon Glyph="&#xE14E;"/>
+        </Button>
+        <Button Margin="59,349,0,0" Width="44" Height="44" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Unselect All">
+            <FontIcon Glyph="&#xE8E6;"/>
+        </Button>
         <TextBlock Text="Add to library" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,402,0,0"/>
-        <TextBlock Text="Add to:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,431,0,0"/>
-        <TextBox Text="My Computer" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" Margin="65,425,0,0" Width="434"/>
-        <Button Content="Browse..." Margin="504,425,0,0" VerticalAlignment="Top" Height="32"/>
-        <CheckBox Content="Match the file system folder hierarchy in the library" Margin="10,459,0,0" VerticalAlignment="Top"/>
-        <Button Width="44" Height="44" Margin="10,496,0,0" VerticalAlignment="Top">
+        <TextBlock Text="Add to:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,438,0,0"/>
+        <AutoSuggestBox Text="My Computer" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" VerticalContentAlignment="Center" Margin="73,425,0,0" Width="468" Height="44"/>
+        <Button Margin="546,425,0,0" Width="44" Height="44" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Browse...">
+            <FontIcon Glyph="&#xE11A;"/>
+        </Button>
+        <CheckBox Content="Match the file system folder hierarchy in the library" Margin="73,474,0,0" VerticalAlignment="Top"/>
+        <Button Width="44" Height="44" Margin="10,496,0,0" VerticalAlignment="Top" 
+                ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>
         </Button>
-        <Button x:Name="FinishButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="546,496,0,0" VerticalAlignment="Top">
+        <Button x:Name="FinishButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="546,496,0,0" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Finish">
             <FontIcon Glyph="&#xE10B;"/>
         </Button>
     </Grid>

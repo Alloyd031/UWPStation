@@ -14,10 +14,12 @@
     <Grid>
         <TextBlock Text="Ready to Create Virtual Machine" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
         <TextBlock Text="Click Finish to create the virtual machine. Then you can install Alloyd's OS." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,34,0,0" TextWrapping="Wrap" Width="420"/>
-        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top">
+        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top" 
+                ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>
         </Button>
-        <Button x:Name="FinishButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top">
+        <Button x:Name="FinishButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Finish">
             <FontIcon Glyph="&#xE10B;"/>
         </Button>
     </Grid>

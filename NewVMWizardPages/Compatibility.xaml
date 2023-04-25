@@ -25,10 +25,12 @@
         <TextBox Text="UWPStation 0.1.x" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,186,0,0"/>
         <TextBlock Text="Limitations:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,162,0,0"/>
         <TextBox Text="No limitations" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,186,0,0"/>
-        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top">
+        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>
         </Button>
-        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top" Click="NextButton_Click">
+        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top" Click="NextButton_Click"
+                ToolTipService.ToolTip="Next">
             <FontIcon Glyph="&#xE111;"/>
         </Button>
     </Grid>

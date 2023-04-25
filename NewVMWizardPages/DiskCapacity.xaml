@@ -21,10 +21,12 @@
         <RadioButton Content="Store virtual disk as a single file" Margin="10,204,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="Split virtual disk into multiple files" IsChecked="True" Margin="10,236,0,0" VerticalAlignment="Top"/>
         <TextBlock Text="Splitting the disk makes it easier to move the virtual machine to another computer but may reduce performance with very large disks." HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,268,0,0" Width="420"/>
-        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top">
+        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>
         </Button>
-        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top" Click="NextButton_Click">
+        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top" Click="NextButton_Click"
+                ToolTipService.ToolTip="Next">
             <FontIcon Glyph="&#xE111;"/>
         </Button>
     </Grid>

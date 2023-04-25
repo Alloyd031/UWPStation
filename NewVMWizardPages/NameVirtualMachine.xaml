@@ -20,10 +20,12 @@
         <TextBox Text="Some location" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,155,0,0" Width="337" IsReadOnly="True"/>
         <Button Content="Browse..." Margin="352,155,0,0" VerticalAlignment="Top"/>
         <TextBlock Text="The default location can be changed at Edit > Preferences." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,192,0,0"/>
-        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top">
+        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>
         </Button>
-        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top" Click="NextButton_Click">
+        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top" Click="NextButton_Click"
+                ToolTipService.ToolTip="Next">
             <FontIcon Glyph="&#xE111;"/>
         </Button>
     </Grid>

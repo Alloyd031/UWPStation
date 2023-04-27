@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Loaded="Page_Loaded">
@@ -22,8 +23,31 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        <Button
+					x:Name="MenuButton"
+					Width="50"
+					Height="50"
+					AutomationProperties.Name="Menu"
+					Background="Transparent"
+					BorderBrush="Transparent"
+					ToolTipService.ToolTip="Menu"
+                    Click="MenuButton_Click">
+            <muxc:AnimatedIcon x:Name="GlobalNavigationButtonAnimatedIcon">
+                <muxc:AnimatedIcon.Source>
+                    <animatedvisuals:AnimatedGlobalNavigationButtonVisualSource/>
+                </muxc:AnimatedIcon.Source>
+                <muxc:AnimatedIcon.FallbackIconSource>
+                    <muxc:SymbolIconSource Symbol="GlobalNavigationButton"/>
+                </muxc:AnimatedIcon.FallbackIconSource>
+            </muxc:AnimatedIcon>
+            <FlyoutBase.AttachedFlyout>
+                <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                    <MenuFlyoutItem Text="Changelog" Click="Changelog_Click"/>
+                </MenuFlyout>
+            </FlyoutBase.AttachedFlyout>
+        </Button>
         <Grid x:Name="AppTitleBar"
-              Background="Transparent">
+              Background="Transparent" Margin="50,0,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="16" />
                 <ColumnDefinition Width="Auto" />
@@ -41,8 +65,8 @@
                        Grid.Column="2" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
         </Grid>
         <StackPanel x:Name="MenuStack"
-                    Orientation="Horizontal" Margin="200,0,0,0">
-            <muxc:MenuBar>
+                    Orientation="Horizontal" Margin="250,0,0,0">
+            <muxc:MenuBar Height="50">
                 <muxc:MenuBarItem Title="File">
                     <MenuFlyoutItem Text="New Virtual Machine..." Click="CreateNewVM_Click"/>
                     <MenuFlyoutItem Text="New Window" Click="NewWindow_Click"/>

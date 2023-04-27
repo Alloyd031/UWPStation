@@ -130,6 +130,9 @@
     <Compile Include="AboutDialog.xaml.cs">
       <DependentUpon>AboutDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangelogDialog.xaml.cs">
+      <DependentUpon>ChangelogDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreatorsDialog.xaml.cs">
       <DependentUpon>CreatorsDialog.xaml</DependentUpon>
     </Compile>
@@ -229,9 +232,6 @@
     <Compile Include="Pages\WorkspacePage.xaml.cs">
       <DependentUpon>WorkspacePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProjectPage.xaml.cs">
-      <DependentUpon>ProjectPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScanForVMsPages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
@@ -329,6 +329,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AboutDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangelogDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -461,10 +465,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\WorkspacePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ProjectPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

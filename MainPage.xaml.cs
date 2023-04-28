@@ -227,20 +227,6 @@ namespace UWPStation
         {
             this.TabsFrame.Navigate(typeof(VMPage));
         }
-        private void MyComputer_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(MyComputerPage));
-            Button btnE = sender as Button;
-            if (this.MyComputerTab.Visibility == Visibility.Collapsed)
-            {
-                this.MyComputerTab.Visibility = Visibility.Visible;
-            }
-        }
-        private void CloseMyComputerTab_Click(object sender, RoutedEventArgs e)
-        {           
-            MyComputerTab.Visibility = Visibility.Collapsed;
-            this.TabsFrame.GoBack();
-        }
         private async void VMSettings_Click(object sender, RoutedEventArgs e)
         {
             VMSettings dialog = new VMSettings();

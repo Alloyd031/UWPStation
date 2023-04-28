@@ -31,6 +31,7 @@
 					Background="Transparent"
 					BorderBrush="Transparent"
 					ToolTipService.ToolTip="Menu"
+                    ToolTipService.Placement="Bottom"
                     Click="MenuButton_Click">
             <muxc:AnimatedIcon x:Name="GlobalNavigationButtonAnimatedIcon">
                 <muxc:AnimatedIcon.Source>
@@ -213,7 +214,7 @@
                     Click="HideLibrary_Click"/>
             <AutoSuggestBox VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="10,44,10,0"/>
             <Button x:Name="MyComputer" Height="49" Width="180" Margin="0,81,0,0" Background="Transparent" BorderBrush="Transparent"
-                    VerticalAlignment="Top" HorizontalAlignment="Center" Click="MyComputer_Click">
+                    VerticalAlignment="Top" HorizontalAlignment="Center">
                 <Grid Margin="-90,-25,-90,-25">
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEC4E;" FontSize="15" Width="29" Margin="10,10,141,10"/>
                     <TextBlock Text="My Computer" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
@@ -253,11 +254,11 @@
                     </Grid>
                 </Button>
                 <Button x:Name="MyComputerTab" Height="49" Width="175"
-                        Click="MyComputerTab_Click" Margin="370,0,0,0">
+                        Click="MyComputerTab_Click" Margin="370,0,0,10" VerticalAlignment="Bottom">
                     <Grid Margin="-88,-24,-87,-25">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEC4E;" Width="29" Height="29" Margin="10,10,136,10"/>
                         <TextBlock Text="My Computer" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
-                        <Button x:Name="CloseMyComputerTab" Height="29" Width="29" Background="Transparent" BorderBrush="Transparent" Margin="136,0,0,0" ToolTipService.ToolTip="Close Tab" Click="CloseMyComputerTab_Click">
+                        <Button x:Name="CloseMyComputerTab" Height="29" Width="29" Background="Transparent" BorderBrush="Transparent" Margin="136,0,0,0" ToolTipService.ToolTip="Close Tab">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8BB;" FontSize="12" Margin="-15,-14,-14,-15"/>
                         </Button>
                     </Grid>

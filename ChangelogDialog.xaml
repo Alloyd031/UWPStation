@@ -47,6 +47,7 @@
         </Grid>
         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="43" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,288,0,0"/>
         <TextBlock Text="Changelog is currently not available. Use GitHub Commits to see what changed." HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" Margin="0,337,0,0"/>
+        <HyperlinkButton Content="Go to GitHub Commits page" NavigateUri="https://github.com/Alloyd031/UWPStation/commits/master" HorizontalAlignment="Center" Margin="0,361,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Margin="846,652,0,0" Grid.Row="1"
                 ToolTipService.ToolTip="OK">
             <FontIcon Glyph="&#xE10B;"/>

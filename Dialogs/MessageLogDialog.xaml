@@ -57,7 +57,7 @@
                 ToolTipService.ToolTip="Remove All">
             <FontIcon Glyph="&#xECC9;"/>
         </Button>
-        <Button x:Name="CloseButton" Width="44" Height="44" Margin="386,376,0,0" Grid.Row="1" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="CloseButton_Click"
+        <Button x:Name="CloseButton" Width="44" Height="44" Margin="386,376,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseButton_Click"
                 ToolTipService.ToolTip="Close">
             <FontIcon Glyph="&#xE8BB;"/>
         </Button>

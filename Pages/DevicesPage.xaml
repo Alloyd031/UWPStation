@@ -14,14 +14,14 @@
             <FontIcon Glyph="&#xE772;" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
             <TextBlock Text="Devices" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0" Height="80">
-            <TextBlock Text="Removable media" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0">
+            <TextBlock Text="Removable media" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
             <TextBlock Text="The Autorun feature on the host opens and runs CDs and DVDs automatically when you insert them in the host CD/DVD drive. Autorun can cause unexpected behavior in virtual machines." 
-                       HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,24,0,0"/>
-            <CheckBox Content="Disable Autorun on the host when a virtual machine is running" VerticalAlignment="Top" IsChecked="True" Margin="0,48,0,0"/>
+                       HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Width="600" Margin="0,24,0,0"/>
+            <CheckBox Content="Disable Autorun on the host when a virtual machine is running" VerticalAlignment="Top" IsChecked="True" Margin="0,61,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,146,0,0" Height="80">
-            <TextBlock Text="Virtual printer" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,159,0,0" Height="80">
+            <TextBlock Text="Virtual printer" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
             <TextBlock Text="The virtual printer device allows a virtual machine with UWPTools to print to any printers configured on your host." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,24,0,0"/>
             <CheckBox x:Name="EnablePrinters" Content="Enable virtual printers" IsChecked="True" IsEnabled="False" VerticalAlignment="Top" Margin="0,48,0,0"/>
             <Button x:Name="ChangeSettingsButton" Content="Change settings" VerticalAlignment="Top" Click="ChangeSettingsButton_Click" Margin="168,48,0,0"/>

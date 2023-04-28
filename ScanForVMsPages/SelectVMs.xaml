@@ -17,8 +17,10 @@
         <TextBlock Text="Virtual machines to add" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,66,0,0"/>
         <TextBlock Text="VM Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,98,0,0"/>
         <TextBlock Text="Path" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,98,0,0"/>
-        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="43" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,218,0,0"/>
-        <TextBlock Text="Scanning for VMs is not possible at this time." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Scanning for VMs is not possible at this time." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+        </Grid>
         <Button Margin="10,349,0,0" Width="44" Height="44" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Select All">
             <FontIcon Glyph="&#xE14E;"/>

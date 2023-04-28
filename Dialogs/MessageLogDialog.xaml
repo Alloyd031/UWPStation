@@ -47,8 +47,10 @@
         </Grid>
         <TextBlock Text="Summary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,16,0,0" Grid.Row="1"/>
         <TextBlock Text="Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,16,0,0" Grid.Row="1"/>
-        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="43" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,171,0,0"/>
-        <TextBlock Text="Message Logs are not available." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Message Logs are not available." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+        </Grid>
         <Button Margin="288,376,0,0" Width="44" Height="44" Grid.Row="1" VerticalAlignment="Top" IsEnabled="False"
                 ToolTipService.ToolTip="Remove">
             <FontIcon Glyph="&#xE108;"/>

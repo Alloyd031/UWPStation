@@ -8,19 +8,21 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
-    Width="440"
+    Width="480"
 	Height="500">
 
     <Grid>
         <TextBlock Text="Ready to Create Virtual Machine" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
         <TextBlock Text="Click Finish to create the virtual machine. Then you can install Alloyd's OS." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,34,0,0" TextWrapping="Wrap" Width="420"/>
-        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="43" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,216,0,0"/>
-        <TextBlock Text="Creating VMs is not possible at this time." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,264,0,0"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Creating VMs is not possible at this time." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+        </Grid>
         <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top" 
                 ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>
         </Button>
-        <Button x:Name="FinishButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="386,446,0,0" VerticalAlignment="Top"
+        <Button x:Name="FinishButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="426,446,0,0" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Finish">
             <FontIcon Glyph="&#xE10B;"/>
         </Button>

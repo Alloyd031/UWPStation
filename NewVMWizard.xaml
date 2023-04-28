@@ -20,7 +20,7 @@
     <Border>
         <Grid
 			x:Name="ContainerGrid"
-            Width="440"
+            Width="480"
 			Height="550"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
@@ -62,7 +62,7 @@
 					Background="Transparent"
 					BorderBrush="Transparent"
 					Click="CloseDialogButton_Click"
-					ToolTipService.ToolTip="Close" Margin="396,0,0,0">
+					ToolTipService.ToolTip="Close" Margin="436,0,0,0">
                     <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
                 </Button>
             </Grid>

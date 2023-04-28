@@ -48,8 +48,9 @@
                     </muxc:AnimatedIcon.FallbackIconSource>
                 </muxc:AnimatedIcon>
             </Button>
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE115;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44" Margin="44,0,0,0"/>
+            <FontIcon x:Name="PreferencesIcon" FontFamily="Segoe Fluent Icons" Glyph="&#xE115;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44" Margin="44,0,0,0"/>
             <TextBlock
+                    x:Name="PreferencesString"
 					HorizontalAlignment="Left"
 					VerticalAlignment="Center"
 					FontWeight="SemiBold"
@@ -95,7 +96,7 @@
         </Button>
         <Button x:Name="DisplayButton" Height="44" Width="44" VerticalAlignment="Top"
                 Click="DisplayButton_Click" Margin="157,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Display">
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE770;" Margin="-22,-22,-22,-22"/>
+            <FontIcon Glyph="&#xE770;" Margin="-22,-22,-22,-22"/>
         </Button>
         <Button x:Name="UnityButton" Height="44" Width="44" VerticalAlignment="Top"
                 Click="UnityButton_Click" Margin="206,652,0,0" Grid.Row="1" ToolTipService.ToolTip="Unity">

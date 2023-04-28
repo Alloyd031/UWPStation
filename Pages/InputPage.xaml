@@ -10,24 +10,32 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="Input" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
-        <TextBlock Text="Keyboard and mouse" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,92,0,0"/>
-        <CheckBox Content="Grab keyboard and input on mouse click" Margin="19,118,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <CheckBox Content="Grab keyboard and input on key press" Margin="19,150,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="Cursor" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,197,0,0"/>
-        <TextBlock Text="You may need to install UWPTools for these options to work correctly." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,221,0,0"/>
-        <CheckBox Content="Automatically grab and ungrab the mouse" Margin="19,245,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <CheckBox Content="Hide cursor on ungrab" Margin="19,277,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <TextBlock Text="Optimize mouse for games:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,318,0,0"/>
-        <ComboBox Text="Automatic" Margin="194,312,0,0">
+        <Grid Height="49" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE961;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
+            <TextBlock Text="Input" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0">
+            <TextBlock Text="Keyboard and mouse" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <CheckBox Content="Grab keyboard and input on mouse click" Margin="0,19,0,0" VerticalAlignment="Top" IsChecked="True"/>
+            <CheckBox Content="Grab keyboard and input on key press" Margin="0,51,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,149,0,0">
+            <TextBlock Text="Cursor" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <TextBlock Text="You may need to install UWPTools for these options to work correctly." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,24,0,0"/>
+            <CheckBox Content="Automatically grab and ungrab the mouse" Margin="0,43,0,0" VerticalAlignment="Top" IsChecked="True"/>
+            <CheckBox Content="Hide cursor on ungrab" Margin="0,75,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        </Grid>
+        <TextBlock Text="Optimize mouse for games:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,273,0,0"/>
+        <ComboBox Text="Automatic" Margin="185,266,0,0">
             <ComboBox.Items>
                 <ComboBoxItem Content="Automatic" IsSelected="True"/>
                 <ComboBoxItem Content="Always"/>
                 <ComboBoxItem Content="Never"/>
             </ComboBox.Items>
         </ComboBox>
-        <TextBlock FontFamily="Segoe FLuent Icons" Text="&#xE946;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,349,0,0" Height="17" FontSize="16"/>
-        <TextBlock Text="Change this option if you have trouble with mouse motion in some applications." HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="49,348,0,0"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,303,0,0">
+            <TextBlock FontFamily="Segoe FLuent Icons" Text="&#xE946;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="17" FontSize="16"/>
+            <TextBlock Text="Change this option if you have trouble with mouse motion in some applications." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,-2,0,0" />
+        </Grid>
     </Grid>
 </Page>

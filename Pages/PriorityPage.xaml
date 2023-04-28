@@ -10,26 +10,33 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <TextBlock Text="Priority" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
-        <TextBlock Text="Default process priority" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,92,0,0"/>
-        <TextBlock Text="Input grabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,128,0,0"/>
-        <ComboBox Text="Normal" Margin="132,122,0,0">
-            <ComboBox.Items>
-                <ComboBoxItem Content="Normal" IsSelected="True"/>
-                <ComboBoxItem Content="High"/>
-            </ComboBox.Items>
-        </ComboBox>
-        <TextBlock Text="Input ungrabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,165,0,0"/>
-        <ComboBox Text="Normal" Margin="132,159,0,0">
-            <ComboBox.Items>
-                <ComboBoxItem Content="Low"/>
-                <ComboBoxItem Content="Normal" IsSelected="True"/>
-            </ComboBox.Items>
-        </ComboBox>
-        <TextBlock Text="A virtual machine's local settings will override these global settings." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,196,0,0"/>
-        <TextBlock Text="Snapshots" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,226,0,0"/>
-        <CheckBox Content="Take snapshots in the background when possible" Margin="19,245,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="Restore snapshots in the background when possible" Margin="19,277,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="Virtual machines must be powered off for background snapshot changes to take effect." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,309,0,0"/>
+        <Grid Height="49" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE182;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
+            <TextBlock Text="Priority" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0">
+            <TextBlock Text="Default process priority" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <TextBlock Text="Input grabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,33,0,0"/>
+            <ComboBox Text="Normal" Margin="132,27,0,0">
+                <ComboBox.Items>
+                    <ComboBoxItem Content="Normal" IsSelected="True"/>
+                    <ComboBoxItem Content="High"/>
+                </ComboBox.Items>
+            </ComboBox>
+            <TextBlock Text="Input ungrabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,77,0,0"/>
+            <ComboBox Text="Normal" Margin="132,70,0,0">
+                <ComboBox.Items>
+                    <ComboBoxItem Content="Low"/>
+                    <ComboBoxItem Content="Normal" IsSelected="True"/>
+                </ComboBox.Items>
+            </ComboBox>
+            <TextBlock Text="A virtual machine's local settings will override these global settings." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,114,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,199,0,0">
+            <TextBlock Text="Snapshots" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <CheckBox Content="Take snapshots in the background when possible" Margin="0,19,0,0" VerticalAlignment="Top"/>
+            <CheckBox Content="Restore snapshots in the background when possible" Margin="0,51,0,0" VerticalAlignment="Top"/>
+            <TextBlock Text="Virtual machines must be powered off for background snapshot changes to take effect." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,88,0,0"/>
+        </Grid>
     </Grid>
 </Page>

@@ -10,13 +10,16 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <TextBlock Text="USB" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,92,0,0">
-            <TextBlock Text="Connections" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBlock Text="When a new USB device is detected, UWPStation should:"/>
-            <RadioButton Content="Ask me what to do" IsChecked="True"/>
-            <RadioButton Content="Connect the device to the host" />
-            <RadioButton Content="Connect the device to the foreground virtual machine"/>
-        </StackPanel>
+        <Grid Height="49" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE88E;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
+            <TextBlock Text="USB" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0">
+            <TextBlock Text="Connections" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <TextBlock Text="When a new USB device is detected, UWPStation should:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,24,0,0"/>
+            <RadioButton Content="Ask me what to do" IsChecked="True" Margin="0,42,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Connect the device to the host" Margin="0,72,0,0" VerticalAlignment="Top" />
+            <RadioButton Content="Connect the device to the foreground virtual machine" HorizontalAlignment="Center" Margin="0,104,0,0" VerticalAlignment="Top"/>
+        </Grid>
     </Grid>
 </Page>

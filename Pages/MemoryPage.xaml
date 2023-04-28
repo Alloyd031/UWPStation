@@ -10,18 +10,23 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <TextBlock Text="Memory" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
-        <TextBlock Text="Reserved memory" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,92,0,0"/>
-        <TextBlock Text="How much host RAM should the system be able to reserve for all running virtual machines?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,116,0,0"/>
-        <Slider HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,140,0,0" Width="300" 
+        <Grid Height="49" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE950;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
+            <TextBlock Text="Memory" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0">
+            <TextBlock Text="Reserved memory" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <TextBlock Text="How much host RAM should the system be able to reserve for all running virtual machines?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,24,0,0"/>
+            <Slider HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,54,0,0" Width="300" 
                 TickFrequency="8136" TickPlacement="BottomRight" Value="6356" Minimum="128" Maximum="8136"/>
-        <muxc:NumberBox SpinButtonPlacementMode="Compact" Text="6356" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="331,140,0,0"/>
-        <muxc:RadioButtons Header="Additional memory" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="1" Margin="19,183,0,0">
+            <muxc:NumberBox SpinButtonPlacementMode="Compact" Text="6356" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="312,54,0,0"/>
+        </Grid>
+        <muxc:RadioButtons Header="Additional memory" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="1" Margin="10,151,0,0">
             <RadioButton Content="Fit all virtual machine memory into reserved host RAM"/>
             <RadioButton Content="Allow some virtual machine memory to be swapped"/>
             <RadioButton Content="Allow most virtual machine memory to be swapped"/>
         </muxc:RadioButtons>
-        <TextBlock Text="Swapping virtual machine memory allows more virtual machines to run but can degrade system perfomance if the virtual machines use their memory intensively." 
-                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,327,0,0" TextWrapping="Wrap"/>
+        <TextBlock Text="Swapping virtual machine memory allows more virtual machines to run but can degrade system performance if the virtual machines use their memory intensively." 
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,295,0,0" Width="600" TextWrapping="Wrap"/>
     </Grid>
 </Page>

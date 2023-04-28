@@ -10,12 +10,15 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <TextBlock Text="Unity" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,92,0,0">
-            <TextBlock Text="Unity applications menu hot key" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBlock Text="Hot key:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox Text="Ctrl + Shift + U" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        </StackPanel>
-        <CheckBox Content="Minimize UWPStation when entering Unity" IsChecked="True" Margin="19,167,0,0" VerticalAlignment="Top"/>
+        <Grid Height="49" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE2AE;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
+            <TextBlock Text="Unity" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0">
+            <TextBlock Text="Unity applications menu hot key" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,24,0,0"/>
+            <TextBlock Text="Hot key:" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <TextBox Text="Ctrl + Shift + U" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,48,0,0"/>
+            <CheckBox Content="Minimize UWPStation when entering Unity" IsChecked="True" Margin="0,85,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        </Grid>
     </Grid>
 </Page>

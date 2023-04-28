@@ -10,18 +10,25 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <TextBlock Text="Updates" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,19,0,0"/>
-        <TextBlock Text="Software updates" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,94,0,0"/>
-        <CheckBox Content="Check for product updates on startup" Margin="19,118,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <TextBlock Text="When UWPStation starts, check for new versions of the application and installed software components." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,150,0,0"/>
-        <CheckBox Content="Check for software components as needed" IsChecked="True" Margin="19,169,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="When a software component is needed (such as installing UWPTools) check for a new version of the component." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,201,0,0"/>
-        <Button Content="Download All Components Now" Margin="19,225,0,0" VerticalAlignment="Top"/>
-        <Button Content="Connection Settings" Margin="247,225,0,0" VerticalAlignment="Top"/>
-        <HyperlinkButton Content="Learn More" Margin="401,225,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="UWPTools updates" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,271,0,0"/>
-        <CheckBox Content="Automatically update UWPTools on a virtual machine" Margin="19,295,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="If a new version of UWPTools is available, it will be updated the next time a virtual machine is powered on or off. This configuration may be overriden in each virtual machine's settings." 
-                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,332,0,0" TextWrapping="Wrap"/>
+        <Grid Height="49" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE777;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
+            <TextBlock Text="Updates" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0">
+            <TextBlock Text="Software updates" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <CheckBox Content="Check for product updates on startup" Margin="1,19,0,0" VerticalAlignment="Top" IsChecked="True"/>
+            <TextBlock Text="When UWPStation starts, check for new versions of the application and installed software components." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,51,0,0"/>
+            <CheckBox Content="Check for software components as needed" IsChecked="True" Margin="0,75,0,0" VerticalAlignment="Top"/>
+            <TextBlock Text="When a software component is needed (such as installing UWPTools) check for a new version of the component." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,107,0,0"/>
+            <Button Content="Download All Components Now" Margin="0,137,0,0" VerticalAlignment="Top"/>
+            <Button Content="Connection Settings" Margin="228,137,0,0" VerticalAlignment="Top"/>
+            <HyperlinkButton Content="Learn More" Margin="382,137,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,235,0,0">
+            <TextBlock Text="UWPTools updates" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <CheckBox Content="Automatically update UWPTools on a virtual machine" Margin="0,24,0,0" VerticalAlignment="Top"/>
+            <TextBlock Text="If a new version of UWPTools is available, it will be updated the next time a virtual machine is powered on or off. This configuration may be overriden in each virtual machine's settings." 
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,56,0,0" TextWrapping="Wrap" Width="600"/>
+        </Grid>
     </Grid>
 </Page>

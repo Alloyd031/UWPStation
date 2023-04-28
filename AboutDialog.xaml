@@ -55,6 +55,7 @@
                 ToolTipService.ToolTip="Creators">
             <FontIcon Glyph="&#xE125;"/>
         </Button>
+        <TextBlock Text="This app is a part of the UWPFamily apps." Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,371,0,0" Grid.Row="1"/>
         <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Grid.Row="1"
                 ToolTipService.ToolTip="OK" Margin="597,360,0,0">
             <FontIcon Glyph="&#xE10B;"/>

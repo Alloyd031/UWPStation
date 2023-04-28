@@ -13,7 +13,7 @@
 
     <Grid>
         <TextBlock Text="Ready to Create Virtual Machine" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <TextBlock Text="Click Finish to create the virtual machine. Then you can install Alloyd's OS." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,34,0,0" TextWrapping="Wrap" Width="420"/>
+        <TextBlock Text="Click Finish to create the virtual machine. Then you can install Alloyd's OS." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0" />
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Creating VMs is not possible at this time." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>

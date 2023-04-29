@@ -22,38 +22,15 @@
 			Height="500"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="44" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Grid>
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC5;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
-            <TextBlock
-					HorizontalAlignment="Left"
-					VerticalAlignment="Center"
-					FontWeight="SemiBold"
-					Text="Software Updates" Margin="49,0,0,0"/>
-            <Button
-					x:Name="CloseDialogButton"
-					Width="44"
-					Height="44"
-					AutomationProperties.Name="Close"
-					Background="Transparent"
-					BorderBrush="Transparent"
-					Click="CloseDialogButton_Click"
-					ToolTipService.ToolTip="Close" Margin="396,0,0,0">
-                <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
-            </Button>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <muxc:ProgressRing x:Name="CheckForUpdatesProgress" Width="60" Height="60" IsIndeterminate="False" VerticalAlignment="Top"/>
+            <TextBlock x:Name="PendingUpdatesText" Text="No pending updates." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
         </Grid>
-        <TextBlock x:Name="PendingUpdatesText" Text="No pending updates." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,47,0,0" Grid.Row="1"/>
-        <muxc:ProgressRing x:Name="CheckForUpdatesProgress" Margin="0,10,0,0" IsIndeterminate="False" Grid.Row="1" VerticalAlignment="Top"/>
-        <RichEditBox Margin="10,91,10,59" Grid.Row="1" IsReadOnly="True"/>
-        <Button x:Name="CheckForUpdatesButton" Width="44" Height="44" VerticalAlignment="Top" Click="CheckForUpdatesButton_Click" Grid.Row="1"
-                ToolTipService.ToolTip="Check for updates" Margin="337,402,0,0">
+        <Button x:Name="CheckForUpdatesButton" Width="44" Height="44" VerticalAlignment="Top" Click="CheckForUpdatesButton_Click"
+                ToolTipService.ToolTip="Check for updates" Margin="342,446,0,0">
             <FontIcon Glyph="&#xECC5;"/>
         </Button>
-        <Button x:Name="CloseButton" Width="44" Height="44" Margin="386,402,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseButton_Click"
+        <Button x:Name="CloseButton" Width="44" Height="44" Margin="386,446,0,0" VerticalAlignment="Top" Click="CloseButton_Click"
                 ToolTipService.ToolTip="Close">
             <FontIcon Glyph="&#xE8BB;"/>
         </Button>

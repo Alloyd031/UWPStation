@@ -12,12 +12,18 @@
 	Height="500">
 
     <Grid>
-        <TextBlock Text="Welcome to the New Virtual Machine Wizard" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <TextBlock Text="What type of configuration you want?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0"/>
-        <RadioButton x:Name="TypicalRadioButton" Content="Typical (Recommended)" Margin="10,72,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <TextBlock Text="Create a UWPStation 0.1.x virtual machine in a few easy steps." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,104,0,0"/>
-        <RadioButton x:Name="CustomRadioButton" Content="Custom (Advanced)" Margin="10,132,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="Create a virtual machine with advanced options." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,164,0,0"/>
+        <Grid VerticalAlignment="Top">
+            <TextBlock Text="Welcome to the New Virtual Machine Wizard" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,8,0,0"/>
+            <TextBlock Text="What type of configuration you want?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,32,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,56,0,0">
+            <RadioButton x:Name="TypicalRadioButton" Content="Typical (Recommended)" VerticalAlignment="Top" IsChecked="True"/>
+            <TextBlock Text="Create a UWPStation 0.1.x virtual machine in a few easy steps." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,112,0,0">
+            <RadioButton x:Name="CustomRadioButton" Content="Custom (Advanced)" VerticalAlignment="Top"/>
+            <TextBlock Text="Create a virtual machine with advanced options." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0"/>
+        </Grid>
         <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>

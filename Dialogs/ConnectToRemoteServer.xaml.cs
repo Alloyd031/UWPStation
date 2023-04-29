@@ -23,17 +23,9 @@ namespace UWPStation.Dialogs
         {
             this.InitializeComponent();
         }
-        private void CloseDialogButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-        }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-        }
-        private void ConnectButton_Click(object sender, RoutedEventArgs e)
-        {
-            ConnectButtonTip.IsOpen = true;
         }
     }
 }

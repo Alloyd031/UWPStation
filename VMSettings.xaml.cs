@@ -32,10 +32,6 @@ namespace UWPStation
         {
             Hide();
         }
-        private void CloseDialogButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-        }
         private void HardwareTab_Click(object sender, RoutedEventArgs e)
         {
             this.ContentFrame.Navigate(typeof(Hardware));

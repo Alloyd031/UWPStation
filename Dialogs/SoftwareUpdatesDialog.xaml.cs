@@ -24,10 +24,6 @@ namespace UWPStation.Dialogs
         {
             this.InitializeComponent();
         }
-        private void CloseDialogButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-        }
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
@@ -36,24 +32,19 @@ namespace UWPStation.Dialogs
         {
             CheckForUpdatesProgress.IsIndeterminate = true;
             PendingUpdatesText.Text = "UWPStation is connecting to the update server...";
-            if (this.CheckForUpdatesButton != null && this.CloseDialogButton != null && this.CloseButton != null)
+            if (this.CheckForUpdatesButton != null && this.CloseButton != null)
             {
-                CloseDialogButton.IsEnabled = false;
                 CheckForUpdatesButton.IsEnabled = false;
                 CloseButton.IsEnabled = false;
             }           
             await Task.Delay(5000);
             CheckForUpdatesProgress.IsIndeterminate = false;
-            PendingUpdatesText.Text = "No pending updates.";
+            PendingUpdatesText.Text = "There are no software updates available at this time.";
             if (this.CheckForUpdatesButton != null)
             {
-                CloseDialogButton.IsEnabled = true;
                 CheckForUpdatesButton.IsEnabled = true;
                 CloseButton.IsEnabled = true;
             }
-            Hide();
-            NoSoftwareUpdates dialog = new NoSoftwareUpdates();
-            await dialog.ShowAsync();
         }
     }
 }

@@ -133,9 +133,6 @@
     <Compile Include="ChangelogDialog.xaml.cs">
       <DependentUpon>ChangelogDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CreatorsDialog.xaml.cs">
-      <DependentUpon>CreatorsDialog.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Dialogs\ConnectToRemoteServer.xaml.cs">
       <DependentUpon>ConnectToRemoteServer.xaml</DependentUpon>
     </Compile>
@@ -144,9 +141,6 @@
     </Compile>
     <Compile Include="Dialogs\MessageLogDialog.xaml.cs">
       <DependentUpon>MessageLogDialog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\NoSoftwareUpdates.xaml.cs">
-      <DependentUpon>NoSoftwareUpdates.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\RestoreSnapshot.xaml.cs">
       <DependentUpon>RestoreSnapshot.xaml</DependentUpon>
@@ -336,10 +330,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CreatorsDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Dialogs\ConnectToRemoteServer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -349,10 +339,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\MessageLogDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Dialogs\NoSoftwareUpdates.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

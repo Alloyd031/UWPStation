@@ -21,44 +21,22 @@
 			Height="458"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="44" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Grid>
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE946;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
-            <TextBlock
-					HorizontalAlignment="Left"
-					VerticalAlignment="Center"
-					FontWeight="SemiBold"
-					Text="About UWPStation" Margin="49,0,0,0"/>
-            <Button
-					x:Name="CloseDialogButton"
-					Width="44"
-					Height="44"
-					AutomationProperties.Name="Close"
-					Background="Transparent"
-					BorderBrush="Transparent"
-					Click="CloseDialogButton_Click"
-					ToolTipService.ToolTip="Close" Margin="607,0,0,0">
-                <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
-            </Button>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,33,0,0">
+            <Image Source="/Assets/StoreLogo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Width="48" Height="48"/>
+            <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,48,0,0"/>
+            <TextBlock Text="0.1 Preview" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,85,0,0"/>
         </Grid>
-        <Image Source="/Assets/StoreLogo.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="32" Margin="10,10,0,0" Grid.Row="1"/>
-        <TextBlock Grid.Row="1" Text="Product Information" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,17,0,0"/>
-        <TextBlock Grid.Row="1" Text="Product:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,41,0,0"/>
-        <TextBlock Grid.Row="1" Text="UWPStation" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="146,41,0,0"/>
-        <TextBlock Grid.Row="1" Text="Version:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,65,0,0"/>
-        <TextBlock Grid.Row="1" Text="0.1 Preview" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="146,65,0,0"/>
-        <Button x:Name="CreatorsButton" Grid.Row="1" Height="44" Width="44" Click="CreatorsButton_Click" Margin="10,360,0,0" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Creators">
-            <FontIcon Glyph="&#xE125;"/>
-        </Button>
-        <TextBlock Text="This app is a part of the UWPFamily apps." Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,371,0,0" Grid.Row="1"/>
-        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Grid.Row="1"
-                ToolTipService.ToolTip="OK" Margin="597,360,0,0">
+        <TextBlock Text="This app is a part of the UWPFamily apps." Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,415,0,0"/>
+        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click"
+                ToolTipService.ToolTip="OK" Margin="597,404,0,0">
             <FontIcon Glyph="&#xE10B;"/>
         </Button>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,180,0,0">
+            <FontIcon Glyph="&#xE125;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Made by:" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+            <TextBlock Text="Alloyd" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,97,0,0"/>
+            <TextBlock Text="With the help from:" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,146,0,0"/>
+            <TextBlock Text="Lixkote" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,178,0,0"/>
+        </Grid>
     </Grid>
 </ContentDialog>

@@ -32,11 +32,5 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
-        private async void CreatorsButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-            CreatorsDialog dialog = new CreatorsDialog();
-            await dialog.ShowAsync();
-        }
     }
 }

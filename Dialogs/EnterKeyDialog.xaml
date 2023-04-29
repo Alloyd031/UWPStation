@@ -16,44 +16,22 @@
     </ContentDialog.Resources>
     <Grid
 			x:Name="ContainerGrid"
-			Height="220"
+			Height="300"
             Width="400"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="44" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Grid>
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE144;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
-            <TextBlock
-					HorizontalAlignment="Left"
-					VerticalAlignment="Center"
-					FontWeight="SemiBold"
-					Text="Enter a License Key" Margin="49,0,0,0"/>
-            <Button
-					x:Name="CloseDialogButton"
-					Width="44"
-					Height="44"
-					AutomationProperties.Name="Close"
-					Background="Transparent"
-					BorderBrush="Transparent"
-					Click="CloseDialogButton_Click"
-					ToolTipService.ToolTip="Close" Margin="356,0,0,0">
-                <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
-            </Button>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,45,0,0">
+            <FontIcon Glyph="&#xE144;" HorizontalAlignment="Center" FontSize="60" VerticalAlignment="Top" Margin="0,6,0,0"/>
+            <TextBlock Text="Enter your 25-character license key. (Not working at this time.)" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,66,0,0"/>
         </Grid>
-        <TextBlock Text="Enter your 25-character license key." HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Margin="10,10,0,0"/>
-        <TextBlock Text="License Key:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,55,0,0" Grid.Row="1"/>
-        <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="89,50,10,0" Grid.Row="1"/>
-        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Grid.Row="1"
-                ToolTipService.ToolTip="OK" Margin="297,122,0,0">
+        <TextBlock Text="License Key:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,198,0,0"/>
+        <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" VerticalAlignment="Top" Margin="89,191,10,0"/>
+        <Button x:Name="OKButton" Width="44" Height="44" VerticalAlignment="Top"
+                ToolTipService.ToolTip="OK" Margin="297,246,0,0">
             <FontIcon Glyph="&#xE10B;"/>
         </Button>
-        <muxc:TeachingTip x:Name="OKButtonTip" Target="{x:Bind OKButton}" Title="Lol" Subtitle="That's fake :D" Margin="0,82,0,50" Grid.Row="1"/>
-        <Button x:Name="CancelButton" Width="44" Height="44" Grid.Row="1" Click="CancelButton_Click" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Cancel" Margin="346,122,0,0">
+        <Button x:Name="CancelButton" Width="44" Height="44" Click="CancelButton_Click" VerticalAlignment="Top"
+                ToolTipService.ToolTip="Cancel" Margin="346,246,0,0">
             <FontIcon Glyph="&#xE10A;"/>
         </Button>
     </Grid>

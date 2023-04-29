@@ -6,14 +6,35 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Width="480"
 	Height="500">
 
     <Grid>
-        <TextBlock Text="Choose the Virtual Machine Hardware Compatibility" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <TextBlock Text="Which hardware features are needed for this virtual machine?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0"/>
+        <Grid VerticalAlignment="Top">
+            <Button
+					x:Name="BackButton"
+					Width="48"
+					Height="48"
+					AutomationProperties.Name="Back"
+					Background="Transparent"
+					BorderBrush="Transparent"
+					Click="BackButton_Click"
+					ToolTipService.ToolTip="Back">
+                <muxc:AnimatedIcon x:Name="BackAnimatedIcon">
+                    <muxc:AnimatedIcon.Source>
+                        <animatedvisuals:AnimatedBackVisualSource/>
+                    </muxc:AnimatedIcon.Source>
+                    <muxc:AnimatedIcon.FallbackIconSource>
+                        <muxc:SymbolIconSource Symbol="Back"/>
+                    </muxc:AnimatedIcon.FallbackIconSource>
+                </muxc:AnimatedIcon>
+            </Button>
+            <TextBlock Text="Choose the Virtual Machine Hardware Compatibility" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,8,0,0"/>
+            <TextBlock Text="Which hardware features are needed for this virtual machine?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,32,0,0"/>
+        </Grid>
         <TextBlock Text="Virtual machine hardware compabitility" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,67,0,0"/>
         <TextBlock Text="Hardware compabitility:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,91,0,0"/>
         <ComboBox Text="UWPStation 0.1.x" Margin="164,86,0,0">

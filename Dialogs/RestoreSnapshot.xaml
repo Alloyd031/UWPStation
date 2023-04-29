@@ -17,43 +17,21 @@
 
     <Grid
 			x:Name="ContainerGrid"
-			Height="220"
-            Width="400"
+			Height="300"
+            Width="650"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="44" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Grid>
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="44" Width="44"/>
-            <TextBlock
-					HorizontalAlignment="Left"
-					VerticalAlignment="Center"
-					FontWeight="SemiBold"
-					Text="UWPStation" Margin="49,0,0,0"/>
-            <Button
-					x:Name="CloseDialogButton"
-					Width="44"
-					Height="44"
-					AutomationProperties.Name="Close"
-					Background="Transparent"
-					BorderBrush="Transparent"
-					Click="CloseDialogButton_Click"
-					ToolTipService.ToolTip="Close" Margin="356,0,0,0">
-                <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
-            </Button>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <FontIcon Glyph="&#xE7BA;" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="60" Margin="0,0,0,0"/>
+            <TextBlock Text="By restoring the snapshot, the current state will be lost." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,59,0,0"/>
+            <TextBlock Text="Do you want to restore the snapshot?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,96,0,0"/>
         </Grid>
-        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Grid.Row="1"/>
-        <TextBlock Text="By restoring the snapshot, the current state will be lost." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="49,10,0,0" Grid.Row="1"/>
-        <TextBlock Text="Do you want to restore the snapshot?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="49,40,0,0" Grid.Row="1"/>
-        <Button x:Name="NoButton" Width="44" Height="44" Grid.Row="1" Click="NoButton_Click" VerticalAlignment="Top"
-                ToolTipService.ToolTip="No" Margin="346,122,0,0">
+        <Button x:Name="NoButton" Width="44" Height="44" Click="NoButton_Click" VerticalAlignment="Top"
+                ToolTipService.ToolTip="No" Margin="596,246,0,0">
             <FontIcon Glyph="&#xE10A;"/>
         </Button>
-        <Button x:Name="YesButton" Width="44" Height="44" VerticalAlignment="Top" Click="YesButton_Click" Grid.Row="1"
-                ToolTipService.ToolTip="Yes" Margin="297,122,0,0">
+        <Button x:Name="YesButton" Width="44" Height="44" VerticalAlignment="Top" Click="YesButton_Click"
+                ToolTipService.ToolTip="Yes" Margin="547,246,0,0">
             <FontIcon Glyph="&#xE10B;"/>
         </Button>
     </Grid>

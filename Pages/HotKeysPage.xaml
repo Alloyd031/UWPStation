@@ -9,22 +9,22 @@
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Grid>
-        <Grid Height="49" VerticalAlignment="Top">
-            <FontIcon Glyph="&#xE84B;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
-            <TextBlock Text="Hot Keys" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
+            <FontIcon Glyph="&#xE84B;" Height="44" Width="44" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Text="Hot Keys" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="49,6,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0">
-            <TextBlock Text="Hot key combination" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
-            <TextBlock Text="Hot keys provide a shortcut to commonly-used virtual machine operations. Click the buttons below to modify your hot keys." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,24,0,0" TextWrapping="Wrap"/>
-            <ToggleButton Content="Ctrl" IsChecked="True" Margin="0,54,0,0" VerticalAlignment="Top"/>
-            <ToggleButton Content="Shift" Margin="51,54,0,0" VerticalAlignment="Top"/>
-            <ToggleButton Content="Alt" IsChecked="True" Margin="108,54,0,0" VerticalAlignment="Top"/>
-            <ToggleButton Content="Win" Margin="155,54,0,0" VerticalAlignment="Top"/>
-            <TextBlock Text="To release control from the current virtual machine, press Ctrl+Alt." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,97,0,0"/>
-            <TextBlock Text="To enter or leave full screen mode, press Ctrl+Alt+Enter." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,121,0,0"/>
-            <TextBlock Text="To switch to the previous full-screen virtual machine, press Ctrl+Alt+Left Arrow." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,145,0,0"/>
-            <TextBlock Text="To switch to the next full-screen virtual machine, press Ctrl+Alt+Right Arrow." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,193,0,0"/>
-            <TextBlock Text="To show the multiple-monitor layout menu, press Ctrl+Alt+M." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,169,0,0"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,59,0,0">
+            <TextBlock Text="Hot key combination" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
+            <TextBlock Text="Hot keys provide a shortcut to commonly-used virtual machine operations. Click the buttons below to modify your hot keys." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0" TextWrapping="Wrap" Width="600"/>
+            <ToggleButton Content="Ctrl" IsChecked="True" Margin="10,74,0,0" VerticalAlignment="Top"/>
+            <ToggleButton Content="Shift" Margin="61,74,0,0" VerticalAlignment="Top"/>
+            <ToggleButton Content="Alt" IsChecked="True" Margin="118,74,0,0" VerticalAlignment="Top"/>
+            <ToggleButton Content="Win" Margin="165,74,0,0" VerticalAlignment="Top"/>
+            <TextBlock Text="To release control from the current virtual machine, press Ctrl+Alt." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,111,0,0"/>
+            <TextBlock Text="To enter or leave full screen mode, press Ctrl+Alt+Enter." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,135,0,0"/>
+            <TextBlock Text="To switch to the previous full-screen virtual machine, press Ctrl+Alt+Left Arrow." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,159,0,0"/>
+            <TextBlock Text="To switch to the next full-screen virtual machine, press Ctrl+Alt+Right Arrow." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,207,0,0"/>
+            <TextBlock Text="To show the multiple-monitor layout menu, press Ctrl+Alt+M." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,183,0,0"/>
         </Grid>
     </Grid>
 </Page>

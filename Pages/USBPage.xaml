@@ -10,16 +10,16 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <Grid Height="49" VerticalAlignment="Top">
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
             <FontIcon Glyph="&#xE88E;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
             <TextBlock Text="USB" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0">
-            <TextBlock Text="Connections" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
-            <TextBlock Text="When a new USB device is detected, UWPStation should:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,24,0,0"/>
-            <RadioButton Content="Ask me what to do" IsChecked="True" Margin="0,42,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Connect the device to the host" Margin="0,72,0,0" VerticalAlignment="Top" />
-            <RadioButton Content="Connect the device to the foreground virtual machine" HorizontalAlignment="Center" Margin="0,104,0,0" VerticalAlignment="Top"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,64,0,0">
+            <TextBlock Text="Connections" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
+            <TextBlock Text="When a new USB device is detected, UWPStation should:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,34,0,0"/>
+            <RadioButton Content="Ask me what to do" IsChecked="True" Margin="10,58,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Connect the device to the host" Margin="10,90,0,0" VerticalAlignment="Top" />
+            <RadioButton Content="Connect the device to the foreground virtual machine" Margin="10,122,0,0" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
 </Page>

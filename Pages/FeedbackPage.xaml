@@ -10,7 +10,7 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <Grid Height="49" VerticalAlignment="Top">
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
             <FontIcon Glyph="&#xED15;" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
             <TextBlock Text="Feedback" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
         </Grid>

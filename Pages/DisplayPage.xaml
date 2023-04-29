@@ -10,39 +10,39 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <Grid Height="49" VerticalAlignment="Top">
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
             <FontIcon Glyph="&#xE770;" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
             <TextBlock Text="Display" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0" Height="127">
-            <TextBlock Text="Autofit" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
-            <CheckBox Content="Autofit window" IsChecked="True" VerticalAlignment="Top" Margin="0,19,0,0"/>
-            <TextBlock Text="When the virtual machine display settings change, resize the application window to match." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,51,0,0"/>
-            <CheckBox Content="Autofit guest" IsChecked="True" VerticalAlignment="Top" Margin="0,75,0,0"/>
-            <TextBlock Text="When the application window is resized, change the virtual machine display settings to match." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,107,0,0"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,64,0,0">
+            <TextBlock Text="Autofit" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
+            <CheckBox Content="Autofit window" IsChecked="True" VerticalAlignment="Top" Margin="10,29,0,0"/>
+            <TextBlock Text="When the virtual machine display settings change, resize the application window to match." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,61,0,0"/>
+            <CheckBox Content="Autofit guest" IsChecked="True" VerticalAlignment="Top" Margin="10,85,0,0"/>
+            <TextBlock Text="When the application window is resized, change the virtual machine display settings to match." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,117,0,0"/>
         </Grid>
-        <muxc:RadioButtons Header="Full screen" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,192,0,0"
+        <muxc:RadioButtons Header="Full screen" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,205,0,0"
                            SelectedIndex="0">
             <RadioButton Content="Autofit guest (change guest resolution)"/>
             <RadioButton Content="Center guest (no resolution change)"/>
         </muxc:RadioButtons>
-        <muxc:RadioButtons Header="Color Theme" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,305,0,0"
+        <muxc:RadioButtons Header="Color Theme" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,309,0,0"
                            SelectedIndex="0">
             <RadioButton Content="System (use app mode of Host OS)" IsChecked="True"/>
             <RadioButton Content="Light"/>
             <RadioButton Content="Dark"/>
         </muxc:RadioButtons>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,455,0,0">
-            <TextBlock Text="Graphics" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
-            <CheckBox Content="Hardware acceleration for remote virtual machine" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,19,0,0"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,453,0,0">
+            <TextBlock Text="Graphics" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
+            <CheckBox Content="Hardware acceleration for remote virtual machine" VerticalAlignment="Top" Margin="10,29,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,517,0,0">
-            <TextBlock Text="Menu and toolbar" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
-            <CheckBox Content="Use a single button for power controls" VerticalAlignment="Top" IsChecked="True" Margin="0,19,0,0"/>
-            <CheckBox Content="Use a single button for stretch controls" IsChecked="True" Margin="0,51,0,0" VerticalAlignment="Top"/>
-            <CheckBox Content="Combine toolbar with menubar in windowed mode" VerticalAlignment="Top" IsChecked="True" Margin="0,83,0,0" HorizontalAlignment="Center"/>
-            <CheckBox Content="Combine tabs with toolbar in full screen" VerticalAlignment="Top" IsChecked="True" Margin="0,114,0,0"/>
-            <CheckBox Content="Show toolbar edge when unpinned in full screen" VerticalAlignment="Top" IsChecked="True" Margin="0,146,0,0"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,519,0,0">
+            <TextBlock Text="Menu and toolbar" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
+            <CheckBox Content="Use a single button for power controls" VerticalAlignment="Top" IsChecked="True" Margin="10,29,0,0"/>
+            <CheckBox Content="Use a single button for stretch controls" IsChecked="True" Margin="10,61,0,0" VerticalAlignment="Top"/>
+            <CheckBox Content="Combine toolbar with menubar in windowed mode" VerticalAlignment="Top" IsChecked="True" Margin="10,93,0,0"/>
+            <CheckBox Content="Combine tabs with toolbar in full screen" VerticalAlignment="Top" IsChecked="True" Margin="10,125,0,0"/>
+            <CheckBox Content="Show toolbar edge when unpinned in full screen" VerticalAlignment="Top" IsChecked="True" Margin="10,157,0,0"/>
         </Grid>
     </Grid>
 </Page>

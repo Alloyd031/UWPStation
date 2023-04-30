@@ -18,15 +18,15 @@
     <Grid
 			x:Name="ContainerGrid"
 		    Width="900"
-			Height="750"
+			Height="400"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Changelog is currently not available. Use GitHub Commits to see what changed." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <TextBlock Text="Changelog is currently not available. Use GitHub Commits to see what changed." Style="{StaticResource CaptionTextBlockStyle}" FontSize="23" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
             <HyperlinkButton Content="Go to GitHub Commits page" FontSize="24" FontWeight="Bold" NavigateUri="https://github.com/Alloyd031/UWPStation/commits/master" HorizontalAlignment="Center" Margin="0,97,0,0" VerticalAlignment="Top"/>
         </Grid>
-        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Margin="846,696,0,0"
+        <Button x:Name="OKButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Top" Click="OKButton_Click" Margin="846,346,0,0"
                 ToolTipService.ToolTip="OK">
             <FontIcon Glyph="&#xE10B;"/>
         </Button>

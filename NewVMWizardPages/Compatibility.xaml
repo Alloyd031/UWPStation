@@ -14,38 +14,23 @@
 
     <Grid>
         <Grid VerticalAlignment="Top">
-            <Button
-					x:Name="BackButton"
-					Width="48"
-					Height="48"
-					AutomationProperties.Name="Back"
-					Background="Transparent"
-					BorderBrush="Transparent"
-					Click="BackButton_Click"
-					ToolTipService.ToolTip="Back">
-                <muxc:AnimatedIcon x:Name="BackAnimatedIcon">
-                    <muxc:AnimatedIcon.Source>
-                        <animatedvisuals:AnimatedBackVisualSource/>
-                    </muxc:AnimatedIcon.Source>
-                    <muxc:AnimatedIcon.FallbackIconSource>
-                        <muxc:SymbolIconSource Symbol="Back"/>
-                    </muxc:AnimatedIcon.FallbackIconSource>
-                </muxc:AnimatedIcon>
-            </Button>
-            <TextBlock Text="Choose the Virtual Machine Hardware Compatibility" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,8,0,0"/>
-            <TextBlock Text="Which hardware features are needed for this virtual machine?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,32,0,0"/>
+            <FontIcon Glyph="&#xE930;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Choose the Virtual Machine Hardware Compatibility" Style="{StaticResource CaptionTextBlockStyle}" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <TextBlock Text="Which hardware features are needed for this virtual machine?" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0"/>
         </Grid>
-        <TextBlock Text="Virtual machine hardware compabitility" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,67,0,0"/>
-        <TextBlock Text="Hardware compabitility:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,91,0,0"/>
-        <ComboBox Text="UWPStation 0.1.x" Margin="164,86,0,0">
-            <ComboBoxItem Content="UWPStation 0.1.x" IsSelected="True"/>
-        </ComboBox>
-        <TextBlock Text="Compatible with:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,121,0,0"/>
-        <CheckBox Content="ESX Server" IsChecked="True" IsEnabled="False" Margin="164,118,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="Compatible products:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,162,0,0"/>
-        <TextBox Text="UWPStation 0.1.x" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,186,0,0"/>
-        <TextBlock Text="Limitations:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,162,0,0"/>
-        <TextBox Text="No limitations" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,186,0,0"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Virtual machine hardware compabitility" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+            <TextBlock Text="Hardware compabitility:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0"/>
+            <ComboBox Text="UWPStation 0.1.x" Margin="164,35,0,0">
+                <ComboBoxItem Content="UWPStation 0.1.x" IsSelected="True"/>
+            </ComboBox>
+            <TextBlock Text="Compatible with:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <CheckBox Content="ESX Server" IsChecked="True" IsEnabled="False" Margin="164,72,0,0" VerticalAlignment="Top"/>
+            <TextBlock Text="Compatible products:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,119,0,0"/>
+            <TextBox Text="UWPStation 0.1.x" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0"/>
+            <TextBlock Text="Limitations:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="257,119,0,0"/>
+            <TextBox Text="No limitations" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="257,143,0,0"/>
+        </Grid>
         <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>

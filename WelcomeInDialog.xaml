@@ -66,11 +66,10 @@
 					Height="50"
 					Background="Transparent"
 					BorderBrush="Transparent"
-					Margin="849,0,0,0">
+					Margin="849,0,0,0" VerticalAlignment="Bottom" Click="Close_Click">
                 <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
             </Button>
         </Grid>
-        <TextBlock Text="Welcome to Alloyd's OS!" Grid.Row="1" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button x:Name="CloseWindow" Content="Close this window" Margin="754,10,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CloseWindow_Click"/>
+        <TextBlock Text="Welcome to UWPFamilyOS!" Grid.Row="1" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </ContentDialog>

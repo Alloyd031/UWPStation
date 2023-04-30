@@ -33,5 +33,9 @@ namespace UWPStation.NewVMWizardPages
                 this.Frame.Navigate(typeof(OperatingSystem));
             }
         }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

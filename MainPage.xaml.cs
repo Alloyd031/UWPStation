@@ -223,7 +223,7 @@ namespace UWPStation
         {
             this.TabsFrame.Navigate(typeof(HomePage));
         }
-        private void AlloydsOS_Click(object sender, RoutedEventArgs e)
+        private void UWPFamilyOS_Click(object sender, RoutedEventArgs e)
         {
             this.TabsFrame.Navigate(typeof(VMPage));
         }

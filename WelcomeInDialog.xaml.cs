@@ -27,5 +27,9 @@ namespace UWPStation
         {
             Hide();
         }
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
     }
 }

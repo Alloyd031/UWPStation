@@ -6,19 +6,23 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Width="600"
 	Height="550">
 
     <Grid>
-        <TextBlock Text="Select virtual machines" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <TextBlock Text="Select virtual machines that you want to add into the library." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0"/>
-        <TextBlock Text="Virtual machines to add" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,66,0,0"/>
-        <TextBlock Text="VM Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,98,0,0"/>
-        <TextBlock Text="Path" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,98,0,0"/>
+        <Grid VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE7C4;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Select virtual machines" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <TextBlock Text="Select virtual machines that you want to add into the library." Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0"/>
+        </Grid>
+        <TextBlock Text="Virtual machines to add" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,134,0,0"/>
+        <TextBlock Text="VM Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,165,0,0"/>
+        <TextBlock Text="Path" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,165,0,0"/>
         <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Scanning for VMs is not possible at this time." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
         </Grid>
         <Button Margin="10,349,0,0" Width="44" Height="44" VerticalAlignment="Top"

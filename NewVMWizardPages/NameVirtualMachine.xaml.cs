@@ -28,7 +28,7 @@ namespace UWPStation.NewVMWizardPages
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.OSName.Text == "Alloyd's OS")
+            if (this.OSName.Text == "UWPFamilyOS")
             {
                 this.Frame.Navigate(typeof(DiskCapacity));
             }

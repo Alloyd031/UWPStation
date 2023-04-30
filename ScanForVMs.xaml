@@ -24,6 +24,25 @@
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
         <Button
+					x:Name="BackButton"
+					Width="48"
+					Height="48"
+					AutomationProperties.Name="Back"
+					Background="Transparent"
+					BorderBrush="Transparent"
+                    IsEnabled="{x:Bind ContentFrame.CanGoBack, Mode=OneWay}"
+					Click="BackButton_Click"
+					ToolTipService.ToolTip="Back" VerticalAlignment="Top">
+            <muxc:AnimatedIcon x:Name="BackAnimatedIcon">
+                <muxc:AnimatedIcon.Source>
+                    <animatedvisuals:AnimatedBackVisualSource/>
+                </muxc:AnimatedIcon.Source>
+                <muxc:AnimatedIcon.FallbackIconSource>
+                    <muxc:SymbolIconSource Symbol="Back"/>
+                </muxc:AnimatedIcon.FallbackIconSource>
+            </muxc:AnimatedIcon>
+        </Button>
+        <Button
 					x:Name="CloseDialogButton"
 					Width="44"
 					Height="44"

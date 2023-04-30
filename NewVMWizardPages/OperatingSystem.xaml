@@ -13,18 +13,23 @@
 	Height="500">
 
     <Grid>
-        <TextBlock Text="Select a Guest Operating System" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <TextBlock Text="Which operating system will be installed on this virtual machine?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0"/>
-        <TextBlock Text="Guest operating system" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,64,0,0"/>
-        <RadioButton x:Name="WindowsOS" x:Uid="1" Content="Microsoft Windows" IsChecked="True" Margin="10,88,0,0" VerticalAlignment="Top" Checked="HandleCheck"/>
-        <RadioButton x:Name="LinuxOS" x:Uid="2" Content="Linux" Margin="10,120,0,0" VerticalAlignment="Top" Checked="HandleCheck"/>
-        <RadioButton x:Name="OtherOS" x:Uid="3" Content="Other" Margin="10,152,0,0" VerticalAlignment="Top" Checked="HandleCheck"/>
-        <TextBlock Text="Version" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,196,0,0"/>
-        <ComboBox x:Name="OSSelectionBox" Text="Alloyd's OS" Margin="10,220,0,0" IsEnabled="False">
-            <ComboBox.Items>
-                <ComboBoxItem Content="Alloyd's OS" IsSelected="True"/>
-            </ComboBox.Items>
-        </ComboBox>
+        <Grid VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE770;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Select a Guest Operating System" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <TextBlock Text="Which operating system will be installed on this virtual machine?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Guest operating system" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+            <RadioButton x:Name="WindowsOS" x:Uid="1" Content="Microsoft Windows" IsChecked="True" Margin="0,34,0,0" VerticalAlignment="Top" Checked="HandleCheck" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="LinuxOS" x:Uid="2" Content="Linux" Margin="10,66,0,0" VerticalAlignment="Top" Checked="HandleCheck"/>
+            <RadioButton x:Name="OtherOS" x:Uid="3" Content="Other" Margin="10,98,0,0" VerticalAlignment="Top" Checked="HandleCheck"/>
+            <TextBlock Text="Version" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,144,0,0"/>
+            <ComboBox x:Name="OSSelectionBox" Text="UWPFamilyOS" Margin="10,168,0,0" IsEnabled="False">
+                <ComboBox.Items>
+                    <ComboBoxItem Content="UWPFamilyOS" IsSelected="True"/>
+                </ComboBox.Items>
+            </ComboBox>
+        </Grid>
         <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>

@@ -12,15 +12,20 @@
 	Height="500">
 
     <Grid>
-        <TextBlock Text="Specify Disk Capacity" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <TextBlock Text="How large do you want this disk to be?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0"/>
-        <TextBlock Text="The virtual machine's hard disk is stored as one or more files on the host computer's physical disk. These file(s) start small and become larger as you add applications, files, and data to your virtual machine." HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,64,0,0" Width="420"/>
-        <TextBlock Text="Maximum disk size (GB):" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,145,0,0"/>
-        <muxc:NumberBox Text="60.0" HorizontalAlignment="Left" VerticalAlignment="Top" SpinButtonPlacementMode="Compact" Margin="165,138,0,0"/>
-        <TextBlock Text="Recommended size for Alloyd's OS: 60 GB" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,175,0,0"/>
-        <RadioButton Content="Store virtual disk as a single file" Margin="10,204,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Split virtual disk into multiple files" IsChecked="True" Margin="10,236,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="Splitting the disk makes it easier to move the virtual machine to another computer but may reduce performance with very large disks." HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,268,0,0" Width="420"/>
+        <Grid VerticalAlignment="Top">
+            <FontIcon Glyph="&#xEDA2;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Specify Disk Capacity" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <TextBlock Text="How large do you want this disk to be?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="The virtual machine's hard disk is stored as one or more files on the host computer's physical disk. These file(s) start small and become larger as you add applications, files, and data to your virtual machine." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Margin="10,10,0,0" Width="420"/>
+            <TextBlock Text="Maximum disk size (GB):" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,96,0,0"/>
+            <muxc:NumberBox Text="60.0" HorizontalAlignment="Left" VerticalAlignment="Top" SpinButtonPlacementMode="Compact" Margin="165,89,0,0"/>
+            <TextBlock Text="Recommended size for UWPFamilyOS: 60 GB" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,126,0,0"/>
+            <RadioButton Content="Store virtual disk as a single file" Margin="10,150,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Split virtual disk into multiple files" IsChecked="True" Margin="10,182,0,0" VerticalAlignment="Top"/>
+            <TextBlock Text="Splitting the disk makes it easier to move the virtual machine to another computer but may reduce performance with very large disks." HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Margin="10,214,0,0"/>
+        </Grid>
         <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>

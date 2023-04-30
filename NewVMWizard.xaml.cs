@@ -34,7 +34,7 @@ namespace UWPStation
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            ContentFrame.GoBack();
+            this.ContentFrame.GoBack();
         }
     }
 }

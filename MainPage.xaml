@@ -220,11 +220,11 @@
                     <TextBlock Text="My Computer" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="AlloydsOS" Height="49" Width="180" Margin="0,130,0,0" Background="Transparent" BorderBrush="Transparent"
-                    VerticalAlignment="Top" HorizontalAlignment="Center" Click="AlloydsOS_Click">
+            <Button x:Name="UWPFamilyOS" Height="49" Width="180" Margin="0,130,0,0" Background="Transparent" BorderBrush="Transparent"
+                    VerticalAlignment="Top" HorizontalAlignment="Center" Click="UWPFamilyOS_Click">
                 <Grid Margin="-90,-25,-90,-25">
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" FontSize="15" Width="29" Margin="10,10,141,10"/>
-                    <TextBlock Text="Alloyd's OS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+                    <TextBlock Text="UWPFamilyOS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
                     <Button x:Name="Star" Height="31" Width="29" Background="Transparent" BorderBrush="Transparent" Margin="141,0,0,0">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE1CE;" FontSize="15" Margin="-15,-15,-14,-16"/>
                     </Button>
@@ -247,7 +247,7 @@
                         Click="VMTab_Click" Margin="190,0,0,0">
                     <Grid Margin="-88,-24,-87,-25">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" Width="29" Height="29" Margin="10,10,136,10"/>
-                        <TextBlock Text="Alloyd's OS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+                        <TextBlock Text="UWPFamilyOS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
                         <Button x:Name="CloseVMTab" Height="29" Width="29" Background="Transparent" BorderBrush="Transparent" Margin="136,0,0,0" ToolTipService.ToolTip="Close Tab">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8BB;" FontSize="12" Margin="-15,-14,-14,-15"/>
                         </Button>

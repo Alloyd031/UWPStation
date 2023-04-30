@@ -43,6 +43,7 @@
                     </muxc:AnimatedIcon.FallbackIconSource>
                 </muxc:AnimatedIcon>
             </Button>
+            <TextBlock Text="New Virtual Machine Wizard" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,11,0,0"/>
             <Button
 					x:Name="CloseDialogButton"
 					Width="44"
@@ -52,7 +53,7 @@
 					BorderBrush="Transparent"
 					Click="CloseDialogButton_Click"
 					ToolTipService.ToolTip="Close" VerticalAlignment="Top" Margin="436,0,0,0">
-                <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
+                <FontIcon Glyph="&#xE8BB;"/>
             </Button>
             <Frame x:Name="ContentFrame" Margin="0,48,0,0"/>
         </Grid>

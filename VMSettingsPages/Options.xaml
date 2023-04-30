@@ -19,7 +19,7 @@
                 <Grid Margin="-149,-21,-148,-21">
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE977;" Margin="10,7,260,7"/>
                     <TextBlock Text="General" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
-                    <TextBlock Text="Alloyd's OS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
+                    <TextBlock Text="UWPFamilyOS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
                 </Grid>
             </Button>
             <Button x:Name="PowerButton" Height="42" Width="297" VerticalAlignment="Top"

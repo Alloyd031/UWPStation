@@ -288,7 +288,7 @@
                         HorizontalAlignment="Right">
                 <Button Background="Transparent" BorderBrush="Transparent"
                         FontFamily="Segoe Fluent Icons" Content="&#xE15F;" 
-                        ToolTipService.ToolTip="Message log" RightTapped="Button_RightTapped" Tapped="Button_Tapped" Height="32">
+                        ToolTipService.ToolTip="Message log: no messages" RightTapped="Button_RightTapped" Tapped="Button_Tapped" Height="32">
                     <FlyoutBase.AttachedFlyout>
                         <MenuFlyout Placement="TopEdgeAlignedRight">
                             <MenuFlyoutItem Text="Open Message Log" Click="MessageLog_Click"/>

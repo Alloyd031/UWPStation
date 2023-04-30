@@ -18,8 +18,8 @@
                 </Grid>
             </Button>
         </Grid>
-        <Grid x:Name="Taskbar" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Grid.Row="3" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <Button Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" x:Name="StartButton" ToolTipService.ToolTip="Start">
+        <Grid x:Name="Taskbar" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="48" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Button Height="48" Width="48" Background="Transparent" BorderBrush="Transparent" ToolTipService.ToolTip="Start" HorizontalAlignment="Center">
                 <FontIcon FontFamily="HoloLens MDL2 Assets" Glyph="&#xE782;" FontSize="16"/>
             </Button>
         </Grid>

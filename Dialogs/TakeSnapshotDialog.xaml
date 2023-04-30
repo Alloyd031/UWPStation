@@ -22,12 +22,14 @@
 			Height="500"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
-        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE121;" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,17,0,0"/>
-        <TextBlock Text="Taking a snapshot lets you preserve the state of the virtual machine so that you can return to the same state later." HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Margin="43,9,0,0" Grid.Row="1"/>
-        <TextBlock Text="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,57,0,0" Grid.Row="1"/>
-        <TextBox Text="Snapshot 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,51,0,0" Grid.Row="1" Width="375"/>
-        <TextBlock Text="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,95,0,0" Grid.Row="1"/>
-        <RichEditBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,95,0,0" Width="336" Height="346"/>
+        <Grid VerticalAlignment="Top" Margin="0,10,0,0">
+            <FontIcon Glyph="&#xE121;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Taking a snapshot lets you preserve the state of the virtual machine so that you can return to the same state later." Style="{StaticResource CaptionTextBlockStyle}" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+        </Grid>
+        <TextBlock Text="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,113,0,0"/>
+        <TextBox Text="Snapshot 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,107,0,0" Width="375"/>
+        <TextBlock Text="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0"/>
+        <RichEditBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,144,0,0" Width="342" Height="297"/>
         <Button x:Name="TakeSnapshotButton" Width="44" Height="44" Margin="337,446,0,0" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Take Snapshot">
             <FontIcon Glyph="&#xE109;"/>

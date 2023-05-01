@@ -48,7 +48,9 @@
                 ToolTipService.ToolTip="Options">
             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE15E;"/>
         </Button>
-        <Frame x:Name="ContentFrame" Margin="68,0,0,63"/>
+        <ScrollViewer Margin="68,0,0,63" VerticalScrollBarVisibility="Hidden">
+            <Frame x:Name="ContentFrame"/>
+        </ScrollViewer>
         <Button x:Name="HelpButton" Width="44" Height="44" VerticalAlignment="Top" Margin="746,696,0,0"
                 ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>

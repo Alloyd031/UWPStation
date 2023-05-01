@@ -41,7 +41,7 @@
                 </muxc:AnimatedIcon.FallbackIconSource>
             </muxc:AnimatedIcon>
         </Button>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="64,0,0,62">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="64,0,0,62">
             <Frame x:Name="ContentFrame"/>
         </ScrollViewer>
         <Button x:Name="HelpButton" Width="44" Height="44" VerticalAlignment="Top" Margin="746,696,0,0"

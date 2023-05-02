@@ -15,7 +15,7 @@
             <TextBlock FontWeight="Bold" FontSize="60" Text="UWPStation" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="90,0,0,0"/>
         </Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,94,0,0">
-            <Grid x:Name="CreateVMGrid" Padding="10,0,10,0">
+            <Grid x:Name="CreateVMGrid" Padding="5,0,5,0">
                 <Button Width="150" Click="CreateVM_Click" Height="150">
                     <Grid>
                         <FontIcon Glyph="&#xECC8;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -23,7 +23,7 @@
                     </Grid>
                 </Button>
             </Grid>
-            <Grid x:Name="OpenVMGrid" Padding="10,0,10,0">
+            <Grid x:Name="OpenVMGrid" Padding="5,0,5,0">
                 <Button Width="150" Click="OpenVM_Click" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top">
                     <Grid>
                         <FontIcon Glyph="&#xE8A7;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -31,7 +31,7 @@
                     </Grid>
                 </Button>
             </Grid>
-            <Grid x:Name="ConnectToServerGrid" Padding="10,0,10,0">
+            <Grid x:Name="ConnectToServerGrid" Padding="5,0,5,0">
                 <Button Width="150" Click="ConnectToRemoteServerButton_Click" Height="150" VerticalAlignment="Top" HorizontalAlignment="Center">
                     <Grid>
                         <FontIcon Glyph="&#xE13C;" Margin="0,-28,0,28" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>

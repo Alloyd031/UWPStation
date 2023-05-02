@@ -14,18 +14,18 @@
     <Grid>
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE13E;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Name the Virtual Machine" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
-            <TextBlock Text="What name would you like to use for this virtual machine?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="17" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0"/>
+            <TextBlock Text="Name the Virtual Machine" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
+            <TextBlock Text="What name would you like to use for this virtual machine?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="17" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,108,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Virtual machine name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-            <TextBox x:Name="OSName" Text="UWPFamilyOS" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0" Width="337"/>
-            <TextBlock Text="Location:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,80,0,0"/>
+            <TextBlock Text="Virtual machine name:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+            <TextBox x:Name="OSName" Text="UWPFamilyOS" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0" Width="337"/>
+            <TextBlock Text="Location:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,80,0,0"/>
             <AutoSuggestBox Text="Some location" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" IsEnabled="False" Margin="10,104,0,0" Width="337" Height="44"/>
-            <Button Height="44" Width="44" Margin="352,104,0,0" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
+            <Button Height="44" Width="44" Margin="352,104,0,0" IsEnabled="False" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
                 <FontIcon Glyph="&#xE11A;"/>
             </Button>
-            <TextBlock Text="The default location can be changed at Edit > Preferences." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,163,0,0"/>
+            <TextBlock Text="The default location can be changed at Edit > Preferences." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,163,0,0"/>
         </Grid>
         <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Help">

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.UI.Xaml.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UWPStation.Dialogs;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,6 +24,12 @@ namespace UWPStation
         public MoreApps()
         {
             this.InitializeComponent();
+        }
+        private async void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            AboutDialog dialog = new AboutDialog();
+            await dialog.ShowAsync();
         }
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {

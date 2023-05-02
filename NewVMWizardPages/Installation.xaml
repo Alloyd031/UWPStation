@@ -15,20 +15,20 @@
     <Grid>
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE977;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Guest Operating System Installation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
-            <TextBlock Text="A virtual machine is like a physical computer; it needs an operating system. How will you install the operating system?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0"/>
+            <TextBlock Text="Guest Operating System Installation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
+            <TextBlock Text="A virtual machine is like a physical computer; it needs an operating system. How will you install the operating system?" TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,108,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0">
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0">
             <TextBlock Text="Install from:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-            <RadioButton Content="Installer disc:" Margin="10,34,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Installer disc:" Margin="10,34,0,0" FontWeight="Bold" VerticalAlignment="Top"/>
             <ComboBox Text="No drives available" Margin="10,66,0,0" IsEnabled="False"/>
-            <RadioButton Content="Installer disc image file (iso):" Margin="10,103,0,0" VerticalAlignment="Top" IsChecked="True"/>
+            <RadioButton Content="Installer disc image file (iso):" Margin="10,103,0,0" FontWeight="Bold" VerticalAlignment="Top" IsChecked="True"/>
             <AutoSuggestBox Text="Some location" VerticalContentAlignment="Center" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,135,0,0" Width="310" Height="44"/>
-            <Button Height="44" Width="44" Margin="325,135,0,0" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
+            <Button Height="44" Width="44" Margin="325,135,0,0" IsEnabled="False" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
                 <FontIcon Glyph="&#xE11A;"/>
             </Button>
-            <RadioButton x:Name="InstallLaterCheck" Content="I will install the operating system later." Margin="10,184,0,0" VerticalAlignment="Top"/>
-            <TextBlock Text="The virtual machine will be created with a blank hard disk." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,216,0,0"/>
+            <RadioButton x:Name="InstallLaterCheck" Content="I will install the operating system later." FontWeight="Bold" Margin="10,184,0,0" VerticalAlignment="Top"/>
+            <TextBlock Text="The virtual machine will be created with a blank hard disk." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,221,0,0"/>
         </Grid>
         <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Help">

@@ -39,7 +39,7 @@
         </Button>
         <Button x:Name="CloseButton" Width="44" Height="44" Margin="497,520,0,0" VerticalAlignment="Top" Click="CloseButton_Click"
                 ToolTipService.ToolTip="Close">
-            <FontIcon Glyph="&#xE8BB;"/>
+            <FontIcon Glyph="&#xE10A;"/>
         </Button>
         <Border Grid.Row="1" VerticalAlignment="Bottom" Height="31">
             <TextBlock Text="No items" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="11,0,0,0"/>

@@ -22,12 +22,12 @@
 			VerticalAlignment="Stretch">
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE144;" HorizontalAlignment="Center" FontSize="60" VerticalAlignment="Top" Margin="0,6,0,0"/>
-            <TextBlock Text="Enter your 25-character license key." Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,66,0,0"/>
+            <TextBlock Text="Enter your 25-character license key." Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,71,0,0"/>
         </Grid>
         <TextBlock Text="License Key:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,112,0,0"/>
         <TextBox PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" VerticalAlignment="Top" Margin="89,105,10,0"/>
         <Button x:Name="OKButton" Width="44" Height="44" VerticalAlignment="Top"
-                ToolTipService.ToolTip="OK" Margin="297,146,0,0">
+                ToolTipService.ToolTip="OK" Margin="297,146,0,0" Click="OKButton_Click">
             <FontIcon Glyph="&#xE10B;"/>
         </Button>
         <Button x:Name="CancelButton" Width="44" Height="44" Click="CancelButton_Click" VerticalAlignment="Top"

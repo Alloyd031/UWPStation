@@ -31,13 +31,12 @@
         <TextBlock Text="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0"/>
         <RichEditBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,144,0,0" Width="342" Height="297"/>
         <Button x:Name="TakeSnapshotButton" Width="44" Height="44" Margin="337,446,0,0" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Take Snapshot">
+                ToolTipService.ToolTip="Take Snapshot" Click="TakeSnapshotButton_Click">
             <FontIcon Glyph="&#xE109;"/>
         </Button>
         <Button x:Name="CancelButton" Width="44" Height="44" Click="CancelButton_Click" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Cancel" Margin="386,446,0,0">
             <FontIcon Glyph="&#xE10A;"/>
         </Button>
-        <TextBlock Text="You can't take snapshots at this time." Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,457,0,0"/>
     </Grid>
 </ContentDialog>

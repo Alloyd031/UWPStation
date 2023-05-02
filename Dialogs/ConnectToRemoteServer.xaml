@@ -23,17 +23,16 @@
 			VerticalAlignment="Stretch">
         <Grid VerticalAlignment="Top" Margin="0,10,0,0">
             <FontIcon Glyph="&#xE192;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Select the remote server that you want to connect to." Style="{StaticResource CaptionTextBlockStyle}" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <TextBlock Text="Select the remote server that you want to connect to." Style="{StaticResource CaptionTextBlockStyle}" FontSize="19" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,65,0,0"/>
         </Grid>
-        <TextBlock Text="Server name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,108,0,0"/>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,101,0,0" Width="388"/>
-        <TextBlock Text="User name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,182,0,0"/>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,138,0,0" Width="388"/>
-        <TextBlock Text="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,145,0,0"/>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,175,0,0" Width="388"/>
-        <TextBlock Text="Connecting to remote servers is not supported." Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,257,0,0"/>
+        <TextBlock Text="Server name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,116,0,0"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,108,0,0" Width="388"/>
+        <TextBlock Text="User name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,190,0,0"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,145,0,0" Width="388"/>
+        <TextBlock Text="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,153,0,0"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,182,0,0" Width="388"/>
         <Button x:Name="ConnectButton" Width="44" Height="44" Margin="397,246,0,0" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Connect">
+                ToolTipService.ToolTip="Connect" Click="ConnectButton_Click">
             <FontIcon Glyph="&#xE703;"/>
         </Button>
         <Button x:Name="CancelButton" Width="44" Height="44" Click="CancelButton_Click" VerticalAlignment="Top" 

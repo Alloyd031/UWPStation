@@ -23,8 +23,8 @@
 			VerticalAlignment="Stretch">
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <FontIcon Glyph="&#xE7BA;" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="60" Margin="0,0,0,0"/>
-            <TextBlock Text="By restoring the snapshot, the current state will be lost." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,59,0,0"/>
-            <TextBlock Text="Do you want to restore the snapshot?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,96,0,0"/>
+            <TextBlock Text="By restoring the snapshot, the current state will be lost." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+            <TextBlock Text="Do you want to restore the snapshot?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,99,0,0"/>
         </Grid>
         <Button x:Name="NoButton" Width="44" Height="44" Click="NoButton_Click" VerticalAlignment="Top"
                 ToolTipService.ToolTip="No" Margin="596,246,0,0">

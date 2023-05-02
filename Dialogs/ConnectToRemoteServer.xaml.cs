@@ -27,5 +27,11 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
+        private async void ConnectButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
     }
 }

@@ -20,7 +20,7 @@
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,146,0,0">
             <TextBlock Text="The virtual machine's hard disk is stored as one or more files on the host computer's physical disk. These file(s) start small and become larger as you add applications, files, and data to your virtual machine." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Margin="10,10,0,0" Width="420"/>
             <TextBlock Text="Maximum disk size (GB):" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,96,0,0"/>
-            <muxc:NumberBox Text="60.0" HorizontalAlignment="Left" VerticalAlignment="Top" SpinButtonPlacementMode="Compact" Margin="165,89,0,0"/>
+            <muxc:NumberBox Text="60.0" HorizontalAlignment="Left" VerticalAlignment="Top" SpinButtonPlacementMode="Compact" Margin="182,88,0,0"/>
             <TextBlock Text="Recommended size for UWPFamilyOS: 60 GB" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,126,0,0"/>
             <RadioButton Content="Store virtual disk as a single file" FontWeight="Bold" Margin="10,150,0,0" VerticalAlignment="Top"/>
             <RadioButton Content="Split virtual disk into multiple files" FontWeight="Bold" IsChecked="True" Margin="10,182,0,0" VerticalAlignment="Top"/>

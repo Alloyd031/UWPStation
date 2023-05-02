@@ -71,96 +71,135 @@
                 <muxc:MenuBarItem Title="File">
                     <MenuFlyoutItem Text="New Virtual Machine..." Click="CreateNewVM_Click"/>
                     <MenuFlyoutItem Text="New Window" Click="NewWindow_Click"/>
-                    <MenuFlyoutItem Text="Open..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Open..." Click="Open_Click"/>
                     <MenuFlyoutItem Text="Scan for Virtual Machines..." Click="ScanForVMs_Click"/>
-                    <MenuFlyoutItem Text="Configure Auto Start VMs" IsEnabled="False"/>
-                    <MenuFlyoutItem Text="Close Tab" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Configure Auto Start VMs" Click="ConfigureAutoStartVMs_Click"/>
+                    <MenuFlyoutItem Text="Close Tab" Click="CloseTab_Click"/>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="Connect to Server..." Click="ConnectToRemoteServer_Click"/>
-                    <MenuFlyoutItem Text="Export to OVF..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Export to OVF..." Click="ExportToOVF_Click"/>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="Exit" Click="Exit_Click"/>
                 </muxc:MenuBarItem>
                 <muxc:MenuBarItem Title="Edit">
-                    <MenuFlyoutItem Text="Cut" IsEnabled="False"/>
-                    <MenuFlyoutItem Text="Copy" IsEnabled="False"/>
-                    <MenuFlyoutItem Text="Paste" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Cut" Click="Cut_Click"/>
+                    <MenuFlyoutItem Text="Copy" Click="Copy_Click"/>
+                    <MenuFlyoutItem Text="Paste" Click="Paste_Click"/>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="Virtual Network Editor..." Click="VirtualNetEditor_Click"/>
                     <MenuFlyoutItem Text="Preferences..." Click="Preferences_Click"/>
                 </muxc:MenuBarItem>
                 <muxc:MenuBarItem Title="View">
-                    <MenuFlyoutItem Text="Full Screen" IsEnabled="False"/>
-                    <MenuFlyoutItem Text="Unity" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Full Screen" Click="FullScreen_Click"/>
+                    <MenuFlyoutItem Text="Unity" Click="Unity_Click"/>
                     <MenuFlyoutSeparator/>
-                    <MenuFlyoutItem Text="Console View" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Console View" Click="ConsoleView_Click"/>
                     <MenuFlyoutSeparator/>
-                    <MenuFlyoutItem Text="Fit Guest Now" IsEnabled="False"/>
-                    <MenuFlyoutItem Text="Fit Window Now" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Fit Guest Now" Click="FitGuestNow_Click"/>
+                    <MenuFlyoutItem Text="Fit Window Now" Click="FitWindowNow_Click"/>
                     <MenuFlyoutSubItem Text="Autosize">
-                        <muxc:RadioMenuFlyoutItem Text="Autofit Guest" IsChecked="True" IsEnabled="False"/>
-                        <muxc:RadioMenuFlyoutItem Text="Center Guest" IsEnabled="False"/>
+                        <muxc:RadioMenuFlyoutItem Text="Autofit Guest" IsChecked="True"/>
+                        <muxc:RadioMenuFlyoutItem Text="Center Guest"/>
                         <MenuFlyoutSeparator/>
-                        <ToggleMenuFlyoutItem Text="Autofit Window" IsChecked="True" IsEnabled="False"/>
+                        <ToggleMenuFlyoutItem Text="Autofit Window" IsChecked="True"/>
                     </MenuFlyoutSubItem>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutSubItem Text="Customize">
-                        <ToggleMenuFlyoutItem Text="Library" IsEnabled="False"/>
-                        <ToggleMenuFlyoutItem Text="Thumbnail Bar" IsEnabled="False"/>
-                        <ToggleMenuFlyoutItem Text="Toolbar" IsChecked="True" IsEnabled="False"/>
-                        <ToggleMenuFlyoutItem Text="Tabs" IsChecked="True" IsEnabled="False"/>
-                        <ToggleMenuFlyoutItem Text="Status Bar" IsChecked="True" IsEnabled="False"/>
+                        <ToggleMenuFlyoutItem Text="Library" IsChecked="True"/>
+                        <ToggleMenuFlyoutItem Text="Thumbnail Bar" IsChecked="True"/>
+                        <ToggleMenuFlyoutItem Text="Toolbar" IsChecked="True"/>
+                        <ToggleMenuFlyoutItem Text="Tabs" IsChecked="True"/>
+                        <ToggleMenuFlyoutItem Text="Status Bar" IsChecked="True"/>
                         <MenuFlyoutSeparator/>
                         <MenuFlyoutSubItem Text="Thumbnail Bar Options">
-                            <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines" IsEnabled="False"/>
-                            <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True" IsEnabled="False"/>
+                            <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines"/>
+                            <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True"/>
                         </MenuFlyoutSubItem>
                     </MenuFlyoutSubItem>
                 </muxc:MenuBarItem>
                 <muxc:MenuBarItem Title="VM">
                     <MenuFlyoutSubItem Text="Power">
-                        <MenuFlyoutItem Text="Not available" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Start Up Guest" Click="StartUpGuest_Click"/>
+                        <MenuFlyoutItem Text="Shut Down Guest" Click="ShutDownGuest_Click"/>
+                        <MenuFlyoutItem Text="Suspend Guest" Click="SuspendGuest_Click"/>
+                        <MenuFlyoutItem Text="Restart Guest" Click="RestartGuest_Click"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Text="Power On" Click="PowerOn_Click"/>
+                        <MenuFlyoutItem Text="Power Off" Click="PowerOff_Click"/>
+                        <MenuFlyoutItem Text="Suspend" Click="Suspend_Click"/>
+                        <MenuFlyoutItem Text="Reset" Click="Reset_Click"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Text="Power On to Firmware" Click="PowerOnToFirmware_Click"/>
                     </MenuFlyoutSubItem>
                     <MenuFlyoutSubItem Text="Removable Devices">
-                        <MenuFlyoutItem Text="Not available" IsEnabled="False"/>
+                        <MenuFlyoutSubItem Text="CD/DVD (IDE)">
+                            <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click"/>
+                            <MenuFlyoutItem Text="Settings..." Click="Settings_Click"/>
+                        </MenuFlyoutSubItem>
+                        <MenuFlyoutSubItem Text="Network Adapter">
+                            <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click"/>
+                            <MenuFlyoutItem Text="Settings..." Click="Settings_Click"/>
+                        </MenuFlyoutSubItem>
+                        <MenuFlyoutSubItem Text="Sound Card">
+                            <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click"/>
+                            <MenuFlyoutItem Text="Settings..." Click="Settings_Click"/>
+                        </MenuFlyoutSubItem>
                     </MenuFlyoutSubItem>
-                    <MenuFlyoutItem Text="Pause" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Pause" Click="Pause_Click"/>
                     <MenuFlyoutSeparator/>
-                    <MenuFlyoutItem Text="Send Ctrl+Alt+Del" IsEnabled="False"/>
-                    <MenuFlyoutItem Text="Grab Input" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Send Ctrl+Alt+Del" Click="SendCtrlAltDel_Click"/>
+                    <MenuFlyoutItem Text="Grab Input" Click="GrabInput_Click"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutSubItem Text="Snapshot">
+                        <MenuFlyoutItem Text="Take Snapshot..." Click="TakeVMSnapshot_Click"/>
+                        <MenuFlyoutItem Text="Revert to Snapshot" Click="RevertToSnapshot_Click"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Text="Snapshot Manager" Click="VMSnapshotManager_Click"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutItem Text="Capture Screen" Click="CaptureScreen_Click"/>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutSubItem Text="Manage">
-                        <MenuFlyoutItem Text="Not available" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Change Hardware Compatibility..." Click="ChangeHardwareCompatibility_Click"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Text="Clone..." Click="Clone_Click"/>
+                        <MenuFlyoutItem Text="Upload..." Click="Upload_Click"/>
+                        <MenuFlyoutItem Text="Download..." Click="Download_Click"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Text="Clean Up Disks..." Click="CleanUpDisks_Click"/>
+                        <MenuFlyoutItem Text="Delete from Disk" Click="DeleteFromDisks_Click"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Text="Permissions..." Click="Permissions_Click"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Text="VNC Connections" Click="VNCConnections_Click"/>
+                        <MenuFlyoutItem Text="Message Log" Click="VMMessageLog_Click"/>
                     </MenuFlyoutSubItem>
-                    <MenuFlyoutItem Text="Install UWPTools..." IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Install UWPTools..." Click="InstallUWPTools_Click"/>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="Settings..." Click="VMSettings_Click"/>
                 </muxc:MenuBarItem>
                 <muxc:MenuBarItem Title="Tabs">
-                    <MenuFlyoutItem Text="Switching between tabs is not supported." IsEnabled="False"/>
-                    <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="Go to Home Tab" Click="GoToHome_Click"/>
                     <MenuFlyoutSeparator/>
-                    <MenuFlyoutItem Text="Next Tab" IsEnabled="False"/>
-                    <MenuFlyoutItem Text="Previous Tab" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Next Tab" Click="NextTab_Click"/>
+                    <MenuFlyoutItem Text="Previous Tab" Click="PreviousTab_Click"/>
                 </muxc:MenuBarItem>
                 <muxc:MenuBarItem Title="Help">
-                    <MenuFlyoutItem Text="Help Topics" IsEnabled="False"/>
-                    <MenuFlyoutItem Text="Online Documentaion" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Help Topics" Click="HelpTopics_Click"/>
+                    <MenuFlyoutItem Text="Online Documentaion" Click="OnlineDocumentation_Click"/>
                     <MenuFlyoutSubItem Text="Support">
-                        <MenuFlyoutItem Text="Online Community" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Product Support Center" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Submit Support Request" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Collect Support Data..." IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Online Community" Click="OnlineCommunity_Click"/>
+                        <MenuFlyoutItem Text="Product Support Center" Click="ProductSupportCenter_Click"/>
+                        <MenuFlyoutItem Text="Submit Support Request" Click="SubmitSupportRequest_Click"/>
+                        <MenuFlyoutItem Text="Collect Support Data..." Click="CollectSupportData_Click"/>
                     </MenuFlyoutSubItem>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutSubItem Text="Hints">
-                        <MenuFlyoutItem Text="Enable All Hints" IsEnabled="False"/>
-                        <ToggleMenuFlyoutItem Text="Show Enabled Hints" IsChecked="True" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Enable All Hints" Click="EnableAllHints_Click"/>
+                        <ToggleMenuFlyoutItem Text="Show Enabled Hints" IsChecked="True"/>
                     </MenuFlyoutSubItem>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="Enter a License Key" Click="LicenseKey_Click"/>
-                    <MenuFlyoutItem Text="Register UWPStation" IsEnabled="False"/>
+                    <MenuFlyoutItem Text="Register UWPStation" Click="RegisterUWPStation_Click"/>
                     <MenuFlyoutItem Text="Software Updates" Click="SoftwareUpdates_Click"/>
                     <MenuFlyoutSeparator/>
                     <MenuFlyoutItem Text="About UWPStation" Click="About_Click"/>

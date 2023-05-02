@@ -24,7 +24,7 @@
 			VerticalAlignment="Stretch">
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <muxc:ProgressRing x:Name="CheckForUpdatesProgress" Width="60" Height="60" IsIndeterminate="False" VerticalAlignment="Top"/>
-            <TextBlock x:Name="PendingUpdatesText" Text="No pending updates." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <TextBlock x:Name="PendingUpdatesText" Text="No pending updates." TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
         </Grid>
         <Button x:Name="CheckForUpdatesButton" Width="44" Height="44" VerticalAlignment="Top" Click="CheckForUpdatesButton_Click"
                 ToolTipService.ToolTip="Check for updates" Margin="337,446,0,0">

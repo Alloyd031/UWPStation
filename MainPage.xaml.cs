@@ -241,5 +241,258 @@ namespace UWPStation
             ChangelogDialog dialog = new ChangelogDialog();
             await dialog.ShowAsync();
         }
+        private async void Open_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void ConfigureAutoStartVMs_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void CloseTab_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void ExportToOVF_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Cut_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Copy_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Paste_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void FullScreen_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Unity_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void ConsoleView_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void FitGuestNow_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void FitWindowNow_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void StartUpGuest_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void ShutDownGuest_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void SuspendGuest_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void RestartGuest_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void PowerOn_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void PowerOff_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Suspend_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void PowerOnToFirmware_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Disconnect_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            VMSettings dialog = new VMSettings();
+            await dialog.ShowAsync();
+        }
+        private async void Pause_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+
+        private async void SendCtrlAltDel_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void GrabInput_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+
+        private async void TakeVMSnapshot_Click(object sender, RoutedEventArgs e)
+        {
+            TakeSnapshotDialog dialog = new TakeSnapshotDialog();
+            await dialog.ShowAsync();
+        }
+
+        private async void RevertToSnapshot_Click(object sender, RoutedEventArgs e)
+        {
+            RestoreSnapshot dialog = new RestoreSnapshot();
+            await dialog.ShowAsync();
+        }
+
+        private async void VMSnapshotManager_Click(object sender, RoutedEventArgs e)
+        {
+            SnapshotManagerDialog dialog = new SnapshotManagerDialog();
+            await dialog.ShowAsync();
+        }
+        private async void CaptureScreen_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void ChangeHardwareCompatibility_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Clone_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Upload_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Download_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void CleanUpDisks_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void DeleteFromDisks_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Permissions_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void VNCConnections_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void VMMessageLog_Click(object sender, RoutedEventArgs e)
+        {
+            MessageLogDialog dialog = new MessageLogDialog();
+            await dialog.ShowAsync();
+        }
+        private async void InstallUWPTools_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void NextTab_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void PreviousTab_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void HelpTopics_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void OnlineDocumentation_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void OnlineCommunity_Click(object sender, RoutedEventArgs e)
+        {
+            await Windows.System.Launcher.LaunchUriAsync(new Uri("https://discord.gg/jDt9eCkaJc"));
+        }
+        private async void ProductSupportCenter_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void SubmitSupportRequest_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void CollectSupportData_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void EnableAllHints_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void RegisterUWPStation_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
     }
 }

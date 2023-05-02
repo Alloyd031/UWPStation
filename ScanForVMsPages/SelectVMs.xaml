@@ -15,12 +15,12 @@
     <Grid>
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE7C4;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Select virtual machines" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
-            <TextBlock Text="Select virtual machines that you want to add into the library." Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0"/>
+            <TextBlock Text="Select virtual machines" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+            <TextBlock Text="Select virtual machines that you want to add into the library." Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,94,0,0"/>
         </Grid>
-        <TextBlock Text="Virtual machines to add" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,134,0,0"/>
-        <TextBlock Text="VM Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,165,0,0"/>
-        <TextBlock Text="Path" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,165,0,0"/>
+        <TextBlock Text="Virtual machines to add" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,134,0,0"/>
+        <TextBlock Text="VM Name" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,165,0,0"/>
+        <TextBlock Text="Path" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,165,0,0"/>
         <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Scanning for VMs is not possible at this time." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
@@ -33,14 +33,14 @@
                 ToolTipService.ToolTip="Unselect All">
             <FontIcon Glyph="&#xE8E6;"/>
         </Button>
-        <TextBlock Text="Add to library" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,402,0,0"/>
-        <TextBlock Text="Add to:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,438,0,0"/>
+        <TextBlock Text="Add to library" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,402,0,0"/>
+        <TextBlock Text="Add to:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,438,0,0"/>
         <AutoSuggestBox Text="My Computer" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" VerticalContentAlignment="Center" Margin="73,425,0,0" Width="468" Height="44"/>
         <Button Margin="546,425,0,0" Width="44" Height="44" VerticalAlignment="Top"
                 ToolTipService.ToolTip="Browse...">
             <FontIcon Glyph="&#xE11A;"/>
         </Button>
-        <CheckBox Content="Match the file system folder hierarchy in the library" Margin="73,474,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Match the file system folder hierarchy in the library" FontWeight="Bold" Margin="73,474,0,0" VerticalAlignment="Top"/>
         <Button Width="44" Height="44" Margin="10,496,0,0" VerticalAlignment="Top" 
                 ToolTipService.ToolTip="Help">
             <FontIcon Glyph="&#xE11B;"/>

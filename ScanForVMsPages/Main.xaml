@@ -14,12 +14,12 @@
     <Grid>
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE11A;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Welcome to the Scan for Virtual Machines Wizard" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
-            <TextBlock Text="This wizard will scan your system for virtual machines outside of virtual machine library." Style="{StaticResource CaptionTextBlockStyle}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0"/>
+            <TextBlock Text="Welcome to the Scan for Virtual Machines Wizard" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+            <TextBlock Text="This wizard will scan your system for virtual machines outside of virtual machine library." Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,94,0,0"/>
         </Grid>
-        <TextBlock Text="Select a location to scan:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,126,0,0"/>
-        <AutoSuggestBox x:Name="LocationBox" Text="Some location" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" VerticalContentAlignment="Center" Margin="10,150,0,0" Width="531" Height="44"/>
-        <Button Margin="546,150,0,0" Width="44" Height="44" VerticalAlignment="Top"
+        <TextBlock Text="Select a location to scan:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,157,0,0"/>
+        <AutoSuggestBox x:Name="LocationBox" Text="Some location" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" VerticalContentAlignment="Center" Margin="10,179,0,0" Width="531" Height="44"/>
+        <Button Margin="546,179,0,0" Width="44" Height="44" VerticalAlignment="Top" IsEnabled="False"
                 ToolTipService.ToolTip="Browse...">
             <FontIcon Glyph="&#xE11A;"/>
         </Button>

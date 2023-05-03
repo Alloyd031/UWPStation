@@ -10,7 +10,7 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <Grid Grid.Row="2" Grid.RowSpan="2" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,40">
+        <Grid Grid.Row="2" Grid.RowSpan="2" Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}" Margin="0,0,0,40">
             <Button x:Name="WelcomeButton" Background="Transparent" BorderBrush="Transparent" Height="100" Width="100" Margin="10,10,0,0" VerticalAlignment="Top" Click="WelcomeButton_Click">
                 <Grid Margin="-50,-50,-50,-50">
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE946;" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,33,0,0"/>
@@ -18,7 +18,7 @@
                 </Grid>
             </Button>
         </Grid>
-        <Grid x:Name="Taskbar" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="48" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="Taskbar" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="48" Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}">
             <Button Height="48" Width="48" Background="Transparent" BorderBrush="Transparent" ToolTipService.ToolTip="Start" HorizontalAlignment="Center">
                 <FontIcon FontFamily="HoloLens MDL2 Assets" Glyph="&#xE782;" FontSize="16"/>
             </Button>

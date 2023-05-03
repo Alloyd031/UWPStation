@@ -283,7 +283,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="VMTab" Height="49" Width="175"
-                        Click="VMTab_Click" Margin="190,0,0,0">
+                        Click="VMTab_Click" Margin="190,0,0,0" RightTapped="VMTab_RightTapped">
                     <Grid Margin="-88,-24,-87,-25">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7C4;" Width="29" Height="29" Margin="10,10,136,10"/>
                         <TextBlock Text="UWPFamilyOS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
@@ -291,16 +291,23 @@
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8BB;" FontSize="12" Margin="-15,-14,-14,-15"/>
                         </Button>
                     </Grid>
-                </Button>
-                <Button x:Name="MyComputerTab" Height="49" Width="175"
-                        Click="MyComputerTab_Click" Margin="370,0,0,10" VerticalAlignment="Bottom">
-                    <Grid Margin="-88,-24,-87,-25">
-                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEC4E;" Width="29" Height="29" Margin="10,10,136,10"/>
-                        <TextBlock Text="My Computer" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
-                        <Button x:Name="CloseMyComputerTab" Height="29" Width="29" Background="Transparent" BorderBrush="Transparent" Margin="136,0,0,0" ToolTipService.ToolTip="Close Tab">
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8BB;" FontSize="12" Margin="-15,-14,-14,-15"/>
-                        </Button>
-                    </Grid>
+                    <FlyoutBase.AttachedFlyout>
+                        <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                            <MenuFlyoutItem Text="Change Hardware Compatibility..." Click="ChangeHardwareCompatibility_Click"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Clone..." Click="Clone_Click"/>
+                            <MenuFlyoutItem Text="Upload..." Click="Upload_Click"/>
+                            <MenuFlyoutItem Text="Download..." Click="Download_Click"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Clean Up Disks..." Click="CleanUpDisks_Click"/>
+                            <MenuFlyoutItem Text="Delete from Disk" Click="DeleteFromDisks_Click"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Permissions..." Click="Permissions_Click"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="VNC Connections" Click="VNCConnections_Click"/>
+                            <MenuFlyoutItem Text="Message Log" Click="VMMessageLog_Click"/>
+                        </MenuFlyout>
+                    </FlyoutBase.AttachedFlyout>
                 </Button>
             </Grid>
             <Frame x:Name="TabsFrame" Margin="0,69,0,147"/>

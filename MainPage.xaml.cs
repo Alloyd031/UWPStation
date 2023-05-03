@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Enumeration;
 using UWPStation.Pages;
 using UWPStation.Dialogs;
+using UWPStation.Wizards;
 using Microsoft.UI.Xaml.Controls;
 using System.Collections.ObjectModel;
 using System.Reflection;
@@ -194,7 +195,6 @@ namespace UWPStation
             this.TabsFrame.Navigate(typeof(HomePage));
             this.FolderView.Visibility = Visibility.Collapsed;
             this.TabsFrame.Margin = new Thickness(0, 69, 0, 0);
-            this.MyComputerTab.Visibility = Visibility.Collapsed;
         }
         private void HideFolderView_Click(object sender, RoutedEventArgs e)
         {
@@ -397,7 +397,7 @@ namespace UWPStation
         }
         private async void ChangeHardwareCompatibility_Click(object sender, RoutedEventArgs e)
         {
-            NotAvailableDialog dialog = new NotAvailableDialog();
+            ChangeHardwareCompatibility dialog = new ChangeHardwareCompatibility();
             await dialog.ShowAsync();
         }
         private async void Clone_Click(object sender, RoutedEventArgs e)
@@ -493,6 +493,10 @@ namespace UWPStation
         {
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
+        }
+        private void VMTab_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
     }
 }

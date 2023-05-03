@@ -1,5 +1,5 @@
 ﻿<ContentDialog
-    x:Class="UWPStation.Dialogs.ScanForVMs"
+    x:Class="UWPStation.Wizards.ScanForVMs"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPStation.Dialogs"
@@ -7,9 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
+    mc:Ignorable="d"
     Style="{StaticResource DefaultContentDialogStyle}"
-    Loaded="ContentDialog_Loaded"
-    mc:Ignorable="d">
+    Loaded="ContentDialog_Loaded">
 
     <ContentDialog.Resources>
         <ResourceDictionary>
@@ -25,8 +25,8 @@
 			VerticalAlignment="Stretch">
         <Button
 					x:Name="BackButton"
-					Width="48"
-					Height="48"
+					Width="44"
+					Height="44"
 					AutomationProperties.Name="Back"
 					Background="Transparent"
 					BorderBrush="Transparent"
@@ -42,7 +42,7 @@
                 </muxc:AnimatedIcon.FallbackIconSource>
             </muxc:AnimatedIcon>
         </Button>
-        <Grid VerticalAlignment="Top" Height="44" Margin="48,0,44,0">
+        <Grid VerticalAlignment="Top" Height="44" Margin="44,0,44,0">
             <TextBlock Text="Scan for Virtual Machines Wizard" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
         <Button

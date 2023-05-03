@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UWPStation.ScanForVMsPages;
+using UWPStation.ChangeHardwareCompatibilityPages;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -16,11 +16,11 @@ using Windows.UI.Xaml.Navigation;
 
 // The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace UWPStation.Dialogs
+namespace UWPStation.Wizards
 {
-    public sealed partial class ScanForVMs : ContentDialog
+    public sealed partial class ChangeHardwareCompatibility : ContentDialog
     {
-        public ScanForVMs()
+        public ChangeHardwareCompatibility()
         {
             this.InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace UWPStation.Dialogs
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            ContentFrame.GoBack();
+            this.ContentFrame.GoBack();
         }
         private void ContentDialog_Loaded(object sender, RoutedEventArgs e)
         {

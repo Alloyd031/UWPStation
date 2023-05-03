@@ -130,6 +130,9 @@
     <Compile Include="AboutDialog.xaml.cs">
       <DependentUpon>AboutDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangeHardwareCompatibilityPages\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ChangelogDialog.xaml.cs">
       <DependentUpon>ChangelogDialog.xaml</DependentUpon>
     </Compile>
@@ -151,7 +154,10 @@
     <Compile Include="PreferencesDialog.xaml.cs">
       <DependentUpon>PreferencesDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ScanForVMs.xaml.cs">
+    <Compile Include="Wizards\ChangeHardwareCompatibility.xaml.cs">
+      <DependentUpon>ChangeHardwareCompatibility.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\ScanForVMs.xaml.cs">
       <DependentUpon>ScanForVMs.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\SnapshotManagerDialog.xaml.cs">
@@ -163,7 +169,7 @@
     <Compile Include="Dialogs\TakeSnapshotDialog.xaml.cs">
       <DependentUpon>TakeSnapshotDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NewVMWizard.xaml.cs">
+    <Compile Include="Wizards\NewVMWizard.xaml.cs">
       <DependentUpon>NewVMWizard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\NotAvailableDialog.xaml.cs">
@@ -329,6 +335,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChangeHardwareCompatibilityPages\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ChangelogDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -357,7 +367,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ScanForVMs.xaml">
+    <Page Include="Wizards\ChangeHardwareCompatibility.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wizards\ScanForVMs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -373,7 +387,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NewVMWizard.xaml">
+    <Page Include="Wizards\NewVMWizard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

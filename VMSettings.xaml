@@ -8,6 +8,7 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     Style="{StaticResource DefaultContentDialogStyle}"
+    Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}"
     mc:Ignorable="d"
     Loaded="ContentDialog_Loaded">
 

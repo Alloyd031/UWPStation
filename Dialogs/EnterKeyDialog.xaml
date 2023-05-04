@@ -7,7 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Style="{StaticResource DefaultContentDialogStyle}"
-    Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}"
     mc:Ignorable="d">
     <ContentDialog.Resources>
         <ResourceDictionary>

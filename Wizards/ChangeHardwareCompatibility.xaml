@@ -9,7 +9,6 @@
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
     Style="{StaticResource DefaultContentDialogStyle}"
-    Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}"
     Loaded="ContentDialog_Loaded">
 
     <ContentDialog.Resources>

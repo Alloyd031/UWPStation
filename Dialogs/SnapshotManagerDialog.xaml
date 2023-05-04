@@ -26,7 +26,7 @@
             <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Snapshot Manager is not available." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
         </Grid>
-        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xECC5;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,532,0,0"/>
+        <FontIcon Glyph="&#xECC5;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,532,0,0"/>
         <CheckBox Content="Show AutoProtect snapshots" Margin="44,526,0,0" VerticalAlignment="Top"/>
         <Button Margin="399,520,0,0" Width="44" Height="44" VerticalAlignment="Top" ToolTipService.ToolTip="Go To">
             <FontIcon Glyph="&#xE143;"/>

@@ -17,7 +17,7 @@
             <Button x:Name="GeneralButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,34,0,0" Click="GeneralButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE977;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xE977;" Margin="10,7,260,7"/>
                     <TextBlock Text="General" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                     <TextBlock Text="UWPFamilyOS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
                 </Grid>
@@ -25,14 +25,14 @@
             <Button x:Name="PowerButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,76,0,0" Click="PowerButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE102;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xE102;" Margin="10,7,260,7"/>
                     <TextBlock Text="Power" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                 </Grid>
             </Button>
             <Button x:Name="SharedFolderButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,118,0,0" Click="SharedFolderButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8B7;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xE8B7;" Margin="10,7,260,7"/>
                     <TextBlock Text="Shared Folders" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                     <TextBlock Text="Disabled" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
                 </Grid>
@@ -40,14 +40,14 @@
             <Button x:Name="SnapshotsButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,160,0,0" Click="SnapshotsButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xF739;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xF739;" Margin="10,7,260,7"/>
                     <TextBlock Text="Snapshots" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                 </Grid>
             </Button>
             <Button x:Name="AutoProtectButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,202,0,0" Click="AutoProtectButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xF738;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xF738;" Margin="10,7,260,7"/>
                     <TextBlock Text="AutoProtect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                     <TextBlock Text="Disabled" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
                 </Grid>
@@ -55,14 +55,14 @@
             <Button x:Name="GuestIsolationButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,244,0,0" Click="GuestIsolationButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE72E;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xE72E;" Margin="10,7,260,7"/>
                     <TextBlock Text="Guest Isolation" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                 </Grid>
             </Button>
             <Button x:Name="AccessControlButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,286,0,0" Click="AccessControlButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEE3F;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xEE3F;" Margin="10,7,260,7"/>
                     <TextBlock Text="Access Control" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                     <TextBlock Text="Not encrypted" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
                 </Grid>
@@ -70,7 +70,7 @@
             <Button x:Name="UWPToolsButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,328,0,0" Click="UWPToolsButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEC7A;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xEC7A;" Margin="10,7,260,7"/>
                     <TextBlock Text="UWPTools" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                     <TextBlock Text="Time sync off" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
                 </Grid>
@@ -78,7 +78,7 @@
             <Button x:Name="VNCConnectionsButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,370,0,0" Click="VNCConnectionsButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE148;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xE148;" Margin="10,7,260,7"/>
                     <TextBlock Text="VNC Connections" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                     <TextBlock Text="Disabled" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
                 </Grid>
@@ -86,21 +86,21 @@
             <Button x:Name="UnityButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,412,0,0" Click="UnityButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE2AE;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xE2AE;" Margin="10,7,260,7"/>
                     <TextBlock Text="Unity" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                 </Grid>
             </Button>
             <Button x:Name="ApplianceViewButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,454,0,0" Click="ApplianceViewButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE12A;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xE12A;" Margin="10,7,260,7"/>
                     <TextBlock Text="Appliance View" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                 </Grid>
             </Button>
             <Button x:Name="AutologinButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,496,0,0" Click="AutologinButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE1A6;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xE1A6;" Margin="10,7,260,7"/>
                     <TextBlock Text="Autologin" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                     <TextBlock Text="Not supported" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
                 </Grid>
@@ -108,7 +108,7 @@
             <Button x:Name="AdvancedButton" Height="42" Width="297" VerticalAlignment="Top"
                     Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,538,0,0" Click="AdvancedButton_Click">
                 <Grid Margin="-149,-21,-148,-21">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE9D9;" Margin="10,7,260,7"/>
+                    <FontIcon Glyph="&#xE9D9;" Margin="10,7,260,7"/>
                     <TextBlock Text="Advanced" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
                     <TextBlock Text="Default/Default" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
                 </Grid>

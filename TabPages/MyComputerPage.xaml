@@ -11,7 +11,7 @@
 
     <Grid>
         <Grid Height="49" VerticalAlignment="Top">
-            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEC4E;" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <FontIcon Glyph="&#xEC4E;" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
             <TextBlock Text="My Computer" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="52,0,0,0"/>
         </Grid>
     </Grid>

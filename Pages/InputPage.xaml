@@ -35,7 +35,7 @@
                 </ComboBox.Items>
             </ComboBox>
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,47,0,0">
-                <TextBlock FontFamily="Segoe FLuent Icons" Text="&#xE946;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="17" FontSize="16"/>
+                <TextBlock Text="&#xE946;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="17" FontSize="16"/>
                 <TextBlock Text="Change this option if you have trouble with mouse motion in some applications." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,-2,0,0" />
             </Grid>
         </Grid>

@@ -15,14 +15,14 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace UWPStation.Pages
+namespace UWPStation.PreferencesPages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MemoryPage : Page
+    public sealed partial class HotKeysPage : Page
     {
-        public MemoryPage()
+        public HotKeysPage()
         {
             this.InitializeComponent();
         }

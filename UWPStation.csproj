@@ -202,37 +202,37 @@
     <Compile Include="NewVMWizardPages\ReadyToCreate.xaml.cs">
       <DependentUpon>ReadyToCreate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\DevicesPage.xaml.cs">
+    <Compile Include="PreferencesPages\DevicesPage.xaml.cs">
       <DependentUpon>DevicesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\DisplayPage.xaml.cs">
+    <Compile Include="PreferencesPages\DisplayPage.xaml.cs">
       <DependentUpon>DisplayPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FeedbackPage.xaml.cs">
+    <Compile Include="PreferencesPages\FeedbackPage.xaml.cs">
       <DependentUpon>FeedbackPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\HotKeysPage.xaml.cs">
+    <Compile Include="PreferencesPages\HotKeysPage.xaml.cs">
       <DependentUpon>HotKeysPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\InputPage.xaml.cs">
+    <Compile Include="PreferencesPages\InputPage.xaml.cs">
       <DependentUpon>InputPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MemoryPage.xaml.cs">
+    <Compile Include="PreferencesPages\MemoryPage.xaml.cs">
       <DependentUpon>MemoryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PriorityPage.xaml.cs">
+    <Compile Include="PreferencesPages\PriorityPage.xaml.cs">
       <DependentUpon>PriorityPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\UnityPage.xaml.cs">
+    <Compile Include="PreferencesPages\UnityPage.xaml.cs">
       <DependentUpon>UnityPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\UpdatesPage.xaml.cs">
+    <Compile Include="PreferencesPages\UpdatesPage.xaml.cs">
       <DependentUpon>UpdatesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\USBPage.xaml.cs">
+    <Compile Include="PreferencesPages\USBPage.xaml.cs">
       <DependentUpon>USBPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WorkspacePage.xaml.cs">
+    <Compile Include="PreferencesPages\WorkspacePage.xaml.cs">
       <DependentUpon>WorkspacePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -431,47 +431,47 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\DevicesPage.xaml">
+    <Page Include="PreferencesPages\DevicesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\DisplayPage.xaml">
+    <Page Include="PreferencesPages\DisplayPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\FeedbackPage.xaml">
+    <Page Include="PreferencesPages\FeedbackPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\HotKeysPage.xaml">
+    <Page Include="PreferencesPages\HotKeysPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\InputPage.xaml">
+    <Page Include="PreferencesPages\InputPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\MemoryPage.xaml">
+    <Page Include="PreferencesPages\MemoryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PriorityPage.xaml">
+    <Page Include="PreferencesPages\PriorityPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\UnityPage.xaml">
+    <Page Include="PreferencesPages\UnityPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\UpdatesPage.xaml">
+    <Page Include="PreferencesPages\UpdatesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\USBPage.xaml">
+    <Page Include="PreferencesPages\USBPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\WorkspacePage.xaml">
+    <Page Include="PreferencesPages\WorkspacePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

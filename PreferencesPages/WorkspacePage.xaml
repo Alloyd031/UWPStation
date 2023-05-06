@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="UWPStation.Pages.WorkspacePage"
+    x:Class="UWPStation.PreferencesPages.WorkspacePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPStation.Pages"
@@ -7,7 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
@@ -19,7 +18,7 @@
             <TextBlock Text="Default location for virtual machines" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <AutoSuggestBox PlaceholderText="C:\VMs" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="223" Margin="10,36,0,0" Height="44"/>
             <Button Width="44" Height="44" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Browse" Margin="238,36,0,0">
+                    ToolTipService.ToolTip="Browse" Margin="238,36,0,0" IsEnabled="False">
                 <FontIcon Glyph="&#xE11A;"/>
             </Button>
         </Grid>

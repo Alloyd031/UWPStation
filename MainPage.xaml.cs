@@ -16,7 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Enumeration;
-using UWPStation.Pages;
+using UWPStation.PreferencesPages;
 using UWPStation.Dialogs;
 using UWPStation.Wizards;
 using Microsoft.UI.Xaml.Controls;

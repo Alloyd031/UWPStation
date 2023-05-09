@@ -17,57 +17,26 @@
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="120"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Button
-					x:Name="MenuButton"
-					Width="50"
-					Height="50"
-					AutomationProperties.Name="Menu"
-					Background="Transparent"
-					BorderBrush="Transparent"
-					ToolTipService.ToolTip="Menu"
-                    ToolTipService.Placement="Bottom"
-                    Click="MenuButton_Click">
-            <muxc:AnimatedIcon x:Name="GlobalNavigationButtonAnimatedIcon">
-                <muxc:AnimatedIcon.Source>
-                    <animatedvisuals:AnimatedGlobalNavigationButtonVisualSource/>
-                </muxc:AnimatedIcon.Source>
-                <muxc:AnimatedIcon.FallbackIconSource>
-                    <muxc:SymbolIconSource Symbol="GlobalNavigationButton"/>
-                </muxc:AnimatedIcon.FallbackIconSource>
-            </muxc:AnimatedIcon>
-            <FlyoutBase.AttachedFlyout>
-                <MenuFlyout Placement="BottomEdgeAlignedLeft">
-                    <MenuFlyoutItem Text="Changelog" Click="Changelog_Click"/>
-                </MenuFlyout>
-            </FlyoutBase.AttachedFlyout>
-        </Button>
         <Grid x:Name="AppTitleBar"
-              Background="Transparent" Margin="50,0,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="16" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="16" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
+              Background="Transparent" Height="40">
             <Image Source="/Assets/StoreLogo.png"
-                   Width="32"
-                   Height="32" Grid.ColumnSpan="2" Margin="10,10,10,10"/>
+                   Width="25"
+                   Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
             <TextBlock
                        x:Name="AppTitle"
-                       Text="UWPStation" FontSize="24" HorizontalAlignment="Left"
+                       Text="UWPStation" FontSize="20" HorizontalAlignment="Left"
                        Style="{StaticResource CaptionTextBlockStyle}"
-                       VerticalAlignment="Center"
-                       Grid.Column="2" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                       VerticalAlignment="Center" Margin="45,0,0,0"/>
         </Grid>
         <StackPanel x:Name="MenuStack"
-                    Orientation="Horizontal" Margin="250,0,0,0">
-            <muxc:MenuBar Height="50">
+                    Orientation="Horizontal" Margin="0,0,0,80" Grid.Row="2">
+            <muxc:MenuBar>
                 <muxc:MenuBarItem Title="File">
                     <MenuFlyoutItem Text="New Virtual Machine..." Click="CreateNewVM_Click"/>
                     <MenuFlyoutItem Text="New Window" Click="NewWindow_Click"/>
@@ -208,18 +177,18 @@
             <AppBarSeparator/>
             <muxc:SplitButton Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE102;" ToolTipService.ToolTip="Start up this guest operating system">
                 <muxc:SplitButton.Flyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem Text="Start Up Guest" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Shut Down Guest" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Suspend Guest" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Restart Guest" IsEnabled="False"/>
+                    <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                        <MenuFlyoutItem Text="Start Up Guest" Click="StartUpGuest_Click"/>
+                        <MenuFlyoutItem Text="Shut Down Guest" Click="ShutDownGuest_Click"/>
+                        <MenuFlyoutItem Text="Suspend Guest" Click="SuspendGuest_Click"/>
+                        <MenuFlyoutItem Text="Restart Guest" Click="RestartGuest_Click"/>
                         <MenuFlyoutSeparator/>
-                        <MenuFlyoutItem Text="Power On" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Power Off" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Suspend" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Reset" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Power On" Click="PowerOn_Click"/>
+                        <MenuFlyoutItem Text="Power Off" Click="PowerOff_Click"/>
+                        <MenuFlyoutItem Text="Suspend" Click="Suspend_Click"/>
+                        <MenuFlyoutItem Text="Reset" Click="Reset_Click"/>
                         <MenuFlyoutSeparator/>
-                        <MenuFlyoutItem Text="Power On to Firmware" IsEnabled="False"/>
+                        <MenuFlyoutItem Text="Power On to Firmware" Click="PowerOnToFirmware_Click"/>
                     </MenuFlyout>
                 </muxc:SplitButton.Flyout>
             </muxc:SplitButton>
@@ -239,15 +208,14 @@
             <AppBarSeparator/>
             <muxc:ToggleSplitButton Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE2B4;" ToolTipService.ToolTip="Free stretch / Keep aspect ratio stretch">
                 <muxc:ToggleSplitButton.Flyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem Text="Keep aspect ratio stretch" IsEnabled="False"/>
-                        <MenuFlyoutItem Text="Free stretch" IsEnabled="False"/>
+                    <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                        <MenuFlyoutItem Text="Keep aspect ratio stretch" Click="KeepAspectRatioStretch_Click"/>
+                        <MenuFlyoutItem Text="Free stretch" Click="FreeStretch_Click"/>
                     </MenuFlyout>
                 </muxc:ToggleSplitButton.Flyout>
             </muxc:ToggleSplitButton>
-            <AppBarSeparator/>
         </StackPanel>
-        <Grid x:Name="LibraryPanel" Grid.Row="2" Width="200" HorizontalAlignment="Left" Grid.RowSpan="2">
+        <Grid x:Name="LibraryPanel" Grid.Row="2" Width="200" HorizontalAlignment="Left" Grid.RowSpan="2" Margin="0,40,0,0">
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Library" TextAlignment="Center" Margin="10,10,0,0"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"
                     Click="HideLibrary_Click"/>
@@ -270,7 +238,7 @@
                 </Grid>
             </Button>
         </Grid>
-        <Grid x:Name="TabsGrid" Grid.RowSpan="2" Grid.Row="2" Margin="200,0,0,0">
+        <Grid x:Name="TabsGrid" Grid.RowSpan="2" Grid.Row="2" Margin="200,40,0,0">
             <Grid x:Name="Tabs" VerticalAlignment="Top" Height="69">
                 <Button x:Name="HomeTab" Height="49" Width="175"
                         Click="HomeTab_Click" Margin="10,0,0,0">
@@ -314,12 +282,12 @@
             <Grid x:Name="FolderView" Height="147" VerticalAlignment="Bottom">
                 <TextBlock Text="No folder view virtual machines." HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top">
-                    <Button x:Name="HideFolderView" Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" HorizontalAlignment="Right" VerticalAlignment="Top" Height="39" Width="39" Click="HideFolderView_Click"/>
-                    <Button x:Name="FolderViewOptions" Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF08E;" HorizontalAlignment="Right" VerticalAlignment="Top" Height="39" Width="39" Click="FolderViewOptions_Click">
+                    <Button x:Name="HideFolderView" Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" HorizontalAlignment="Right" VerticalAlignment="Top" Height="39" Width="39" Click="HideFolderView_Click" ToolTipService.ToolTip="Hide Folder View"/>
+                    <Button x:Name="FolderViewOptions" Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xF08E;" HorizontalAlignment="Right" VerticalAlignment="Top" Height="39" Width="39" Click="FolderViewOptions_Click" ToolTipService.ToolTip="Folder View Options">
                         <FlyoutBase.AttachedFlyout>
                             <MenuFlyout Placement="BottomEdgeAlignedRight">
-                                <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines" IsEnabled="False"/>
-                                <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True" IsEnabled="False"/>
+                                <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines"/>
+                                <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True"/>
                             </MenuFlyout>
                         </FlyoutBase.AttachedFlyout>
                     </Button>

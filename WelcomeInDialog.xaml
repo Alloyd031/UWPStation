@@ -17,59 +17,17 @@
     </ContentDialog.Resources>
     <Grid
 			x:Name="ContainerGrid"
-		    Width="900"
-			Height="750"
+		    Width="500"
+			Height="300"
 			HorizontalAlignment="Stretch"
 			VerticalAlignment="Stretch">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Grid>
-            <Image Source="/Assets/StoreLogo.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="32" Height="32" Margin="10,0,0,0"/>
-            <TextBlock
-                       x:Name="AppTitle"
-                       Text="Welcome!" FontSize="24" HorizontalAlignment="Left"
-                       Style="{StaticResource CaptionTextBlockStyle}"
-                       VerticalAlignment="Center" Margin="54,0,0,0"/>
-            <Button
-					x:Name="Menu"
-					Width="51"
-					Height="50"
-					Background="Transparent"
-					BorderBrush="Transparent"
-				    Margin="696,0,0,0">
-                <FontIcon Glyph="&#xE10C;"/>
-            </Button>
-            <Button
-					x:Name="Minimize"
-					Width="51"
-					Height="50"
-					Background="Transparent"
-					BorderBrush="Transparent"
-				    Margin="747,0,0,0">
-                <FontIcon FontSize="12" Glyph="&#xE921;"/>
-            </Button>
-            <Button
-					x:Name="MaximizeOrRestore"
-					Width="51"
-					Height="50"
-					Background="Transparent"
-					BorderBrush="Transparent"
-					Margin="798,0,0,0">
-                <FontIcon FontSize="12" Glyph="&#xE922;"/>
-            </Button>
-            <Button
+        <Button
 					x:Name="Close"
 					Width="51"
 					Height="50"
-					Background="Transparent"
-					BorderBrush="Transparent"
-					Margin="849,0,0,0" VerticalAlignment="Bottom" Click="Close_Click">
-                <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
-            </Button>
-        </Grid>
-        <TextBlock Text="Welcome to UWPFamilyOS!" Grid.Row="1" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+					Margin="439,10,0,0" Click="Close_Click" VerticalAlignment="Top">
+            <FontIcon FontSize="12" Glyph="&#xE8BB;"/>
+        </Button>
+        <TextBlock Text="Welcome to UWPFamilyOS!" Style="{StaticResource HeaderTextBlockStyle}" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </ContentDialog>

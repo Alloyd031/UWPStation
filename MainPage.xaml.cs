@@ -236,11 +236,6 @@ namespace UWPStation
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
-        private async void Changelog_Click(object sender, RoutedEventArgs e)
-        {
-            ChangelogDialog dialog = new ChangelogDialog();
-            await dialog.ShowAsync();
-        }
         private async void Open_Click(object sender, RoutedEventArgs e)
         {
             NotAvailableDialog dialog = new NotAvailableDialog();
@@ -497,6 +492,16 @@ namespace UWPStation
         private void VMTab_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        }
+        private async void KeepAspectRatioStretch_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void FreeStretch_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
         }
     }
 }

@@ -133,9 +133,6 @@
     <Compile Include="ChangeHardwareCompatibilityPages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChangelogDialog.xaml.cs">
-      <DependentUpon>ChangelogDialog.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Dialogs\ConnectToRemoteServer.xaml.cs">
       <DependentUpon>ConnectToRemoteServer.xaml</DependentUpon>
     </Compile>
@@ -336,10 +333,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChangeHardwareCompatibilityPages\Main.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ChangelogDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

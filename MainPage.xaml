@@ -17,22 +17,22 @@
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="32"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="120"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid x:Name="AppTitleBar"
-              Background="Transparent" Height="40">
+              Background="Transparent" Height="32">
             <Image Source="/Assets/StoreLogo.png"
-                   Width="25"
-                   Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                   Width="20"
+                   Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
             <TextBlock
                        x:Name="AppTitle"
-                       Text="UWPStation" FontSize="20" HorizontalAlignment="Left"
+                       Text="UWPStation" FontSize="15" HorizontalAlignment="Left"
                        Style="{StaticResource CaptionTextBlockStyle}"
-                       VerticalAlignment="Center" Margin="45,0,0,0"/>
+                       VerticalAlignment="Center" Margin="41,0,0,0"/>
         </Grid>
         <StackPanel x:Name="MenuStack"
                     Orientation="Horizontal" Margin="0,0,0,80" Grid.Row="2">

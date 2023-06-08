@@ -16,26 +16,10 @@
         </ResourceDictionary>
     </Page.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="32"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="120"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid x:Name="AppTitleBar"
-              Background="Transparent" Height="32">
-            <Image Source="/Assets/StoreLogo.png"
-                   Width="20"
-                   Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-            <TextBlock
-                       x:Name="AppTitle"
-                       Text="UWPStation" FontSize="15" HorizontalAlignment="Left"
-                       Style="{StaticResource CaptionTextBlockStyle}"
-                       VerticalAlignment="Center" Margin="41,0,0,0"/>
-        </Grid>
-        <StackPanel x:Name="MenuStack"
-                    Orientation="Horizontal" Margin="0,0,0,80" Grid.Row="2">
+        <Grid x:Name="AppTitleBar" VerticalAlignment="Top"
+              Background="Transparent" Height="40"/>
+        <StackPanel x:Name="MenuStack" VerticalAlignment="Top"
+                    Orientation="Horizontal">
             <muxc:MenuBar>
                 <muxc:MenuBarItem Title="File">
                     <MenuFlyoutItem Text="New Virtual Machine..." Click="CreateNewVM_Click"/>
@@ -215,7 +199,7 @@
                 </muxc:ToggleSplitButton.Flyout>
             </muxc:ToggleSplitButton>
         </StackPanel>
-        <Grid x:Name="LibraryPanel" Grid.Row="2" Width="200" HorizontalAlignment="Left" Grid.RowSpan="2" Margin="0,40,0,0">
+        <Grid x:Name="LibraryPanel" Width="200" HorizontalAlignment="Left" Margin="0,40,0,0">
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Library" TextAlignment="Center" Margin="10,10,0,0"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"
                     Click="HideLibrary_Click"/>
@@ -238,7 +222,7 @@
                 </Grid>
             </Button>
         </Grid>
-        <Grid x:Name="TabsGrid" Grid.RowSpan="2" Grid.Row="2" Margin="200,40,0,0">
+        <Grid x:Name="TabsGrid" Margin="200,40,0,0">
             <Grid x:Name="Tabs" VerticalAlignment="Top" Height="69">
                 <Button x:Name="HomeTab" Height="49" Width="175"
                         Click="HomeTab_Click" Margin="10,0,0,0">

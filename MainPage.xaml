@@ -199,7 +199,7 @@
                 </muxc:ToggleSplitButton.Flyout>
             </muxc:ToggleSplitButton>
         </StackPanel>
-        <Grid x:Name="LibraryPanel" Width="200" HorizontalAlignment="Left" Margin="0,40,0,0">
+        <Grid x:Name="LibraryPanel" Width="200" HorizontalAlignment="Left" Margin="0,40,0,32">
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Library" TextAlignment="Center" Margin="10,10,0,0"/>
             <Button Background="Transparent" BorderBrush="Transparent" FontFamily="Segoe Fluent Icons" Content="&#xE8BB;" Margin="161,0,0,0" VerticalAlignment="Top" Height="39" Width="39" ToolTipService.ToolTip="Hide Library"
                     Click="HideLibrary_Click"/>
@@ -222,7 +222,7 @@
                 </Grid>
             </Button>
         </Grid>
-        <Grid x:Name="TabsGrid" Margin="200,40,0,0">
+        <Grid x:Name="TabsGrid" Margin="200,40,0,32">
             <Grid x:Name="Tabs" VerticalAlignment="Top" Height="69">
                 <Button x:Name="HomeTab" Height="49" Width="175"
                         Click="HomeTab_Click" Margin="10,0,0,0">
@@ -280,8 +280,7 @@
         </Grid>
         <Border BackgroundSizing="OuterBorderEdge"
                 BorderThickness="0,0,0,0"
-                Height="32"
-                Grid.Row="4">
+                Height="32" VerticalAlignment="Bottom">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right">
                 <Button Background="Transparent" BorderBrush="Transparent"

@@ -160,7 +160,7 @@
                 <FontIcon Glyph="&#xE8BB;" FontSize="10" Margin="-23,-16,-23,-16"/>
             </Button>
         </Grid>
-        <ScrollViewer Margin="0,32,0,0">
+        <ScrollViewer Margin="0,32,0,0" VerticalScrollBarVisibility="Hidden">
             <Frame x:Name="ContentFrame"/>
         </ScrollViewer>
     </Grid>

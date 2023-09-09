@@ -14,8 +14,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Документацию по шаблону элемента "Диалоговое окно содержимого" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace UWPStation
 {
     public sealed partial class VMSettings : ContentDialog
@@ -23,6 +21,10 @@ namespace UWPStation
         public VMSettings()
         {
             this.InitializeComponent();
+        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
         }
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
@@ -38,7 +40,7 @@ namespace UWPStation
         }
         private void ContentDialog_Loaded(object sender, RoutedEventArgs e)
         {
-            this.ContentFrame.Navigate(typeof(Hardware));
+            this.ContentFrame.Navigate(typeof(VMSettingsPages.Home));
         }
         private void OptionsTab_Click(object sender, RoutedEventArgs e)
         {

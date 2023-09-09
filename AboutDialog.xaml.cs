@@ -24,6 +24,10 @@ namespace UWPStation.Dialogs
         {
             this.InitializeComponent();
         }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
         private void CloseDialogButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
@@ -32,7 +36,6 @@ namespace UWPStation.Dialogs
         {
             Hide();
         }
-
         private async void MoreAppsButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();

@@ -25,6 +25,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 using UWPStation.TabPages;
+using UWPStation.Something;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -41,8 +42,8 @@ namespace UWPStation
             Window.Current.SetTitleBar(AppTitleBar);
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
-            titleBar.ButtonBackgroundColor = Colors.Transparent;
-            titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+            titleBar.BackgroundColor = Colors.Teal;
+            titleBar.InactiveBackgroundColor = Colors.Teal;
         }
         private async Task<bool> OpenPageAsWindowAsync(Type t)
         {
@@ -116,12 +117,12 @@ namespace UWPStation
             if (this.LibraryPanel.Visibility == Visibility.Visible)
             {
                 this.LibraryPanel.Visibility = Visibility.Collapsed;
-                this.TabsGrid.Margin = new Thickness(0, 0, 0, 0);
+                this.TabsGrid.Margin = new Thickness(0, 72, 0, 32);
             }
             else
             {
                 this.LibraryPanel.Visibility = Visibility.Visible;
-                this.TabsGrid.Margin = new Thickness(200, 0, 0, 0);
+                this.TabsGrid.Margin = new Thickness(200, 72, 0, 32);
             }
         }
         private async void CreateVM_Click(object sender, RoutedEventArgs e)
@@ -186,20 +187,16 @@ namespace UWPStation
         {
             this.TabsFrame.Navigate(typeof(VMPage));
         }
-        private void MyComputerTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(MyComputerPage));
-        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             this.TabsFrame.Navigate(typeof(HomePage));
             this.FolderView.Visibility = Visibility.Collapsed;
-            this.TabsFrame.Margin = new Thickness(0, 69, 0, 0);
+            this.TabsFrame.Margin = new Thickness(0, 31, 0, 0);
         }
         private void HideFolderView_Click(object sender, RoutedEventArgs e)
         {
             this.FolderView.Visibility = Visibility.Collapsed;
-            this.TabsFrame.Margin = new Thickness(0, 69, 0, 0);
+            this.TabsFrame.Margin = new Thickness(0, 31, 0, 0);
         }
         private void ShowHideFolderView_Click(object sender, RoutedEventArgs e)
         {
@@ -207,12 +204,12 @@ namespace UWPStation
             if (this.FolderView.Visibility == Visibility.Visible)
             {
                 this.FolderView.Visibility = Visibility.Collapsed;
-                this.TabsFrame.Margin = new Thickness(0, 69, 0, 0);
+                this.TabsFrame.Margin = new Thickness(0, 31, 0, 0);
             }
             else
             {
                 this.FolderView.Visibility = Visibility.Visible;
-                this.TabsFrame.Margin = new Thickness(0, 69, 0, 147);
+                this.TabsFrame.Margin = new Thickness(0, 31, 0, 152);
             }
         }
         private void FolderViewOptions_Click(object sender, RoutedEventArgs e)
@@ -499,6 +496,21 @@ namespace UWPStation
             await dialog.ShowAsync();
         }
         private async void FreeStretch_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void Important_Click(object sender, RoutedEventArgs e)
+        {
+            Important dialog = new Important();
+            await dialog.ShowAsync();
+        }
+        private async void EasterEgg_Click(object sender, RoutedEventArgs e)
+        {
+            EasterEgg dialog = new EasterEgg();
+            await dialog.ShowAsync();
+        }
+        private async void ClearMessages_Click(object sender, RoutedEventArgs e)
         {
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();

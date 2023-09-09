@@ -31,6 +31,10 @@ namespace UWPStation
             AboutDialog dialog = new AboutDialog();
             await dialog.ShowAsync();
         }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();

@@ -2,12 +2,13 @@
     x:Class="UWPStation.PreferencesPages.PriorityPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UWPStation.Pages"
+    xmlns:local="using:UWPStation.PreferencesPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+    Width="800"
+	Height="718">
 
     <Grid>
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
@@ -17,14 +18,14 @@
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,64,0,0">
             <TextBlock Text="Default process priority" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
             <TextBlock Text="Input grabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,39,0,0"/>
-            <ComboBox Text="Normal" Margin="132,33,0,0">
+            <ComboBox Text="Normal" Margin="132,33,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
                 <ComboBox.Items>
                     <ComboBoxItem Content="Normal" IsSelected="True"/>
                     <ComboBoxItem Content="High"/>
                 </ComboBox.Items>
             </ComboBox>
             <TextBlock Text="Input ungrabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,84,0,0"/>
-            <ComboBox Text="Normal" Margin="132,77,0,0">
+            <ComboBox Text="Normal" Margin="132,77,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
                 <ComboBox.Items>
                     <ComboBoxItem Content="Low"/>
                     <ComboBoxItem Content="Normal" IsSelected="True"/>
@@ -34,8 +35,8 @@
         </Grid>
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,206,0,0">
             <TextBlock Text="Snapshots" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
-            <CheckBox Content="Take snapshots in the background when possible" Margin="10,29,0,0" VerticalAlignment="Top"/>
-            <CheckBox Content="Restore snapshots in the background when possible" Margin="10,61,0,0" VerticalAlignment="Top"/>
+            <CheckBox Content="Take snapshots in the background when possible" Margin="10,29,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <CheckBox Content="Restore snapshots in the background when possible" Margin="10,61,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Virtual machines must be powered off for background snapshot changes to take effect." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,98,0,0"/>
         </Grid>
     </Grid>

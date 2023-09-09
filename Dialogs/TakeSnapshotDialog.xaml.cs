@@ -23,11 +23,14 @@ namespace UWPStation.Dialogs
         {
             this.InitializeComponent();
         }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
         }
-
         private async void TakeSnapshotButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();

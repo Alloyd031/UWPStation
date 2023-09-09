@@ -23,11 +23,7 @@ namespace UWPStation
         {
             this.InitializeComponent();
         }
-        private void CloseWindow_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-        }
-        private void Close_Click(object sender, RoutedEventArgs e)
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
         }

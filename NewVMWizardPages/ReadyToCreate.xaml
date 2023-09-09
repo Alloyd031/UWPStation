@@ -7,11 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Width="480"
-	Height="500">
+	Height="518">
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE10B;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Ready to Create Virtual Machine" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
@@ -19,15 +18,34 @@
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Creating VMs is not possible at this time." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+            <TextBlock Text="Creating VMs is not possible at this time" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
         </Grid>
-        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top" 
-                ToolTipService.ToolTip="Help">
-            <FontIcon Glyph="&#xE11B;"/>
-        </Button>
-        <Button x:Name="FinishButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="426,446,0,0" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Finish">
-            <FontIcon Glyph="&#xE10B;"/>
+        <Button x:Name="FinishButton" Width="70" Height="35" Margin="400,473,0,0" Content="Finish"
+                VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
         </Button>
     </Grid>
 </Page>

@@ -8,15 +8,14 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
-    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Width="600"
-	Height="550">
+	Height="568">
 
     <Grid>
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE7C4;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Select virtual machines" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
-            <TextBlock Text="Select virtual machines that you want to add into the library." Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,94,0,0"/>
+            <TextBlock Text="Select virtual machines that you want to add into the library" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,94,0,0"/>
         </Grid>
         <TextBlock Text="Virtual machines to add" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,134,0,0"/>
         <TextBlock Text="VM Name" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,165,0,0"/>
@@ -25,29 +24,94 @@
             <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Scanning for VMs is not possible at this time." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
         </Grid>
-        <Button Margin="10,349,0,0" Width="44" Height="44" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Select All">
-            <FontIcon Glyph="&#xE14E;"/>
+        <Button Margin="10,361,0,0" Width="100" Height="35" Content="Select All" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
         </Button>
-        <Button Margin="59,349,0,0" Width="44" Height="44" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Unselect All">
-            <FontIcon Glyph="&#xE8E6;"/>
+        <Button Margin="115,361,0,0" Width="100" Height="35" Content="Unselect All" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
         </Button>
         <TextBlock Text="Add to library" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,402,0,0"/>
         <TextBlock Text="Add to:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,438,0,0"/>
-        <AutoSuggestBox Text="My Computer" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" VerticalContentAlignment="Center" Margin="73,425,0,0" Width="468" Height="44"/>
+        <AutoSuggestBox Text="My Computer" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" 
+                        VerticalContentAlignment="Center" Margin="73,425,0,0" Width="468" Height="44" CornerRadius="0"/>
         <Button Margin="546,425,0,0" Width="44" Height="44" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Browse...">
+                ToolTipService.ToolTip="Browse..." CornerRadius="0" IsEnabled="False">
             <FontIcon Glyph="&#xE11A;"/>
         </Button>
-        <CheckBox Content="Match the file system folder hierarchy in the library" FontWeight="Bold" Margin="73,474,0,0" VerticalAlignment="Top"/>
-        <Button Width="44" Height="44" Margin="10,496,0,0" VerticalAlignment="Top" 
-                ToolTipService.ToolTip="Help">
-            <FontIcon Glyph="&#xE11B;"/>
-        </Button>
-        <Button x:Name="FinishButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="546,496,0,0" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Finish">
-            <FontIcon Glyph="&#xE10B;"/>
+        <CheckBox Content="Match the file system folder hierarchy in the library" FontWeight="Bold" Margin="73,474,0,0"
+                  VerticalAlignment="Top" CornerRadius="0"/>
+        <Button x:Name="FinishButton" Width="70" Height="35" Margin="520,523,0,0" Content="Finish"
+                VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
         </Button>
     </Grid>
 </Page>

@@ -8,11 +8,10 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
-    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Width="480"
-	Height="500">
+	Height="518">
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE770;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Select a Guest Operating System" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
@@ -20,23 +19,42 @@
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,170,0,0">
             <TextBlock Text="Guest operating system" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-            <RadioButton x:Name="WindowsOS" x:Uid="1" FontWeight="Bold" Content="Microsoft Windows" IsChecked="True" Margin="10,34,0,0" VerticalAlignment="Top" Checked="HandleCheck"/>
-            <RadioButton x:Name="LinuxOS" x:Uid="2" FontWeight="Bold" Content="Linux" Margin="10,66,0,0" VerticalAlignment="Top" Checked="HandleCheck"/>
-            <RadioButton x:Name="OtherOS" x:Uid="3" FontWeight="Bold" Content="Other" Margin="10,98,0,0" VerticalAlignment="Top" Checked="HandleCheck"/>
+            <RadioButton x:Name="WindowsOS" x:Uid="1" FontWeight="Bold" Content="Microsoft Windows" IsChecked="True" Margin="10,34,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
+            <RadioButton x:Name="LinuxOS" x:Uid="2" FontWeight="Bold" Content="Linux" Margin="10,66,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
+            <RadioButton x:Name="OtherOS" x:Uid="3" FontWeight="Bold" Content="Other" Margin="10,98,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Version" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,144,0,0"/>
-            <ComboBox x:Name="OSSelectionBox" Text="UWPFamilyOS" Margin="10,168,0,0" IsEnabled="False">
+            <ComboBox x:Name="OSSelectionBox" Text="UWPFamilyOS" Margin="10,168,0,0" IsEnabled="False" CornerRadius="0">
                 <ComboBox.Items>
                     <ComboBoxItem Content="UWPFamilyOS" IsSelected="True"/>
                 </ComboBox.Items>
             </ComboBox>
         </Grid>
-        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Help">
-            <FontIcon Glyph="&#xE11B;"/>
-        </Button>
-        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="426,446,0,0" VerticalAlignment="Top" Click="NextButton_Click"
-                ToolTipService.ToolTip="Next">
-            <FontIcon Glyph="&#xE111;"/>
+        <Button x:Name="NextButton" Width="70" Height="35" Margin="400,473,0,0" Content="Next" UseSystemFocusVisuals="False"
+                VerticalAlignment="Top" Click="NextButton_Click" CornerRadius="0" BorderThickness="2,2,2,2">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
         </Button>
     </Grid>
 </Page>

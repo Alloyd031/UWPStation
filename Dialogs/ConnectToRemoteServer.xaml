@@ -6,8 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    Style="{StaticResource DefaultContentDialogStyle}"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    CornerRadius="0" BorderBrush="#3D7B79">
 
     <ContentDialog.Resources>
         <ResourceDictionary>
@@ -15,29 +15,128 @@
             <Thickness x:Key="ContentDialogPadding">0</Thickness>
         </ResourceDictionary>
     </ContentDialog.Resources>
-    <Grid
-			x:Name="ContainerGrid"
-			Height="300"
-            Width="500"
-			HorizontalAlignment="Stretch"
-			VerticalAlignment="Stretch">
-        <Grid VerticalAlignment="Top" Margin="0,10,0,0">
-            <FontIcon Glyph="&#xE192;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Select the remote server that you want to connect to." Style="{StaticResource CaptionTextBlockStyle}" FontSize="19" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,65,0,0"/>
+    <Grid x:Name="ContainerGrid"
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+		  Height="300"
+          Width="500"
+	      HorizontalAlignment="Stretch"
+		  VerticalAlignment="Stretch">
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Dark">
+                        <Color x:Key="SystemAltHighColor">Black</Color>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                    </ResourceDictionary>
+                    <ResourceDictionary x:Key="Light">
+                        <Color x:Key="SystemAltHighColor">White</Color>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                    </ResourceDictionary>
+                </ResourceDictionary.ThemeDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <Grid x:Name="TitlebarGrid" Height="32" VerticalAlignment="Top">
+            <TextBlock x:FieldModifier="public" x:Name="TitleText" Text="Connect to Remote Server" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Button	x:Name="CloseButton"
+					Width="46" Height="32"
+                    CornerRadius="0"
+					AutomationProperties.Name="CloseButton"
+					Click="CloseButton_Click" UseSystemFocusVisuals="False"
+					ToolTipService.ToolTip="Close" Margin="454,0,0,0">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F1707A"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#E81123"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#F1707A"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F1707A"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#E81123"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#F1707A"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <FontIcon Glyph="&#xE8BB;" FontSize="10" Margin="-23,-16,-23,-16"/>
+            </Button>
         </Grid>
-        <TextBlock Text="Server name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,116,0,0"/>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,108,0,0" Width="388"/>
-        <TextBlock Text="User name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,190,0,0"/>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,145,0,0" Width="388"/>
-        <TextBlock Text="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,153,0,0"/>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,182,0,0" Width="388"/>
-        <Button x:Name="ConnectButton" Width="44" Height="44" Margin="397,246,0,0" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Connect" Click="ConnectButton_Click">
-            <FontIcon Glyph="&#xE703;"/>
+        <Grid VerticalAlignment="Top" Margin="0,32,0,0">
+            <FontIcon Glyph="&#xE192;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Select the remote server that you want to connect to" Style="{StaticResource CaptionTextBlockStyle}" FontSize="19" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,65,0,0"/>
+        </Grid>
+        <TextBlock Text="Server name:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" Margin="102,0,0,0" Width="388" CornerRadius="0" UseSystemFocusVisuals="False"/>
+        <TextBlock Text="User name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,215,0,0"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,170,0,0" Width="388" CornerRadius="0" UseSystemFocusVisuals="False"/>
+        <TextBlock Text="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,178,0,0"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,207,0,0" Width="388" CornerRadius="0" UseSystemFocusVisuals="False"/>
+        <Button x:Name="ConnectButton" Width="80" Height="35" Content="Connect" CornerRadius="0" BorderThickness="2,2,2,2" 
+                Margin="325,255,0,0" VerticalAlignment="Top" Click="ConnectButton_Click" UseSystemFocusVisuals="False">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
         </Button>
-        <Button x:Name="CancelButton" Width="44" Height="44" Click="CancelButton_Click" VerticalAlignment="Top" 
-                ToolTipService.ToolTip="Cancel" Margin="446,246,0,0">
-            <FontIcon Glyph="&#xE10A;"/>
+        <Button x:Name="CancelButton" Width="80" Height="35" Content="Cancel" CornerRadius="0" BorderThickness="2,2,2,2" 
+                Click="CancelButton_Click" VerticalAlignment="Top" Margin="410,255,0,0" UseSystemFocusVisuals="False">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
         </Button>
     </Grid>
 </ContentDialog>

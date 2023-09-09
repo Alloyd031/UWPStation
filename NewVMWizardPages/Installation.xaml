@@ -8,11 +8,10 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
-    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Width="480"
-	Height="500">
+	Height="518">
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE977;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Guest Operating System Installation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
@@ -21,22 +20,43 @@
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0">
             <TextBlock Text="Install from:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <RadioButton Content="Installer disc:" Margin="10,34,0,0" FontWeight="Bold" VerticalAlignment="Top"/>
-            <ComboBox Text="No drives available" Margin="10,66,0,0" IsEnabled="False"/>
+            <ComboBox Text="No drives available" Margin="10,66,0,0" IsEnabled="False" CornerRadius="0"/>
             <RadioButton Content="Installer disc image file (iso):" Margin="10,103,0,0" FontWeight="Bold" VerticalAlignment="Top" IsChecked="True"/>
-            <AutoSuggestBox Text="Some location" VerticalContentAlignment="Center" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,135,0,0" Width="310" Height="44"/>
-            <Button Height="44" Width="44" Margin="325,135,0,0" IsEnabled="False" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
+            <AutoSuggestBox Text="Some location" VerticalContentAlignment="Center" IsEnabled="False" CornerRadius="0"
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,135,0,0" Width="310" Height="44"/>
+            <Button Height="44" Width="44" Margin="325,135,0,0" IsEnabled="False" CornerRadius="0"
+                    VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
                 <FontIcon Glyph="&#xE11A;"/>
             </Button>
             <RadioButton x:Name="InstallLaterCheck" Content="I will install the operating system later." FontWeight="Bold" Margin="10,184,0,0" VerticalAlignment="Top"/>
             <TextBlock Text="The virtual machine will be created with a blank hard disk." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,221,0,0"/>
         </Grid>
-        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Help">
-            <FontIcon Glyph="&#xE11B;"/>
-        </Button>
-        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="426,446,0,0" VerticalAlignment="Top" Click="NextButton_Click"
-                ToolTipService.ToolTip="Next">
-            <FontIcon Glyph="&#xE111;"/>
+        <Button x:Name="NextButton" Width="70" Height="35" Margin="400,473,0,0" Content="Next"
+                VerticalAlignment="Top" Click="NextButton_Click" CornerRadius="0" BorderThickness="2,2,2,2">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
         </Button>
     </Grid>
 </Page>

@@ -7,11 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Width="480"
-	Height="500">
+	Height="518">
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xEDA2;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Specify Disk Capacity" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
@@ -20,19 +19,39 @@
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,146,0,0">
             <TextBlock Text="The virtual machine's hard disk is stored as one or more files on the host computer's physical disk. These file(s) start small and become larger as you add applications, files, and data to your virtual machine." TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Margin="10,10,0,0" Width="420"/>
             <TextBlock Text="Maximum disk size (GB):" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,96,0,0"/>
-            <muxc:NumberBox Text="60.0" HorizontalAlignment="Left" VerticalAlignment="Top" SpinButtonPlacementMode="Compact" Margin="182,88,0,0"/>
+            <muxc:NumberBox Value="60" HorizontalAlignment="Left" VerticalAlignment="Top" CornerRadius="0"
+                            SpinButtonPlacementMode="Compact" Margin="182,88,0,0" Width="100" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Recommended size for UWPFamilyOS: 60 GB" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,126,0,0"/>
-            <RadioButton Content="Store virtual disk as a single file" FontWeight="Bold" Margin="10,150,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Split virtual disk into multiple files" FontWeight="Bold" IsChecked="True" Margin="10,182,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Store virtual disk as a single file" FontWeight="Bold" Margin="10,150,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
+            <RadioButton Content="Split virtual disk into multiple files" FontWeight="Bold" IsChecked="True" Margin="10,182,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Splitting the disk makes it easier to move the virtual machine to another computer but may reduce performance with very large disks." TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Margin="10,219,0,0"/>
         </Grid>
-        <Button Width="44" Height="44" Margin="10,446,0,0" VerticalAlignment="Top"
-                ToolTipService.ToolTip="Help">
-            <FontIcon Glyph="&#xE11B;"/>
-        </Button>
-        <Button x:Name="NextButton" Width="44" Height="44" Style="{StaticResource AccentButtonStyle}" Margin="426,446,0,0" VerticalAlignment="Top" Click="NextButton_Click"
-                ToolTipService.ToolTip="Next">
-            <FontIcon Glyph="&#xE111;"/>
+        <Button x:Name="NextButton" Width="70" Height="35" Margin="400,473,0,0" Content="Next" UseSystemFocusVisuals="False"
+                VerticalAlignment="Top" Click="NextButton_Click" CornerRadius="0" BorderThickness="2,2,2,2">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
         </Button>
     </Grid>
 </Page>

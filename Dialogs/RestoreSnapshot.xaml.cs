@@ -23,6 +23,10 @@ namespace UWPStation.Dialogs
         {
             this.InitializeComponent();
         }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
         private async void YesButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();

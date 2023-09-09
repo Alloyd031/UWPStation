@@ -13,15 +13,19 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+// Документацию по шаблону элемента "Диалоговое окно содержимого" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace UWPStation.Dialogs
+namespace UWPStation
 {
-    public sealed partial class SettingsDialog : ContentDialog
+    public sealed partial class Important : ContentDialog
     {
-        public SettingsDialog()
+        public Important()
         {
             this.InitializeComponent();
+        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
         }
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {

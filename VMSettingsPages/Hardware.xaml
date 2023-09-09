@@ -6,85 +6,368 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    mc:Ignorable="d"
-    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
-    Loaded="Page_Loaded">
+    mc:Ignorable="d"   
+    Loaded="Page_Loaded"
+    Height="718" Width="800">
 
-    <Grid>
-        <Grid Width="297" HorizontalAlignment="Left">
-            <TextBlock Text="Device" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-            <TextBlock Text="Summary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="149,10,0,0"/>
-            <Button x:Name="MemoryButton" Height="42" Width="297" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,34,0,0" Click="MemoryButton_Click">
-                <Grid Margin="-149,-21,-148,-21">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="Background" Color="Black"/>
+                    <SolidColorBrush x:Key="Foreground" Color="White"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="Background" Color="White"/>
+                    <SolidColorBrush x:Key="Foreground" Color="Black"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Dark">
+                        <Color x:Key="SystemAltHighColor">Black</Color>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                    </ResourceDictionary>
+                    <ResourceDictionary x:Key="Light">
+                        <Color x:Key="SystemAltHighColor">White</Color>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                    </ResourceDictionary>
+                </ResourceDictionary.ThemeDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <Grid Width="320" HorizontalAlignment="Left" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <Color x:Key="SystemAltHighColor">#1F1F1F</Color>
+                            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <Color x:Key="SystemAltHighColor">#E6E6E6</Color>
+                            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Grid.Resources>
+            <TextBlock Text="Device" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,10,0,0"/>
+            <TextBlock Text="Summary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,10,0,0"/>
+            <Button x:Name="MemoryButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    HorizontalAlignment="Center" Margin="0,34,0,0" Click="MemoryButton_Click">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <Grid Margin="-160,-24,-160,-24">
                     <FontIcon Glyph="&#xE964;" Margin="10,7,260,7"/>
-                    <TextBlock Text="Memory" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
-                    <TextBlock Text="2 GB" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
+                    <TextBlock Text="Memory" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
+                    <TextBlock Text="2 GB" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="ProcessorsButton" Height="42" Width="297" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,76,0,0" Click="ProcessorsButton_Click">
-                <Grid Margin="-149,-21,-148,-21">
+            <Button x:Name="ProcessorsButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,82,0,0" Click="ProcessorsButton_Click" HorizontalAlignment="Center">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <Grid Margin="-160,-24,-160,-24">
                     <FontIcon Glyph="&#xE950;" Margin="10,7,260,7"/>
-                    <TextBlock Text="Processors" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
-                    <TextBlock Text="2" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
+                    <TextBlock Text="Processors" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
+                    <TextBlock Text="2" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="HardDiskButton" Height="42" Width="297" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,118,0,0" Click="HardDiskButton_Click">
-                <Grid Margin="-149,-21,-148,-21">
+            <Button x:Name="HardDiskButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    HorizontalAlignment="Center" Margin="0,130,0,0" Click="HardDiskButton_Click">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <Grid Margin="-160,-24,-160,-24">
                     <FontIcon Glyph="&#xEDA2;" Margin="10,7,260,7"/>
-                    <TextBlock Text="Hard Disk (SCSI)" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
-                    <TextBlock Text="100 GB" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
+                    <TextBlock Text="Hard Disk (SCSI)" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
+                    <TextBlock Text="100 GB" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="CDDVDButton" Height="42" Width="297" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,160,0,0" Click="CDDVDButton_Click">
-                <Grid Margin="-149,-21,-148,-21">
+            <Button x:Name="CDDVDButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,178,0,0" Click="CDDVDButton_Click" HorizontalAlignment="Center">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <Grid Margin="-160,-24,-160,-24">
                     <FontIcon Glyph="&#xE958;" Margin="10,7,260,7"/>
-                    <TextBlock Text="CD/DVD (IDE)" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
-                    <TextBlock Text="Auto detect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
+                    <TextBlock Text="CD/DVD (IDE)" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
+                    <TextBlock Text="Auto detect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="NetworkAdapterButton" Height="42" Width="297" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,202,0,0" Click="NetworkAdapterButton_Click">
-                <Grid Margin="-149,-21,-148,-21">
+            <Button x:Name="NetworkAdapterButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,226,0,0" Click="NetworkAdapterButton_Click" HorizontalAlignment="Center">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <Grid Margin="-160,-24,-160,-24">
                     <FontIcon Glyph="&#xEDA3;" Margin="10,7,260,7"/>
-                    <TextBlock Text="Network Adapter" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
-                    <TextBlock Text="NAT" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
+                    <TextBlock Text="Network Adapter" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
+                    <TextBlock Text="NAT" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="USBControllerButton" Height="42" Width="297" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,244,0,0" Click="USBControllerButton_Click">
-                <Grid Margin="-149,-21,-148,-21">
+            <Button x:Name="USBControllerButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                   Margin="0,274,0,0" Click="USBControllerButton_Click" HorizontalAlignment="Center">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <Grid Margin="-160,-24,-160,-24">
                     <FontIcon Glyph="&#xE88E;" Margin="10,7,260,7"/>
-                    <TextBlock Text="USB Controller" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
-                    <TextBlock Text="Present" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
+                    <TextBlock Text="USB Controller" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
+                    <TextBlock Text="Present" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="SoundCardButton" Height="42" Width="297" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,286,0,0" Click="SoundCardButton_Click">
-                <Grid Margin="-149,-21,-148,-21">
+            <Button x:Name="SoundCardButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,322,0,0" Click="SoundCardButton_Click" HorizontalAlignment="Center">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <Grid Margin="-160,-24,-160,-24">
                     <FontIcon Glyph="&#xE15D;" Margin="10,7,260,7"/>
-                    <TextBlock Text="Sound Card" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
-                    <TextBlock Text="Auto detect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
+                    <TextBlock Text="Sound Card" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
+                    <TextBlock Text="Auto detect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="DisplayButton" Height="42" Width="297" VerticalAlignment="Top"
-                    Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Margin="0,328,0,0" Click="DisplayButton_Click">
-                <Grid Margin="-149,-21,-148,-21">
+            <Button x:Name="DisplayButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,370,0,0" Click="DisplayButton_Click" HorizontalAlignment="Center">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <Grid Margin="-160,-24,-160,-24">
                     <FontIcon Glyph="&#xE7F4;" Margin="10,7,260,7"/>
-                    <TextBlock Text="Display" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="42,0,0,0"/>
-                    <TextBlock Text="Auto detect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="149,0,0,0"/>
+                    <TextBlock Text="Display" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
+                    <TextBlock Text="Auto detect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button VerticalAlignment="Bottom" Width="44" Height="44" Margin="243,0,0,10" ToolTipService.ToolTip="Remove">
-                <FontIcon Glyph="&#xE108;"/>
+            <Button VerticalAlignment="Bottom" Content="Remove" Width="80" Height="35" Margin="230,0,0,10"
+                    CornerRadius="0" BorderThickness="2,2,2,2">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
             </Button>
-            <Button VerticalAlignment="Bottom" Width="44" Height="44" Margin="194,0,0,10" ToolTipService.ToolTip="Add...">
-                <FontIcon Glyph="&#xE109;"/>
+            <Button VerticalAlignment="Top" Content="Add..." Width="80" Height="35" Margin="145,673,0,0"
+                    CornerRadius="0" BorderThickness="2,2,2,2">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
             </Button>
         </Grid>
-        <Frame x:Name="HardwareFrame" Margin="297,0,0,0"/>
+        <Frame x:Name="HardwareFrame" Margin="320,0,0,0"/>
     </Grid>
 </Page>

@@ -12,12 +12,12 @@
 	Height="518">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid VerticalAlignment="Top">
+        <Grid VerticalAlignment="Top" Margin="0,10,0,0">
             <FontIcon Glyph="&#xE977;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Guest Operating System Installation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
             <TextBlock Text="A virtual machine is like a physical computer; it needs an operating system. How will you install the operating system?" TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,108,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0">
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,163,0,0">
             <TextBlock Text="Install from:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <RadioButton Content="Installer disc:" Margin="10,34,0,0" FontWeight="Bold" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
             <ComboBox Text="No drives available" Margin="10,66,0,0" IsEnabled="False" CornerRadius="0"/>

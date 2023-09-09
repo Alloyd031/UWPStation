@@ -12,12 +12,12 @@
 	Height="518">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid VerticalAlignment="Top">
+        <Grid VerticalAlignment="Top" Margin="0,10,0,0">
             <FontIcon Glyph="&#xE770;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Select a Guest Operating System" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
             <TextBlock Text="Which operating system will be installed on this virtual machine?" Style="{StaticResource CaptionTextBlockStyle}" TextAlignment="Center" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,108,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,170,0,0">
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,177,0,0">
             <TextBlock Text="Guest operating system" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <RadioButton x:Name="WindowsOS" x:Uid="1" FontWeight="Bold" Content="Microsoft Windows" IsChecked="True" Margin="10,34,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
             <RadioButton x:Name="LinuxOS" x:Uid="2" FontWeight="Bold" Content="Linux" Margin="10,66,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>

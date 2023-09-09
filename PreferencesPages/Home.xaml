@@ -14,7 +14,7 @@
             <Grid>
                 <TextBlock Text="Preferences" FontSize="30" Style="{StaticResource HeaderTextBlockStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,40,0,0"/>
                 <Button x:Name="WorkspaceButton" Width="250" Height="154" Margin="140,100,0,0" Click="WorkspaceButton_Click"
-                BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -47,7 +47,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="InputButton" Width="250" Height="154" Margin="410,100,0,0" Click="InputButton_Click"
-                BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -80,7 +80,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="HotKeysButton" Width="250" Height="154" Margin="140,259,0,0" Click="HotKeysButton_Click"
-                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -113,7 +113,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="DisplayButton" Width="250" Height="154" Margin="410,259,0,0" Click="DisplayButton_Click"
-                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -146,7 +146,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="UnityButton" Width="250" Height="154" Margin="140,418,0,0" Click="UnityButton_Click"
-                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -179,7 +179,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="USBButton" Width="250" Height="154" Margin="410,418,0,0" Click="USBButton_Click"
-                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -212,7 +212,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="UpdatesButton" Width="250" Height="154" Margin="140,577,0,0" Click="UpdatesButton_Click"
-                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -245,7 +245,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="FeedbackButton" Width="250" Height="154" Margin="410,577,0,0" Click="FeedbackButton_Click"
-                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -278,7 +278,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="MemoryButton" Width="250" Height="154" Margin="140,736,0,0" Click="MemoryButton_Click"
-                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -311,7 +311,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="PriorityButton" Width="250" Height="154" Margin="410,736,0,0" Click="PriorityButton_Click"
-                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -344,7 +344,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="DevicesButton" Width="250" Height="154" Margin="140,895,0,0" Click="DevicesButton_Click"
-                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                        BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>

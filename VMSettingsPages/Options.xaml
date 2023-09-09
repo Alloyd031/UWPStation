@@ -58,7 +58,7 @@
             <TextBlock Text="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,10,0,0"/>
             <TextBlock Text="Summary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,10,0,0"/>
             <Button x:Name="GeneralButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    HorizontalAlignment="Center" Margin="0,34,0,0" Click="GeneralButton_Click">
+                    HorizontalAlignment="Center" Margin="0,34,0,0" Click="GeneralButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -90,7 +90,7 @@
                 </Grid>
             </Button>
             <Button x:Name="PowerButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,82,0,0" Click="PowerButton_Click">
+                    Margin="0,82,0,0" Click="PowerButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -121,7 +121,7 @@
                 </Grid>
             </Button>
             <Button x:Name="SharedFolderButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,130,0,0" Click="SharedFolderButton_Click">
+                    Margin="0,130,0,0" Click="SharedFolderButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -153,7 +153,7 @@
                 </Grid>
             </Button>
             <Button x:Name="SnapshotsButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,178,0,0" Click="SnapshotsButton_Click">
+                    Margin="0,178,0,0" Click="SnapshotsButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -184,7 +184,7 @@
                 </Grid>
             </Button>
             <Button x:Name="AutoProtectButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,226,0,0" Click="AutoProtectButton_Click">
+                    Margin="0,226,0,0" Click="AutoProtectButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -216,7 +216,7 @@
                 </Grid>
             </Button>
             <Button x:Name="GuestIsolationButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,274,0,0" Click="GuestIsolationButton_Click">
+                    Margin="0,274,0,0" Click="GuestIsolationButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -247,7 +247,7 @@
                 </Grid>
             </Button>
             <Button x:Name="AccessControlButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,322,0,0" Click="AccessControlButton_Click">
+                    Margin="0,322,0,0" Click="AccessControlButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -279,7 +279,7 @@
                 </Grid>
             </Button>
             <Button x:Name="UWPToolsButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,370,0,0" Click="UWPToolsButton_Click">
+                    Margin="0,370,0,0" Click="UWPToolsButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -311,7 +311,7 @@
                 </Grid>
             </Button>
             <Button x:Name="VNCConnectionsButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,418,0,0" Click="VNCConnectionsButton_Click">
+                    Margin="0,418,0,0" Click="VNCConnectionsButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -343,7 +343,7 @@
                 </Grid>
             </Button>
             <Button x:Name="UnityButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,466,0,0" Click="UnityButton_Click">
+                    Margin="0,466,0,0" Click="UnityButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -374,7 +374,7 @@
                 </Grid>
             </Button>
             <Button x:Name="ApplianceViewButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,514,0,0" Click="ApplianceViewButton_Click">
+                    Margin="0,514,0,0" Click="ApplianceViewButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -405,7 +405,7 @@
                 </Grid>
             </Button>
             <Button x:Name="AutologinButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,562,0,0" Click="AutologinButton_Click">
+                    Margin="0,562,0,0" Click="AutologinButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -437,7 +437,7 @@
                 </Grid>
             </Button>
             <Button x:Name="AdvancedButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,610,0,0" Click="AdvancedButton_Click">
+                    Margin="0,610,0,0" Click="AdvancedButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>

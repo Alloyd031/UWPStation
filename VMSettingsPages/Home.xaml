@@ -26,7 +26,7 @@
         </Grid.Resources>
         <TextBlock Text="VM Settings" FontSize="30" Style="{StaticResource HeaderTextBlockStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,40,0,0"/>
         <Button x:Name="HardwareButton" Width="250" Height="154" Margin="140,100,0,0" Click="HardwareButton_Click"
-                BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -60,7 +60,7 @@
             </Grid>
         </Button>
         <Button x:Name="OptionsButton" Width="250" Height="154" Margin="410,100,0,0" Click="OptionsButton_Click"
-                BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top">
+                BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>

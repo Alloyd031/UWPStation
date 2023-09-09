@@ -58,7 +58,7 @@
             <TextBlock Text="Device" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,10,0,0"/>
             <TextBlock Text="Summary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,10,0,0"/>
             <Button x:Name="MemoryButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    HorizontalAlignment="Center" Margin="0,34,0,0" Click="MemoryButton_Click">
+                    HorizontalAlignment="Center" Margin="0,34,0,0" Click="MemoryButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -90,7 +90,7 @@
                 </Grid>
             </Button>
             <Button x:Name="ProcessorsButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,82,0,0" Click="ProcessorsButton_Click" HorizontalAlignment="Center">
+                    Margin="0,82,0,0" Click="ProcessorsButton_Click" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -122,7 +122,7 @@
                 </Grid>
             </Button>
             <Button x:Name="HardDiskButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    HorizontalAlignment="Center" Margin="0,130,0,0" Click="HardDiskButton_Click">
+                    HorizontalAlignment="Center" Margin="0,130,0,0" Click="HardDiskButton_Click" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -154,7 +154,7 @@
                 </Grid>
             </Button>
             <Button x:Name="CDDVDButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,178,0,0" Click="CDDVDButton_Click" HorizontalAlignment="Center">
+                    Margin="0,178,0,0" Click="CDDVDButton_Click" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -186,7 +186,7 @@
                 </Grid>
             </Button>
             <Button x:Name="NetworkAdapterButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,226,0,0" Click="NetworkAdapterButton_Click" HorizontalAlignment="Center">
+                    Margin="0,226,0,0" Click="NetworkAdapterButton_Click" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -218,7 +218,7 @@
                 </Grid>
             </Button>
             <Button x:Name="USBControllerButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                   Margin="0,274,0,0" Click="USBControllerButton_Click" HorizontalAlignment="Center">
+                   Margin="0,274,0,0" Click="USBControllerButton_Click" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -250,7 +250,7 @@
                 </Grid>
             </Button>
             <Button x:Name="SoundCardButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,322,0,0" Click="SoundCardButton_Click" HorizontalAlignment="Center">
+                    Margin="0,322,0,0" Click="SoundCardButton_Click" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -282,7 +282,7 @@
                 </Grid>
             </Button>
             <Button x:Name="DisplayButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,370,0,0" Click="DisplayButton_Click" HorizontalAlignment="Center">
+                    Margin="0,370,0,0" Click="DisplayButton_Click" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -314,7 +314,7 @@
                 </Grid>
             </Button>
             <Button VerticalAlignment="Bottom" Content="Remove" Width="80" Height="35" Margin="230,0,0,10"
-                    CornerRadius="0" BorderThickness="2,2,2,2">
+                    CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -341,7 +341,7 @@
                 </Button.Resources>
             </Button>
             <Button VerticalAlignment="Top" Content="Add..." Width="80" Height="35" Margin="145,673,0,0"
-                    CornerRadius="0" BorderThickness="2,2,2,2">
+                    CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>

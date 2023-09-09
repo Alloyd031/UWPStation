@@ -11,8 +11,8 @@
 	Height="718">
 
     <Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
-            <FontIcon Glyph="&#xED15;" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
+            <FontIcon Glyph="&#xED15;" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
             <TextBlock Text="Feedback" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">

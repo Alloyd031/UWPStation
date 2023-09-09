@@ -11,17 +11,17 @@
 	Height="718">
 
     <Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
-            <FontIcon Glyph="&#xE777;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
+            <FontIcon Glyph="&#xE777;" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
             <TextBlock Text="Updates" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,64,0,0">
-            <TextBlock Text="Software updates" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
-            <CheckBox Content="Check for product updates on startup" Margin="10,29,0,0" VerticalAlignment="Top" IsChecked="True" CornerRadius="0" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="When UWPStation starts, check for new versions of the application and installed software components." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,61,0,0"/>
-            <CheckBox Content="Check for software components as needed" IsChecked="True" Margin="10,85,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="When a software component is needed (such as installing UWPTools) check for a new version of the component." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,117,0,0"/>
-            <Button Content="Download All Components Now" Margin="10,141,0,0" Width="230" Height="35" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
+            <TextBlock Text="Software updates" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <CheckBox Content="Check for product updates on startup" Margin="0,24,0,0" VerticalAlignment="Top" IsChecked="True" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <TextBlock Text="When UWPStation starts, check for new versions of the application and installed software components." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,56,0,0"/>
+            <CheckBox Content="Check for software components as needed" IsChecked="True" Margin="0,80,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <TextBlock Text="When a software component is needed (such as installing UWPTools) check for a new version of the component." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,112,0,0"/>
+            <Button Content="Download All Components Now" Margin="0,136,0,0" Width="230" Height="35" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -47,7 +47,7 @@
                     </ResourceDictionary>
                 </Button.Resources>
             </Button>
-            <Button Content="Connection Settings" Margin="245,141,0,0" Width="150" Height="35" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
+            <Button Content="Connection Settings" Margin="235,135,0,0" Width="150" Height="35" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -73,13 +73,13 @@
                     </ResourceDictionary>
                 </Button.Resources>
             </Button>
-            <HyperlinkButton Content="Learn More" Margin="400,141,0,0" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False"/>
+            <HyperlinkButton Content="Learn More" Margin="390,135,0,0" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,242,0,0">
-            <TextBlock Text="UWPTools updates" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
-            <CheckBox Content="Automatically update UWPTools on a virtual machine" Margin="10,29,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,240,0,0">
+            <TextBlock Text="UWPTools updates" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <CheckBox Content="Automatically update UWPTools on a virtual machine" Margin="0,24,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
             <TextBlock Text="If a new version of UWPTools is available, it will be updated the next time a virtual machine is powered on or off. This configuration may be overriden in each virtual machine's settings." 
-                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,61,0,0" TextWrapping="Wrap" Width="600"/>
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,56,0,0" TextWrapping="Wrap" Width="600"/>
         </Grid>
     </Grid>
 </Page>

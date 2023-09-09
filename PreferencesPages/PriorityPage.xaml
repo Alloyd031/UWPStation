@@ -11,14 +11,14 @@
 	Height="718">
 
     <Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
-            <FontIcon Glyph="&#xE182;" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
+            <FontIcon Glyph="&#xE182;" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" Height="49" Width="49"/>
             <TextBlock Text="Priority" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="54,7,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,64,0,0">
-            <TextBlock Text="Default process priority" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
-            <TextBlock Text="Input grabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,39,0,0"/>
-            <ComboBox Text="Normal" Margin="132,33,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
+            <TextBlock Text="Default process priority" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <TextBlock Text="Input grabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,31,0,0"/>
+            <ComboBox Text="Normal" Margin="122,24,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
                 <ComboBox.Resources>
                     <Style TargetType="ComboBox">
                         <Setter Property="CornerRadius" Value="0"/>
@@ -29,8 +29,8 @@
                     <ComboBoxItem Content="High" CornerRadius="0"/>
                 </ComboBox.Items>
             </ComboBox>
-            <TextBlock Text="Input ungrabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,84,0,0"/>
-            <ComboBox Text="Normal" Margin="132,77,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
+            <TextBlock Text="Input ungrabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,74,0,0"/>
+            <ComboBox Text="Normal" Margin="122,67,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
                 <ComboBox.Resources>
                     <Style TargetType="ComboBox">
                         <Setter Property="CornerRadius" Value="0"/>
@@ -41,13 +41,13 @@
                     <ComboBoxItem Content="Normal" IsSelected="True" CornerRadius="0"/>
                 </ComboBox.Items>
             </ComboBox>
-            <TextBlock Text="A virtual machine's local settings will override these global settings." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,118,0,0"/>
+            <TextBlock Text="A virtual machine's local settings will override these global settings." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,104,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,206,0,0">
-            <TextBlock Text="Snapshots" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
-            <CheckBox Content="Take snapshots in the background when possible" Margin="10,29,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
-            <CheckBox Content="Restore snapshots in the background when possible" Margin="10,61,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="Virtual machines must be powered off for background snapshot changes to take effect." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,98,0,0"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,192,0,0">
+            <TextBlock Text="Snapshots" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14"/>
+            <CheckBox Content="Take snapshots in the background when possible" Margin="0,24,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <CheckBox Content="Restore snapshots in the background when possible" Margin="0,56,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <TextBlock Text="Virtual machines must be powered off for background snapshot changes to take effect." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,93,0,0"/>
         </Grid>
     </Grid>
 </Page>

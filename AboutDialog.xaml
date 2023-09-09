@@ -84,7 +84,7 @@
             <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,48,0,0"/>
             <TextBlock Text="0.1 Preview" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,85,0,0"/>
         </Grid>
-        <TextBlock Text="This app is a part of the UWPFamily apps." Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,422,0,0"/>
+        <TextBlock Text="This app is a part of the UWPFamily apps." Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,419,0,0"/>
         <Button x:Name="MoreAppsButton" Width="101" Height="35" Content="More Apps!" VerticalAlignment="Top" UseSystemFocusVisuals="False"
                 Click="MoreAppsButton_Click" Margin="10,413,0,0" CornerRadius="0" BorderThickness="2,2,2,2">
             <Button.Resources>

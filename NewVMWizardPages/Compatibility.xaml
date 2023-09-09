@@ -20,8 +20,13 @@
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Virtual machine hardware compabitility" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <TextBlock Text="Hardware compabitility:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0"/>
-            <ComboBox Text="UWPStation 0.1.x" Margin="174,34,0,0" CornerRadius="0" UseSystemFocusVisuals="False">  
-                <ComboBoxItem Content="UWPStation 0.1.x" IsSelected="True"/>
+            <ComboBox Text="UWPStation 0.1.x" Margin="174,34,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBox">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </Style>
+                </ComboBox.Resources>
+                <ComboBoxItem Content="UWPStation 0.1.x" IsSelected="True" CornerRadius="0"/>
             </ComboBox>
             <TextBlock Text="Compatible with:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
             <CheckBox Content="ESX Server" FontWeight="Bold" IsChecked="True" IsEnabled="False" 

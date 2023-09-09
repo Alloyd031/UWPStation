@@ -19,16 +19,26 @@
             <TextBlock Text="Default process priority" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
             <TextBlock Text="Input grabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,39,0,0"/>
             <ComboBox Text="Normal" Margin="132,33,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBox">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </Style>
+                </ComboBox.Resources>
                 <ComboBox.Items>
-                    <ComboBoxItem Content="Normal" IsSelected="True"/>
-                    <ComboBoxItem Content="High"/>
+                    <ComboBoxItem Content="Normal" IsSelected="True" CornerRadius="0"/>
+                    <ComboBoxItem Content="High" CornerRadius="0"/>
                 </ComboBox.Items>
             </ComboBox>
             <TextBlock Text="Input ungrabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,84,0,0"/>
             <ComboBox Text="Normal" Margin="132,77,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBox">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </Style>
+                </ComboBox.Resources>
                 <ComboBox.Items>
-                    <ComboBoxItem Content="Low"/>
-                    <ComboBoxItem Content="Normal" IsSelected="True"/>
+                    <ComboBoxItem Content="Low" CornerRadius="0"/>
+                    <ComboBoxItem Content="Normal" IsSelected="True" CornerRadius="0"/>
                 </ComboBox.Items>
             </ComboBox>
             <TextBlock Text="A virtual machine's local settings will override these global settings." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,118,0,0"/>

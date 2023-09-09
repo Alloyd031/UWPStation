@@ -15,12 +15,12 @@
         </ResourceDictionary>
     </ContentDialog.Resources>
 
-    <Grid
-			x:Name="ContainerGrid"
-		    Width="440"
-			Height="500"
-			HorizontalAlignment="Stretch"
-			VerticalAlignment="Stretch">
+    <Grid x:Name="ContainerGrid"
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+		  Width="440"
+		  Height="500"
+		  HorizontalAlignment="Stretch"
+	      VerticalAlignment="Stretch">
         <Grid.Resources>
             <ResourceDictionary>
                 <ResourceDictionary.ThemeDictionaries>

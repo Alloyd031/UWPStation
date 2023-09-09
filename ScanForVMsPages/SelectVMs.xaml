@@ -85,7 +85,7 @@
             <FontIcon Glyph="&#xE11A;"/>
         </Button>
         <CheckBox Content="Match the file system folder hierarchy in the library" FontWeight="Bold" Margin="73,474,0,0"
-                  VerticalAlignment="Top" CornerRadius="0"/>
+                  VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
         <Button x:Name="FinishButton" Width="70" Height="35" Margin="520,523,0,0" Content="Finish"
                 VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
             <Button.Resources>

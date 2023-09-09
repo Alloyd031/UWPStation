@@ -43,7 +43,7 @@
 					Width="46" Height="32"
                     CornerRadius="0"
 					AutomationProperties.Name="CloseButton"
-					Click="CloseButton_Click" UseSystemFocusVisuals="True"
+					Click="CloseButton_Click" UseSystemFocusVisuals="False"
 					ToolTipService.ToolTip="Close" Margin="354,0,0,0">
                 <Button.Resources>
                     <ResourceDictionary>

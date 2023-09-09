@@ -26,14 +26,14 @@
         </Grid>
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,144,0,0">
             <TextBlock Text="Virtual Machines" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" Margin="10,10,0,0"/>
-            <CheckBox Content="Remember opened tabs between sessions" IsChecked="True" Margin="10,29,0,0" VerticalAlignment="Top" CornerRadius="0"/>
-            <CheckBox Content="Keep VMs running after UWPStation closes" Margin="10,60,0,0" VerticalAlignment="Top" CornerRadius="0"/>
-            <CheckBox Content="Enable all shared folders by default" Margin="10,92,0,0" VerticalAlignment="Top" CornerRadius="0"/>
-            <CheckBox Content="Show Aero Peek thumbnails for open tabs" Margin="10,124,0,0" VerticalAlignment="Top" CornerRadius="0"/>
+            <CheckBox Content="Remember opened tabs between sessions" IsChecked="True" Margin="10,29,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <CheckBox Content="Keep VMs running after UWPStation closes" Margin="10,60,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <CheckBox Content="Enable all shared folders by default" Margin="10,92,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <CheckBox Content="Show Aero Peek thumbnails for open tabs" Margin="10,124,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
         </Grid>
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,305,0,0">
             <TextBlock Text="Show tray icon:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,16,0,0" />
-            <ComboBox Text="Always" Margin="109,10,0,0" CornerRadius="0">
+            <ComboBox Text="Always" Margin="109,10,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
                 <ComboBox.Items>
                     <ComboBoxItem Content="Always" IsSelected="True"/>
                     <ComboBoxItem Content="When virtual machine is powered on"/>
@@ -41,7 +41,7 @@
                 </ComboBox.Items>
             </ComboBox>
             <TextBlock Text="Default hardware compatibility:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0" />
-            <ComboBox Text="Always" Margin="208,43,0,0" CornerRadius="0">
+            <ComboBox Text="Always" Margin="208,43,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
                 <ComboBox.Items>
                     <ComboBoxItem Content="Not available" IsSelected="True" IsEnabled="False"/>
                 </ComboBox.Items>
@@ -49,12 +49,12 @@
             <TextBlock Text="Compatible with:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="99,85,0,0"/>
             <CheckBox Content="ESX Server" IsChecked="True" IsEnabled="False" Margin="208,80,0,0" VerticalAlignment="Top" CornerRadius="0"/>
             <TextBlock Text="Seconds between powering on multiple VMs:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,124,0,0"/>
-            <muxc:NumberBox HorizontalAlignment="Left" VerticalAlignment="Top" CornerRadius="0"
+            <muxc:NumberBox HorizontalAlignment="Left" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"
                         SpinButtonPlacementMode="Compact" Margin="294,117,0,0" Text="10"/>
             <TextBlock Text="Save screenshots to:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,169,0,0"/>
-            <CheckBox Content="Clipboard" Margin="140,164,0,0" VerticalAlignment="Top" IsChecked="True" CornerRadius="0"/>
-            <CheckBox Content="File:" Margin="140,196,0,0" VerticalAlignment="Top" IsChecked="True" CornerRadius="0"/>
-            <ComboBox Text="Save to Desktop" Margin="243,195,0,0" CornerRadius="0">
+            <CheckBox Content="Clipboard" Margin="140,164,0,0" VerticalAlignment="Top" IsChecked="True" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <CheckBox Content="File:" Margin="140,196,0,0" VerticalAlignment="Top" IsChecked="True" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <ComboBox Text="Save to Desktop" Margin="243,195,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
                 <ComboBox.Items>
                     <ComboBoxItem Content="Always ask for location"/>
                     <ComboBoxItem Content="Save to Desktop" IsSelected="True"/>
@@ -64,8 +64,8 @@
         </Grid>
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,538,0,0">
             <TextBlock Text="Privacy" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="14" Margin="10,10,0,0"/>
-            <CheckBox Content="Offer to save login information for remote hosts" Margin="10,28,0,0" VerticalAlignment="Top" CornerRadius="0"/>
-            <Button Content="Show Saved Login Information" Width="220" Height="35" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" Margin="10,65,0,0">
+            <CheckBox Content="Offer to save login information for remote hosts" Margin="10,28,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <Button Content="Show Saved Login Information" Width="220" Height="35" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" Margin="10,65,0,0" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>

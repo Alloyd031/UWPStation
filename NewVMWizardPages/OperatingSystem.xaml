@@ -24,6 +24,11 @@
             <RadioButton x:Name="OtherOS" x:Uid="3" FontWeight="Bold" Content="Other" Margin="10,98,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Version" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,144,0,0"/>
             <ComboBox x:Name="OSSelectionBox" Text="UWPFamilyOS" Margin="10,168,0,0" IsEnabled="False" CornerRadius="0">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBox">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </Style>
+                </ComboBox.Resources>
                 <ComboBox.Items>
                     <ComboBoxItem Content="UWPFamilyOS" IsSelected="True"/>
                 </ComboBox.Items>

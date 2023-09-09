@@ -29,14 +29,19 @@
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,279,0,0">
             <TextBlock Text="Optimize mouse for games:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,16,0,0"/>
             <ComboBox Text="Automatic" Margin="187,10,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBox">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </Style>
+                </ComboBox.Resources>
                 <ComboBox.Items>
-                    <ComboBoxItem Content="Automatic" IsSelected="True"/>
-                    <ComboBoxItem Content="Always"/>
-                    <ComboBoxItem Content="Never"/>
+                    <ComboBoxItem Content="Automatic" IsSelected="True" CornerRadius="0" UseSystemFocusVisuals="False"/>
+                    <ComboBoxItem Content="Always" CornerRadius="0" UseSystemFocusVisuals="False"/>
+                    <ComboBoxItem Content="Never" CornerRadius="0" UseSystemFocusVisuals="False"/>
                 </ComboBox.Items>
             </ComboBox>
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,47,0,0">
-                <TextBlock Text="&#xE946;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="17" FontSize="16"/>
+                <FontIcon Glyph="&#xE946;" HorizontalAlignment="Left" VerticalAlignment="Center" Height="17" FontSize="16"/>
                 <TextBlock Text="Change this option if you have trouble with mouse motion in some applications." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,-2,0,0" />
             </Grid>
         </Grid>

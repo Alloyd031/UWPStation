@@ -19,19 +19,19 @@
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0">
             <TextBlock Text="Install from:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-            <RadioButton Content="Installer disc:" Margin="10,34,0,0" FontWeight="Bold" VerticalAlignment="Top"/>
+            <RadioButton Content="Installer disc:" Margin="10,34,0,0" FontWeight="Bold" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
             <ComboBox Text="No drives available" Margin="10,66,0,0" IsEnabled="False" CornerRadius="0"/>
-            <RadioButton Content="Installer disc image file (iso):" Margin="10,103,0,0" FontWeight="Bold" VerticalAlignment="Top" IsChecked="True"/>
+            <RadioButton Content="Installer disc image file (iso):" Margin="10,103,0,0" FontWeight="Bold" VerticalAlignment="Top" IsChecked="True" UseSystemFocusVisuals="False"/>
             <AutoSuggestBox Text="Some location" VerticalContentAlignment="Center" IsEnabled="False" CornerRadius="0"
                             HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,135,0,0" Width="310" Height="44"/>
             <Button Height="44" Width="44" Margin="325,135,0,0" IsEnabled="False" CornerRadius="0"
                     VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
                 <FontIcon Glyph="&#xE11A;"/>
             </Button>
-            <RadioButton x:Name="InstallLaterCheck" Content="I will install the operating system later." FontWeight="Bold" Margin="10,184,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="InstallLaterCheck" Content="I will install the operating system later." FontWeight="Bold" Margin="10,184,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
             <TextBlock Text="The virtual machine will be created with a blank hard disk." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,221,0,0"/>
         </Grid>
-        <Button x:Name="NextButton" Width="70" Height="35" Margin="400,473,0,0" Content="Next"
+        <Button x:Name="NextButton" Width="70" Height="35" Margin="400,473,0,0" Content="Next" UseSystemFocusVisuals="False"
                 VerticalAlignment="Top" Click="NextButton_Click" CornerRadius="0" BorderThickness="2,2,2,2">
             <Button.Resources>
                 <ResourceDictionary>

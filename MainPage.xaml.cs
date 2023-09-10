@@ -109,7 +109,7 @@ namespace UWPStation
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             this.LibraryPanel.Visibility = Visibility.Collapsed;
-            this.TabsGrid.Margin = new Thickness (0, 0, 0, 0);
+            this.TabsGrid.Margin = new Thickness (0, 72, 0, 0);
         }
         private void ShowHideLibrary_Click(object sender, RoutedEventArgs e)
         {

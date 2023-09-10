@@ -40,7 +40,7 @@
             <TextBlock x:FieldModifier="public" x:Name="TitleText" Text="Welcome" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <Button x:Name="MinimizeButton"
 					Width="46" Height="32"
-                    CornerRadius="0"
+                    CornerRadius="0" UseSystemFocusVisuals="False"
 					AutomationProperties.Name="Minimize"
 					ToolTipService.ToolTip="Minimize" Margin="562,0,0,0">
                 <Button.Resources>
@@ -49,8 +49,6 @@
                             <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -62,8 +60,6 @@
                             <ResourceDictionary x:Key="Light">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -79,7 +75,7 @@
             </Button>
             <Button x:Name="MaximizeButton"
 					Width="46" Height="32"
-                    CornerRadius="0"
+                    CornerRadius="0" UseSystemFocusVisuals="False"
 					AutomationProperties.Name="Maximize"
 					ToolTipService.ToolTip="Maximize" Margin="608,0,0,0">
                 <Button.Resources>
@@ -88,8 +84,6 @@
                             <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -101,8 +95,6 @@
                             <ResourceDictionary x:Key="Light">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -116,12 +108,11 @@
                 </Button.Resources>
                 <FontIcon Glyph="&#xE922;" FontSize="10" Margin="-23,-16,-23,-16"/>
             </Button>
-            <Button
-					x:Name="CloseButton"
+            <Button x:Name="CloseButton"
 					Width="46" Height="32"
                     CornerRadius="0"
 					AutomationProperties.Name="CloseButton"
-					Click="CloseButton_Click" UseSystemFocusVisuals="True"
+					Click="CloseButton_Click" UseSystemFocusVisuals="False"
 					ToolTipService.ToolTip="Close" Margin="654,0,0,0">
                 <Button.Resources>
                     <ResourceDictionary>
@@ -129,8 +120,6 @@
                             <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -142,8 +131,6 @@
                             <ResourceDictionary x:Key="Light">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>

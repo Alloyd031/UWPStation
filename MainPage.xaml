@@ -44,7 +44,7 @@
                 </TextBlock.Resources>
             </TextBlock>
         </Grid>
-        <StackPanel x:Name="Something" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,0,190,0">
+        <StackPanel x:Name="TitlebarRightItems" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,0,190,0">
             <Button x:Name="Important"
 					Width="46" Height="32"
                     CornerRadius="0" UseSystemFocusVisuals="False"
@@ -56,24 +56,20 @@
                             <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#458C8A"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#5A9997"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#458C8A"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#5A9997"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
                             </ResourceDictionary>
                             <ResourceDictionary x:Key="Light">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#538A88"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#3D7B79"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#538A88"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
                             </ResourceDictionary>
                         </ResourceDictionary.ThemeDictionaries>
                     </ResourceDictionary>
@@ -91,24 +87,20 @@
                             <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#458C8A"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#5A9997"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#458C8A"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#5A9997"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
                             </ResourceDictionary>
                             <ResourceDictionary x:Key="Light">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#538A88"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#3D7B79"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#538A88"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
                             </ResourceDictionary>
                         </ResourceDictionary.ThemeDictionaries>
                     </ResourceDictionary>
@@ -116,7 +108,7 @@
                 <FontIcon Glyph="&#xE899;" FontSize="14" Margin="-23,-16,-23,-16"/>
             </Button>
         </StackPanel>
-        <Grid x:Name="Toolbar" VerticalAlignment="Top" Height="40" Margin="0,32,0,0" BorderBrush="#5D5D5D" BorderThickness="1,1,1,1">
+        <Grid x:Name="Toolbar" VerticalAlignment="Top" Height="40" Margin="0,32,0,0" BorderBrush="#5D5D5D" BorderThickness="0,1,0,1">
             <Grid.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -738,7 +730,7 @@
                                     </ResourceDictionary>
                                 </MenuFlyoutItem.Resources>
                             </MenuFlyoutItem>
-                            <MenuFlyoutSubItem Text="Autosize" CornerRadius="0">
+                            <MenuFlyoutSubItem Text="Autosize" CornerRadius="0" UseSystemFocusVisuals="False">
                                 <MenuFlyoutSubItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -2351,7 +2343,7 @@
                                     <Setter Property="CornerRadius" Value="0"/>
                                 </Style>
                             </MenuFlyout.MenuFlyoutPresenterStyle>
-                            <MenuFlyoutItem Text="Start Up Guest" Click="StartUpGuest_Click">
+                            <MenuFlyoutItem Text="Start Up Guest" Click="StartUpGuest_Click" UseSystemFocusVisuals="False" CornerRadius="0">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -2377,7 +2369,7 @@
                                     </ResourceDictionary>
                                 </MenuFlyoutItem.Resources>
                             </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Shut Down Guest" Click="ShutDownGuest_Click">
+                            <MenuFlyoutItem Text="Shut Down Guest" Click="ShutDownGuest_Click" UseSystemFocusVisuals="False" CornerRadius="0">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -2403,7 +2395,7 @@
                                     </ResourceDictionary>
                                 </MenuFlyoutItem.Resources>
                             </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Suspend Guest" Click="SuspendGuest_Click">
+                            <MenuFlyoutItem Text="Suspend Guest" Click="SuspendGuest_Click" UseSystemFocusVisuals="False" CornerRadius="0">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -2429,112 +2421,7 @@
                                     </ResourceDictionary>
                                 </MenuFlyoutItem.Resources>
                             </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Restart Guest" Click="RestartGuest_Click">
-                                <MenuFlyoutItem.Resources>
-                                    <ResourceDictionary>
-                                        <ResourceDictionary.ThemeDictionaries>
-                                            <ResourceDictionary x:Key="Dark">
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
-                                            </ResourceDictionary>
-                                            <ResourceDictionary x:Key="Light">
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
-                                            </ResourceDictionary>
-                                        </ResourceDictionary.ThemeDictionaries>
-                                    </ResourceDictionary>
-                                </MenuFlyoutItem.Resources>
-                            </MenuFlyoutItem>
-                            <MenuFlyoutSeparator/>
-                            <MenuFlyoutItem Text="Power On" Click="PowerOn_Click">
-                                <MenuFlyoutItem.Resources>
-                                    <ResourceDictionary>
-                                        <ResourceDictionary.ThemeDictionaries>
-                                            <ResourceDictionary x:Key="Dark">
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
-                                            </ResourceDictionary>
-                                            <ResourceDictionary x:Key="Light">
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
-                                            </ResourceDictionary>
-                                        </ResourceDictionary.ThemeDictionaries>
-                                    </ResourceDictionary>
-                                </MenuFlyoutItem.Resources>
-                            </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Power Off" Click="PowerOff_Click">
-                                <MenuFlyoutItem.Resources>
-                                    <ResourceDictionary>
-                                        <ResourceDictionary.ThemeDictionaries>
-                                            <ResourceDictionary x:Key="Dark">
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
-                                            </ResourceDictionary>
-                                            <ResourceDictionary x:Key="Light">
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
-                                            </ResourceDictionary>
-                                        </ResourceDictionary.ThemeDictionaries>
-                                    </ResourceDictionary>
-                                </MenuFlyoutItem.Resources>
-                            </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Suspend" Click="Suspend_Click">
-                                <MenuFlyoutItem.Resources>
-                                    <ResourceDictionary>
-                                        <ResourceDictionary.ThemeDictionaries>
-                                            <ResourceDictionary x:Key="Dark">
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
-                                            </ResourceDictionary>
-                                            <ResourceDictionary x:Key="Light">
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
-                                            </ResourceDictionary>
-                                        </ResourceDictionary.ThemeDictionaries>
-                                    </ResourceDictionary>
-                                </MenuFlyoutItem.Resources>
-                            </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Reset" Click="Reset_Click">
+                            <MenuFlyoutItem Text="Restart Guest" Click="RestartGuest_Click" UseSystemFocusVisuals="False" CornerRadius="0">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -2561,7 +2448,112 @@
                                 </MenuFlyoutItem.Resources>
                             </MenuFlyoutItem>
                             <MenuFlyoutSeparator/>
-                            <MenuFlyoutItem Text="Power On to Firmware" Click="PowerOnToFirmware_Click">
+                            <MenuFlyoutItem Text="Power On" Click="PowerOn_Click" UseSystemFocusVisuals="False" CornerRadius="0">
+                                <MenuFlyoutItem.Resources>
+                                    <ResourceDictionary>
+                                        <ResourceDictionary.ThemeDictionaries>
+                                            <ResourceDictionary x:Key="Dark">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
+                                            </ResourceDictionary>
+                                            <ResourceDictionary x:Key="Light">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
+                                            </ResourceDictionary>
+                                        </ResourceDictionary.ThemeDictionaries>
+                                    </ResourceDictionary>
+                                </MenuFlyoutItem.Resources>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Power Off" Click="PowerOff_Click" UseSystemFocusVisuals="False" CornerRadius="0">
+                                <MenuFlyoutItem.Resources>
+                                    <ResourceDictionary>
+                                        <ResourceDictionary.ThemeDictionaries>
+                                            <ResourceDictionary x:Key="Dark">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
+                                            </ResourceDictionary>
+                                            <ResourceDictionary x:Key="Light">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
+                                            </ResourceDictionary>
+                                        </ResourceDictionary.ThemeDictionaries>
+                                    </ResourceDictionary>
+                                </MenuFlyoutItem.Resources>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Suspend" Click="Suspend_Click" UseSystemFocusVisuals="False" CornerRadius="0">
+                                <MenuFlyoutItem.Resources>
+                                    <ResourceDictionary>
+                                        <ResourceDictionary.ThemeDictionaries>
+                                            <ResourceDictionary x:Key="Dark">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
+                                            </ResourceDictionary>
+                                            <ResourceDictionary x:Key="Light">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
+                                            </ResourceDictionary>
+                                        </ResourceDictionary.ThemeDictionaries>
+                                    </ResourceDictionary>
+                                </MenuFlyoutItem.Resources>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Reset" Click="Reset_Click" UseSystemFocusVisuals="False" CornerRadius="0">
+                                <MenuFlyoutItem.Resources>
+                                    <ResourceDictionary>
+                                        <ResourceDictionary.ThemeDictionaries>
+                                            <ResourceDictionary x:Key="Dark">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
+                                            </ResourceDictionary>
+                                            <ResourceDictionary x:Key="Light">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
+                                            </ResourceDictionary>
+                                        </ResourceDictionary.ThemeDictionaries>
+                                    </ResourceDictionary>
+                                </MenuFlyoutItem.Resources>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Power On to Firmware" Click="PowerOnToFirmware_Click" UseSystemFocusVisuals="False" CornerRadius="0">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -2872,7 +2864,7 @@
                                     <Setter Property="CornerRadius" Value="0"/>
                                 </Style>
                             </MenuFlyout.MenuFlyoutPresenterStyle>
-                            <MenuFlyoutItem Text="Keep aspect ratio stretch" Click="KeepAspectRatioStretch_Click">
+                            <MenuFlyoutItem Text="Keep aspect ratio stretch" Click="KeepAspectRatioStretch_Click" UseSystemFocusVisuals="False" CornerRadius="0">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -2898,7 +2890,7 @@
                                     </ResourceDictionary>
                                 </MenuFlyoutItem.Resources>
                             </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Free stretch" Click="FreeStretch_Click">
+                            <MenuFlyoutItem Text="Free stretch" Click="FreeStretch_Click" UseSystemFocusVisuals="False" CornerRadius="0">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -3110,7 +3102,7 @@
                         </ResourceDictionary>
                     </Button.Resources>
                     <Grid Margin="-88,-14,-87,-15">
-                        <FontIcon Glyph="&#xE10F;" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+                        <FontIcon Glyph="&#xE10F;" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
                         <TextBlock Text="Home" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
                     </Grid>
                 </Button>
@@ -3141,7 +3133,7 @@
                         </ResourceDictionary>
                     </Button.Resources>
                     <Grid Margin="-88,-14,-87,-15">
-                        <FontIcon Glyph="&#xE7C4;" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+                        <FontIcon Glyph="&#xE7C4;" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
                         <TextBlock Text="UWPFamilyOS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
                     </Grid>
                     <FlyoutBase.AttachedFlyout>

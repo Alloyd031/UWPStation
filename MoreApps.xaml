@@ -51,8 +51,6 @@
                             <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -64,8 +62,6 @@
                             <ResourceDictionary x:Key="Light">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -93,8 +89,6 @@
                             <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -106,8 +100,6 @@
                             <ResourceDictionary x:Key="Light">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -122,20 +114,20 @@
                 <FontIcon Glyph="&#xE8BB;" FontSize="10" Margin="-23,-16,-23,-16"/>
             </Button>
         </Grid>
-        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="227,37,0,0">
-            <FontIcon Glyph="&#xE14D;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Check out these apps!" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
+            <FontIcon Glyph="&#xE14D;" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Text="Check out these apps!" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0"/>
         </Grid>
         <Grid Height="194" Width="194" Margin="125,146,0,0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Top" HorizontalAlignment="Left" CornerRadius="0" BorderThickness="2,2,2,2">
             <Grid.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
                         <ResourceDictionary x:Key="Dark">
-                            <Color x:Key="SystemAltHighColor">#333333</Color>
+                            <Color x:Key="SystemAltHighColor">#1F1F1F</Color>
                             <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                         </ResourceDictionary>
                         <ResourceDictionary x:Key="Light">
-                            <Color x:Key="SystemAltHighColor">#CCCCCC</Color>
+                            <Color x:Key="SystemAltHighColor">#E6E6E6</Color>
                             <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                         </ResourceDictionary>
                     </ResourceDictionary.ThemeDictionaries>
@@ -143,29 +135,87 @@
             </Grid.Resources>
             <FontIcon Glyph="&#xE8F2;" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,33,0,0"/>
             <TextBlock Text="UWPCord" FontSize="16" FontWeight="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <HyperlinkButton Content="GitHub" NavigateUri="https://github.com/Alloyd031/UWPCord" CornerRadius="0" BorderThickness="2,2,2,2"
-                                 HorizontalAlignment="Center" Margin="0,152,0,0" VerticalAlignment="Top" Width="174" UseSystemFocusVisuals="False"/>
+            <HyperlinkButton x:Name="GoToUWPCordGit" Content="GitHub" NavigateUri="https://github.com/Alloyd031/UWPCord" CornerRadius="0" BorderThickness="2,2,2,2"
+                             HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="174" UseSystemFocusVisuals="False">
+                <HyperlinkButton.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrush" Color="#333333"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="#333333"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="White"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="#333333"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="White"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="#666666"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="#858585"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="#CCCCCC"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="Black"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="Black"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="#999999"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPressed" Color="#CBCBCB"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </HyperlinkButton.Resources>
+            </HyperlinkButton>
         </Grid>
         <Grid Height="194" Width="194" Margin="336,146,121,0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2">
             <Grid.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
                         <ResourceDictionary x:Key="Dark">
-                            <Color x:Key="SystemAltHighColor">#333333</Color>
+                            <Color x:Key="SystemAltHighColor">#1F1F1F</Color>
                             <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                         </ResourceDictionary>
                         <ResourceDictionary x:Key="Light">
-                            <Color x:Key="SystemAltHighColor">#CCCCCC</Color>
+                            <Color x:Key="SystemAltHighColor">#E6E6E6</Color>
                             <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                         </ResourceDictionary>
                     </ResourceDictionary.ThemeDictionaries>
                 </ResourceDictionary>
             </Grid.Resources>
             <FontIcon Glyph="&#xE7FC;" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,33,0,0"/>
-                <TextBlock Text="UWPBlox" FontSize="16" FontWeight="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <HyperlinkButton Content="GitHub" NavigateUri="https://github.com/Alloyd031/UWPBlox" HorizontalAlignment="Center" UseSystemFocusVisuals="False"
-                                 Margin="0,152,0,0" VerticalAlignment="Top" Width="174" CornerRadius="0" BorderThickness="2,2,2,2"/>
-            </Grid>
+            <TextBlock Text="UWPBlox" FontSize="16" FontWeight="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <HyperlinkButton x:Name="GoToUWPBloxGit" Content="GitHub" NavigateUri="https://github.com/Alloyd031/UWPBlox" HorizontalAlignment="Center" UseSystemFocusVisuals="False"
+                             Margin="0,150,0,0" VerticalAlignment="Top" Width="174" CornerRadius="0" BorderThickness="2,2,2,2">
+                <HyperlinkButton.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrush" Color="#333333"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="#333333"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="White"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="#333333"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="White"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="#666666"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="#858585"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPressed" Color="#4C4C4C"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="#CCCCCC"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="Black"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="#CCCCCC"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="Black"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="#999999"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="#7A7A7A"/>
+                                <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPressed" Color="#CBCBCB"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </HyperlinkButton.Resources>
+            </HyperlinkButton>
+        </Grid>
         <Button x:Name="OKButton" Width="70" Height="35" Content="OK" UseSystemFocusVisuals="False" VerticalAlignment="Top" Click="OKButton_Click"
                  Margin="571,413,0,0" CornerRadius="0" BorderThickness="2,2,2,2">
             <Button.Resources>

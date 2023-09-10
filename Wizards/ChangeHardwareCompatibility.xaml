@@ -84,15 +84,13 @@
 					Width="46" Height="32"
                     CornerRadius="0"
 					AutomationProperties.Name="Help"
-					ToolTipService.ToolTip="Help" Margin="708,0,0,0">
+					ToolTipService.ToolTip="Help" Margin="458,0,0,0">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
                             <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -104,8 +102,6 @@
                             <ResourceDictionary x:Key="Light">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -123,7 +119,7 @@
 					Width="46" Height="32"
                     CornerRadius="0"
 					AutomationProperties.Name="CloseButton"
-					Click="CloseButton_Click" UseSystemFocusVisuals="True"
+					Click="CloseButton_Click" UseSystemFocusVisuals="False"
 					ToolTipService.ToolTip="Close" Margin="504,0,0,0">
                 <Button.Resources>
                     <ResourceDictionary>
@@ -131,8 +127,6 @@
                             <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
@@ -144,8 +138,6 @@
                             <ResourceDictionary x:Key="Light">
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>

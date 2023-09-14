@@ -19,7 +19,7 @@
     <Grid x:Name="ContainerGrid"
           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
 		  Width="651"
-		  Height="458"
+		  Height="500"
 		  HorizontalAlignment="Stretch"
 		  VerticalAlignment="Stretch">
         <Grid.Resources>
@@ -37,8 +37,8 @@
             </ResourceDictionary>
         </Grid.Resources>
         <Grid x:Name="TitlebarGrid" Height="32" VerticalAlignment="Top">
-            <TextBlock x:FieldModifier="public" x:Name="TitleText" Text="About UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <Button	x:Name="CloseButton"
+            <TextBlock x:Uid="AboutTitleString" x:Name="TitleText" Text="About UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Button x:Uid="CloseButtonString" x:Name="CloseButton"
 					Width="46" Height="32"
                     CornerRadius="0" UseSystemFocusVisuals="False"
 					AutomationProperties.Name="CloseButton"
@@ -75,14 +75,20 @@
                 <FontIcon Glyph="&#xE8BB;" FontSize="10" Margin="-23,-16,-23,-16"/>
             </Button>
         </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Margin="110,0,0,0">
-            <Image Source="/Assets/StoreLogo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Width="48" Height="48"/>
-            <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,48,0,0"/>
-            <TextBlock Text="0.1 Preview" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,85,0,0"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                <FontIcon Glyph="&#xE946;" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock x:Uid="ProductInfoString" Text="Product Information:" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="55,0,0,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,55,0,0" Width="209">
+                <Image Source="/Assets/StoreLogo.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="60" Height="60"/>
+                <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,0,0,0"/>
+                <TextBlock Text="0.2 Preview" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,32,0,0"/>
+            </Grid>
         </Grid>
-        <TextBlock Text="This app is a part of the UWPFamily apps" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,419,0,0"/>
-        <Button x:Name="MoreAppsButton" Width="101" Height="35" Content="More Apps!" VerticalAlignment="Top" UseSystemFocusVisuals="False"
-                Click="MoreAppsButton_Click" Margin="10,413,0,0" CornerRadius="0" BorderThickness="2,2,2,2">
+        <TextBlock x:Uid="PartOfAppsString" Text="This app is a part of the UWPFamily apps" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,420,0,0"/>
+        <Button x:Uid="MoreAppsString" x:Name="MoreAppsButton" Height="35" Content="More Apps!" VerticalAlignment="Top" UseSystemFocusVisuals="False"
+                Click="MoreAppsButton_Click" Margin="10,455,0,0" CornerRadius="0" BorderThickness="2,2,2,2">
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -108,8 +114,8 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="OKButton" Width="70" Height="35" Content="OK" UseSystemFocusVisuals="False" VerticalAlignment="Top" Click="OKButton_Click"
-                 Margin="571,413,0,0" CornerRadius="0" BorderThickness="2,2,2,2">
+        <Button x:Uid="OKString" x:Name="OKButton" Height="35" Content="OK" UseSystemFocusVisuals="False" VerticalAlignment="Top" Click="OKButton_Click"
+                Margin="596,455,0,0" CornerRadius="0" BorderThickness="2,2,2,2">
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -135,12 +141,19 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Margin="340,0,0,0">
-            <FontIcon Glyph="&#xE125;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Made by:" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
-            <TextBlock Text="Alloyd" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,97,0,0"/>
-            <TextBlock Text="With the help from:" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,146,0,0"/>
-            <TextBlock Text="Lixkote" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,178,0,0"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                <FontIcon Glyph="&#xE125;" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock x:Uid="CreatorsString" Text="Creators:" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="55,0,0,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,54,0,0">
+                <TextBlock x:Uid="MadeByString" Text="Made by:" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock Text="Alloyd" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,124,0,0">
+                <TextBlock x:Uid="WithHelpString" Text="With the help from:" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Text="Lixkote" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0"/>
+            </Grid>
         </Grid>
     </Grid>
 </ContentDialog>

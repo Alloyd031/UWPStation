@@ -38,8 +38,7 @@
             </ResourceDictionary>
         </Grid.Resources>
         <Grid x:Name="TitlebarGrid" Height="32" VerticalAlignment="Top">
-            <Button
-					x:Name="BackButton"
+            <Button	x:Uid="BackButtonString" x:Name="BackButton"
 					Width="46" Height="32"
                     CornerRadius="0"
 					AutomationProperties.Name="Back"
@@ -75,14 +74,13 @@
                 </Button.Resources>
                 <FontIcon Glyph="&#xE112;" FontSize="12" Margin="-23,-16,-23,-16"/>
             </Button>
-            <TextBlock x:FieldModifier="public" x:Name="TitleText" Text="More Apps!" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="56,0,0,0"/>
-            <Button
-			x:Name="CloseButton"
-			Width="46" Height="32"
-            CornerRadius="0" UseSystemFocusVisuals="False"
-			AutomationProperties.Name="CloseButton"
-			Click="CloseButton_Click"
-			ToolTipService.ToolTip="Close" Margin="605,0,0,0">
+            <TextBlock x:Uid="MoreAppsTitleString" x:FieldModifier="public" x:Name="TitleText" Text="More Apps!" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="56,0,0,0"/>
+            <Button x:Uid="CloseButtonString" x:Name="CloseButton"
+			        Width="46" Height="32"
+                    CornerRadius="0" UseSystemFocusVisuals="False"
+			        AutomationProperties.Name="CloseButton"
+			        Click="CloseButton_Click"
+			        ToolTipService.ToolTip="Close" Margin="605,0,0,0">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -116,7 +114,7 @@
         </Grid>
         <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
             <FontIcon Glyph="&#xE14D;" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBlock Text="Check out these apps!" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0"/>
+            <TextBlock x:Uid="CheckTheseAppsString" Text="Check out these apps!" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0"/>
         </Grid>
         <Grid Height="194" Width="194" Margin="125,146,0,0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Top" HorizontalAlignment="Left" CornerRadius="0" BorderThickness="2,2,2,2">
             <Grid.Resources>
@@ -216,8 +214,8 @@
                 </HyperlinkButton.Resources>
             </HyperlinkButton>
         </Grid>
-        <Button x:Name="OKButton" Width="70" Height="35" Content="OK" UseSystemFocusVisuals="False" VerticalAlignment="Top" Click="OKButton_Click"
-                 Margin="571,413,0,0" CornerRadius="0" BorderThickness="2,2,2,2">
+        <Button x:Uid="OKString" x:Name="OKButton" Height="35" Content="OK" UseSystemFocusVisuals="False" VerticalAlignment="Top" Click="OKButton_Click"
+                Margin="596,413,0,0" CornerRadius="0" BorderThickness="2,2,2,2">
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>

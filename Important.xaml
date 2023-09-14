@@ -17,7 +17,7 @@
 
     <Grid x:Name="ContainerGrid"
           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-		  Width="400"
+		  Width="420"
 	      Height="250"
 		  HorizontalAlignment="Stretch"
 		  VerticalAlignment="Stretch">
@@ -36,14 +36,13 @@
             </ResourceDictionary>
         </Grid.Resources>
         <Grid x:Name="TitlebarGrid" Height="32" VerticalAlignment="Top">
-            <TextBlock x:FieldModifier="public" x:Name="TitleText" Text="Important!" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <Button
-					x:Name="CloseButton"
+            <TextBlock x:Uid="ImportantTitleString" x:FieldModifier="public" x:Name="TitleText" Text="Important!" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Button	x:Uid="CloseButtonString" x:Name="CloseButton"
 					Width="46" Height="32"
                     CornerRadius="0"
 					AutomationProperties.Name="CloseButton"
 					Click="CloseButton_Click" UseSystemFocusVisuals="False"
-					ToolTipService.ToolTip="Close" Margin="354,0,0,0">
+					ToolTipService.ToolTip="Close" Margin="374,0,0,0">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -77,10 +76,10 @@
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <FontIcon Glyph="&#xE171;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="This is not a real VMware Workstation. This is just a parody." TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+            <TextBlock x:Uid="ImportantMessageString" Text="This app is not a real VMware Workstation. This is just a parody." TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Margin="0,65,0,0"/>
         </Grid>
-        <Button x:Name="OKButton" Width="70" Height="35" Content="OK" VerticalAlignment="Top" Click="OKButton_Click" CornerRadius="0"
-                Margin="320,205,0,0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
+        <Button x:Uid="OKString" x:Name="OKButton" Height="35" Content="OK" VerticalAlignment="Top" Click="OKButton_Click" CornerRadius="0"
+                Margin="365,205,0,0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>

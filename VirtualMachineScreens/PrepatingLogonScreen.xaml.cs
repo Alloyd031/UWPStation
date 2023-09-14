@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -13,19 +14,18 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Документацию по шаблону элемента "Диалоговое окно содержимого" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
-
-namespace UWPStation.Something
+namespace UWPStation.VirtualMachineScreens
 {
-    public sealed partial class EasterEgg : ContentDialog
+    public sealed partial class PreparingLogonScreen : Page
     {
-        public EasterEgg()
+        public PreparingLogonScreen()
         {
             this.InitializeComponent();
         }
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Hide();
+            await Task.Delay(3000);
+            this.Frame.Navigate(typeof(LogonScreen));
         }
     }
 }

@@ -82,6 +82,18 @@
             <muxc:ProgressRing x:Name="CheckForUpdatesProgress" Width="60" Height="60" IsIndeterminate="False" VerticalAlignment="Top"/>
             <TextBlock x:Name="PendingUpdatesText" Text="No pending updates." TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
         </Grid>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Padding="10,0,0,10">
+            <TextBlock Text="Updates Channel:" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" FontSize="15"/>
+            <ComboBox Margin="0,10,0,0" Text="Preview" CornerRadius="0">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBox">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </Style>
+                </ComboBox.Resources>
+                <ComboBoxItem Content="Stable (Not available)" CornerRadius="0" IsEnabled="False"/>
+                <ComboBoxItem Content="Preview" CornerRadius="0" IsSelected="True"/>
+            </ComboBox>
+        </StackPanel>
         <Button x:Name="CheckForUpdatesButton" Width="140" Height="35" Content="Check for updates" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False"
                 VerticalAlignment="Top" Click="CheckForUpdatesButton_Click" ToolTipService.ToolTip="Check for updates" Margin="290,455,0,0">
             <Button.Resources>

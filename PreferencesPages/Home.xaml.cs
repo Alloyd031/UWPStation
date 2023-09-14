@@ -65,5 +65,9 @@ namespace UWPStation.PreferencesPages
         {
             this.Frame.Navigate(typeof(DevicesPage));
         }
+        private void LanguageButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LanguagePage));
+        }
     }
 }

@@ -11,7 +11,7 @@
 	Height="718">
 
     <Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
+        <Grid VerticalAlignment="Top" Margin="0,10,0,0" BorderThickness="0,0,0,1" BorderBrush="#5D5D5D">
             <FontIcon Glyph="&#xE821;" Height="44" Width="44" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <TextBlock Text="Workspace" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" Margin="49,6,0,0"/>
         </Grid>
@@ -32,7 +32,7 @@
             <CheckBox Content="Show Aero Peek thumbnails for open tabs" Margin="0,120,0,0" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"/>
         </Grid>
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,305,0,0">
-            <TextBlock Text="Show tray icon:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,9,0,0" />
+            <TextBlock Text="Show tray icon:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,8,0,0" />
             <ComboBox Text="Always" Margin="108,3,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
                 <ComboBox.Resources>
                     <Style TargetType="ComboBox">
@@ -45,18 +45,18 @@
                     <ComboBoxItem Content="Never" CornerRadius="0"/>
                 </ComboBox.Items>
             </ComboBox>
-            <TextBlock Text="Default hardware compatibility:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,40,0,0" />
-            <ComboBox Text="Always" Margin="208,36,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
+            <TextBlock Text="Default hardware compatibility:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,42,0,0" />
+            <ComboBox Text="UWPStation 0.2.x" Margin="208,36,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
                 <ComboBox.Resources>
                     <Style TargetType="ComboBox">
                         <Setter Property="CornerRadius" Value="0"/>
                     </Style>
                 </ComboBox.Resources>
                 <ComboBox.Items>
-                    <ComboBoxItem Content="Not available" IsSelected="True" IsEnabled="False" CornerRadius="0"/>
+                    <ComboBoxItem Content="UWPStation 0.2.x" IsSelected="True" CornerRadius="0" UseSystemFocusVisuals="False"/>
                 </ComboBox.Items>
             </ComboBox>
-            <TextBlock Text="Compatible with:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="99,77,0,0"/>
+            <TextBlock Text="Compatible with:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,78,0,0"/>
             <CheckBox Content="ESX Server" IsChecked="True" IsEnabled="False" Margin="208,72,0,0" VerticalAlignment="Top" CornerRadius="0"/>
             <TextBlock Text="Seconds between powering on multiple VMs:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,116,0,0"/>
             <muxc:NumberBox HorizontalAlignment="Left" VerticalAlignment="Top" CornerRadius="0" UseSystemFocusVisuals="False"

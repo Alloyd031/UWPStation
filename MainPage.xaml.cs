@@ -27,13 +27,8 @@ using Windows.UI.Core;
 using UWPStation.TabPages;
 using UWPStation.Something;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace UWPStation
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -42,8 +37,6 @@ namespace UWPStation
             Window.Current.SetTitleBar(AppTitleBar);
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
-            titleBar.BackgroundColor = Colors.Teal;
-            titleBar.InactiveBackgroundColor = Colors.Teal;
         }
         private async Task<bool> OpenPageAsWindowAsync(Type t)
         {
@@ -186,6 +179,14 @@ namespace UWPStation
         private void VMTab_Click(object sender, RoutedEventArgs e)
         {
             this.TabsFrame.Navigate(typeof(VMPage));
+        }
+        private void TestVMTab_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(TestVMPage));
+        }
+        private void TestTab_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(TestPage));
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {

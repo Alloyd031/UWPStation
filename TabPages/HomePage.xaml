@@ -31,7 +31,7 @@
             <FontIcon Glyph="&#xE977;" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Center" Height="72" Width="72"/>
             <TextBlock FontWeight="Bold" FontSize="60" Text="UWPStation" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="90,0,0,0"/>
         </Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,167,0,0">
             <Grid x:Name="CreateVMGrid" Padding="5,0,5,0">
                 <Button Width="150" Click="CreateVM_Click" Height="150" CornerRadius="4" UseSystemFocusVisuals="False" BorderThickness="3,3,3,3">
                     <Button.Resources>
@@ -60,7 +60,7 @@
                     </Button.Resources>
                     <Grid Margin="-75,-75,-75,-75">
                         <FontIcon Glyph="&#xECC8;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Text="Create a New Virtual Machine" TextAlignment="Center" TextWrapping="Wrap" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
+                        <TextBlock x:Uid="CreateVMString" Text="Create a New Virtual Machine" TextAlignment="Center" TextWrapping="Wrap" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
                     </Grid>
                 </Button>
             </Grid>
@@ -92,7 +92,7 @@
                     </Button.Resources>
                     <Grid Margin="-75,-75,-75,-75">
                         <FontIcon Glyph="&#xE8A7;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Text="Open a Virtual Machine" TextAlignment="Center" TextWrapping="Wrap" Margin="25,75,25,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
+                        <TextBlock x:Uid="OpenVMString" Text="Open a Virtual Machine" TextAlignment="Center" TextWrapping="Wrap" Margin="25,75,25,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
                     </Grid>
                 </Button>
             </Grid>
@@ -124,7 +124,7 @@
                     </Button.Resources>
                     <Grid Margin="-75,-75,-75,-75">
                         <FontIcon Glyph="&#xE13C;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Text="Connect to a Remote Server" TextAlignment="Center" TextWrapping="Wrap" Margin="0,75,0,0" Height="38" VerticalAlignment="Top" Width="140"/>
+                        <TextBlock x:Uid="ConnectToServerString" Text="Connect to a Remote Server" TextAlignment="Center" TextWrapping="Wrap" Margin="0,75,0,0" Height="38" VerticalAlignment="Top" Width="140"/>
                     </Grid>
                 </Button>
             </Grid>

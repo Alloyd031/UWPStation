@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="UWPStation.TabPages.TestPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPStation.TabPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Dark">
+                        <Color x:Key="SystemAltHighColor">#1E1E1E</Color>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                    </ResourceDictionary>
+                    <ResourceDictionary x:Key="Light">
+                        <Color x:Key="SystemAltHighColor">#FFFFFF</Color>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                    </ResourceDictionary>
+                </ResourceDictionary.ThemeDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <Grid x:Name="TitleGrid" Height="48" VerticalAlignment="Top" BorderThickness="0,0,0,1" BorderBrush="#5D5D5D">
+            <FontIcon Glyph="&#xE18A;" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBlock x:Uid="TestPageString" Text="Test Page" FontSize="24" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="45,0,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Uid="TestsHereString" Text="Here will be some tests :)" FontSize="36" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black"/>
+        </Grid>
+    </Grid>
+</Page>

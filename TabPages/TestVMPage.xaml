@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="UWPStation.VMPage"
+    x:Class="UWPStation.TabPages.TestVMPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UWPStation"
+    xmlns:local="using:UWPStation.TabPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
@@ -13,10 +13,12 @@
             <ResourceDictionary>
                 <ResourceDictionary.ThemeDictionaries>
                     <ResourceDictionary x:Key="Dark">
+                        <SolidColorBrush x:Key="Foreground" Color="White"/>
                         <Color x:Key="SystemAltHighColor">#1F1F1F</Color>
                         <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                     </ResourceDictionary>
                     <ResourceDictionary x:Key="Light">
+                        <SolidColorBrush x:Key="Foreground" Color="Black"/>
                         <Color x:Key="SystemAltHighColor">White</Color>
                         <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                     </ResourceDictionary>
@@ -25,17 +27,17 @@
         </Grid.Resources>
         <Grid x:Name="TitleGrid" Height="48" VerticalAlignment="Top" BorderThickness="0,0,0,1" BorderBrush="#5D5D5D">
             <FontIcon Glyph="&#xE7C4;" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-            <TextBlock Text="UWPFamilyOS" FontSize="24" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="45,0,0,0"/>
+            <TextBlock Text="Test VM" FontSize="24" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="45,0,0,0"/>
         </Grid>
         <Grid Width="301" Margin="0,48,0,0" HorizontalAlignment="Left" BorderThickness="0,0,1,0" BorderBrush="#5D5D5D">
             <Grid x:Name="VMActionsGrid" Height="80" VerticalAlignment="Top" BorderThickness="0,0,0,1" BorderBrush="#5D5D5D">
-                <HyperlinkButton x:Name="StartVM" Margin="20,10,0,0" VerticalAlignment="Top" Padding="5" Width="271" Click="StartVM_Click">
+                <HyperlinkButton Margin="20,10,0,0" VerticalAlignment="Top" Padding="5" Width="271">
                     <Grid Margin="-136,0,-135,0">
                         <FontIcon Glyph="&#xE102;" Margin="8,0,0,0" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <TextBlock Text="Power on this virtual machine" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0"/>
                     </Grid>
                 </HyperlinkButton>
-                <HyperlinkButton x:Name="EditVMSettings" Margin="20,40,0,0" VerticalAlignment="Top" Padding="5" Click="EditVMSettings_Click" Width="271">
+                <HyperlinkButton x:Name="EditVMSettings" Margin="20,40,0,0" VerticalAlignment="Top" Padding="5" Width="271">
                     <Grid Margin="-136,0,-135,0">
                         <FontIcon Glyph="&#xE15E;" FontSize="18" Margin="8,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <TextBlock Text="Edit virtual machine settings" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0"/>

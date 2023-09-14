@@ -157,8 +157,38 @@
     <Compile Include="PreferencesPages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PreferencesPages\LanguagePage.xaml.cs">
+      <DependentUpon>LanguagePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Something\EasterEgg.xaml.cs">
       <DependentUpon>EasterEgg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabPages\TestPage.xaml.cs">
+      <DependentUpon>TestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabPages\TestVMPage.xaml.cs">
+      <DependentUpon>TestVMPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMachineScreens\BIOSBoot.xaml.cs">
+      <DependentUpon>BIOSBoot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMachineScreens\BootScreen.xaml.cs">
+      <DependentUpon>BootScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMachineScreens\Desktop.xaml.cs">
+      <DependentUpon>Desktop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMachineScreens\LogonScreen.xaml.cs">
+      <DependentUpon>LogonScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMachineScreens\PrepatingLogonScreen.xaml.cs">
+      <DependentUpon>PrepatingLogonScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMachineScreens\Preparing.xaml.cs">
+      <DependentUpon>Preparing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMachineScreens\Starting.xaml.cs">
+      <DependentUpon>Starting.xaml</DependentUpon>
     </Compile>
     <Compile Include="VMSettingsPages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -375,7 +405,47 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PreferencesPages\LanguagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Something\EasterEgg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabPages\TestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabPages\TestVMPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualMachineScreens\BIOSBoot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualMachineScreens\BootScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualMachineScreens\Desktop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualMachineScreens\LogonScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualMachineScreens\PrepatingLogonScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualMachineScreens\Preparing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualMachineScreens\Starting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -531,6 +601,12 @@
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.5</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\ru-RU\Resources.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

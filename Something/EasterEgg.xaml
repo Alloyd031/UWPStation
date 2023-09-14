@@ -36,9 +36,8 @@
             </ResourceDictionary>
         </Grid.Resources>
         <Grid x:Name="TitlebarGrid" Height="32" VerticalAlignment="Top">
-            <TextBlock x:FieldModifier="public" x:Name="TitleText" Text="Easter Egg!" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <Button
-					x:Name="CloseButton"
+            <TextBlock x:Uid="EasterEggTitleString" x:FieldModifier="public" x:Name="TitleText" Text="Easter Egg!" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Button x:Uid="CloseButtonString" x:Name="CloseButton"
 					Width="46" Height="32"
                     CornerRadius="0"
 					AutomationProperties.Name="CloseButton"
@@ -77,35 +76,7 @@
         </Grid>
         <Image Source="ms-appx:///Something/CubeX.png" Margin="0,32,399,0"/>
         <Grid Margin="296,32,0,0">
-            <TextBlock x:FieldModifier="public" x:Name="Text1" Text="Hey, you found hidden CubeX! Congratulations!" Style="{StaticResource CaptionTextBlockStyle}" TextAlignment="Center" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,240,0,0"/>
-            <TextBlock x:FieldModifier="public" x:Name="Text2" Text="Say hi to him!" Style="{StaticResource CaptionTextBlockStyle}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,269,0,0"/>
-            <Button x:Name="SayHiButton" Content="Hi!" Width="80" Height="35" CornerRadius="0" BorderThickness="2,2,2,2" 
-                    VerticalAlignment="Top" Click="SayHiButton_Click" Margin="314,473,0,0" UseSystemFocusVisuals="False">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-            </Button>
+            <TextBlock x:Uid="CongratsTextString" x:Name="CongratsText" Text="Hey, you found hidden CubeX! Congratulations!" Style="{StaticResource CaptionTextBlockStyle}" TextAlignment="Center" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,237,0,0"/>
         </Grid>
     </Grid>
 </ContentDialog>

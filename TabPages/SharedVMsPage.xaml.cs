@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UWPStation.Wizards;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -21,9 +20,9 @@ namespace UWPStation.TabPages
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class TestVMPage : Page
+    public sealed partial class SharedVMsPage : Page
     {
-        public TestVMPage()
+        public SharedVMsPage()
         {
             this.InitializeComponent();
         }

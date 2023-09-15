@@ -28,7 +28,7 @@
             </ResourceDictionary>
         </Grid.Resources>
         <StackPanel x:Name="TitlebarLeftItems" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <Button x:Uid="MenuButton" x:Name="Menu"
+            <Button x:Uid="MenuButtonString" x:Name="MenuButton"
 			        Width="46" Height="32"
                     CornerRadius="0" UseSystemFocusVisuals="False"
 			        AutomationProperties.Name="Menu"
@@ -59,53 +59,47 @@
                 </Button.Resources>
                 <FontIcon Glyph="&#xE700;" FontSize="14" Margin="-23,-16,-23,-16"/>
                 <Button.Flyout>
-                    <Flyout Placement="BottomEdgeAlignedLeft">
-                        <Flyout.FlyoutPresenterStyle>
-                            <Style TargetType="FlyoutPresenter">
+                    <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                        <MenuFlyout.MenuFlyoutPresenterStyle>
+                            <Style TargetType="MenuFlyoutPresenter">
                                 <Setter Property="Padding" Value="0"/>
                                 <Setter Property="CornerRadius" Value="0"/>
                             </Style>
-                            </Flyout.FlyoutPresenterStyle>
-                        <Grid Width="200">
-                            <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalAlignment="Stretch" CornerRadius="0">
-                                <Button.Resources>
-                                    <ResourceDictionary>
-                                        <ResourceDictionary.ThemeDictionaries>
-                                            <ResourceDictionary x:Key="Dark">
-                                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
-                                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                                            </ResourceDictionary>
-                                            <ResourceDictionary x:Key="Light">
-                                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
-                                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
-                                            </ResourceDictionary>
-                                        </ResourceDictionary.ThemeDictionaries>
-                                    </ResourceDictionary>
-                                </Button.Resources>
-                                <Grid>
-                                    <FontIcon Glyph="&#xE18A;" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Test" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
-                                </Grid>
-                            </Button>
-                        </Grid>
-                    </Flyout>
+                        </MenuFlyout.MenuFlyoutPresenterStyle>
+                        <MenuFlyoutItem x:Uid="ChangelogItemString" x:Name="ChangelogItem" Text="Changelog" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalAlignment="Stretch" Click="ChangelogItem_Click" CornerRadius="0">
+                            <MenuFlyoutItem.Resources>
+                                <ResourceDictionary>
+                                    <ResourceDictionary.ThemeDictionaries>
+                                        <ResourceDictionary x:Key="Dark">
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
+                                        </ResourceDictionary>
+                                        <ResourceDictionary x:Key="Light">
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
+                                            <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
+                                        </ResourceDictionary>
+                                    </ResourceDictionary.ThemeDictionaries>
+                                </ResourceDictionary>
+                            </MenuFlyoutItem.Resources>
+                        </MenuFlyoutItem>
+                    </MenuFlyout>
                 </Button.Flyout>
             </Button>
         </StackPanel>
         <Grid x:Name="AppTitleBar" VerticalAlignment="Top"
               Height="32" Background="Transparent" Margin="46,0,0,0">
             <Image Source="ms-appx:///Assets/StoreLogo.png" Width="20" Height="20" Margin="10,6,0,6" HorizontalAlignment="Left"/>
-            <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40,0,0,0">
+            <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0">
                 <TextBlock.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -3120,6 +3114,39 @@
                     <TextBlock Text="UWPFamilyOS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
                 </Grid>
             </Button>
+            <Button x:Name="SharedVMs" Height="49" Width="200" Margin="0,169,0,0" CornerRadius="0" UseSystemFocusVisuals="False"
+                    VerticalAlignment="Top" HorizontalAlignment="Center" Click="SharedVMs_Click">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="#00CCC5"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#00D7CF"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#00D7CF"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="#00CCC5"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#00D7CF"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#00D7CF"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <Grid Margin="-100,-25,-100,-25">
+                    <FontIcon Glyph="&#xEDA3;" FontSize="15" Width="29" Margin="10,10,161,10"/>
+                    <TextBlock x:Uid="SharedVMsString" Text="Shared VMs" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
+                </Grid>
+            </Button>
         </Grid>
         <Grid x:Name="TabsGrid" Margin="202,72,0,32" BorderBrush="#646464" BorderThickness="1,1,1,1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.Resources>
@@ -3153,7 +3180,7 @@
                 </Grid.Resources>
                 <StackPanel x:Name="LeftItems" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Left">
                     <Button x:Name="HomeTab" Height="29" Width="175" CornerRadius="3,3,0,0" BorderThickness="1,1,1,0"
-                        Click="HomeTab_Click" Margin="2,2,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
+                            Click="HomeTab_Click" Margin="2,2,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                         <Button.Resources>
                             <ResourceDictionary>
                                 <ResourceDictionary.ThemeDictionaries>
@@ -3183,8 +3210,39 @@
                             <TextBlock x:Uid="HomeTabString" Text="Home" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
                         </Grid>
                     </Button>
+                    <Button x:Name="SharedVMsTab" Height="29" Width="175" CornerRadius="3,3,0,0" BorderThickness="1,1,1,0"
+                            Margin="2,2,0,0" VerticalAlignment="Top" Click="SharedVMsTab_Click" UseSystemFocusVisuals="False">
+                        <Button.Resources>
+                            <ResourceDictionary>
+                                <ResourceDictionary.ThemeDictionaries>
+                                    <ResourceDictionary x:Key="Dark">
+                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="#4B4B4B"/>
+                                        <SolidColorBrush x:Key="ButtonBackground" Color="#1E1E1E"/>
+                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#1E1E1E"/>
+                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#1E1E1E"/>
+                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4B4B4B"/>
+                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4B4B4B"/>
+                                    </ResourceDictionary>
+                                    <ResourceDictionary x:Key="Light">
+                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="#B3B3B3"/>
+                                        <SolidColorBrush x:Key="ButtonBackground" Color="White"/>
+                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="White"/>
+                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="White"/>
+                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#B3B3B3"/>
+                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B3B3B3"/>
+                                    </ResourceDictionary>
+                                </ResourceDictionary.ThemeDictionaries>
+                            </ResourceDictionary>
+                        </Button.Resources>
+                        <Grid Margin="-88,-15,-87,-14">
+                            <FontIcon Glyph="&#xEDA3;" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+                            <TextBlock x:Uid="SharedVMsString" Text="Shared VMs" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
+                        </Grid>
+                    </Button>
                     <Button x:Name="VMTab" Height="29" Width="175" CornerRadius="3,3,0,0" BorderThickness="1,1,1,0" UseSystemFocusVisuals="False"
-                        Click="VMTab_Click" Margin="2,2,0,0" RightTapped="VMTab_RightTapped" VerticalAlignment="Top">
+                            Click="VMTab_Click" Margin="2,2,0,0" RightTapped="VMTab_RightTapped" VerticalAlignment="Top">
                         <Button.Resources>
                             <ResourceDictionary>
                                 <ResourceDictionary.ThemeDictionaries>
@@ -4202,37 +4260,6 @@
                                 </MenuFlyoutItem>
                             </MenuFlyout>
                         </FlyoutBase.AttachedFlyout>
-                    </Button>
-                    <Button x:Name="TestVMTab" Height="29" Width="175" CornerRadius="3,3,0,0" BorderThickness="1,1,1,0"
-                            Click="TestVMTab_Click" Margin="2,2,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
-                        <Button.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Dark">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="#4B4B4B"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="#1E1E1E"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#1E1E1E"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#1E1E1E"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4B4B4B"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4B4B4B"/>
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="#B3B3B3"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#B3B3B3"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B3B3B3"/>
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Button.Resources>
-                        <Grid Margin="-88,-15,-87,-14">
-                            <FontIcon Glyph="&#xE7C4;" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                            <TextBlock Text="Test VM" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
-                        </Grid>
                     </Button>
                 </StackPanel>
                 <StackPanel x:Name="RightItems" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Right">

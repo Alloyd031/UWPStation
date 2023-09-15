@@ -133,6 +133,9 @@
     <Compile Include="ChangeHardwareCompatibilityPages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Changelog.xaml.cs">
+      <DependentUpon>Changelog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\ConnectToRemoteServer.xaml.cs">
       <DependentUpon>ConnectToRemoteServer.xaml</DependentUpon>
     </Compile>
@@ -163,11 +166,11 @@
     <Compile Include="Something\EasterEgg.xaml.cs">
       <DependentUpon>EasterEgg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TabPages\SharedVMsPage.xaml.cs">
+      <DependentUpon>SharedVMsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TabPages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TabPages\TestVMPage.xaml.cs">
-      <DependentUpon>TestVMPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="VirtualMachineScreens\BIOSBoot.xaml.cs">
       <DependentUpon>BIOSBoot.xaml</DependentUpon>
@@ -351,6 +354,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Changelog.txt" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -370,6 +374,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChangeHardwareCompatibilityPages\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Changelog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -413,11 +421,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TabPages\TestPage.xaml">
+    <Page Include="TabPages\SharedVMsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TabPages\TestVMPage.xaml">
+    <Page Include="TabPages\TestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -600,6 +608,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.5</Version>
+    </PackageReference>
+    <PackageReference Include="runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk">
+      <Version>2.2.14</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

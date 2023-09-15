@@ -2,4 +2,4 @@
 Initial release
 
 0.2 Preview
-Attempt at implementing Windows 10's UI in the app.
+Attempt at implementing Windows 10's UI in the app

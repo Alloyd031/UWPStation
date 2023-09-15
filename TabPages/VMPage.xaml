@@ -104,8 +104,9 @@
                     </Grid>
                 </muxc:Expander>
                 <Border BorderThickness="0,0,0,1" BorderBrush="#5D5D5D"/>
-                <muxc:Expander Header="Description" Background="Transparent" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" IsExpanded="True" Padding="0" CornerRadius="0" VerticalAlignment="Stretch">
-                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <muxc:Expander Header="Description" Background="Transparent" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
+                               HorizontalAlignment="Stretch" IsExpanded="True" Padding="0" CornerRadius="0" VerticalAlignment="Stretch">
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="280">
                         <RichEditBox CornerRadius="0"/>
                     </Grid>
                 </muxc:Expander>

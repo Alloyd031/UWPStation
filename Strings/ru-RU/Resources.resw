@@ -123,6 +123,12 @@
   <data name="BackButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Назад</value>
   </data>
+  <data name="ChangelogItemString.Text" xml:space="preserve">
+    <value>Список изменений</value>
+  </data>
+  <data name="ChangelogTitleString.Text" xml:space="preserve">
+    <value>Список изменений</value>
+  </data>
   <data name="CheckTheseAppsString.Text" xml:space="preserve">
     <value>Проверьте эти приложения!</value>
   </data>
@@ -183,6 +189,9 @@
   <data name="MadeByString.Text" xml:space="preserve">
     <value>Создано:</value>
   </data>
+  <data name="MenuButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Меню</value>
+  </data>
   <data name="MoreAppsString.Content" xml:space="preserve">
     <value>Больше приложений!</value>
   </data>
@@ -209,6 +218,15 @@
   </data>
   <data name="SearchString.PlaceholderText" xml:space="preserve">
     <value>Введите искомый текст</value>
+  </data>
+  <data name="SharedVMsPageString.Text" xml:space="preserve">
+    <value>Общие ВМ</value>
+  </data>
+  <data name="SharedVMsString.Text" xml:space="preserve">
+    <value>Общие ВМ</value>
+  </data>
+  <data name="SharedVMsTabString.Text" xml:space="preserve">
+    <value>Общие ВМ</value>
   </data>
   <data name="TabsMenuString.Content" xml:space="preserve">
     <value>Вкладки</value>

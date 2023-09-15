@@ -180,9 +180,9 @@ namespace UWPStation
         {
             this.TabsFrame.Navigate(typeof(VMPage));
         }
-        private void TestVMTab_Click(object sender, RoutedEventArgs e)
+        private void SharedVMsTab_Click(object sender, RoutedEventArgs e)
         {
-            this.TabsFrame.Navigate(typeof(TestVMPage));
+            this.TabsFrame.Navigate(typeof(SharedVMsPage));
         }
         private void TestTab_Click(object sender, RoutedEventArgs e)
         {
@@ -224,6 +224,10 @@ namespace UWPStation
         private void UWPFamilyOS_Click(object sender, RoutedEventArgs e)
         {
             this.TabsFrame.Navigate(typeof(VMPage));
+        }
+        private void SharedVMs_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(SharedVMsPage));
         }
         private async void VMSettings_Click(object sender, RoutedEventArgs e)
         {
@@ -514,6 +518,11 @@ namespace UWPStation
         private async void ClearMessages_Click(object sender, RoutedEventArgs e)
         {
             NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void ChangelogItem_Click(object sender, RoutedEventArgs e)
+        {
+            Changelog dialog = new Changelog();
             await dialog.ShowAsync();
         }
     }

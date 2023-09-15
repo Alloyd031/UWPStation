@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutItemString.Text" xml:space="preserve">
+    <value>О программе UWPStation</value>
+  </data>
   <data name="AboutTitleString.Text" xml:space="preserve">
     <value>О программе UWPStation</value>
+  </data>
+  <data name="AppLanguageString.Header" xml:space="preserve">
+    <value>Язык приложения</value>
   </data>
   <data name="BackButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Назад</value>
@@ -141,6 +147,9 @@
   <data name="ConnectToServerString.Text" xml:space="preserve">
     <value>Подключиться к удалённому серверу</value>
   </data>
+  <data name="ConnectToUWPFamilyvCloudAirString.Text" xml:space="preserve">
+    <value>Подключение к UWPFamily vCloud Air</value>
+  </data>
   <data name="CreateVMString.Text" xml:space="preserve">
     <value>Создать новую виртуальную машину</value>
   </data>
@@ -156,11 +165,20 @@
   <data name="EditMenuString.Content" xml:space="preserve">
     <value>Правка</value>
   </data>
+  <data name="EnglishLanguageString.Content" xml:space="preserve">
+    <value>Английский</value>
+  </data>
+  <data name="FeedbackPreferenceString.Text" xml:space="preserve">
+    <value>Обратная связь</value>
+  </data>
   <data name="FeedbackString.Text" xml:space="preserve">
     <value>Обратная связь</value>
   </data>
   <data name="FileMenuString.Content" xml:space="preserve">
     <value>Файл</value>
+  </data>
+  <data name="HelpButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Помощь</value>
   </data>
   <data name="HelpMenuString.Content" xml:space="preserve">
     <value>Справка</value>
@@ -180,6 +198,9 @@
   <data name="ImportantTitleString.Text" xml:space="preserve">
     <value>Важно!</value>
   </data>
+  <data name="LanguagePreferenceString.Text" xml:space="preserve">
+    <value>Язык</value>
+  </data>
   <data name="LanguageString.Text" xml:space="preserve">
     <value>Язык</value>
   </data>
@@ -198,8 +219,20 @@
   <data name="MoreAppsTitleString.Text" xml:space="preserve">
     <value>Больше приложений!</value>
   </data>
+  <data name="MyComputerPageString.Text" xml:space="preserve">
+    <value>Мой компьютер</value>
+  </data>
   <data name="MyComputerString.Text" xml:space="preserve">
     <value>Мой компьютер</value>
+  </data>
+  <data name="MyComputerTabString.Text" xml:space="preserve">
+    <value>Мой компьютер</value>
+  </data>
+  <data name="NotAvailableString.Text" xml:space="preserve">
+    <value>Эта возможность недоступна</value>
+  </data>
+  <data name="NotAvailableTitleString.Text" xml:space="preserve">
+    <value>Ошибка</value>
   </data>
   <data name="OKString.Content" xml:space="preserve">
     <value>ОК</value>
@@ -213,8 +246,20 @@
   <data name="PartOfAppsString.Text" xml:space="preserve">
     <value>Это приложение является частью приложений UWPFamily</value>
   </data>
+  <data name="PreferencesItemString.Text" xml:space="preserve">
+    <value>Настройки...</value>
+  </data>
+  <data name="PreferencesPageString.Text" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="PreferencesTitleString.Text" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
   <data name="ProductInfoString.Text" xml:space="preserve">
     <value>Информация о продукте:</value>
+  </data>
+  <data name="RussianLanguageString.Content" xml:space="preserve">
+    <value>Русский</value>
   </data>
   <data name="SearchString.PlaceholderText" xml:space="preserve">
     <value>Введите искомый текст</value>

@@ -23,9 +23,9 @@
                 </ResourceDictionary.ThemeDictionaries>
             </ResourceDictionary>
         </Grid.Resources>
-        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Left" Padding="15,0,0,10">
-            <FontIcon Glyph="&#xEBDA;" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBlock FontWeight="Bold" FontSize="20" Text="UWPFamily" Margin="10,0,0,0"/>
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Left" Padding="20,0,0,15">
+            <FontIcon Glyph="&#xEBDA;" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock FontWeight="Bold" FontSize="30" Text="UWPFamily" Margin="10,0,0,0"/>
         </StackPanel>
         <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
             <FontIcon Glyph="&#xE977;" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Center" Height="72" Width="72"/>
@@ -125,6 +125,38 @@
                     <Grid Margin="-75,-75,-75,-75">
                         <FontIcon Glyph="&#xE13C;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <TextBlock x:Uid="ConnectToServerString" Text="Connect to a Remote Server" TextAlignment="Center" TextWrapping="Wrap" Margin="0,75,0,0" Height="38" VerticalAlignment="Top" Width="140"/>
+                    </Grid>
+                </Button>
+            </Grid>
+            <Grid x:Name="ConnectToUWPFamilyvCloudAirGrid" Padding="5,0,5,0">
+                <Button Width="150" Height="150" UseSystemFocusVisuals="False" BorderThickness="3,3,3,3" Click="ConnectToUWPFamilyvCloudAir_Click" VerticalAlignment="Top" HorizontalAlignment="Center" CornerRadius="4">
+                    <Button.Resources>
+                        <ResourceDictionary>
+                            <ResourceDictionary.ThemeDictionaries>
+                                <ResourceDictionary x:Key="Dark">
+                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="#282828"/>
+                                    <SolidColorBrush x:Key="ButtonBackground" Color="#282828"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#282828"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#282828"/>
+                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#724A96"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#232323"/>
+                                </ResourceDictionary>
+                                <ResourceDictionary x:Key="Light">
+                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="#D7D7D7"/>
+                                    <SolidColorBrush x:Key="ButtonBackground" Color="#D7D7D7"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#D7D7D7"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#D7D7D7"/>
+                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#724A96"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#6A6A6A"/>
+                                </ResourceDictionary>
+                            </ResourceDictionary.ThemeDictionaries>
+                        </ResourceDictionary>
+                    </Button.Resources>
+                    <Grid Margin="-75,-75,-75,-75">
+                        <FontIcon Glyph="&#xE753;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Uid="ConnectToUWPFamilyvCloudAirString" Text="Connect to UWPFamily vCloud Air" TextAlignment="Center" TextWrapping="Wrap" Margin="0,75,0,0" Height="38" VerticalAlignment="Top" Width="140"/>
                     </Grid>
                 </Button>
             </Grid>

@@ -166,6 +166,9 @@
     <Compile Include="Something\EasterEgg.xaml.cs">
       <DependentUpon>EasterEgg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TabPages\MyComputerPage.xaml.cs">
+      <DependentUpon>MyComputerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TabPages\SharedVMsPage.xaml.cs">
       <DependentUpon>SharedVMsPage.xaml</DependentUpon>
     </Compile>
@@ -421,6 +424,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TabPages\MyComputerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TabPages\SharedVMsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -608,9 +615,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.5</Version>
-    </PackageReference>
-    <PackageReference Include="runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk">
-      <Version>2.2.14</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

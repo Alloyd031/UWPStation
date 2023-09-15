@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutItemString.Text" xml:space="preserve">
+    <value>About UWPStation</value>
+  </data>
   <data name="AboutTitleString.Text" xml:space="preserve">
     <value>About UWPStation</value>
+  </data>
+  <data name="AppLanguageString.Header" xml:space="preserve">
+    <value>App language</value>
   </data>
   <data name="BackButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Back</value>
@@ -141,6 +147,9 @@
   <data name="ConnectToServerString.Text" xml:space="preserve">
     <value>Connect to Remote Server</value>
   </data>
+  <data name="ConnectToUWPFamilyvCloudAirString.Text" xml:space="preserve">
+    <value>Connect to UWPFamily vCloud Air</value>
+  </data>
   <data name="CreateVMString.Text" xml:space="preserve">
     <value>Create a New Virtual Machine</value>
   </data>
@@ -156,11 +165,20 @@
   <data name="EditMenuString.Content" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="EnglishLanguageString.Content" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="FeedbackPreferenceString.Text" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
   <data name="FeedbackString.Text" xml:space="preserve">
     <value>Feedback</value>
   </data>
   <data name="FileMenuString.Content" xml:space="preserve">
     <value>File</value>
+  </data>
+  <data name="HelpButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Help</value>
   </data>
   <data name="HelpMenuString.Content" xml:space="preserve">
     <value>Help</value>
@@ -180,6 +198,9 @@
   <data name="ImportantTitleString.Text" xml:space="preserve">
     <value>Important!</value>
   </data>
+  <data name="LanguagePreferenceString.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
   <data name="LanguageString.Text" xml:space="preserve">
     <value>Language</value>
   </data>
@@ -198,8 +219,20 @@
   <data name="MoreAppsTitleString.Text" xml:space="preserve">
     <value>More Apps!</value>
   </data>
+  <data name="MyComputerPageString.Text" xml:space="preserve">
+    <value>My Computer</value>
+  </data>
   <data name="MyComputerString.Text" xml:space="preserve">
     <value>My Computer</value>
+  </data>
+  <data name="MyComputerTabString.Text" xml:space="preserve">
+    <value>My Computer</value>
+  </data>
+  <data name="NotAvailableString.Text" xml:space="preserve">
+    <value>This feature is not available</value>
+  </data>
+  <data name="NotAvailableTitleString.Text" xml:space="preserve">
+    <value>Error</value>
   </data>
   <data name="OKString.Content" xml:space="preserve">
     <value>OK</value>
@@ -213,8 +246,20 @@
   <data name="PartOfAppsString.Text" xml:space="preserve">
     <value>This app is a part of UWPFamily apps</value>
   </data>
+  <data name="PreferencesItemString.Text" xml:space="preserve">
+    <value>Preferences...</value>
+  </data>
+  <data name="PreferencesPageString.Text" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="PreferencesTitleString.Text" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
   <data name="ProductInfoString.Text" xml:space="preserve">
     <value>Product Information:</value>
+  </data>
+  <data name="RussianLanguageString.Content" xml:space="preserve">
+    <value>Russian</value>
   </data>
   <data name="SearchString.PlaceholderText" xml:space="preserve">
     <value>Type here to search</value>

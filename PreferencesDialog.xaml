@@ -38,7 +38,7 @@
             </ResourceDictionary>
         </Grid.Resources>
         <Grid x:Name="TitlebarGrid" Height="32" VerticalAlignment="Top">
-            <Button x:Name="BackButton"
+            <Button x:Uid="BackButtonString" x:Name="BackButton"
 		         	Width="46" Height="32"
                     CornerRadius="0"
 					AutomationProperties.Name="Back"
@@ -79,8 +79,8 @@
                 </Button.Resources>
                 <FontIcon Glyph="&#xE112;" FontSize="12" Margin="-23,-16,-23,-16"/>
             </Button>
-            <TextBlock x:FieldModifier="public" x:Name="TitleText" Text="Preferences" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="56,0,0,0"/>
-            <Button x:Name="HelpButton"
+            <TextBlock x:Uid="PreferencesTitleString" x:FieldModifier="public" x:Name="TitleText" Text="Preferences" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="56,0,0,0"/>
+            <Button x:Uid="HelpButtonString" x:Name="HelpButton"
 					Width="46" Height="32"
                     CornerRadius="0" UseSystemFocusVisuals="False"
 					AutomationProperties.Name="Help"
@@ -119,7 +119,7 @@
                 </Button.Resources>
                 <FontIcon Glyph="&#xE11B;" FontSize="12" Margin="-23,-16,-23,-16"/>
             </Button>
-            <Button	x:Name="CloseButton"
+            <Button	x:Name="CloseButton" x:Uid="CloseButtonString"
 					Width="46" Height="32"
                     CornerRadius="0"
 					AutomationProperties.Name="CloseButton"

@@ -15,13 +15,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using UWPStation.Wizards;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace UWPStation.TabPages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class HomePage : Page
     {
         public HomePage()
@@ -39,6 +34,11 @@ namespace UWPStation.TabPages
             await dialog.ShowAsync();
         }
         private async void OpenVM_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
+        private async void ConnectToUWPFamilyvCloudAir_Click(object sender, RoutedEventArgs e)
         {
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();

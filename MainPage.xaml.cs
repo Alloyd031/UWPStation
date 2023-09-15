@@ -172,6 +172,10 @@ namespace UWPStation
             ConnectToRemoteServer dialog = new ConnectToRemoteServer();
             await dialog.ShowAsync();
         }
+        private void MyComputerTab_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(MyComputerPage));
+        }
         private void HomeTab_Click(object sender, RoutedEventArgs e)
         {
             this.TabsFrame.Navigate(typeof(HomePage));
@@ -216,6 +220,10 @@ namespace UWPStation
         private void FolderViewOptions_Click(object sender, RoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        }
+        private void MyComputer_Click(object sender, RoutedEventArgs e)
+        {
+            this.TabsFrame.Navigate(typeof(MyComputerPage));
         }
         private void GoToHome_Click(object sender, RoutedEventArgs e)
         {

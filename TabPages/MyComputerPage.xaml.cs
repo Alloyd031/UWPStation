@@ -13,11 +13,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace UWPStation.PreferencesPages
+namespace UWPStation.TabPages
 {
-    public sealed partial class UpdatesPage : Page
+    public sealed partial class MyComputerPage : Page
     {
-        public UpdatesPage()
+        public MyComputerPage()
         {
             this.InitializeComponent();
         }

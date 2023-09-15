@@ -14,13 +14,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace UWPStation.VirtualMachineScreens
 {
-    /// <summary>
-    /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
-    /// </summary>
     public sealed partial class BIOSBoot : Page
     {
         public BIOSBoot()
@@ -29,11 +24,14 @@ namespace UWPStation.VirtualMachineScreens
         }
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            await Task.Delay(1000);
+            BootLogo.Visibility = Visibility.Collapsed;
+
+            await Task.Delay(800);
             if (this.BootLogo  != null)
             {
                 BootLogo.Visibility = Visibility.Visible;
             }
+            await Task.Delay(2000);
             this.BootProgress.Value = 50;
 
             await Task.Delay(2000);

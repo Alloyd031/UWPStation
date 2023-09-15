@@ -17,9 +17,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace UWPStation.NewVMWizardPages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class Installation : Page
     {
         public Installation()
@@ -32,10 +29,6 @@ namespace UWPStation.NewVMWizardPages
             {
                 this.Frame.Navigate(typeof(OperatingSystem));
             }
-        }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.GoBack();
         }
     }
 }

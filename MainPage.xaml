@@ -99,7 +99,7 @@
         <Grid x:Name="AppTitleBar" VerticalAlignment="Top"
               Height="32" Background="Transparent" Margin="46,0,0,0">
             <Image Source="ms-appx:///Assets/StoreLogo.png" Width="20" Height="20" Margin="10,6,0,6" HorizontalAlignment="Left"/>
-            <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0">
+            <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="48,0,0,0">
                 <TextBlock.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -606,7 +606,7 @@
                                     </ResourceDictionary>
                                 </MenuFlyoutItem.Resources>
                             </MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Preferences..." Click="Preferences_Click" CornerRadius="0" UseSystemFocusVisuals="False">
+                            <MenuFlyoutItem x:Uid="PreferencesItemString" Text="Preferences..." Click="Preferences_Click" CornerRadius="0" UseSystemFocusVisuals="False">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -2349,7 +2349,7 @@
                                 </MenuFlyoutItem.Resources>
                             </MenuFlyoutItem>
                             <MenuFlyoutSeparator/>
-                            <MenuFlyoutItem Text="About UWPStation" Click="About_Click" CornerRadius="0" UseSystemFocusVisuals="False">
+                            <MenuFlyoutItem x:Uid="AboutItemString" Text="About UWPStation" Click="About_Click" CornerRadius="0" UseSystemFocusVisuals="False">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -3006,35 +3006,37 @@
                     </ResourceDictionary.ThemeDictionaries>
                 </ResourceDictionary>
             </Grid.Resources>
-            <TextBlock x:Uid="LibraryString" Style="{StaticResource CaptionTextBlockStyle}" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Library" TextAlignment="Center" Margin="6,4,0,0"/>
-            <Button x:Uid="HideLibraryString" Margin="175,3,0,0" VerticalAlignment="Top" Height="20" Width="20" ToolTipService.ToolTip="Hide Library"
-                    Click="HideLibrary_Click" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#253F3E"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#215452"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#215452"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#197F7B"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CDE8E8"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B6EAEA"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#89EFED"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B6EAEA"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-                <FontIcon Glyph="&#xE8BB;" FontSize="10" Margin="-13,-10,-7,-10"/>
-            </Button>
+            <Grid Height="42" VerticalAlignment="Top" Margin="1,1,1,0">
+                <TextBlock x:Uid="LibraryString" Style="{StaticResource CaptionTextBlockStyle}" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Library" TextAlignment="Center" Margin="8,0,0,0"/>
+                <Button x:Uid="HideLibraryString" Margin="162,0,0,0" Height="29" Width="29" ToolTipService.ToolTip="Hide Library"
+                        Click="HideLibrary_Click" CornerRadius="0" BorderThickness="2" VerticalAlignment="Center" UseSystemFocusVisuals="False">
+                    <Button.Resources>
+                        <ResourceDictionary>
+                            <ResourceDictionary.ThemeDictionaries>
+                                <ResourceDictionary x:Key="Dark">
+                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#253F3E"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#215452"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#215452"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#197F7B"/>
+                                </ResourceDictionary>
+                                <ResourceDictionary x:Key="Light">
+                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CDE8E8"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B6EAEA"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#89EFED"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B6EAEA"/>
+                                </ResourceDictionary>
+                            </ResourceDictionary.ThemeDictionaries>
+                        </ResourceDictionary>
+                    </Button.Resources>
+                    <FontIcon Glyph="&#xE8BB;" FontSize="12" Margin="-15,-14,-14,-15"/>
+                </Button>
+            </Grid>
             <AutoSuggestBox x:Uid="SearchString" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search"
-                            CornerRadius="0" Margin="8,29,4,0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
+                            CornerRadius="0" Margin="2,42,2,0" BorderThickness="2" UseSystemFocusVisuals="False">
                 <AutoSuggestBox.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -3048,8 +3050,8 @@
                     </ResourceDictionary>
                 </AutoSuggestBox.Resources>
             </AutoSuggestBox>
-            <Button x:Name="MyComputer" Height="49" Width="200" Margin="0,69,0,0" CornerRadius="0"
-                    VerticalAlignment="Top" UseSystemFocusVisuals="False">
+            <Button x:Name="MyComputer" Height="49" Width="200" Margin="0,82,0,0" CornerRadius="0"
+                    VerticalAlignment="Top" UseSystemFocusVisuals="False" Click="MyComputer_Click" HorizontalAlignment="Center">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -3081,7 +3083,7 @@
                     <TextBlock x:Uid="MyComputerString" Text="My Computer" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="UWPFamilyOS" Height="49" Width="200" Margin="0,119,0,0" CornerRadius="0" UseSystemFocusVisuals="False"
+            <Button x:Name="UWPFamilyOS" Height="49" Width="200" Margin="0,132,0,0" CornerRadius="0" UseSystemFocusVisuals="False"
                     VerticalAlignment="Top" HorizontalAlignment="Center" Click="UWPFamilyOS_Click">
                 <Button.Resources>
                     <ResourceDictionary>
@@ -3114,7 +3116,7 @@
                     <TextBlock Text="UWPFamilyOS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="44,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="SharedVMs" Height="49" Width="200" Margin="0,169,0,0" CornerRadius="0" UseSystemFocusVisuals="False"
+            <Button x:Name="SharedVMs" Height="49" Width="200" Margin="0,182,0,0" CornerRadius="0" UseSystemFocusVisuals="False"
                     VerticalAlignment="Top" HorizontalAlignment="Center" Click="SharedVMs_Click">
                 <Button.Resources>
                     <ResourceDictionary>
@@ -3179,6 +3181,37 @@
                     </ResourceDictionary>
                 </Grid.Resources>
                 <StackPanel x:Name="LeftItems" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+                    <Button x:Name="MyComputerTab" Height="29" Width="175" CornerRadius="3,3,0,0" BorderThickness="1,1,1,0"
+                            Click="MyComputerTab_Click" Margin="2,2,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
+                        <Button.Resources>
+                            <ResourceDictionary>
+                                <ResourceDictionary.ThemeDictionaries>
+                                    <ResourceDictionary x:Key="Dark">
+                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="#4B4B4B"/>
+                                        <SolidColorBrush x:Key="ButtonBackground" Color="#1E1E1E"/>
+                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#1E1E1E"/>
+                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#1E1E1E"/>
+                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4B4B4B"/>
+                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4B4B4B"/>
+                                    </ResourceDictionary>
+                                    <ResourceDictionary x:Key="Light">
+                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="#B3B3B3"/>
+                                        <SolidColorBrush x:Key="ButtonBackground" Color="White"/>
+                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="White"/>
+                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="White"/>
+                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#B3B3B3"/>
+                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B3B3B3"/>
+                                    </ResourceDictionary>
+                                </ResourceDictionary.ThemeDictionaries>
+                            </ResourceDictionary>
+                        </Button.Resources>
+                        <Grid Margin="-88,-15,-87,-14">
+                            <FontIcon Glyph="&#xEC4E;" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+                            <TextBlock x:Uid="MyComputerTabString" Text="My Computer" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="34,0,0,0"/>
+                        </Grid>
+                    </Button>
                     <Button x:Name="HomeTab" Height="29" Width="175" CornerRadius="3,3,0,0" BorderThickness="1,1,1,0"
                             Click="HomeTab_Click" Margin="2,2,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
                         <Button.Resources>

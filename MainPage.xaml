@@ -4442,8 +4442,14 @@
                     </Button.Resources>
                     <FlyoutBase.AttachedFlyout>
                         <MenuFlyout Placement="BottomEdgeAlignedRight">
-                            <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines"/>
-                            <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True"/>
+                            <MenuFlyout.MenuFlyoutPresenterStyle>
+                                <Style TargetType="MenuFlyoutPresenter">
+                                    <Setter Property="Padding" Value="0"/>
+                                    <Setter Property="CornerRadius" Value="0"/>
+                                </Style>
+                            </MenuFlyout.MenuFlyoutPresenterStyle>
+                            <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines" CornerRadius="0" UseSystemFocusVisuals="False"/>
+                            <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True" CornerRadius="0" UseSystemFocusVisuals="False"/>
                         </MenuFlyout>
                     </FlyoutBase.AttachedFlyout>
                 </Button>

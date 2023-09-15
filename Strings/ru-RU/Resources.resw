@@ -288,6 +288,9 @@
   <data name="ViewMenuString.Content" xml:space="preserve">
     <value>Вид</value>
   </data>
+  <data name="VirtualizePhysicalMachineItemString.Text" xml:space="preserve">
+    <value>Виртуализация физической машины...</value>
+  </data>
   <data name="VMMenuString.Content" xml:space="preserve">
     <value>Виртуальная машина</value>
   </data>

@@ -288,6 +288,9 @@
   <data name="ViewMenuString.Content" xml:space="preserve">
     <value>View</value>
   </data>
+  <data name="VirtualizePhysicalMachineItemString.Text" xml:space="preserve">
+    <value>Virtualize a Physical Machine...</value>
+  </data>
   <data name="VMMenuString.Content" xml:space="preserve">
     <value>VM</value>
   </data>

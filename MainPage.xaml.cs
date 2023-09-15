@@ -167,6 +167,11 @@ namespace UWPStation
             ConnectToRemoteServer dialog = new ConnectToRemoteServer();
             await dialog.ShowAsync();
         }
+        private async void VirtualizePhysicalMachine_Click(object sender, RoutedEventArgs e)
+        {
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
+        }
         private async void ConnectToRemoteServer_Click(object sender, RoutedEventArgs e)
         {
             ConnectToRemoteServer dialog = new ConnectToRemoteServer();

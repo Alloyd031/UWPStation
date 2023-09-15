@@ -386,6 +386,32 @@
                                 </MenuFlyoutItem.Resources>
                             </MenuFlyoutItem>
                             <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem x:Uid="VirtualizePhysicalMachineItemString" Text="Virtualize a Physical Machine..." Click="VirtualizePhysicalMachine_Click"  CornerRadius="0" UseSystemFocusVisuals="False">
+                                <MenuFlyoutItem.Resources>
+                                    <ResourceDictionary>
+                                        <ResourceDictionary.ThemeDictionaries>
+                                            <ResourceDictionary x:Key="Dark">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#4C4C4C"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="White"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#353535"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#4C4C4C"/>
+                                            </ResourceDictionary>
+                                            <ResourceDictionary x:Key="Light">
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrush" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackground" Color="Transparent"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPressed" Color="#B8B8B8"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemForegroundPressed" Color="Black"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPointerOver" Color="#CFCFCF"/>
+                                                <SolidColorBrush x:Key="MenuFlyoutItemBorderBrushPressed" Color="#B8B8B8"/>
+                                            </ResourceDictionary>
+                                        </ResourceDictionary.ThemeDictionaries>
+                                    </ResourceDictionary>
+                                </MenuFlyoutItem.Resources>
+                            </MenuFlyoutItem>
                             <MenuFlyoutItem Text="Connect to Server..." Click="ConnectToRemoteServer_Click" CornerRadius="0" UseSystemFocusVisuals="False">
                                 <MenuFlyoutItem.Resources>
                                     <ResourceDictionary>

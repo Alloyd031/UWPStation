@@ -340,7 +340,7 @@
                     </ResourceDictionary>
                 </Button.Resources>
             </Button>
-            <Button VerticalAlignment="Top" Content="Add..." Width="80" Height="35" Margin="145,673,0,0"
+            <Button VerticalAlignment="Bottom" Content="Add..." Width="80" Height="35" Margin="145,0,0,10"
                     CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
                 <Button.Resources>
                     <ResourceDictionary>

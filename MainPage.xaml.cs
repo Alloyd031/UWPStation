@@ -26,6 +26,7 @@ using System.Threading.Tasks;
 using Windows.UI.Core;
 using UWPStation.TabPages;
 using UWPStation.Something;
+using Windows.UI.WindowManagement;
 
 namespace UWPStation
 {
@@ -37,6 +38,23 @@ namespace UWPStation
             Window.Current.SetTitleBar(AppTitleBar);
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
+            titleBar.ButtonBackgroundColor = Colors.Transparent;
+            titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+        }
+        public SolidColorBrush GetSolidColorBrush(string hex)
+        {
+            hex = hex.Replace("#", string.Empty);
+            byte a = (byte)(Convert.ToUInt32(hex.Substring(0, 2), 16));
+            byte r = (byte)(Convert.ToUInt32(hex.Substring(2, 2), 16));
+            byte g = (byte)(Convert.ToUInt32(hex.Substring(4, 2), 16));
+            byte b = (byte)(Convert.ToUInt32(hex.Substring(6, 2), 16));
+            SolidColorBrush myBrush = new SolidColorBrush(Windows.UI.Color.FromArgb(a, r, g, b));
+            return myBrush;
+        }
+        private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
+        {
+            var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+            RightPaddingColumn.Width = new GridLength(coreTitleBar.SystemOverlayRightInset);
         }
         private async Task<bool> OpenPageAsWindowAsync(Type t)
         {
@@ -102,7 +120,7 @@ namespace UWPStation
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             this.LibraryPanel.Visibility = Visibility.Collapsed;
-            this.TabsGrid.Margin = new Thickness (0, 72, 0, 0);
+            this.TabsGrid.Margin = new Thickness (0, 88, 0, 0);
         }
         private void ShowHideLibrary_Click(object sender, RoutedEventArgs e)
         {
@@ -110,12 +128,12 @@ namespace UWPStation
             if (this.LibraryPanel.Visibility == Visibility.Visible)
             {
                 this.LibraryPanel.Visibility = Visibility.Collapsed;
-                this.TabsGrid.Margin = new Thickness(0, 72, 0, 32);
+                this.TabsGrid.Margin = new Thickness(0, 88, 0, 32);
             }
             else
             {
                 this.LibraryPanel.Visibility = Visibility.Visible;
-                this.TabsGrid.Margin = new Thickness(200, 72, 0, 32);
+                this.TabsGrid.Margin = new Thickness(200, 88, 0, 32);
             }
         }
         private async void CreateVM_Click(object sender, RoutedEventArgs e)

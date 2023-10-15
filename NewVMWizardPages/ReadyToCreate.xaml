@@ -21,7 +21,7 @@
             <TextBlock Text="Creating VMs is not possible at this time" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
         </Grid>
         <Button x:Name="FinishButton" Width="70" Height="35" Margin="400,473,0,0" Content="Finish"
-                VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False">
+                VerticalAlignment="Top" CornerRadius="0" BorderThickness="2,2,2,2" UseSystemFocusVisuals="False" Click="FinishButton_Click">
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>

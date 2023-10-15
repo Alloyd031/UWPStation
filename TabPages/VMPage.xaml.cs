@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using UWPStation.VirtualMachineScreens;
+using UWPStation.Dialogs;
 
 namespace UWPStation
 {
@@ -35,9 +35,10 @@ namespace UWPStation
             VMSettings dialog = new VMSettings();
             await dialog.ShowAsync();
         }
-        private void StartVM_Click(object sender, RoutedEventArgs e)
+        private async void StartVM_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Starting));
+            NotAvailableDialog dialog = new NotAvailableDialog();
+            await dialog.ShowAsync();
         }
     }
 }

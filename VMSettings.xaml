@@ -9,7 +9,6 @@
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
     Loaded="ContentDialog_Loaded"
-    Style="{StaticResource DefaultContentDialogStyle}"
     CornerRadius="8">
 
     <ContentDialog.Resources>
@@ -19,116 +18,39 @@
         </ResourceDictionary>
     </ContentDialog.Resources>
     <Grid x:Name="ContainerGrid"
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
 		  Width="800"
 		  Height="760"
 		  HorizontalAlignment="Stretch"
 		  VerticalAlignment="Stretch">
-        <Grid x:Name="TitlebarGrid" Height="48" VerticalAlignment="Top">
-            <Button	x:Name="BackButton" Background="Transparent"
-					Width="40" Height="40" BorderBrush="Transparent"
-                    CornerRadius="3" Margin="4,0,0,0"
-					AutomationProperties.Name="Back"
-                    IsEnabled="{x:Bind ContentFrame.CanGoBack, Mode=OneWay}"
-					Click="BackButton_Click" UseSystemFocusVisuals="False" VerticalContentAlignment="Stretch"
-					ToolTipService.ToolTip="Back" HorizontalContentAlignment="Stretch">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Dark">
+                        <Color x:Key="SystemAltHighColor">#1D1D1D</Color>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                     </ResourceDictionary>
-                </Button.Resources>
-                <muxc:AnimatedIcon x:Name="BackAnimatedIcon">
-                    <muxc:AnimatedIcon.Source>
-                        <animatedvisuals:AnimatedBackVisualSource/>
-                    </muxc:AnimatedIcon.Source>
-                    <muxc:AnimatedIcon.FallbackIconSource>
-                        <muxc:SymbolIconSource Symbol="Back"/>
-                    </muxc:AnimatedIcon.FallbackIconSource>
-                </muxc:AnimatedIcon>
-            </Button>
-            <TextBlock x:FieldModifier="public" x:Name="TitleText" Text="VM Settings" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="56,0,0,0"/>
-            <Button x:Name="HelpButton"
-					Width="46" Height="32"
-                    CornerRadius="0" UseSystemFocusVisuals="False"
-					AutomationProperties.Name="Help" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
-					ToolTipService.ToolTip="Help" Margin="708,0,0,0" VerticalAlignment="Top">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#538A88"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#3D7B79"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#538A88"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3D7B79"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#538A88"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#3D7B79"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#538A88"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Light">
+                        <Color x:Key="SystemAltHighColor">White</Color>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                     </ResourceDictionary>
-                </Button.Resources>
-                <FontIcon Glyph="&#xE11B;" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Width="46"/>
-            </Button>
-            <Button	x:Name="CloseButton"
-					Width="46" Height="32"
-                    CornerRadius="0,8,0,0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
-					AutomationProperties.Name="CloseButton"
-					Click="CloseButton_Click" UseSystemFocusVisuals="False"
-					ToolTipService.ToolTip="Close" Margin="754,0,0,0" VerticalAlignment="Top">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F1707A"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#E81123"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#F1707A"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F1707A"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#E81123"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#F1707A"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-                <FontIcon Glyph="&#xE8BB;" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Width="46"/>
-            </Button>
-        </Grid>
-        <ScrollViewer Margin="0,48,0,0" VerticalScrollBarVisibility="Hidden">
+                </ResourceDictionary.ThemeDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <ScrollViewer Margin="0,0,0,50" VerticalScrollBarVisibility="Hidden">
             <Frame x:Name="ContentFrame"/>
         </ScrollViewer>
+        <Grid x:Name="BottomGrid" VerticalAlignment="Top" Height="50" Margin="0,710,0,0">
+            <Button	x:Name="BackButton" Content="Back"
+		            Height="35" IsTabStop="False"
+		            AutomationProperties.Name="Back"
+                    IsEnabled="{x:Bind ContentFrame.CanGoBack, Mode=OneWay}"
+	             	Click="BackButton_Click" UseSystemFocusVisuals="False" VerticalContentAlignment="Stretch"
+	               HorizontalContentAlignment="Stretch" Margin="10,0,0,10" VerticalAlignment="Bottom">
+            </Button>
+            <Button x:Name="OKButton" Content="OK" Margin="619,0,0,10" VerticalAlignment="Bottom" Height="35" UseSystemFocusVisuals="False" Click="OKButton_Click" IsTabStop="False"/>
+            <Button	x:Name="CancelButton" Content="Cancel" Height="35" Click="CancelButton_Click" UseSystemFocusVisuals="False" Margin="667,0,0,10" VerticalAlignment="Bottom" IsTabStop="False"/>
+            <Button x:Name="HelpButton" Content="Help" Height="35" UseSystemFocusVisuals="False" Margin="737,0,0,10" VerticalAlignment="Bottom" IsTabStop="False"/>
+        </Grid>
     </Grid>
 </ContentDialog>

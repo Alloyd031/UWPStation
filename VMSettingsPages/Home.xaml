@@ -7,90 +7,25 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Height="760" Width="800">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.ThemeDictionaries>
-                    <ResourceDictionary x:Key="Dark">
-                        <Color x:Key="SystemAltHighColor">Black</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                    </ResourceDictionary>
-                    <ResourceDictionary x:Key="Light">
-                        <Color x:Key="SystemAltHighColor">White</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                    </ResourceDictionary>
-                </ResourceDictionary.ThemeDictionaries>
-            </ResourceDictionary>
-        </Grid.Resources>
-        <TextBlock Text="VM Settings" FontSize="30" Style="{StaticResource HeaderTextBlockStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,40,0,0"/>
-        <Button x:Name="HardwareButton" Width="250" Height="154" Margin="140,100,0,0" Click="HardwareButton_Click"
-                BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
-            <Button.Resources>
-                <ResourceDictionary>
-                    <ResourceDictionary.ThemeDictionaries>
-                        <ResourceDictionary x:Key="Dark">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#1B1B1B"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#686868"/>
-                        </ResourceDictionary>
-                        <ResourceDictionary x:Key="Light">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#E6E6E6"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CCCCCC"/>
-                        </ResourceDictionary>
-                    </ResourceDictionary.ThemeDictionaries>
-                </ResourceDictionary>
-            </Button.Resources>
+    <Grid>
+        <TextBlock Text="VM Settings" Style="{StaticResource HeaderTextBlockStyle}" FontSize="40" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,200,0,0"/>
+        <Button x:Name="HardwareButton" Width="250" Height="154" Margin="130,0,0,0" Click="HardwareButton_Click"
+                BorderThickness="2,2,2,2" UseSystemFocusVisuals="False" IsTabStop="False">
             <Grid Margin="-125,-77,-125,-77">
-                <FontIcon Glyph="&#xE772;" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="16,16,0,0"/>
-                <TextBlock Text="Hardware" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="61,16,0,0"/>
-                <TextBlock Text="Change hardware settings" FontSize="11" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="61,41,0,0"/>
+                <FontIcon Glyph="&#xE772;" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,32,0,0"/>
+                <TextBlock Text="Hardware" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Text="Change hardware settings" FontSize="15" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,92,0,0" Width="200"/>
             </Grid>
         </Button>
-        <Button x:Name="OptionsButton" Width="250" Height="154" Margin="410,100,0,0" Click="OptionsButton_Click"
-                BorderThickness="2,2,2,2" CornerRadius="0" VerticalAlignment="Top" UseSystemFocusVisuals="False">
-            <Button.Resources>
-                <ResourceDictionary>
-                    <ResourceDictionary.ThemeDictionaries>
-                        <ResourceDictionary x:Key="Dark">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#1B1B1B"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#686868"/>
-                        </ResourceDictionary>
-                        <ResourceDictionary x:Key="Light">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#E6E6E6"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CCCCCC"/>
-                        </ResourceDictionary>
-                    </ResourceDictionary.ThemeDictionaries>
-                </ResourceDictionary>
-            </Button.Resources>
+        <Button x:Name="OptionsButton" Width="250" Height="154" Margin="410,0,0,0" Click="OptionsButton_Click"
+                BorderThickness="2,2,2,2" UseSystemFocusVisuals="False" IsTabStop="False">
             <Grid Margin="-125,-77,-125,-77">
-                <FontIcon Glyph="&#xE15E;" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="16,16,0,0"/>
-                <TextBlock Text="Options" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="61,16,0,0"/>
-                <TextBlock Text="Change other virtual machine settings" FontSize="11" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="61,41,0,0"/>
+                <FontIcon Glyph="&#xE15E;" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="108,32,0,0"/>
+                <TextBlock Text="Options" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="96,0,0,0"/>
+                <TextBlock Text="Change other virtual machine settings" FontSize="15" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,92,0,0" Width="200"/>
             </Grid>
         </Button>
     </Grid>

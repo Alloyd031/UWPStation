@@ -26,7 +26,7 @@ using System.Threading.Tasks;
 using Windows.UI.Core;
 using UWPStation.TabPages;
 using UWPStation.Something;
-using Windows.UI.WindowManagement;
+using Windows.UI.Xaml.Media.Animation;
 
 namespace UWPStation
 {
@@ -35,6 +35,7 @@ namespace UWPStation
         public MainPage()
         {
             this.InitializeComponent();
+
             Window.Current.SetTitleBar(AppTitleBar);
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
@@ -121,6 +122,12 @@ namespace UWPStation
         {
             this.LibraryPanel.Visibility = Visibility.Collapsed;
             this.TabsGrid.Margin = new Thickness (0, 88, 0, 0);
+            this.FolderView.Margin = new Thickness(0, 0, 0, 32);
+
+            if (ShowHideLibrary.IsChecked == true)
+            {
+                ShowHideLibrary.IsChecked = false;
+            }
         }
         private void ShowHideLibrary_Click(object sender, RoutedEventArgs e)
         {
@@ -129,11 +136,15 @@ namespace UWPStation
             {
                 this.LibraryPanel.Visibility = Visibility.Collapsed;
                 this.TabsGrid.Margin = new Thickness(0, 88, 0, 32);
+                this.FolderView.Margin = new Thickness(0, 0, 0, 32);
+                ShowHideLibrary.IsChecked = false;
             }
             else
             {
                 this.LibraryPanel.Visibility = Visibility.Visible;
                 this.TabsGrid.Margin = new Thickness(200, 88, 0, 32);
+                this.FolderView.Margin = new Thickness(202, 0, 0, 32);
+                ShowHideLibrary.IsChecked = true;
             }
         }
         private async void CreateVM_Click(object sender, RoutedEventArgs e)
@@ -195,36 +206,30 @@ namespace UWPStation
             ConnectToRemoteServer dialog = new ConnectToRemoteServer();
             await dialog.ShowAsync();
         }
-        private void MyComputerTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(MyComputerPage));
-        }
-        private void HomeTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(HomePage));
-        }
-        private void VMTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(VMPage));
-        }
-        private void SharedVMsTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(SharedVMsPage));
-        }
-        private void TestTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(TestPage));
-        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             this.TabsFrame.Navigate(typeof(HomePage));
             this.FolderView.Visibility = Visibility.Collapsed;
             this.TabsFrame.Margin = new Thickness(0, 31, 0, 0);
+
+            if (ShowHideLibrary.IsChecked == false)
+            {
+                ShowHideLibrary.IsChecked = true;
+            }
+
+            MyComputerTab.IsChecked = false;
+            MyComputer.IsChecked = false;
+            VMTab.IsChecked = false;
+            HomeTab.IsChecked = true;
+            SharedVMsTab.IsChecked = false;
+            SharedVMs.IsChecked = false;
+            TestPageTab.IsChecked = false;
         }
         private void HideFolderView_Click(object sender, RoutedEventArgs e)
         {
             this.FolderView.Visibility = Visibility.Collapsed;
             this.TabsFrame.Margin = new Thickness(0, 31, 0, 0);
+            ShowHideFolderView.IsChecked = false;
         }
         private void ShowHideFolderView_Click(object sender, RoutedEventArgs e)
         {
@@ -233,32 +238,18 @@ namespace UWPStation
             {
                 this.FolderView.Visibility = Visibility.Collapsed;
                 this.TabsFrame.Margin = new Thickness(0, 31, 0, 0);
+                ShowHideFolderView.IsChecked = false;
             }
             else
             {
                 this.FolderView.Visibility = Visibility.Visible;
                 this.TabsFrame.Margin = new Thickness(0, 31, 0, 152);
+                ShowHideFolderView.IsChecked = true;
             }
         }
         private void FolderViewOptions_Click(object sender, RoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
-        }
-        private void MyComputer_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(MyComputerPage));
-        }
-        private void GoToHome_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(HomePage));
-        }
-        private void UWPFamilyOS_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(VMPage));
-        }
-        private void SharedVMs_Click(object sender, RoutedEventArgs e)
-        {
-            this.TabsFrame.Navigate(typeof(SharedVMsPage));
         }
         private async void VMSettings_Click(object sender, RoutedEventArgs e)
         {
@@ -389,7 +380,6 @@ namespace UWPStation
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
         }
-
         private async void SendCtrlAltDel_Click(object sender, RoutedEventArgs e)
         {
             NotAvailableDialog dialog = new NotAvailableDialog();
@@ -400,7 +390,6 @@ namespace UWPStation
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
         }
-
         private async void TakeVMSnapshot_Click(object sender, RoutedEventArgs e)
         {
             TakeSnapshotDialog dialog = new TakeSnapshotDialog();
@@ -555,6 +544,298 @@ namespace UWPStation
         {
             Changelog dialog = new Changelog();
             await dialog.ShowAsync();
+        }
+        private void MyComputer_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;           
+
+            if (TabsFrame.CurrentSourcePageType != typeof(MyComputerPage) && typeof(MyComputerPage) != null)
+            {
+                TabsFrame.Navigate(typeof(MyComputerPage), null, new SuppressNavigationTransitionInfo());
+                MyComputerTab.IsChecked = true;
+                MyComputer.IsChecked = true;
+                VMTab.IsChecked = false;
+                HomeTab.IsChecked = false;
+                SharedVMsTab.IsChecked = false;
+                SharedVMs.IsChecked = false;
+                TestPageTab.IsChecked = false;
+            }
+        }
+        private void MyComputer_Click(object sender, RoutedEventArgs e)
+        {
+            MyComputer.IsChecked = true;
+            MyComputerTab.IsChecked = true;
+            UWPFamilyOS.IsChecked = false;
+            VMTab.IsChecked = false;
+            HomeTab.IsChecked = false;
+            SharedVMsTab.IsChecked = false;
+            SharedVMs.IsChecked = false;
+            TestPageTab.IsChecked = false;
+        }
+        private void MyComputerTab_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (TabsFrame.CurrentSourcePageType != typeof(MyComputerPage) && typeof(MyComputerPage) != null)
+            {
+                TabsFrame.Navigate(typeof(MyComputerPage), null, new SuppressNavigationTransitionInfo());
+                MyComputerTab.IsChecked = true;
+                MyComputer.IsChecked = true;
+                UWPFamilyOS.IsChecked = false;
+                VMTab.IsChecked = false;
+                HomeTab.IsChecked = false;
+                SharedVMsTab.IsChecked = false;
+                SharedVMs.IsChecked = false;
+                TestPageTab.IsChecked = false;
+            }
+        }
+        private void MyComputerTab_Click(object sender, RoutedEventArgs e)
+        {
+            MyComputer.IsChecked = true;
+            MyComputerTab.IsChecked = true;
+            UWPFamilyOS.IsChecked = false;
+            VMTab.IsChecked = false;
+            HomeTab.IsChecked = false;
+            SharedVMsTab.IsChecked = false;
+            SharedVMs.IsChecked = false;
+            TestPageTab.IsChecked = false;
+        }
+        private void UWPFamilyOS_Click(object sender, RoutedEventArgs e)
+        {
+            MyComputer.IsChecked = false;
+            MyComputerTab.IsChecked = false;
+            UWPFamilyOS.IsChecked = true;
+            VMTab.IsChecked = true;
+            HomeTab.IsChecked = false;
+            SharedVMsTab.IsChecked = false;
+            SharedVMs.IsChecked = false;
+            TestPageTab.IsChecked = false;
+        }
+
+        private void UWPFamilyOS_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (TabsFrame.CurrentSourcePageType != typeof(VMPage) && typeof(VMPage) != null)
+            {
+                TabsFrame.Navigate(typeof(VMPage), null, new SuppressNavigationTransitionInfo());
+                MyComputerTab.IsChecked = false;
+                MyComputer.IsChecked = false;
+                UWPFamilyOS.IsChecked = true;
+                VMTab.IsChecked = true;
+                HomeTab.IsChecked = false;
+                SharedVMsTab.IsChecked = false;
+                SharedVMs.IsChecked = false;
+                TestPageTab.IsChecked = false;
+            }
+        }
+        private void VMTab_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (TabsFrame.CurrentSourcePageType != typeof(VMPage) && typeof(VMPage) != null)
+            {
+                TabsFrame.Navigate(typeof(VMPage), null, new SuppressNavigationTransitionInfo());
+                MyComputerTab.IsChecked = false;
+                MyComputer.IsChecked = false;
+                UWPFamilyOS.IsChecked = true;
+                VMTab.IsChecked = true;
+                HomeTab.IsChecked = false;
+                SharedVMsTab.IsChecked = false;
+                SharedVMs.IsChecked = false;
+                TestPageTab.IsChecked = false;
+            }
+        }
+        private void VMTab_Click(object sender, RoutedEventArgs e)
+        {
+            MyComputerTab.IsChecked = false;
+            MyComputer.IsChecked = false;
+            UWPFamilyOS.IsChecked = true;
+            VMTab.IsChecked = true;
+            HomeTab.IsChecked = false;
+            SharedVMsTab.IsChecked = false;
+            SharedVMs.IsChecked = false;
+            TestPageTab.IsChecked = false;
+        }
+        private void HomeTab_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (TabsFrame.CurrentSourcePageType != typeof(HomePage) && typeof(HomePage) != null)
+            {
+                TabsFrame.Navigate(typeof(HomePage), null, new SuppressNavigationTransitionInfo());
+                MyComputerTab.IsChecked = false;
+                MyComputer.IsChecked = false;
+                UWPFamilyOS.IsChecked = false;
+                VMTab.IsChecked = false;
+                HomeTab.IsChecked = true;
+                SharedVMsTab.IsChecked = false;
+                SharedVMs.IsChecked = false;
+                TestPageTab.IsChecked = false;
+            }
+        }
+        private void HomeTab_Click(object sender, RoutedEventArgs e)
+        {
+            MyComputerTab.IsChecked = false;
+            MyComputer.IsChecked = false;
+            UWPFamilyOS.IsChecked = false;
+            VMTab.IsChecked = false;
+            HomeTab.IsChecked = true;
+            SharedVMsTab.IsChecked = false;
+            SharedVMs.IsChecked = false;
+            TestPageTab.IsChecked = false;
+        }
+        private void SharedVMsTab_Click(object sender, RoutedEventArgs e)
+        {
+            MyComputerTab.IsChecked = false;
+            MyComputer.IsChecked = false;
+            UWPFamilyOS.IsChecked = false;
+            VMTab.IsChecked = false;
+            HomeTab.IsChecked = false;
+            SharedVMsTab.IsChecked = true;
+            SharedVMs.IsChecked = true;
+            TestPageTab.IsChecked = false;
+        }
+        private void SharedVMsTab_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (TabsFrame.CurrentSourcePageType != typeof(SharedVMsPage) && typeof(SharedVMsPage) != null)
+            {
+                TabsFrame.Navigate(typeof(SharedVMsPage), null, new SuppressNavigationTransitionInfo());
+                MyComputerTab.IsChecked = false;
+                MyComputer.IsChecked = false;
+                UWPFamilyOS.IsChecked = false;
+                VMTab.IsChecked = false;
+                HomeTab.IsChecked = false;
+                SharedVMsTab.IsChecked = true;
+                SharedVMs.IsChecked = true;
+                TestPageTab.IsChecked = false;
+            }
+        }
+        private void SharedVMs_Click(object sender, RoutedEventArgs e)
+        {
+            MyComputerTab.IsChecked = false;
+            MyComputer.IsChecked = false;
+            UWPFamilyOS.IsChecked = false;
+            VMTab.IsChecked = false;
+            HomeTab.IsChecked = false;
+            SharedVMsTab.IsChecked = true;
+            SharedVMs.IsChecked = true;
+            TestPageTab.IsChecked = false;
+        }
+        private void SharedVMs_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (TabsFrame.CurrentSourcePageType != typeof(SharedVMsPage) && typeof(SharedVMsPage) != null)
+            {
+                TabsFrame.Navigate(typeof(SharedVMsPage), null, new SuppressNavigationTransitionInfo());
+                MyComputerTab.IsChecked = false;
+                MyComputer.IsChecked = false;
+                UWPFamilyOS.IsChecked = false;
+                VMTab.IsChecked = false;
+                HomeTab.IsChecked = false;
+                SharedVMsTab.IsChecked = true;
+                SharedVMs.IsChecked = true;
+                TestPageTab.IsChecked = false;
+            }
+        }
+        private void TestTab_Click(object sender, RoutedEventArgs e)
+        {
+            MyComputerTab.IsChecked = false;
+            MyComputer.IsChecked = false;
+            UWPFamilyOS.IsChecked = false;
+            VMTab.IsChecked = false;
+            HomeTab.IsChecked = false;
+            SharedVMsTab.IsChecked = false;
+            SharedVMs.IsChecked = false;
+            TestPageTab.IsChecked = true;
+        }
+        private void TestPageTab_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (TabsFrame.CurrentSourcePageType != typeof(TestPage) && typeof(TestPage) != null)
+            {
+                TabsFrame.Navigate(typeof(TestPage), null, new SuppressNavigationTransitionInfo());
+                MyComputerTab.IsChecked = false;
+                MyComputer.IsChecked = false;
+                UWPFamilyOS.IsChecked = false;
+                VMTab.IsChecked = false;
+                HomeTab.IsChecked = false;
+                SharedVMsTab.IsChecked = false;
+                SharedVMs.IsChecked = false;
+                TestPageTab.IsChecked = true;
+            }
+        }
+        private void GoToHome_Click(object sender, RoutedEventArgs e)
+        {
+            TabsFrame.Navigate(typeof(HomePage), null, new SuppressNavigationTransitionInfo());
+            MyComputerTab.IsChecked = false;
+            MyComputer.IsChecked = false;
+            UWPFamilyOS.IsChecked = false;
+            VMTab.IsChecked = false;
+            HomeTab.IsChecked = true;
+            SharedVMsTab.IsChecked = false;
+            SharedVMs.IsChecked = false;
+            TestPageTab.IsChecked = false;
+        }
+        private void HomeTab_Checked(object sender, RoutedEventArgs e)
+        {
+            if (TabsFrame.CurrentSourcePageType != typeof(HomePage))
+            {
+                TabsFrame.Navigate(typeof(HomePage), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void SharedVMsTab_Checked(object sender, RoutedEventArgs e)
+        {
+            if (TabsFrame.CurrentSourcePageType != typeof(SharedVMsPage))
+            {
+                TabsFrame.Navigate(typeof(SharedVMsPage), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void VMTab_Checked(object sender, RoutedEventArgs e)
+        {
+            if (TabsFrame.CurrentSourcePageType != typeof(VMPage))
+            {
+                TabsFrame.Navigate(typeof(VMPage), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void TestPageTab_Checked(object sender, RoutedEventArgs e)
+        {
+            if (TabsFrame.CurrentSourcePageType != typeof(TestPage))
+            {
+                TabsFrame.Navigate(typeof(TestPage), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void MyComputerTab_Checked(object sender, RoutedEventArgs e)
+        {
+            if (TabsFrame.CurrentSourcePageType != typeof(MyComputerPage))
+            {
+                TabsFrame.Navigate(typeof(MyComputerPage), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void MyComputer_Checked(object sender, RoutedEventArgs e)
+        {
+            if (TabsFrame.CurrentSourcePageType != typeof(MyComputerPage))
+            {
+                TabsFrame.Navigate(typeof(MyComputerPage), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void UWPFamilyOS_Checked(object sender, RoutedEventArgs e)
+        {
+            if (TabsFrame.CurrentSourcePageType != typeof(VMPage))
+            {
+                TabsFrame.Navigate(typeof(VMPage), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void SharedVMs_Checked(object sender, RoutedEventArgs e)
+        {
+            if (TabsFrame.CurrentSourcePageType != typeof(SharedVMsPage))
+            {
+                TabsFrame.Navigate(typeof(SharedVMsPage), null, new SuppressNavigationTransitionInfo());
+            }
         }
     }
 }

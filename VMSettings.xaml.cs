@@ -22,10 +22,6 @@ namespace UWPStation
         {
             this.InitializeComponent();
         }
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-        }
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
@@ -34,17 +30,9 @@ namespace UWPStation
         {
             Hide();
         }
-        private void HardwareTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.ContentFrame.Navigate(typeof(Hardware));
-        }
         private void ContentDialog_Loaded(object sender, RoutedEventArgs e)
         {
             this.ContentFrame.Navigate(typeof(VMSettingsPages.Home));
-        }
-        private void OptionsTab_Click(object sender, RoutedEventArgs e)
-        {
-            this.ContentFrame.Navigate(typeof(Options));
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using UWPStation;
+using UWPStation.Wizards;
 
 namespace UWPStation.NewVMWizardPages
 {
@@ -21,6 +22,12 @@ namespace UWPStation.NewVMWizardPages
         public ReadyToCreate()
         {
             this.InitializeComponent();
+        }
+
+        private void FinishButton_Click(object sender, RoutedEventArgs e)
+        {
+            NewVMWizard nvm = new NewVMWizard();
+            nvm.Hide();
         }
     }
 }

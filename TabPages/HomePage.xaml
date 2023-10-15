@@ -33,7 +33,7 @@
         </Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,167,0,0">
             <Grid x:Name="CreateVMGrid" Padding="5,0,5,0">
-                <Button Width="150" Click="CreateVM_Click" Height="150" CornerRadius="4" UseSystemFocusVisuals="False" BorderThickness="3,3,3,3">
+                <Button Width="150" Click="CreateVM_Click" Height="150" CornerRadius="4" UseSystemFocusVisuals="False" IsTabStop="False" BorderThickness="3,3,3,3">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -65,7 +65,7 @@
                 </Button>
             </Grid>
             <Grid x:Name="OpenVMGrid" Padding="5,0,5,0">
-                <Button Width="150" Click="OpenVM_Click" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" UseSystemFocusVisuals="False" BorderThickness="3,3,3,3" CornerRadius="4">
+                <Button Width="150" Click="OpenVM_Click" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" UseSystemFocusVisuals="False" IsTabStop="False" BorderThickness="3,3,3,3" CornerRadius="4">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -97,7 +97,7 @@
                 </Button>
             </Grid>
             <Grid x:Name="ConnectToServerGrid" Padding="5,0,5,0">
-                <Button Width="150" Click="ConnectToRemoteServerButton_Click" Height="150" UseSystemFocusVisuals="False" BorderThickness="3,3,3,3" VerticalAlignment="Top" HorizontalAlignment="Center" CornerRadius="4">
+                <Button Width="150" Click="ConnectToRemoteServerButton_Click" Height="150" UseSystemFocusVisuals="False" IsTabStop="False" BorderThickness="3,3,3,3" VerticalAlignment="Top" HorizontalAlignment="Center" CornerRadius="4">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -129,7 +129,7 @@
                 </Button>
             </Grid>
             <Grid x:Name="ConnectToUWPFamilyvCloudAirGrid" Padding="5,0,5,0">
-                <Button Width="150" Height="150" UseSystemFocusVisuals="False" BorderThickness="3,3,3,3" Click="ConnectToUWPFamilyvCloudAir_Click" VerticalAlignment="Top" HorizontalAlignment="Center" CornerRadius="4">
+                <Button Width="150" Height="150" UseSystemFocusVisuals="False" IsTabStop="False" BorderThickness="3,3,3,3" Click="ConnectToUWPFamilyvCloudAir_Click" VerticalAlignment="Top" HorizontalAlignment="Center" CornerRadius="4">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>

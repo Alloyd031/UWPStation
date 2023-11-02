@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 namespace UWPStation.VMSettingsPages
@@ -23,19 +24,11 @@ namespace UWPStation.VMSettingsPages
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.OptionsFrame.Navigate(typeof(NotAvailable));
-        }
-        private void GeneralButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.OptionsFrame.Navigate(typeof(NotAvailable));
-        }
-        private void PowerButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.OptionsFrame.Navigate(typeof(NotAvailable));
-        }
-        private void SharedFolderButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.OptionsFrame.Navigate(typeof(NotAvailable));
+            this.OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+
+            GeneralButton.IsChecked = true;
+            PowerButton.IsChecked = false;
+            SharedFoldersButton.IsChecked = false;
         }
         private void SnapshotsButton_Click(object sender, RoutedEventArgs e)
         {
@@ -76,6 +69,81 @@ namespace UWPStation.VMSettingsPages
         private void AdvancedButton_Click(object sender, RoutedEventArgs e)
         {
             this.OptionsFrame.Navigate(typeof(NotAvailable));
+        }
+        private void GeneralButton_Click(object sender, RoutedEventArgs e)
+        {
+            GeneralButton.IsChecked = true;
+            PowerButton.IsChecked = false;
+            SharedFoldersButton.IsChecked = false;
+        }
+        private void GeneralButton_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (OptionsFrame.CurrentSourcePageType != typeof(NotAvailable) && typeof(NotAvailable) != null)
+            {
+                OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                GeneralButton.IsChecked = true;
+                PowerButton.IsChecked = false;
+                SharedFoldersButton.IsChecked = false;
+            }
+        }
+        private void GeneralButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (OptionsFrame.CurrentSourcePageType != typeof(NotAvailable) && typeof(NotAvailable) != null)
+            {
+                OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void PowerButton_Click(object sender, RoutedEventArgs e)
+        {
+            GeneralButton.IsChecked = false;
+            PowerButton.IsChecked = true;
+            SharedFoldersButton.IsChecked = false;
+        }
+        private void PowerButton_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (OptionsFrame.CurrentSourcePageType != typeof(NotAvailable) && typeof(NotAvailable) != null)
+            {
+                OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                GeneralButton.IsChecked = false;
+                PowerButton.IsChecked = true;
+                SharedFoldersButton.IsChecked = false;
+            }
+        }
+        private void PowerButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (OptionsFrame.CurrentSourcePageType != typeof(NotAvailable) && typeof(NotAvailable) != null)
+            {
+                OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void SharedFoldersButton_Click(object sender, RoutedEventArgs e)
+        {
+            GeneralButton.IsChecked = false;
+            PowerButton.IsChecked = false;
+            SharedFoldersButton.IsChecked = true;
+        }
+        private void SharedFoldersButton_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (OptionsFrame.CurrentSourcePageType != typeof(NotAvailable) && typeof(NotAvailable) != null)
+            {
+                OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                GeneralButton.IsChecked = false;
+                PowerButton.IsChecked = false;
+                SharedFoldersButton.IsChecked = true;
+            }
+        }
+        private void SharedFoldersButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (OptionsFrame.CurrentSourcePageType != typeof(NotAvailable) && typeof(NotAvailable) != null)
+            {
+                OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+            }
         }
     }
 }

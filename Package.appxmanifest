@@ -7,9 +7,9 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="a3ed7909-6813-4281-9b4a-762ff93c2c17"
+    Name="UWPStation"
     Publisher="CN=Alloyd"
-    Version="0.1.0.0" />
+    Version="0.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="a3ed7909-6813-4281-9b4a-762ff93c2c17" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

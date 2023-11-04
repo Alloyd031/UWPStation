@@ -175,9 +175,6 @@
     <Compile Include="TabPages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VMSettingsPages\Home.xaml.cs">
-      <DependentUpon>Home.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Wizards\ChangeHardwareCompatibility.xaml.cs">
       <DependentUpon>ChangeHardwareCompatibility.xaml</DependentUpon>
     </Compile>
@@ -412,10 +409,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TabPages\TestPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="VMSettingsPages\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

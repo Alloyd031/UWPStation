@@ -120,23 +120,20 @@
   <data name="AboutItemString.Text" xml:space="preserve">
     <value>О программе UWPStation</value>
   </data>
+  <data name="AboutString.Text" xml:space="preserve">
+    <value>О программе UWPStation</value>
+  </data>
   <data name="AboutTitleString.Text" xml:space="preserve">
     <value>О программе UWPStation</value>
   </data>
   <data name="AppLanguageString.Header" xml:space="preserve">
     <value>Язык приложения</value>
   </data>
-  <data name="BackButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
-    <value>Назад</value>
-  </data>
   <data name="CheckTheseAppsString.Text" xml:space="preserve">
     <value>Проверьте эти приложения!</value>
   </data>
   <data name="CloseButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Закрыть</value>
-  </data>
-  <data name="CongratsTextString.Text" xml:space="preserve">
-    <value>Эй, ты нашел скрытого CubeX! Поздравляю!</value>
   </data>
   <data name="ConnectToServerString.Text" xml:space="preserve">
     <value>Подключиться к удалённому серверу</value>

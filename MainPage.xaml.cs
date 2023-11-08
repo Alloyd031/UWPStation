@@ -83,8 +83,7 @@ namespace UWPStation
         }
         private async void About_Click(object sender, RoutedEventArgs e)
         {
-            AboutDialog dialog = new AboutDialog();
-            await dialog.ShowAsync();
+            await OpenPageAsWindowAsync(typeof(AboutApp));
         }
         private void Button_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {

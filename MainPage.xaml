@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"  
+    xmlns:ui="using:Microsoft.Toolkit.Uwp.UI"
     mc:Ignorable="d"
     Loaded="Page_Loaded">
 
@@ -1232,10 +1233,6 @@
                     </ResourceDictionary.ThemeDictionaries>
                 </ResourceDictionary>
             </Grid.Resources>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="73*"/>
-                <RowDefinition Height="74*"/>
-            </Grid.RowDefinitions>
             <Grid Margin="1,2,2,2" BorderBrush="#303030" BorderThickness="1,1,1,1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Grid.RowSpan="2">
                 <Grid.Resources>
                     <ResourceDictionary>
@@ -1304,7 +1301,7 @@
                             </ResourceDictionary.ThemeDictionaries>
                         </ResourceDictionary>
                     </Button.Resources>
-                    <FontIcon Glyph="&#xF08E;" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="39" Width="39"/>
+                    <FontIcon Glyph="&#xE972;" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="39" Width="39"/>
                     <FlyoutBase.AttachedFlyout>
                         <MenuFlyout Placement="BottomEdgeAlignedRight">
                             <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines" UseSystemFocusVisuals="False"/>
@@ -1314,9 +1311,7 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <Border BackgroundSizing="OuterBorderEdge" BorderThickness="0,0,0,0"
-                Height="32" VerticalAlignment="Bottom"
-                Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Border BackgroundSizing="OuterBorderEdge" BorderThickness="0,0,0,0" Height="32" VerticalAlignment="Bottom" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Border.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -1332,28 +1327,27 @@
                 </ResourceDictionary>
             </Border.Resources>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Height="32">
-                <Button UseSystemFocusVisuals="False" CornerRadius="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
-                        ToolTipService.ToolTip="Message log: no messages" RightTapped="Button_RightTapped" Tapped="Button_Tapped" Height="32" Width="46" IsTabStop="False">
+                <Button UseSystemFocusVisuals="False" CornerRadius="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ToolTipService.ToolTip="Message log: no messages" RightTapped="Button_RightTapped" Tapped="Button_Tapped" Height="32" Width="46" IsTabStop="False">
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
                                 <ResourceDictionary x:Key="Dark">
                                     <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                     <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
                                     <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                                 </ResourceDictionary>
                                 <ResourceDictionary x:Key="Light">
                                     <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
                                     <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
                                     <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                                 </ResourceDictionary>
                             </ResourceDictionary.ThemeDictionaries>
                         </ResourceDictionary>

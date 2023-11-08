@@ -127,8 +127,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AboutDialog.xaml.cs">
-      <DependentUpon>AboutDialog.xaml</DependentUpon>
+    <Compile Include="AboutApp.xaml.cs">
+      <DependentUpon>AboutApp.xaml</DependentUpon>
     </Compile>
     <Compile Include="ChangeHardwareCompatibilityPages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
@@ -144,9 +144,6 @@
     </Compile>
     <Compile Include="Dialogs\RestoreSnapshot.xaml.cs">
       <DependentUpon>RestoreSnapshot.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MoreApps.xaml.cs">
-      <DependentUpon>MoreApps.xaml</DependentUpon>
     </Compile>
     <Compile Include="PreferencesDialog.xaml.cs">
       <DependentUpon>PreferencesDialog.xaml</DependentUpon>
@@ -269,9 +266,6 @@
     <Compile Include="VMSettingsPages\Options.xaml.cs">
       <DependentUpon>Options.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeInDialog.xaml.cs">
-      <DependentUpon>WelcomeInDialog.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -337,7 +331,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AboutDialog.xaml">
+    <Page Include="AboutApp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -358,10 +352,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\RestoreSnapshot.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MoreApps.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -522,10 +512,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VMSettingsPages\Options.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WelcomeInDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

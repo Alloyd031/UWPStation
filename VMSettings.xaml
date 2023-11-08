@@ -130,7 +130,7 @@
                 </Grid>
             </ToggleButton>
         </StackPanel>
-        <Frame x:Name="ContentFrame" Margin="0,39,0,50" BorderBrush="#292929" BorderThickness="0,1,0,1"/>
+        <Frame x:Name="ContentFrame" Margin="0,39,0,50" BorderBrush="#69A1BF" BorderThickness="0,1,0,1"/>
         <Grid x:Name="BottomGrid" VerticalAlignment="Bottom" Height="50">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Right">
                 <Button x:Name="OKButton" Content="OK" Height="35" UseSystemFocusVisuals="False" Click="OKButton_Click" IsTabStop="False" Margin="0,0,10,0"/>

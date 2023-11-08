@@ -7,8 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    Loaded="Page_Loaded"
-    RequestedTheme="Light">
+    Loaded="Page_Loaded">
 
     <Grid x:Name="ContainerGrid"
           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
@@ -18,7 +17,7 @@
             <ResourceDictionary>
                 <ResourceDictionary.ThemeDictionaries>
                     <ResourceDictionary x:Key="Dark">
-                        <Color x:Key="SystemAltHighColor">#1F1F1F</Color>
+                        <Color x:Key="SystemAltHighColor">Black</Color>
                         <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                     </ResourceDictionary>
                     <ResourceDictionary x:Key="Light">

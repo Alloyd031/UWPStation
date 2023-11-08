@@ -13,7 +13,7 @@
             <ResourceDictionary>
                 <ResourceDictionary.ThemeDictionaries>
                     <ResourceDictionary x:Key="Dark">
-                        <Color x:Key="SystemAltHighColor">#1D1D1D</Color>
+                        <Color x:Key="SystemAltHighColor">#1E1E1E</Color>
                         <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                     </ResourceDictionary>
                     <ResourceDictionary x:Key="Light">

@@ -13,7 +13,7 @@
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Dark">
-                    <SolidColorBrush x:Key="Background" Color="#1D1D1D"/>
+                    <SolidColorBrush x:Key="Background" Color="#1E1E1E"/>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Light">
                     <SolidColorBrush x:Key="Background" Color="White"/>
@@ -27,7 +27,7 @@
             <ResourceDictionary>
                 <ResourceDictionary.ThemeDictionaries>
                     <ResourceDictionary x:Key="Dark">
-                        <Color x:Key="SystemAltHighColor">#1D1D1D</Color>
+                        <Color x:Key="SystemAltHighColor">#1E1E1E</Color>
                         <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                     </ResourceDictionary>
                     <ResourceDictionary x:Key="Light">
@@ -42,7 +42,7 @@
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
                         <ResourceDictionary x:Key="Dark">
-                            <Color x:Key="SystemAltHighColor">#1D1D1D</Color>
+                            <Color x:Key="SystemAltHighColor">#1E1E1E</Color>
                             <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
                         </ResourceDictionary>
                         <ResourceDictionary x:Key="Light">

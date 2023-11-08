@@ -133,9 +133,6 @@
     <Compile Include="ChangeHardwareCompatibilityPages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Changelog.xaml.cs">
-      <DependentUpon>Changelog.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Dialogs\ConnectToRemoteServer.xaml.cs">
       <DependentUpon>ConnectToRemoteServer.xaml</DependentUpon>
     </Compile>
@@ -147,9 +144,6 @@
     </Compile>
     <Compile Include="Dialogs\RestoreSnapshot.xaml.cs">
       <DependentUpon>RestoreSnapshot.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Important.xaml.cs">
-      <DependentUpon>Important.xaml</DependentUpon>
     </Compile>
     <Compile Include="MoreApps.xaml.cs">
       <DependentUpon>MoreApps.xaml</DependentUpon>
@@ -163,9 +157,6 @@
     <Compile Include="PreferencesPages\LanguagePage.xaml.cs">
       <DependentUpon>LanguagePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Something\EasterEgg.xaml.cs">
-      <DependentUpon>EasterEgg.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TabPages\MyComputerPage.xaml.cs">
       <DependentUpon>MyComputerPage.xaml</DependentUpon>
     </Compile>
@@ -174,6 +165,9 @@
     </Compile>
     <Compile Include="TabPages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VMSettings.xaml.cs">
+      <DependentUpon>VMSettings.xaml</DependentUpon>
     </Compile>
     <Compile Include="Wizards\ChangeHardwareCompatibility.xaml.cs">
       <DependentUpon>ChangeHardwareCompatibility.xaml</DependentUpon>
@@ -266,9 +260,6 @@
     <Compile Include="TabPages\VMPage.xaml.cs">
       <DependentUpon>VMPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VMSettings.xaml.cs">
-      <DependentUpon>VMSettings.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VMSettingsPages\Hardware.xaml.cs">
       <DependentUpon>Hardware.xaml</DependentUpon>
     </Compile>
@@ -333,7 +324,6 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="Changelog.txt" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -341,7 +331,6 @@
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Content Include="Something\CubeX.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -353,10 +342,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChangeHardwareCompatibilityPages\Main.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Changelog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -376,10 +361,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Important.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MoreApps.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -396,10 +377,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Something\EasterEgg.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TabPages\MyComputerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -409,6 +386,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TabPages\TestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMSettings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -532,10 +513,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VMSettings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="VMSettingsPages\Hardware.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -557,8 +534,14 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp">
+      <Version>7.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI">
+      <Version>7.1.3</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.8.5</Version>
+      <Version>2.8.6</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

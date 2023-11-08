@@ -30,10 +30,7 @@ namespace UWPStation.VMSettingsPages
             PowerButton.IsChecked = false;
             SharedFoldersButton.IsChecked = false;
             SnapshotsButton.IsChecked = false;
-        }
-        private void AutoProtectButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.OptionsFrame.Navigate(typeof(NotAvailable));
+            AutoProtectButton.IsChecked = false;
         }
         private void GuestIsolationButton_Click(object sender, RoutedEventArgs e)
         {
@@ -73,6 +70,7 @@ namespace UWPStation.VMSettingsPages
             PowerButton.IsChecked = false;
             SharedFoldersButton.IsChecked = false;
             SnapshotsButton.IsChecked = false;
+            AutoProtectButton.IsChecked = false;
         }
         private void GeneralButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -85,6 +83,7 @@ namespace UWPStation.VMSettingsPages
                 PowerButton.IsChecked = false;
                 SharedFoldersButton.IsChecked = false;
                 SnapshotsButton.IsChecked = false;
+                AutoProtectButton.IsChecked = false;
             }
         }
         private void GeneralButton_Checked(object sender, RoutedEventArgs e)
@@ -100,6 +99,7 @@ namespace UWPStation.VMSettingsPages
             PowerButton.IsChecked = true;
             SharedFoldersButton.IsChecked = false;
             SnapshotsButton.IsChecked = false;
+            AutoProtectButton.IsChecked = false;
         }
         private void PowerButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -112,6 +112,7 @@ namespace UWPStation.VMSettingsPages
                 PowerButton.IsChecked = true;
                 SharedFoldersButton.IsChecked = false;
                 SnapshotsButton.IsChecked = false;
+                AutoProtectButton.IsChecked = false;
             }
         }
         private void PowerButton_Checked(object sender, RoutedEventArgs e)
@@ -127,6 +128,7 @@ namespace UWPStation.VMSettingsPages
             PowerButton.IsChecked = false;
             SharedFoldersButton.IsChecked = true;
             SnapshotsButton.IsChecked = false;
+            AutoProtectButton.IsChecked = false;
         }
         private void SharedFoldersButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -139,6 +141,7 @@ namespace UWPStation.VMSettingsPages
                 PowerButton.IsChecked = false;
                 SharedFoldersButton.IsChecked = true;
                 SnapshotsButton.IsChecked = false;
+                AutoProtectButton.IsChecked = false;
             }
         }
         private void SharedFoldersButton_Checked(object sender, RoutedEventArgs e)
@@ -154,6 +157,7 @@ namespace UWPStation.VMSettingsPages
             PowerButton.IsChecked = false;
             SharedFoldersButton.IsChecked = false;
             SnapshotsButton.IsChecked = true;
+            AutoProtectButton.IsChecked = false;
         }
         private void SnapshotsButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -166,9 +170,39 @@ namespace UWPStation.VMSettingsPages
                 PowerButton.IsChecked = false;
                 SharedFoldersButton.IsChecked = false;
                 SnapshotsButton.IsChecked = true;
+                AutoProtectButton.IsChecked = false;
             }
         }
         private void SnapshotsButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (OptionsFrame.CurrentSourcePageType != typeof(NotAvailable) && typeof(NotAvailable) != null)
+            {
+                OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+        private void AutoProtectButton_Click(object sender, RoutedEventArgs e)
+        {
+            GeneralButton.IsChecked = false;
+            PowerButton.IsChecked = false;
+            SharedFoldersButton.IsChecked = false;
+            SnapshotsButton.IsChecked = false;
+            AutoProtectButton.IsChecked = true;
+        }
+        private void AutoProtectButton_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            if (OptionsFrame.CurrentSourcePageType != typeof(NotAvailable) && typeof(NotAvailable) != null)
+            {
+                OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                GeneralButton.IsChecked = false;
+                PowerButton.IsChecked = false;
+                SharedFoldersButton.IsChecked = false;
+                SnapshotsButton.IsChecked = false;
+                AutoProtectButton.IsChecked = true;
+            }
+        }
+        private void AutoProtectButton_Checked(object sender, RoutedEventArgs e)
         {
             if (OptionsFrame.CurrentSourcePageType != typeof(NotAvailable) && typeof(NotAvailable) != null)
             {

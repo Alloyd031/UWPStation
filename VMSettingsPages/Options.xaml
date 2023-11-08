@@ -7,8 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    Loaded="Page_Loaded"
-    Height="679" Width="800">
+    Loaded="Page_Loaded">
 
     <Page.Resources>
         <ResourceDictionary>
@@ -57,7 +56,7 @@
             </Grid.Resources>
             <TextBlock Text="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,10,0,0"/>
             <TextBlock Text="Summary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="162,10,0,0"/>
-            <ToggleButton x:Name="GeneralButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" BorderThickness="5,0,0,0" Checked="GeneralButton_Checked"
+            <ToggleButton x:Name="GeneralButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" BorderThickness="5,0,0,0" Checked="GeneralButton_Checked"
                           HorizontalAlignment="Center" Margin="0,34,0,0" Click="GeneralButton_Click" UseSystemFocusVisuals="False" IsTabStop="False" Tapped="GeneralButton_Tapped">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
@@ -109,8 +108,8 @@
                     <TextBlock Text="UWPFamilyOS" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="PowerButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" BorderThickness="5,0,0,0" Tapped="PowerButton_Tapped"
-                          Margin="0,66,0,0" Click="PowerButton_Click" UseSystemFocusVisuals="False" IsTabStop="False" Checked="PowerButton_Checked" HorizontalAlignment="Center">
+            <ToggleButton x:Name="PowerButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" BorderThickness="5,0,0,0" Tapped="PowerButton_Tapped"
+                          Margin="0,82,0,0" Click="PowerButton_Click" UseSystemFocusVisuals="False" IsTabStop="False" Checked="PowerButton_Checked" HorizontalAlignment="Center">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -160,8 +159,8 @@
                     <TextBlock Text="Power" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="SharedFoldersButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" BorderThickness="5,0,0,0" Checked="SharedFoldersButton_Checked"
-                          Margin="0,98,0,0" Click="SharedFoldersButton_Click" UseSystemFocusVisuals="False" IsTabStop="False" Tapped="SharedFoldersButton_Tapped" HorizontalAlignment="Center">
+            <ToggleButton x:Name="SharedFoldersButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" BorderThickness="5,0,0,0" Checked="SharedFoldersButton_Checked"
+                          Margin="0,130,0,0" Click="SharedFoldersButton_Click" UseSystemFocusVisuals="False" IsTabStop="False" Tapped="SharedFoldersButton_Tapped" HorizontalAlignment="Center">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -212,8 +211,8 @@
                     <TextBlock Text="Disabled" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="SnapshotsButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" BorderThickness="5,0,0,0" Tapped="SnapshotsButton_Tapped"
-                          Margin="0,130,0,0" Click="SnapshotsButton_Click" UseSystemFocusVisuals="False" IsTabStop="False" HorizontalAlignment="Center" Checked="SnapshotsButton_Checked">
+            <ToggleButton x:Name="SnapshotsButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" BorderThickness="5,0,0,0" Tapped="SnapshotsButton_Tapped"
+                          Margin="0,178,0,0" Click="SnapshotsButton_Click" UseSystemFocusVisuals="False" IsTabStop="False" HorizontalAlignment="Center" Checked="SnapshotsButton_Checked">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -263,40 +262,60 @@
                     <TextBlock Text="Snapshots" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <Button x:Name="AutoProtectButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,162,0,0" Click="AutoProtectButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
-                <Button.Resources>
+            <ToggleButton x:Name="AutoProtectButton" Height="48" Width="320" VerticalAlignment="Top" BorderThickness="5,0,0,0" CornerRadius="0" Checked="AutoProtectButton_Checked"
+                          Margin="0,226,0,0" Click="AutoProtectButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center" Tapped="AutoProtectButton_Tapped">
+                <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
                             <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#353535"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#353535"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundPressed" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushPressed" Color="Transparent"/>
+
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushChecked" Color="#016B66"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundChecked" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonForegroundChecked" Color="White"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPointerOver" Color="White"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPressed" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushCheckedPointerOver" Color="#016B66"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushCheckedPressed" Color="#016B66"/>
                             </ResourceDictionary>
                             <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#B8B8B8"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#B8B8B8"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundPressed" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushPressed" Color="Transparent"/>
+
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushChecked" Color="#016B66"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundChecked" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonForegroundChecked" Color="Black"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPointerOver" Color="Black"/>
+                                <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPressed" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushCheckedPointerOver" Color="#016B66"/>
+                                <SolidColorBrush x:Key="ToggleButtonBorderBrushCheckedPressed" Color="#016B66"/>
                             </ResourceDictionary>
                         </ResourceDictionary.ThemeDictionaries>
                     </ResourceDictionary>
-                </Button.Resources>
+                </ToggleButton.Resources>
                 <Grid Margin="-160,-24,-160,-24">
                     <FontIcon Glyph="&#xF738;" Margin="10,7,260,7"/>
                     <TextBlock Text="AutoProtect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
                     <TextBlock Text="Disabled" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
-            </Button>
-            <Button x:Name="GuestIsolationButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,194,0,0" Click="GuestIsolationButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
+            </ToggleButton>
+            <Button x:Name="GuestIsolationButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,274,0,0" Click="GuestIsolationButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -326,8 +345,8 @@
                     <TextBlock Text="Guest Isolation" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="AccessControlButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,226,0,0" Click="AccessControlButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
+            <Button x:Name="AccessControlButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,322,0,0" Click="AccessControlButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -358,8 +377,8 @@
                     <TextBlock Text="Not encrypted" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="UWPToolsButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,258,0,0" Click="UWPToolsButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
+            <Button x:Name="UWPToolsButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,370,0,0" Click="UWPToolsButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -390,8 +409,8 @@
                     <TextBlock Text="Time sync off" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="VNCConnectionsButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,290,0,0" Click="VNCConnectionsButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
+            <Button x:Name="VNCConnectionsButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,418,0,0" Click="VNCConnectionsButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -422,8 +441,8 @@
                     <TextBlock Text="Disabled" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="UnityButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,322,0,0" Click="UnityButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
+            <Button x:Name="UnityButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,466,0,0" Click="UnityButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -453,8 +472,8 @@
                     <TextBlock Text="Unity" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="ApplianceViewButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,354,0,0" Click="ApplianceViewButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
+            <Button x:Name="ApplianceViewButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,514,0,0" Click="ApplianceViewButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -484,8 +503,8 @@
                     <TextBlock Text="Appliance View" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="AutologinButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,386,0,0" Click="AutologinButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
+            <Button x:Name="AutologinButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,562,0,0" Click="AutologinButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -516,8 +535,8 @@
                     <TextBlock Text="Not supported" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="AdvancedButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0"
-                    Margin="0,418,0,0" Click="AdvancedButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
+            <Button x:Name="AdvancedButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0"
+                    Margin="0,610,0,0" Click="AdvancedButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>

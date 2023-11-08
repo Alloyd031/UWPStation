@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"  
     mc:Ignorable="d"
     Loaded="Page_Loaded">
 
@@ -28,13 +28,13 @@
             </ResourceDictionary>
         </Grid.Resources>
         <Grid x:Name="AppTitleBar" VerticalAlignment="Top"
-              Height="48" Background="Transparent">
+              Height="72" Background="Transparent">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
             </Grid.ColumnDefinitions>
-            <Image Source="ms-appx:///Assets/StoreLogo.png" Width="30" Height="30" Margin="9,9,0,9" HorizontalAlignment="Left"/>
-            <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20" Margin="48,0,0,0">
+            <Image Source="ms-appx:///Assets/StoreLogo.png" Width="18" Height="18" Margin="10,7,0,47" HorizontalAlignment="Left"/>
+            <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,8,0,0">
                 <TextBlock.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -49,107 +49,7 @@
                 </TextBlock.Resources>
             </TextBlock>
         </Grid>
-        <StackPanel x:Name="TitlebarRightItems" Orientation="Horizontal" VerticalAlignment="Top" Height="32" HorizontalAlignment="Right" Padding="0,0,188,0">
-            <Button x:Uid="ImportantString" x:Name="Important"
-					Width="46" Height="32" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
-                    UseSystemFocusVisuals="False" IsTabStop="False"
-					AutomationProperties.Name="Important" CornerRadius="0"
-					ToolTipService.ToolTip="Important" ToolTipService.Placement="Bottom" VerticalAlignment="Top" Click="Important_Click">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CFCFCF"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-                <FontIcon Glyph="&#xE171;" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Height="48" Width="48"/>
-            </Button>
-            <Button x:Uid="EasterEggString" x:Name="EasterEgg"
-					Width="46" Height="32" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
-                    UseSystemFocusVisuals="False" IsTabStop="False"
-					AutomationProperties.Name="EasterEgg" CornerRadius="0"
-					ToolTipService.ToolTip="Easter Egg" ToolTipService.Placement="Bottom" VerticalAlignment="Center" Click="EasterEgg_Click">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CFCFCF"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-                <FontIcon Glyph="&#xE899;" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Height="48" Width="48"/>
-            </Button>
-            <Button x:Uid="MenuButtonString" x:Name="MenuButton"
-                    Width="46" Height="32" HorizontalContentAlignment="Stretch"
-                    UseSystemFocusVisuals="False" IsTabStop="False" CornerRadius="0"
-                    AutomationProperties.Name="Menu" VerticalContentAlignment="Stretch"
-                    ToolTipService.ToolTip="Menu" ToolTipService.Placement="Bottom" VerticalAlignment="Center">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4C4C4C"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CFCFCF"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-                <FontIcon Glyph="&#xE700;" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="40"/>
-                <Button.Flyout>
-                    <MenuFlyout Placement="BottomEdgeAlignedRight">
-                        <MenuFlyoutItem x:Uid="ChangelogItemString" x:Name="ChangelogItem" Text="Changelog" UseSystemFocusVisuals="False" IsTabStop="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalAlignment="Stretch" Click="ChangelogItem_Click"/>
-                    </MenuFlyout>
-                </Button.Flyout>
-            </Button>
-        </StackPanel>
-        <Grid x:Name="Toolbar" VerticalAlignment="Top" Height="40" Margin="0,48,0,0" BorderBrush="#5D5D5D" BorderThickness="0,1,0,1">
+        <Grid x:Name="Toolbar" VerticalAlignment="Top" Height="40" Margin="0,32,0,0" HorizontalAlignment="Left">
             <Grid.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -166,314 +66,148 @@
                     </ResourceDictionary.ThemeDictionaries>
                 </ResourceDictionary>
             </Grid.Resources>
-            <Grid VerticalAlignment="Center" Height="40" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,40,0">
+            <Grid VerticalAlignment="Center" Height="40" HorizontalAlignment="Stretch" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,40,0">
                 <StackPanel x:Name="MenuStack" Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button x:Uid="FileMenuString" Content="File" Height="38" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
-                        <Button.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Dark">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CFCFCF"/>
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Button.Resources>
-                        <Button.Flyout>
-                            <MenuFlyout Placement="BottomEdgeAlignedLeft">
-                                <MenuFlyoutItem Text="New Virtual Machine..." Click="CreateNewVM_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="New Window" Click="NewWindow_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Open..." Click="Open_Click"  UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Scan for Virtual Machines..." Click="ScanForVMs_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Configure Auto Start VMs" Click="ConfigureAutoStartVMs_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Close Tab" Click="CloseTab_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                    <muxc:MenuBar>
+                        <muxc:MenuBarItem x:Uid="FileMenuString" Title="File" UseSystemFocusVisuals="False" IsTabStop="False">
+                            <MenuFlyoutItem Text="New Virtual Machine..." Click="CreateNewVM_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="New Window" Click="NewWindow_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Open..." Click="Open_Click"  UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Scan for Virtual Machines..." Click="ScanForVMs_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Configure Auto Start VMs" Click="ConfigureAutoStartVMs_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Close Tab" Click="CloseTab_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem x:Uid="VirtualizePhysicalMachineItemString" Text="Virtualize a Physical Machine..." Click="VirtualizePhysicalMachine_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Connect to Server..." Click="ConnectToRemoteServer_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Export to OVF..." Click="ExportToOVF_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Exit" Click="Exit_Click" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                        </muxc:MenuBarItem>
+                        <muxc:MenuBarItem x:Uid="EditMenuString" Title="Edit" UseSystemFocusVisuals="False" IsTabStop="False">
+                            <MenuFlyoutItem Text="Cut" Click="Cut_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Copy" Click="Copy_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Paste" Click="Paste_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Virtual Network Editor..." Click="VirtualNetEditor_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem x:Uid="PreferencesItemString" Text="Preferences..." Click="Preferences_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                        </muxc:MenuBarItem>
+                        <muxc:MenuBarItem x:Uid="ViewMenuString" Title="View" UseSystemFocusVisuals="False" IsTabStop="False">
+                            <MenuFlyoutItem Text="Full Screen" Click="FullScreen_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Unity" Click="Unity_Click" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Console View" Click="ConsoleView_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Fit Guest Now" Click="FitGuestNow_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Fit Window Now" Click="FitWindowNow_Click" UseSystemFocusVisuals="False" IsTabStop="False">
+                            </MenuFlyoutItem>
+                            <MenuFlyoutSubItem Text="Autosize" UseSystemFocusVisuals="False" IsTabStop="False">
+                                <muxc:RadioMenuFlyoutItem Text="Autofit Guest" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <muxc:RadioMenuFlyoutItem Text="Center Guest" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem x:Uid="VirtualizePhysicalMachineItemString" Text="Virtualize a Physical Machine..." Click="VirtualizePhysicalMachine_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Connect to Server..." Click="ConnectToRemoteServer_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Export to OVF..." Click="ExportToOVF_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <ToggleMenuFlyoutItem Text="Autofit Window" IsChecked="True" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            </MenuFlyoutSubItem>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutSubItem Text="Customize" UseSystemFocusVisuals="False" IsTabStop="False">
+                                <ToggleMenuFlyoutItem Text="Library" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <ToggleMenuFlyoutItem Text="Thumbnail Bar" IsChecked="True"  UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <ToggleMenuFlyoutItem Text="Toolbar" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <ToggleMenuFlyoutItem Text="Tabs" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <ToggleMenuFlyoutItem Text="Status Bar" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem Text="Exit" Click="Exit_Click" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                            </MenuFlyout>
-                        </Button.Flyout>
-                    </Button>
-                    <Button x:Uid="EditMenuString" Content="Edit" Height="38" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
-                        <Button.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Dark">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CFCFCF"/>
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Button.Resources>
-                        <Button.Flyout>
-                            <MenuFlyout Placement="BottomEdgeAlignedLeft">
-                                <MenuFlyoutItem Text="Cut" Click="Cut_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Copy" Click="Copy_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Paste" Click="Paste_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem Text="Virtual Network Editor..." Click="VirtualNetEditor_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem x:Uid="PreferencesItemString" Text="Preferences..." Click="Preferences_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                            </MenuFlyout>
-                        </Button.Flyout>
-                    </Button>
-                    <Button x:Uid="ViewMenuString" Content="View" Height="38" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
-                        <Button.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Dark">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CFCFCF"/>
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Button.Resources>
-                        <Button.Flyout>
-                            <MenuFlyout Placement="BottomEdgeAlignedLeft">
-                                <MenuFlyoutItem Text="Full Screen" Click="FullScreen_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Unity" Click="Unity_Click" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem Text="Console View" Click="ConsoleView_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem Text="Fit Guest Now" Click="FitGuestNow_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Fit Window Now" Click="FitWindowNow_Click" UseSystemFocusVisuals="False" IsTabStop="False">
-                                </MenuFlyoutItem>
-                                <MenuFlyoutSubItem Text="Autosize" UseSystemFocusVisuals="False" IsTabStop="False">
-                                    <muxc:RadioMenuFlyoutItem Text="Autofit Guest" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <muxc:RadioMenuFlyoutItem Text="Center Guest" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutSeparator/>
-                                    <ToggleMenuFlyoutItem Text="Autofit Window" IsChecked="True" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutSubItem Text="Thumbnail Bar Options" UseSystemFocusVisuals="False" IsTabStop="False">
+                                    <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                    <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 </MenuFlyoutSubItem>
+                            </MenuFlyoutSubItem>
+                        </muxc:MenuBarItem>
+                        <muxc:MenuBarItem x:Uid="VMMenuString" Title="VM" UseSystemFocusVisuals="False" IsTabStop="False">
+                            <MenuFlyoutSubItem Text="Power" UseSystemFocusVisuals="False" IsTabStop="False">
+                                <MenuFlyoutItem Text="Start Up Guest" Click="StartUpGuest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Shut Down Guest" Click="ShutDownGuest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Suspend Guest" Click="SuspendGuest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Restart Guest" Click="RestartGuest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 <MenuFlyoutSeparator/>
-                                <MenuFlyoutSubItem Text="Customize" UseSystemFocusVisuals="False" IsTabStop="False">
-                                    <ToggleMenuFlyoutItem Text="Library" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <ToggleMenuFlyoutItem Text="Thumbnail Bar" IsChecked="True"  UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <ToggleMenuFlyoutItem Text="Toolbar" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <ToggleMenuFlyoutItem Text="Tabs" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <ToggleMenuFlyoutItem Text="Status Bar" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutSeparator/>
-                                    <MenuFlyoutSubItem Text="Thumbnail Bar Options" UseSystemFocusVisuals="False" IsTabStop="False">
-                                        <muxc:RadioMenuFlyoutItem Text="Open Virtual Machines" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                        <muxc:RadioMenuFlyoutItem Text="Folder View Virtual Machines" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    </MenuFlyoutSubItem>
+                                <MenuFlyoutItem Text="Power On" Click="PowerOn_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Power Off" Click="PowerOff_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Suspend" Click="Suspend_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Reset" Click="Reset_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutSeparator/>
+                                <MenuFlyoutItem Text="Power On to Firmware" Click="PowerOnToFirmware_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            </MenuFlyoutSubItem>
+                            <MenuFlyoutSubItem Text="Removable Devices" UseSystemFocusVisuals="False" IsTabStop="False">
+                                <MenuFlyoutSubItem Text="CD/DVD (IDE)" UseSystemFocusVisuals="False" IsTabStop="False">
+                                    <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                    <MenuFlyoutItem Text="Settings..." Click="Settings_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 </MenuFlyoutSubItem>
-                            </MenuFlyout>
-                        </Button.Flyout>
-                    </Button>
-                    <Button x:Uid="VMMenuString" Content="VM" Height="38" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
-                        <Button.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Dark">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CFCFCF"/>
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Button.Resources>
-                        <Button.Flyout>
-                            <MenuFlyout Placement="BottomEdgeAlignedLeft">
-                                <MenuFlyoutSubItem Text="Power" UseSystemFocusVisuals="False" IsTabStop="False">
-                                    <MenuFlyoutItem Text="Start Up Guest" Click="StartUpGuest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Shut Down Guest" Click="ShutDownGuest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Suspend Guest" Click="SuspendGuest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Restart Guest" Click="RestartGuest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutSeparator/>
-                                    <MenuFlyoutItem Text="Power On" Click="PowerOn_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Power Off" Click="PowerOff_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Suspend" Click="Suspend_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Reset" Click="Reset_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutSeparator/>
-                                    <MenuFlyoutItem Text="Power On to Firmware" Click="PowerOnToFirmware_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutSubItem Text="Network Adapter" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
+                                    <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                    <MenuFlyoutItem Text="Settings..." Click="Settings_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 </MenuFlyoutSubItem>
-                                <MenuFlyoutSubItem Text="Removable Devices" UseSystemFocusVisuals="False" IsTabStop="False">
-                                    <MenuFlyoutSubItem Text="CD/DVD (IDE)" UseSystemFocusVisuals="False" IsTabStop="False">
-                                        <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                        <MenuFlyoutItem Text="Settings..." Click="Settings_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    </MenuFlyoutSubItem>
-                                    <MenuFlyoutSubItem Text="Network Adapter" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
-                                        <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                        <MenuFlyoutItem Text="Settings..." Click="Settings_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    </MenuFlyoutSubItem>
-                                    <MenuFlyoutSubItem Text="Sound Card" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
-                                        <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                        <MenuFlyoutItem Text="Settings..." Click="Settings_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    </MenuFlyoutSubItem>
+                                <MenuFlyoutSubItem Text="Sound Card" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
+                                    <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                    <MenuFlyoutItem Text="Settings..." Click="Settings_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 </MenuFlyoutSubItem>
-                                <MenuFlyoutItem Text="Pause" Click="Pause_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            </MenuFlyoutSubItem>
+                            <MenuFlyoutItem Text="Pause" Click="Pause_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Send Ctrl+Alt+Del" Click="SendCtrlAltDel_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Grab Input" Click="GrabInput_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutSubItem Text="Snapshot"  UseSystemFocusVisuals="False" IsTabStop="False">
+                                <MenuFlyoutItem Text="Take Snapshot..." Click="TakeVMSnapshot_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Revert to Snapshot" Click="RevertToSnapshot_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem Text="Send Ctrl+Alt+Del" Click="SendCtrlAltDel_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Grab Input" Click="GrabInput_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Snapshot Manager" Click="VMSnapshotManager_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            </MenuFlyoutSubItem>
+                            <MenuFlyoutItem Text="Capture Screen" Click="CaptureScreen_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutSubItem Text="Manage" UseSystemFocusVisuals="False" IsTabStop="False">
+                                <MenuFlyoutItem Text="Change Hardware Compatibility..." Click="ChangeHardwareCompatibility_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 <MenuFlyoutSeparator/>
-                                <MenuFlyoutSubItem Text="Snapshot"  UseSystemFocusVisuals="False" IsTabStop="False">
-                                    <MenuFlyoutItem Text="Take Snapshot..." Click="TakeVMSnapshot_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Revert to Snapshot" Click="RevertToSnapshot_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutSeparator/>
-                                    <MenuFlyoutItem Text="Snapshot Manager" Click="VMSnapshotManager_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                </MenuFlyoutSubItem>
-                                <MenuFlyoutItem Text="Capture Screen" Click="CaptureScreen_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Clone..." Click="Clone_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Upload..." Click="Upload_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Download..." Click="Download_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 <MenuFlyoutSeparator/>
-                                <MenuFlyoutSubItem Text="Manage" UseSystemFocusVisuals="False" IsTabStop="False">
-                                    <MenuFlyoutItem Text="Change Hardware Compatibility..." Click="ChangeHardwareCompatibility_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutSeparator/>
-                                    <MenuFlyoutItem Text="Clone..." Click="Clone_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Upload..." Click="Upload_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Download..." Click="Download_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutSeparator/>
-                                    <MenuFlyoutItem Text="Clean Up Disks..." Click="CleanUpDisks_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Delete from Disk" Click="DeleteFromDisks_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutSeparator/>
-                                    <MenuFlyoutItem Text="Permissions..." Click="Permissions_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutSeparator/>
-                                    <MenuFlyoutItem Text="VNC Connections" Click="VNCConnections_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Message Log" Click="VMMessageLog_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                </MenuFlyoutSubItem>
-                                <MenuFlyoutItem Text="Install UWPTools..." Click="InstallUWPTools_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Clean Up Disks..." Click="CleanUpDisks_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Delete from Disk" Click="DeleteFromDisks_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem Text="Settings..." Click="VMSettings_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                            </MenuFlyout>
-                        </Button.Flyout>
-                    </Button>
-                    <Button x:Uid="TabsMenuString" Content="Tabs" Height="38" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
-                        <Button.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Dark">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CFCFCF"/>
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Button.Resources>
-                        <Button.Flyout>
-                            <MenuFlyout Placement="BottomEdgeAlignedLeft">
-                                <MenuFlyoutItem x:Name="GoToHome" Text="Go to Home Tab" Click="GoToHome_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Permissions..." Click="Permissions_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
                                 <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem Text="Next Tab" Click="NextTab_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Previous Tab" Click="PreviousTab_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                            </MenuFlyout>
-                        </Button.Flyout>
-                    </Button>
-                    <Button x:Uid="HelpMenuString" Content="Help" Height="38" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
-                        <Button.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Dark">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#4C4C4C"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#CFCFCF"/>
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CFCFCF"/>
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Button.Resources>
-                        <Button.Flyout>
-                            <MenuFlyout Placement="BottomEdgeAlignedLeft">
-                                <MenuFlyoutItem Text="Help Topics" Click="HelpTopics_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Online Documentaion" Click="OnlineDocumentation_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutSubItem Text="Support" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
-                                    <MenuFlyoutItem Text="Online Community" Click="OnlineCommunity_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Product Support Center" Click="ProductSupportCenter_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Submit Support Request" Click="SubmitSupportRequest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <MenuFlyoutItem Text="Collect Support Data..." Click="CollectSupportData_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                </MenuFlyoutSubItem>
-                                <MenuFlyoutSeparator/>
-                                <MenuFlyoutSubItem Text="Hints" UseSystemFocusVisuals="False" IsTabStop="False">
-                                    <MenuFlyoutItem Text="Enable All Hints" Click="EnableAllHints_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                    <ToggleMenuFlyoutItem Text="Show Enabled Hints" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                </MenuFlyoutSubItem>
-                                <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem Text="Enter a License Key" Click="LicenseKey_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Register UWPStation" Click="RegisterUWPStation_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutItem Text="Software Updates" Click="SoftwareUpdates_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                                <MenuFlyoutSeparator/>
-                                <MenuFlyoutItem x:Uid="AboutItemString" Text="About UWPStation" Click="About_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                            </MenuFlyout>
-                        </Button.Flyout>
-                    </Button>
+                                <MenuFlyoutItem Text="VNC Connections" Click="VNCConnections_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Message Log" Click="VMMessageLog_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            </MenuFlyoutSubItem>
+                            <MenuFlyoutItem Text="Install UWPTools..." Click="InstallUWPTools_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Settings..." Click="VMSettings_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                        </muxc:MenuBarItem>
+                        <muxc:MenuBarItem x:Uid="TabsMenuString" Title="Tabs" UseSystemFocusVisuals="False" IsTabStop="False">
+                            <MenuFlyoutItem x:Name="GoToHome" Text="Go to Home Tab" Click="GoToHome_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Next Tab" Click="NextTab_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Previous Tab" Click="PreviousTab_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                        </muxc:MenuBarItem>
+                        <muxc:MenuBarItem x:Uid="HelpMenuString" Title="Help" UseSystemFocusVisuals="False" IsTabStop="False">
+                            <MenuFlyoutItem Text="Help Topics" Click="HelpTopics_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Online Documentaion" Click="OnlineDocumentation_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSubItem Text="Support" CornerRadius="0" UseSystemFocusVisuals="False" IsTabStop="False">
+                                <MenuFlyoutItem Text="Online Community" Click="OnlineCommunity_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Product Support Center" Click="ProductSupportCenter_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Submit Support Request" Click="SubmitSupportRequest_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <MenuFlyoutItem Text="Collect Support Data..." Click="CollectSupportData_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            </MenuFlyoutSubItem>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutSubItem Text="Hints" UseSystemFocusVisuals="False" IsTabStop="False">
+                                <MenuFlyoutItem Text="Enable All Hints" Click="EnableAllHints_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                                <ToggleMenuFlyoutItem Text="Show Enabled Hints" IsChecked="True" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            </MenuFlyoutSubItem>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem Text="Enter a License Key" Click="LicenseKey_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Register UWPStation" Click="RegisterUWPStation_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutItem Text="Software Updates" Click="SoftwareUpdates_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem x:Uid="AboutItemString" Text="About UWPStation" Click="About_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                        </muxc:MenuBarItem>
+                    </muxc:MenuBar>
                     <AppBarSeparator HorizontalAlignment="Left"/>
                     <muxc:SplitButton x:Name="VMPower" ToolTipService.ToolTip="Start up this guest operating system" Height="38" UseSystemFocusVisuals="False" IsTabStop="False" VerticalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
                         <muxc:SplitButton.Resources>
@@ -910,7 +644,7 @@
                 </StackPanel>
             </Grid>
         </Grid>
-        <Grid x:Name="LibraryPanel" BorderBrush="#7B8088" Width="200" HorizontalAlignment="Left" Margin="0,88,0,32" BorderThickness="1,1,1,1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="LibraryPanel" BorderBrush="#7B8088" Width="200" HorizontalAlignment="Left" Margin="0,72,0,32" BorderThickness="1,1,1,1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -1129,7 +863,7 @@
                 </Grid>
             </ToggleButton>
         </Grid>
-        <Grid x:Name="TabsGrid" Margin="202,88,0,32" BorderBrush="#646464" BorderThickness="1,1,1,1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="TabsGrid" Margin="202,72,0,32" BorderBrush="#646464" BorderThickness="1,1,1,1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>

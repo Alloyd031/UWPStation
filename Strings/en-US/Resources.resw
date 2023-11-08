@@ -129,12 +129,6 @@
   <data name="BackButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Back</value>
   </data>
-  <data name="ChangelogItemString.Text" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="ChangelogTitleString.Text" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
   <data name="CheckTheseAppsString.Text" xml:space="preserve">
     <value>Check out these apps!</value>
   </data>
@@ -156,13 +150,7 @@
   <data name="CreatorsString.Text" xml:space="preserve">
     <value>Creators:</value>
   </data>
-  <data name="EasterEggString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
-    <value>Easter Egg</value>
-  </data>
-  <data name="EasterEggTitleString.Text" xml:space="preserve">
-    <value>Easter Egg!</value>
-  </data>
-  <data name="EditMenuString.Content" xml:space="preserve">
+  <data name="EditMenuString.Title" xml:space="preserve">
     <value>Edit</value>
   </data>
   <data name="EnglishLanguageString.Content" xml:space="preserve">
@@ -174,13 +162,13 @@
   <data name="FeedbackString.Text" xml:space="preserve">
     <value>Feedback</value>
   </data>
-  <data name="FileMenuString.Content" xml:space="preserve">
+  <data name="FileMenuString.Title" xml:space="preserve">
     <value>File</value>
   </data>
   <data name="HelpButtonString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="HelpMenuString.Content" xml:space="preserve">
+  <data name="HelpMenuString.Title" xml:space="preserve">
     <value>Help</value>
   </data>
   <data name="HideLibraryString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
@@ -188,15 +176,6 @@
   </data>
   <data name="HomeTabString.Text" xml:space="preserve">
     <value>Home</value>
-  </data>
-  <data name="ImportantMessageString.Text" xml:space="preserve">
-    <value>This app is not a real VMware Workstation. This is just a parody.</value>
-  </data>
-  <data name="ImportantString.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
-    <value>Important</value>
-  </data>
-  <data name="ImportantTitleString.Text" xml:space="preserve">
-    <value>Important!</value>
   </data>
   <data name="LanguagePreferenceString.Text" xml:space="preserve">
     <value>Language</value>
@@ -273,7 +252,7 @@
   <data name="SharedVMsTabString.Text" xml:space="preserve">
     <value>Shared VMs</value>
   </data>
-  <data name="TabsMenuString.Content" xml:space="preserve">
+  <data name="TabsMenuString.Title" xml:space="preserve">
     <value>Tabs</value>
   </data>
   <data name="TestPageString.Text" xml:space="preserve">
@@ -285,13 +264,13 @@
   <data name="TestTabString.Text" xml:space="preserve">
     <value>Test Page</value>
   </data>
-  <data name="ViewMenuString.Content" xml:space="preserve">
+  <data name="ViewMenuString.Title" xml:space="preserve">
     <value>View</value>
   </data>
   <data name="VirtualizePhysicalMachineItemString.Text" xml:space="preserve">
     <value>Virtualize a Physical Machine...</value>
   </data>
-  <data name="VMMenuString.Content" xml:space="preserve">
+  <data name="VMMenuString.Title" xml:space="preserve">
     <value>VM</value>
   </data>
   <data name="WithHelpString.Text" xml:space="preserve">

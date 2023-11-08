@@ -16,6 +16,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using UWPStation.Dialogs;
+using System.Threading.Tasks;
+using Windows.UI.Core;
 
 namespace UWPStation
 {
@@ -25,15 +27,25 @@ namespace UWPStation
         {
             this.InitializeComponent();
         }
-        private async void WelcomeButton_Click(object sender, RoutedEventArgs e)
+        private async Task<bool> OpenPageAsWindowAsync(Type t)
         {
-            WelcomeInDialog dialog = new WelcomeInDialog();
-            await dialog.ShowAsync();
+            var view = CoreApplication.CreateNewView();
+            int id = 0;
+
+            await view.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                var frame = new Frame();
+                frame.Navigate(t, null);
+                Window.Current.Content = frame;
+                Window.Current.Activate();
+                id = ApplicationView.GetForCurrentView().Id;
+            });
+
+            return await ApplicationViewSwitcher.TryShowAsStandaloneAsync(id);
         }
         private async void EditVMSettings_Click(object sender, RoutedEventArgs e)
         {
-            VMSettings dialog = new VMSettings();
-            await dialog.ShowAsync();
+            await OpenPageAsWindowAsync(typeof(VMSettings));
         }
         private async void StartVM_Click(object sender, RoutedEventArgs e)
         {

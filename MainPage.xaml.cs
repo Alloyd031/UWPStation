@@ -25,7 +25,6 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 using UWPStation.TabPages;
-using UWPStation.Something;
 using Windows.UI.Xaml.Media.Animation;
 
 namespace UWPStation
@@ -121,7 +120,7 @@ namespace UWPStation
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             this.LibraryPanel.Visibility = Visibility.Collapsed;
-            this.TabsGrid.Margin = new Thickness (0, 88, 0, 0);
+            this.TabsGrid.Margin = new Thickness (0, 72, 0, 0);
             this.FolderView.Margin = new Thickness(0, 0, 0, 32);
 
             if (ShowHideLibrary.IsChecked == true)
@@ -135,14 +134,14 @@ namespace UWPStation
             if (this.LibraryPanel.Visibility == Visibility.Visible)
             {
                 this.LibraryPanel.Visibility = Visibility.Collapsed;
-                this.TabsGrid.Margin = new Thickness(0, 88, 0, 32);
+                this.TabsGrid.Margin = new Thickness(0, 72, 0, 32);
                 this.FolderView.Margin = new Thickness(0, 0, 0, 32);
                 ShowHideLibrary.IsChecked = false;
             }
             else
             {
                 this.LibraryPanel.Visibility = Visibility.Visible;
-                this.TabsGrid.Margin = new Thickness(200, 88, 0, 32);
+                this.TabsGrid.Margin = new Thickness(200, 72, 0, 32);
                 this.FolderView.Margin = new Thickness(202, 0, 0, 32);
                 ShowHideLibrary.IsChecked = true;
             }
@@ -253,8 +252,7 @@ namespace UWPStation
         }
         private async void VMSettings_Click(object sender, RoutedEventArgs e)
         {
-            VMSettings dialog = new VMSettings();
-            await dialog.ShowAsync();
+            await OpenPageAsWindowAsync(typeof(VMSettings));
         }
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
@@ -372,8 +370,7 @@ namespace UWPStation
         }
         private async void Settings_Click(object sender, RoutedEventArgs e)
         {
-            VMSettings dialog = new VMSettings();
-            await dialog.ShowAsync();
+            await OpenPageAsWindowAsync(typeof(VMSettings));
         }
         private async void Pause_Click(object sender, RoutedEventArgs e)
         {
@@ -525,24 +522,9 @@ namespace UWPStation
             NotAvailableDialog dialog = new NotAvailableDialog();
             await dialog.ShowAsync();
         }
-        private async void Important_Click(object sender, RoutedEventArgs e)
-        {
-            Important dialog = new Important();
-            await dialog.ShowAsync();
-        }
-        private async void EasterEgg_Click(object sender, RoutedEventArgs e)
-        {
-            EasterEgg dialog = new EasterEgg();
-            await dialog.ShowAsync();
-        }
         private async void ClearMessages_Click(object sender, RoutedEventArgs e)
         {
             NotAvailableDialog dialog = new NotAvailableDialog();
-            await dialog.ShowAsync();
-        }
-        private async void ChangelogItem_Click(object sender, RoutedEventArgs e)
-        {
-            Changelog dialog = new Changelog();
             await dialog.ShowAsync();
         }
         private void MyComputer_Tapped(object sender, TappedRoutedEventArgs e)

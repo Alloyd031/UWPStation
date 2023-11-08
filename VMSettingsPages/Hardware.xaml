@@ -7,9 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    Loaded="Page_Loaded"
-    Height="679" Width="800">
-    
+    Loaded="Page_Loaded">
+
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
@@ -40,22 +39,22 @@
         </Grid.Resources>
         <Grid Width="320" HorizontalAlignment="Left" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
                             <Color x:Key="SystemAltHighColor">#1D1D1D</Color>
-                                <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <Color x:Key="SystemAltHighColor">#E4E5E7</Color>
-                                <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Grid.Resources>
+                            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <Color x:Key="SystemAltHighColor">#E4E5E7</Color>
+                            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Grid.Resources>
             <TextBlock Text="Device" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,10,0,0"/>
             <TextBlock Text="Summary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="162,10,0,0"/>
-            <ToggleButton x:Name="MemoryButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
+            <ToggleButton x:Name="MemoryButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
                           HorizontalAlignment="Center" Margin="0,34,0,0" Click="MemoryButton_Click" Tapped="MemoryButton_Tapped" Checked="MemoryButton_Checked" UseSystemFocusVisuals="False">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
@@ -107,8 +106,8 @@
                     <TextBlock Text="2 GB" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="ProcessorsButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
-                          Margin="0,66,0,0" Click="ProcessorsButton_Click" Tapped="ProcessorsButton_Tapped" Checked="ProcessorsButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
+            <ToggleButton x:Name="ProcessorsButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
+                          Margin="0,82,0,0" Click="ProcessorsButton_Click" Tapped="ProcessorsButton_Tapped" Checked="ProcessorsButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -159,8 +158,8 @@
                     <TextBlock Text="2" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="HardDiskButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
-                          HorizontalAlignment="Center" Margin="0,98,0,0" Click="HardDiskButton_Click" Tapped="HardDiskButton_Tapped" Checked="HardDiskButton_Checked" UseSystemFocusVisuals="False">
+            <ToggleButton x:Name="HardDiskButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
+                          HorizontalAlignment="Center" Margin="0,130,0,0" Click="HardDiskButton_Click" Tapped="HardDiskButton_Tapped" Checked="HardDiskButton_Checked" UseSystemFocusVisuals="False">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -211,8 +210,8 @@
                     <TextBlock Text="100 GB" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="CDDVDButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
-                          Margin="0,130,0,0" Click="CDDVDButton_Click" Tapped="CDDVDButton_Tapped" Checked="CDDVDButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
+            <ToggleButton x:Name="CDDVDButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
+                          Margin="0,178,0,0" Click="CDDVDButton_Click" Tapped="CDDVDButton_Tapped" Checked="CDDVDButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -263,8 +262,8 @@
                     <TextBlock Text="Auto detect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="NetworkAdapterButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
-                          Margin="0,162,0,0" Click="NetworkAdapterButton_Click" Tapped="NetworkAdapterButton_Tapped" Checked="NetworkAdapterButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
+            <ToggleButton x:Name="NetworkAdapterButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
+                          Margin="0,226,0,0" Click="NetworkAdapterButton_Click" Tapped="NetworkAdapterButton_Tapped" Checked="NetworkAdapterButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -315,8 +314,8 @@
                     <TextBlock Text="NAT" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="USBControllerButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
-                          Margin="0,194,0,0" Click="USBControllerButton_Click" Tapped="USBControllerButton_Tapped" Checked="USBControllerButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
+            <ToggleButton x:Name="USBControllerButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
+                          Margin="0,274,0,0" Click="USBControllerButton_Click" Tapped="USBControllerButton_Tapped" Checked="USBControllerButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -367,8 +366,8 @@
                     <TextBlock Text="Present" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="SoundCardButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
-                          Margin="0,226,0,0" Click="SoundCardButton_Click" Tapped="SoundCardButton_Tapped" Checked="SoundCardButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
+            <ToggleButton x:Name="SoundCardButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
+                          Margin="0,322,0,0" Click="SoundCardButton_Click" Tapped="SoundCardButton_Tapped" Checked="SoundCardButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -419,8 +418,8 @@
                     <TextBlock Text="Auto detect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <ToggleButton x:Name="DisplayButton" Height="32" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
-                          Margin="0,258,0,0" Click="DisplayButton_Click" Tapped="DisplayButton_Tapped" Checked="DisplayButton_Checked" HorizontalAlignment="Center" UseSystemFocusVisuals="False">
+            <ToggleButton x:Name="DisplayButton" Height="48" Width="320" VerticalAlignment="Top" CornerRadius="0" IsTabStop="False" BorderThickness="5,0,0,0"
+                          Margin="0,370,0,0" Click="DisplayButton_Click" Tapped="DisplayButton_Tapped" Checked="DisplayButton_Checked" UseSystemFocusVisuals="False" HorizontalAlignment="Center">
                 <ToggleButton.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -471,10 +470,10 @@
                     <TextBlock Text="Auto detect" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,0,0,0"/>
                 </Grid>
             </ToggleButton>
-            <Button VerticalAlignment="Top" Content="Add..." Width="80" Height="35" HorizontalAlignment="Right" IsTabStop="False"
-                    UseSystemFocusVisuals="False" Margin="0,626,95,0"/>
-            <Button Content="Remove" Width="80" Height="35" HorizontalAlignment="Right" IsTabStop="False"
-                    UseSystemFocusVisuals="False" Margin="0,626,10,0" VerticalAlignment="Top"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                <Button VerticalAlignment="Top" Content="Add..." Width="80" Height="35" Margin="0,0,10,10" HorizontalAlignment="Right" IsTabStop="False" UseSystemFocusVisuals="False"/>
+                <Button Content="Remove" Width="80" Height="35" Margin="0,0,10,10" HorizontalAlignment="Right" IsTabStop="False" UseSystemFocusVisuals="False" VerticalAlignment="Top"/>
+            </StackPanel>
         </Grid>
         <Frame x:Name="HardwareFrame" Margin="320,0,0,0"/>
     </Grid>

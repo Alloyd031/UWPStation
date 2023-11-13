@@ -29,28 +29,30 @@
             </ResourceDictionary>
         </Grid.Resources>
         <Grid x:Name="AppTitleBar" VerticalAlignment="Top"
-              Height="72" Background="Transparent">
+              Height="32" Background="Transparent">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
             </Grid.ColumnDefinitions>
-            <Image Source="ms-appx:///Assets/StoreLogo.png" Width="18" Height="18" Margin="10,7,0,47" HorizontalAlignment="Left"/>
-            <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,8,0,0">
-                <TextBlock.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="Foreground" Color="White"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="Foreground" Color="Black"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </TextBlock.Resources>
-            </TextBlock>
+            <StackPanel Orientation="Horizontal" Padding="15,0,0,0">
+                <Image Source="ms-appx:///Assets/StoreLogo.png" Width="18" Height="18" HorizontalAlignment="Left"/>
+                <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0">
+                    <TextBlock.Resources>
+                        <ResourceDictionary>
+                            <ResourceDictionary.ThemeDictionaries>
+                                <ResourceDictionary x:Key="Dark">
+                                    <SolidColorBrush x:Key="Foreground" Color="White"/>
+                                </ResourceDictionary>
+                                <ResourceDictionary x:Key="Light">
+                                    <SolidColorBrush x:Key="Foreground" Color="Black"/>
+                                </ResourceDictionary>
+                            </ResourceDictionary.ThemeDictionaries>
+                        </ResourceDictionary>
+                    </TextBlock.Resources>
+                </TextBlock>
+            </StackPanel>
         </Grid>
-        <Grid x:Name="Toolbar" VerticalAlignment="Top" Height="40" Margin="0,32,0,0" HorizontalAlignment="Left">
+        <Grid x:Name="Toolbar" VerticalAlignment="Top" Height="40" BorderBrush="#7B8088" BorderThickness="0,1,0,1" Margin="0,32,0,0" HorizontalAlignment="Stretch">
             <Grid.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>

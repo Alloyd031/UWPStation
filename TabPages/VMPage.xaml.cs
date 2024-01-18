@@ -19,7 +19,7 @@ using UWPStation.Dialogs;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 
-namespace UWPStation
+namespace UWPStation.TabPages
 {
     public sealed partial class VMPage : Page
     {

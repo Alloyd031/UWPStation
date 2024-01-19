@@ -45,7 +45,8 @@ namespace UWPStation.TabPages
         }
         private async void EditVMSettings_Click(object sender, RoutedEventArgs e)
         {
-            await OpenPageAsWindowAsync(typeof(VMSettings));
+            VMSettings dialog = new VMSettings();
+            await dialog.ShowAsync();
         }
         private async void StartVM_Click(object sender, RoutedEventArgs e)
         {

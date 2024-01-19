@@ -39,8 +39,13 @@ namespace UWPStation
             Window.Current.SetTitleBar(AppTitleBar);
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
+            titleBar.BackgroundColor = Colors.Transparent;
+            titleBar.InactiveBackgroundColor = Colors.Transparent;
             titleBar.ButtonBackgroundColor = Colors.Transparent;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+
+            ApplicationView.PreferredLaunchViewSize = new Size(1404, 916);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
         }
         private void InitializeSampleTreeView()
         {
@@ -92,7 +97,8 @@ namespace UWPStation
         }
         private async void About_Click(object sender, RoutedEventArgs e)
         {
-            await OpenPageAsWindowAsync(typeof(AboutApp));
+            AboutApp dialog = new AboutApp();
+            await dialog.ShowAsync();
         }
         private void Button_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
@@ -251,7 +257,8 @@ namespace UWPStation
         }
         private async void VMSettings_Click(object sender, RoutedEventArgs e)
         {
-            await OpenPageAsWindowAsync(typeof(VMSettings));
+            VMSettings dialog = new VMSettings();
+            await dialog.ShowAsync();
         }
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {

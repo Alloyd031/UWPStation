@@ -28,7 +28,7 @@
                 </ResourceDictionary.ThemeDictionaries>
             </ResourceDictionary>
         </Grid.Resources>
-        <Grid x:Name="TitleBar" VerticalAlignment="Top" Height="40" Background="Transparent">
+        <Grid VerticalAlignment="Top" Height="40" Background="Transparent">
             <Image Source="/Assets/StoreLogo.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="30" Margin="10,0,0,0"/>
             <TextBlock x:Uid="AboutString" Text="About UWPStation" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="52,0,0,0"/>
         </Grid>

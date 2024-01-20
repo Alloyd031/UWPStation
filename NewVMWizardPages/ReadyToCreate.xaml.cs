@@ -28,5 +28,9 @@ namespace UWPStation.NewVMWizardPages
             NewVMWizard nvm = new NewVMWizard();
             nvm.Hide();
         }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

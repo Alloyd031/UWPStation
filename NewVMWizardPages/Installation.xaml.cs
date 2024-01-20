@@ -13,8 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace UWPStation.NewVMWizardPages
 {
     public sealed partial class Installation : Page
@@ -29,6 +27,10 @@ namespace UWPStation.NewVMWizardPages
             {
                 this.Frame.Navigate(typeof(OperatingSystem));
             }
+        }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
         }
     }
 }

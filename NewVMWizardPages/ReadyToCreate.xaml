@@ -10,15 +10,18 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <Grid VerticalAlignment="Top" Margin="0,10,0,0">
-            <FontIcon Glyph="&#xE10B;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Ready to Create Virtual Machine" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
-            <TextBlock Text="Click Finish to create the virtual machine. Then you can install UWPFamilyOS." TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0"/>
+        <Grid VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE10B;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
+            <TextBlock Text="Ready to Create Virtual Machine" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75,0,0"/>
+            <TextBlock Text="Click Finish to create the virtual machine. Then you can install UWPFamilyOS." TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" Width="350" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,107,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Creating VMs is not possible at this time" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+            <TextBlock Text="Creating VMs is not possible at this time." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
         </Grid>
-        <Button x:Name="FinishButton" Width="70" Height="35" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" Content="Finish" UseSystemFocusVisuals="False" Click="FinishButton_Click"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
+            <Button x:Name="BackButton" Margin="0,0,10,0" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
+            <Button x:Name="FinishButton" Content="Finish" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="FinishButton_Click"/>
+        </StackPanel>
     </Grid>
 </Page>

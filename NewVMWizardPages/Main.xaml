@@ -7,14 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    Width="480"
-	Height="518">
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid VerticalAlignment="Top" Margin="0,10,0,0">
-            <FontIcon Glyph="&#xECC8;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Welcome to the New Virtual Machine Wizard" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
-            <TextBlock Text="What type of configuration you want?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,108,0,0"/>
+    <Grid>
+        <Grid VerticalAlignment="Top" Margin="1,0,-1,0">
+            <FontIcon Glyph="&#xECC8;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
+            <TextBlock Text="Welcome to the New Virtual Machine Wizard" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75,0,0"/>
+            <TextBlock Text="What type of configuration you want?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,107,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <RadioButton x:Name="TypicalRadioButton" Content="Typical (Recommended)" FontWeight="Bold" VerticalAlignment="Top" IsChecked="True" HorizontalAlignment="Center" UseSystemFocusVisuals="False"/>
@@ -22,32 +21,6 @@
             <RadioButton x:Name="CustomRadioButton" Content="Custom (Advanced)" FontWeight="Bold" VerticalAlignment="Top" Margin="124,56,0,0" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Create a virtual machine with advanced options." FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,88,0,0"/>
         </Grid>
-        <Button x:Name="NextButton" Width="70" Height="35" Margin="400,473,0,0" Content="Next" UseSystemFocusVisuals="False"
-                VerticalAlignment="Top" Click="NextButton_Click" CornerRadius="0" BorderThickness="2,2,2,2">
-            <Button.Resources>
-                <ResourceDictionary>
-                    <ResourceDictionary.ThemeDictionaries>
-                        <ResourceDictionary x:Key="Dark">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                        </ResourceDictionary>
-                        <ResourceDictionary x:Key="Light">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
-                        </ResourceDictionary>
-                    </ResourceDictionary.ThemeDictionaries>
-                </ResourceDictionary>
-            </Button.Resources>
-        </Button>
+        <Button x:Name="NextButton" Margin="0,0,10,10" Content="Next" UseSystemFocusVisuals="False" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="NextButton_Click"/>
     </Grid>
 </Page>

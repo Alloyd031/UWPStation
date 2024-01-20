@@ -41,7 +41,11 @@ namespace UWPStation.NewVMWizardPages
             if (this.OtherOS.IsChecked == true)
             {
                 this.Frame.Navigate(typeof(NameVirtualMachine));
-            }           
+            }
+        }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
         }
     }
 }

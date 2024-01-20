@@ -25,5 +25,9 @@ namespace UWPStation.NewVMWizardPages
         {
             this.Frame.Navigate(typeof(ReadyToCreate));
         }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    CornerRadius="0" BorderBrush="#3D7B79">
+    Style="{StaticResource DefaultContentDialogStyle}">
 
     <ContentDialog.Resources>
         <ResourceDictionary>
@@ -16,126 +16,18 @@
         </ResourceDictionary>
     </ContentDialog.Resources>
 
-    <Grid x:Name="ContainerGrid"
-          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-		  Width="440"
-		  Height="500"
-		  HorizontalAlignment="Stretch"
-	      VerticalAlignment="Stretch">
-        <Grid.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.ThemeDictionaries>
-                    <ResourceDictionary x:Key="Dark">
-                        <Color x:Key="SystemAltHighColor">Black</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                    </ResourceDictionary>
-                    <ResourceDictionary x:Key="Light">
-                        <Color x:Key="SystemAltHighColor">White</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                    </ResourceDictionary>
-                </ResourceDictionary.ThemeDictionaries>
-            </ResourceDictionary>
-        </Grid.Resources>
-        <Grid x:Name="TitlebarGrid" Height="32" VerticalAlignment="Top">
-            <TextBlock x:FieldModifier="public" x:Name="TitleText" Text="Message Log" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <Button	x:Name="CloseButton"
-					Width="46" Height="32"
-                    CornerRadius="0"
-					AutomationProperties.Name="CloseButton"
-					Click="CloseButton_Click" UseSystemFocusVisuals="False"
-					ToolTipService.ToolTip="Close" Margin="394,0,0,0">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F1707A"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#E81123"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#F1707A"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#F1707A"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#E81123"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#F1707A"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-                <FontIcon Glyph="&#xE8BB;" FontSize="10" Margin="-23,-16,-23,-16"/>
-            </Button>
-        </Grid>
-        <Grid VerticalAlignment="Top" Margin="0,32,0,0">
-            <FontIcon Glyph="&#xE121;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Taking a snapshot lets you preserve the state of the virtual machine so that you can return to the same state later." Style="{StaticResource CaptionTextBlockStyle}" FontSize="16" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+    <Grid x:Name="ContainerGrid" Width="440" Height="500">
+        <Grid VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE121;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
+            <TextBlock Text="Taking a snapshot lets you preserve the state of the virtual machine so that you can return to the same state later." Style="{StaticResource CaptionTextBlockStyle}" FontSize="16" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75,0,0"/>
         </Grid>
         <TextBlock Text="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,178,0,0"/>
-        <TextBox Text="Snapshot 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,173,0,0" Width="375" CornerRadius="0"/>
+        <TextBox Text="Snapshot 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,173,0,0" Width="375"/>
         <TextBlock Text="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,217,0,0"/>
-        <RichEditBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,217,0,0" Width="342" Height="151" CornerRadius="0"/>
-        <Button x:Name="TakeSnapshotButton" Width="120" Height="35" Content="Take Snapshot" CornerRadius="0" BorderThickness="2,2,2,2" 
-                Margin="185,455,0,0" VerticalAlignment="Top" Click="TakeSnapshotButton_Click" UseSystemFocusVisuals="False">
-            <Button.Resources>
-                <ResourceDictionary>
-                    <ResourceDictionary.ThemeDictionaries>
-                        <ResourceDictionary x:Key="Dark">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                        </ResourceDictionary>
-                        <ResourceDictionary x:Key="Light">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
-                        </ResourceDictionary>
-                    </ResourceDictionary.ThemeDictionaries>
-                </ResourceDictionary>
-            </Button.Resources>
-        </Button>
-        <Button x:Name="CancelButton" Width="120" Height="35" Content="Cancel" CornerRadius="0" BorderThickness="2,2,2,2" 
-                Click="CancelButton_Click" VerticalAlignment="Top" Margin="310,455,0,0" UseSystemFocusVisuals="False">
-            <Button.Resources>
-                <ResourceDictionary>
-                    <ResourceDictionary.ThemeDictionaries>
-                        <ResourceDictionary x:Key="Dark">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                        </ResourceDictionary>
-                        <ResourceDictionary x:Key="Light">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
-                        </ResourceDictionary>
-                    </ResourceDictionary.ThemeDictionaries>
-                </ResourceDictionary>
-            </Button.Resources>
-        </Button>
+        <RichEditBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,217,0,0" Width="342" Height="151"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
+            <Button x:Name="TakeSnapshotButton" Width="120" Height="35" Content="Take Snapshot" Margin="0,0,10,0" VerticalAlignment="Top" Click="TakeSnapshotButton_Click" UseSystemFocusVisuals="False"/>
+            <Button x:Name="CancelButton" Width="120" Height="35" Content="Cancel" Click="CancelButton_Click" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
+        </StackPanel>
     </Grid>
 </ContentDialog>

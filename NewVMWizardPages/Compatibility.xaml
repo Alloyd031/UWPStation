@@ -8,11 +8,10 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
-    Width="480"
-	Height="518">
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid VerticalAlignment="Top" Margin="0,10,0,0">
+    <Grid>
+        <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE930;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock Text="Choose the Virtual Machine Hardware Compatibility" Style="{StaticResource CaptionTextBlockStyle}" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0"/>
             <TextBlock Text="Which hardware features are needed for this virtual machine?" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,108,0,0"/>
@@ -20,50 +19,19 @@
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Virtual machine hardware compabitility" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <TextBlock Text="Hardware compabitility:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0"/>
-            <ComboBox Text="UWPStation 0.2.x" Margin="174,34,0,0" CornerRadius="0" UseSystemFocusVisuals="False">
-                <ComboBox.Resources>
-                    <Style TargetType="ComboBox">
-                        <Setter Property="CornerRadius" Value="0"/>
-                    </Style>
-                </ComboBox.Resources>
-                <ComboBoxItem Content="UWPStation 0.2.x" IsSelected="True" CornerRadius="0"/>
+            <ComboBox Text="UWPStation 0.3.x" Margin="174,34,0,0" UseSystemFocusVisuals="False">
+                <ComboBoxItem Content="UWPStation 0.3.x" IsSelected="True"/>
             </ComboBox>
             <TextBlock Text="Compatible with:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-            <CheckBox Content="ESX Server" FontWeight="Bold" IsChecked="True" IsEnabled="False" 
-                      Margin="164,72,0,0" VerticalAlignment="Top" CornerRadius="0"/>
+            <CheckBox Content="ESX Server" FontWeight="Bold" IsChecked="True" IsEnabled="False"  Margin="164,72,0,0" VerticalAlignment="Top"/>
             <TextBlock Text="Compatible products:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,119,0,0"/>
-            <TextBox Text="UWPStation 0.2.x" FontWeight="Bold" IsReadOnly="True" HorizontalAlignment="Left" 
-                     VerticalAlignment="Top" Margin="10,143,0,0" CornerRadius="0" UseSystemFocusVisuals="False"/>
+            <TextBox Text="UWPStation 0.3.x" FontWeight="Bold" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Limitations:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="257,119,0,0"/>
-            <TextBox Text="No limitations" FontWeight="Bold" IsReadOnly="True" CornerRadius="0"
-                     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="257,143,0,0" UseSystemFocusVisuals="False"/>
+            <TextBox Text="No limitations" FontWeight="Bold" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="257,143,0,0" UseSystemFocusVisuals="False"/>
         </Grid>
-        <Button x:Name="NextButton" Width="70" Height="35" Margin="400,473,0,0" Content="Next" UseSystemFocusVisuals="False"
-                VerticalAlignment="Top" Click="NextButton_Click" CornerRadius="0" BorderThickness="2,2,2,2">
-            <Button.Resources>
-                <ResourceDictionary>
-                    <ResourceDictionary.ThemeDictionaries>
-                        <ResourceDictionary x:Key="Dark">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#333333"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#666666"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#858585"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#4C4C4C"/>
-                        </ResourceDictionary>
-                        <ResourceDictionary x:Key="Light">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="#CCCCCC"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#CCCCCC"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#999999"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#7A7A7A"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#CBCBCB"/>
-                        </ResourceDictionary>
-                    </ResourceDictionary.ThemeDictionaries>
-                </ResourceDictionary>
-            </Button.Resources>
-        </Button>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
+            <Button x:Name="BackButton" Margin="0,0,10,0" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
+            <Button x:Name="NextButton" Content="Next" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click"/>
+        </StackPanel>
     </Grid>
 </Page>

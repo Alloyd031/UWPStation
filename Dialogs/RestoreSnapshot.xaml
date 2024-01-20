@@ -15,26 +15,7 @@
         </ResourceDictionary>
     </ContentDialog.Resources>
 
-    <Grid x:Name="ContainerGrid"
-          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-		  Height="300"
-          Width="650"
-		  HorizontalAlignment="Stretch"
-		  VerticalAlignment="Stretch">
-        <Grid.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.ThemeDictionaries>
-                    <ResourceDictionary x:Key="Dark">
-                        <Color x:Key="SystemAltHighColor">Black</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                    </ResourceDictionary>
-                    <ResourceDictionary x:Key="Light">
-                        <Color x:Key="SystemAltHighColor">White</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                    </ResourceDictionary>
-                </ResourceDictionary.ThemeDictionaries>
-            </ResourceDictionary>
-        </Grid.Resources>
+    <Grid x:Name="ContainerGrid" Height="300" Width="650">
         <Grid VerticalAlignment="Center" HorizontalAlignment="Stretch">
             <FontIcon Glyph="&#xE7BA;" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="60" Margin="0,0,0,0"/>
             <TextBlock Text="By restoring the snapshot, the current state will be lost." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>

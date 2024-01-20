@@ -50,7 +50,7 @@ namespace UWPStation.TabPages
         }
         private async void StartVM_Click(object sender, RoutedEventArgs e)
         {
-            NotAvailableDialog dialog = new NotAvailableDialog();
+            NotAvailable dialog = new NotAvailable();
             await dialog.ShowAsync();
         }
     }

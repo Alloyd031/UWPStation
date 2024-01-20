@@ -23,7 +23,6 @@ namespace UWPStation.NewVMWizardPages
         {
             this.InitializeComponent();
         }
-
         private void FinishButton_Click(object sender, RoutedEventArgs e)
         {
             NewVMWizard nvm = new NewVMWizard();

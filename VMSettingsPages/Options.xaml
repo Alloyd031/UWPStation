@@ -23,7 +23,7 @@
                 </ResourceDictionary.ThemeDictionaries>
             </ResourceDictionary>
         </Grid.Resources>
-        <muxc:NavigationView IsSettingsVisible="False" PaneDisplayMode="Left" OpenPaneLength="250" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" ItemInvoked="NavigationView_ItemInvoked">
+        <muxc:NavigationView x:Name="OptionsNavView" IsSettingsVisible="False" IsPaneOpen="False" OpenPaneLength="250" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" SelectionChanged="OptionsNavView_SelectionChanged">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="General" Content="General" IsSelected="True">
                     <muxc:NavigationViewItem.Icon>

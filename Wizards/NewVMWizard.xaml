@@ -7,9 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
+    x:FieldModifier="Public"
     Loaded="NewVMDialog_Loaded"
     mc:Ignorable="d"
-    CornerRadius="0" BorderBrush="#3D7B79">
+    Style="{StaticResource DefaultContentDialogStyle}">
 
     <ContentDialog.Resources>
         <ResourceDictionary>
@@ -18,22 +19,15 @@
         </ResourceDictionary>
     </ContentDialog.Resources>
     
-    <Grid x:Name="ContainerGrid"
-          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-          Width="480"
-	      Height="550"
-		  HorizontalAlignment="Stretch"
-		  VerticalAlignment="Stretch">
+    <Grid x:Name="ContainerGrid" Width="480" Height="550">
         <Grid.Resources>
             <ResourceDictionary>
                 <ResourceDictionary.ThemeDictionaries>
                     <ResourceDictionary x:Key="Dark">
-                        <Color x:Key="SystemAltHighColor">Black</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="Black"/>
                     </ResourceDictionary>
                     <ResourceDictionary x:Key="Light">
-                        <Color x:Key="SystemAltHighColor">White</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
+                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="White"/>
                     </ResourceDictionary>
                 </ResourceDictionary.ThemeDictionaries>
             </ResourceDictionary>

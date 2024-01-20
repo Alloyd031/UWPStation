@@ -16,21 +16,9 @@
             <Thickness x:Key="ContentDialogPadding">0</Thickness>
         </ResourceDictionary>
     </ContentDialog.Resources>
-    
+
     <Grid x:Name="ContainerGrid" Height="700" Width="750">
-        <Grid.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.ThemeDictionaries>
-                    <ResourceDictionary x:Key="Dark">
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="Black"/>
-                    </ResourceDictionary>
-                    <ResourceDictionary x:Key="Light">
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#E4E5E7"/>
-                    </ResourceDictionary>
-                </ResourceDictionary.ThemeDictionaries>
-            </ResourceDictionary>
-        </Grid.Resources>
-        <muxc:TabView VerticalAlignment="Stretch" IsAddTabButtonVisible="False" CanReorderTabs="False">
+        <muxc:TabView VerticalAlignment="Stretch" IsAddTabButtonVisible="False" CanReorderTabs="False" Padding="1">
             <muxc:TabView.TabItems>
                 <muxc:TabViewItem x:Uid="HardwareTab" Header="Hardware" IsClosable="False">
                     <muxc:TabViewItem.IconSource>
@@ -45,13 +33,19 @@
                     <settingspages:Options/>
                 </muxc:TabViewItem>
             </muxc:TabView.TabItems>
+            <muxc:TabView.TabStripHeader>
+                <StackPanel Orientation="Horizontal" Padding="10,0,10,0" HorizontalAlignment="Left">
+                    <FontIcon Glyph="&#xE713;" FontSize="16" VerticalAlignment="Center"/>
+                    <TextBlock Text="VM Settings" Margin="10,0,0,0" Style="{StaticResource CaptionTextBlockStyle}" FontSize="14" VerticalAlignment="Center"/>
+                </StackPanel>
+            </muxc:TabView.TabStripHeader>
+            <muxc:TabView.TabStripFooter>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="CloseButton" Width="46" Click="CloseButton_Click" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent">
+                        <FontIcon Glyph="&#xE8BB;" FontSize="11"/>
+                    </Button>
+                </StackPanel>
+            </muxc:TabView.TabStripFooter>
         </muxc:TabView>
-        <Grid x:Name="BottomGrid" VerticalAlignment="Bottom" Height="50">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Right">
-                <Button x:Name="OKButton" Content="OK" Height="35" UseSystemFocusVisuals="False" IsTabStop="False" Margin="0,0,10,0" Click="OKButton_Click"/>
-                <Button	x:Name="CancelButton" Content="Cancel" Height="35" UseSystemFocusVisuals="False" VerticalAlignment="Center" IsTabStop="False" Margin="0,0,10,0" Click="CancelButton_Click"/>
-                <Button x:Name="HelpButton" Content="Help" Height="35" UseSystemFocusVisuals="False" VerticalAlignment="Center" IsTabStop="False" Margin="0,0,10,0"/>
-            </StackPanel>
-        </Grid>
     </Grid>
 </ContentDialog>

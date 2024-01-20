@@ -28,16 +28,16 @@
                 </ResourceDictionary.ThemeDictionaries>
             </ResourceDictionary>
         </Grid.Resources>
-        <Grid x:Name="Titlebar" Height="40" VerticalAlignment="Top">
-            <FontIcon Glyph="&#xE192;" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
-            <TextBlock Text="Select the remote server that you want to connect to." Style="{StaticResource CaptionTextBlockStyle}" FontSize="16" FontWeight="BLack" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="47,0,0,0"/>
+        <Grid x:Name="Titlebar" Height="47" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE192;" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBlock Text="Select the remote server that you want to connect to" Style="{StaticResource CaptionTextBlockStyle}" FontSize="16" FontWeight="BLack" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="56,0,0,0"/>
         </Grid>
-        <TextBlock Text="Server name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,52,0,0"/>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,45,0,0" Width="388" UseSystemFocusVisuals="False"/>
-        <TextBlock Text="User name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,125,0,0"/>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,82,0,0" Width="388" UseSystemFocusVisuals="False"/>
-        <TextBlock Text="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,89,0,0"/>
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,118,0,0" Width="388" UseSystemFocusVisuals="False"/>
+        <TextBlock Text="Server name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,59,0,0"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,52,0,0" Width="388" UseSystemFocusVisuals="False"/>
+        <TextBlock Text="User name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,133,0,0"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" Margin="102,0,0,0" Width="388" UseSystemFocusVisuals="False"/>
+        <TextBlock Text="Password:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,126,0,0" Width="388" UseSystemFocusVisuals="False"/>
         <Button x:Name="ConnectButton" Width="80" Height="35" Content="Connect" Margin="325,165,0,0" VerticalAlignment="Top" Click="ConnectButton_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>
         <Button x:Name="CancelButton" Width="80" Height="35" Content="Cancel" Click="CancelButton_Click" VerticalAlignment="Top" Margin="410,165,0,0" UseSystemFocusVisuals="False" IsTabStop="False"/>
     </Grid>

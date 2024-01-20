@@ -18,11 +18,15 @@ using Windows.UI.Xaml.Navigation;
 
 namespace UWPStation
 {
-    public sealed partial class PreferencesDialog : ContentDialog
+    public sealed partial class Preferences : ContentDialog
     {
-        public PreferencesDialog()
+        public Preferences()
         {
             this.InitializeComponent();
+        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
         }
         private void NavigationView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
         {
@@ -70,14 +74,6 @@ namespace UWPStation
         private void ContentDialog_Loaded(object sender, RoutedEventArgs e)
         {
             PreferencesFrame.Navigate(typeof(WorkspacePage), null, new SuppressNavigationTransitionInfo());
-        }
-        private void OKButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
-        }
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hide();
         }
     }
 }

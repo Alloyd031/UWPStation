@@ -13,7 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
-using static System.Net.WebRequestMethods;
 
 namespace UWPStation.VMSettingsPages
 {
@@ -22,40 +21,53 @@ namespace UWPStation.VMSettingsPages
         public Hardware()
         {
             this.InitializeComponent();
-            this.NavigationCacheMode = NavigationCacheMode.Enabled;
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+            HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
         }
-        private void NavigationView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
+        private void HardwareNavView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
-            var item = args.InvokedItemContainer;
-            switch (item.Name)
+            switch (args.SelectedItem)
             {
-                case "Memory":
-                    HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                case "General":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
-                case "Processors":
-                    HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                case "Power":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
-                case "HardDisk":
-                    HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                case "SharedFolders":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
-                case "CDDVD":
-                    HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                case "Snapshots":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "NetworkAdapter":
-                    HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
-                case "USBController":
-                    HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                case "GuestIsolation":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
-                case "SoundCard":
-                    HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                case "AccessControl":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
-                case "Display":
-                    HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                case "UWPTools":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                    break;
+                case "VNCConnections":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                    break;
+                case "Unity":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                    break;
+                case "ApplianceView":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                    break;
+                case "Autologin":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                    break;
+                case "Advanced":
+                    HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
             }
         }

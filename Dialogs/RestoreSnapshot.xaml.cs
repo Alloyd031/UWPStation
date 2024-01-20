@@ -13,8 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace UWPStation.Dialogs
 {
     public sealed partial class RestoreSnapshot : ContentDialog
@@ -30,7 +28,7 @@ namespace UWPStation.Dialogs
         private async void YesButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            NotAvailableDialog dialog = new NotAvailableDialog();
+            NotAvailable dialog = new NotAvailable();
             await dialog.ShowAsync();
         }
         private void NoButton_Click(object sender, RoutedEventArgs e)

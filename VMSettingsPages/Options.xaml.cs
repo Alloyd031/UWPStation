@@ -24,52 +24,50 @@ namespace UWPStation.VMSettingsPages
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+            OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
         }
-
-        private void NavigationView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
+        private void OptionsNavView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
-            var item = args.InvokedItemContainer;
-            switch (item.Name)
+            switch (args.SelectedItem)
             {
                 case "General":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "Power":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "SharedFolders":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "Snapshots":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "NetworkAdapter":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "GuestIsolation":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "AccessControl":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "UWPTools":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "VNCConnections":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "Unity":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "ApplianceView":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "Autologin":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
                 case "Advanced":
-                    OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                    OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
                     break;
             }
         }

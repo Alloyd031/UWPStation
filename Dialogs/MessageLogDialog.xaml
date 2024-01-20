@@ -15,26 +15,7 @@
         </ResourceDictionary>
     </ContentDialog.Resources>
 
-    <Grid x:Name="ContainerGrid"
-          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-          Width="440"
-		  Height="500"
-		  HorizontalAlignment="Stretch"
-		  VerticalAlignment="Stretch">
-        <Grid.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.ThemeDictionaries>
-                    <ResourceDictionary x:Key="Dark">
-                        <Color x:Key="SystemAltHighColor">Black</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                    </ResourceDictionary>
-                    <ResourceDictionary x:Key="Light">
-                        <Color x:Key="SystemAltHighColor">White</Color>
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="{ThemeResource SystemAltHighColor}"/>
-                    </ResourceDictionary>
-                </ResourceDictionary.ThemeDictionaries>
-            </ResourceDictionary>
-        </Grid.Resources>
+    <Grid x:Name="ContainerGrid" Width="440" Height="500">
         <Button	x:Name="CloseButton" Width="46" Height="32" Background="Transparent" BorderBrush="Transparent" Click="CloseButton_Click" UseSystemFocusVisuals="False" VerticalAlignment="Top" HorizontalAlignment="Right">
             <FontIcon Glyph="&#xE8BB;" FontSize="10" Margin="-23,-16,-23,-16"/>
         </Button>

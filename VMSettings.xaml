@@ -30,17 +30,17 @@
                 </ResourceDictionary.ThemeDictionaries>
             </ResourceDictionary>
         </Grid.Resources>
-        <muxc:TabView VerticalAlignment="Stretch" IsAddTabButtonVisible="False" Margin="0,0,0,50">
+        <muxc:TabView VerticalAlignment="Stretch" IsAddTabButtonVisible="False" CanReorderTabs="False">
             <muxc:TabView.TabItems>
                 <muxc:TabViewItem x:Uid="HardwareTab" Header="Hardware" IsClosable="False">
                     <muxc:TabViewItem.IconSource>
-                        <muxc:SymbolIconSource Symbol="Placeholder" />
+                        <muxc:SymbolIconSource Symbol="Placeholder"/>
                     </muxc:TabViewItem.IconSource>
                     <settingspages:Hardware/>
                 </muxc:TabViewItem>
                 <muxc:TabViewItem x:Uid="OptionsTab" Header="Options" IsClosable="False">
                     <muxc:TabViewItem.IconSource>
-                        <muxc:SymbolIconSource Symbol="Placeholder" />
+                        <muxc:SymbolIconSource Symbol="Placeholder"/>
                     </muxc:TabViewItem.IconSource>
                     <settingspages:Options/>
                 </muxc:TabViewItem>

@@ -46,6 +46,7 @@ namespace UWPStation
 
             ApplicationView.PreferredLaunchViewSize = new Size(1404, 916);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(1173, 923));
         }
         private void InitializeSampleTreeView()
         {

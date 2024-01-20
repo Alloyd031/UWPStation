@@ -34,26 +34,14 @@
         </Grid>
         <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
-                <FontIcon Glyph="&#xE946;" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBlock x:Uid="ProductInfoString" Text="Product Information:" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,0,0,0"/>
-                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,45,0,0" Width="300">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Width="300">
                     <TextBlock Text="UWPStation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                     <TextBlock Text="Version: 0.3 Preview" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0"/>
                 </Grid>
             </Grid>
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,132,0,0">
-                <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <FontIcon Glyph="&#xE125;" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <TextBlock x:Uid="CreatorsString" Text="Creators:" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="55,0,0,0"/>
-                </Grid>
-                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,54,0,0">
-                    <TextBlock x:Uid="MadeByString" Text="Made by:" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <TextBlock Text="Alloyd" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0"/>
-                </Grid>
-                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,124,0,0">
-                    <TextBlock x:Uid="WithHelpString" Text="With the help from:" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock Text="Lixkote" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0"/>
-                </Grid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,76,0,0">
+                <TextBlock x:Uid="MadeByString" Text="Made by:" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock Text="Alloyd" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0"/>
             </Grid>
         </Grid>
         <Grid x:Name="BottomItems" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">

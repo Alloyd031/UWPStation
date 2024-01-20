@@ -231,7 +231,7 @@
                 </StackPanel>
             </Grid>
         </Grid>
-        <Grid x:Name="LibraryPanel" BorderBrush="Gray" Width="200" CornerRadius="0,8,8,0" HorizontalAlignment="Left" Margin="0,74,0,32" BorderThickness="0,1,1,1">
+        <Grid x:Name="LibraryPanel" BorderBrush="Gray" Width="200" CornerRadius="0,4,4,0" HorizontalAlignment="Left" Margin="0,74,0,32" BorderThickness="0,1,1,1">
             <Grid Height="42" VerticalAlignment="Top" Margin="1,1,1,0">
                 <TextBlock x:Uid="LibraryString" Style="{StaticResource CaptionTextBlockStyle}" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Library" TextAlignment="Center" Margin="10,0,0,0"/>
                 <Button x:Uid="HideLibraryString" Margin="160,0,0,0" Background="Transparent" BorderBrush="Transparent" Height="29" Width="29" ToolTipService.ToolTip="Hide Library" IsTabStop="False" Click="HideLibrary_Click" UseSystemFocusVisuals="False">
@@ -250,7 +250,7 @@
                 </muxc:TreeView.RootNodes>
             </muxc:TreeView>
         </Grid>
-        <Grid x:Name="TabsGrid" Margin="202,74,0,32" BorderBrush="Gray" BorderThickness="1,1,0,1" CornerRadius="8,0,0,8">
+        <Grid x:Name="TabsGrid" Margin="202,74,0,32" BorderBrush="Gray" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4">
             <muxc:TabView x:Name="TabsView" VerticalAlignment="Stretch" Padding="4" IsAddTabButtonVisible="False" TabWidthMode="SizeToContent">
                 <muxc:TabView.TabItems>
                     <muxc:TabViewItem x:Uid="MyComputerTab" Header="My Computer">

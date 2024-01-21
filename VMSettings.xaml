@@ -18,9 +18,9 @@
     </ContentDialog.Resources>
 
     <Grid x:Name="ContainerGrid" Height="700" Width="750">
-        <muxc:TabView VerticalAlignment="Stretch" IsAddTabButtonVisible="False" CanReorderTabs="False" Padding="1">
+        <muxc:TabView VerticalAlignment="Stretch" IsAddTabButtonVisible="False" CanReorderTabs="False">
             <muxc:TabView.TabItems>
-                <muxc:TabViewItem x:Uid="HardwareTab" Header="Hardware" IsClosable="False">
+                <muxc:TabViewItem x:Uid="HardwareTab" Header="Hardware" IsClosable="False" IsSelected="True">
                     <muxc:TabViewItem.IconSource>
                         <muxc:SymbolIconSource Symbol="Placeholder"/>
                     </muxc:TabViewItem.IconSource>

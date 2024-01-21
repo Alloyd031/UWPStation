@@ -7,23 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    Loaded="Page_Loaded"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <Grid.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.ThemeDictionaries>
-                    <ResourceDictionary x:Key="Dark">
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="Black"/>
-                    </ResourceDictionary>
-                    <ResourceDictionary x:Key="Light">
-                        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="White"/>
-                    </ResourceDictionary>
-                </ResourceDictionary.ThemeDictionaries>
-            </ResourceDictionary>
-        </Grid.Resources>
-        <muxc:NavigationView x:Name="OptionsNavView" IsSettingsVisible="False" IsPaneOpen="False" OpenPaneLength="250" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" SelectionChanged="OptionsNavView_SelectionChanged">
+        <muxc:NavigationView x:Name="OptionsNavView" IsSettingsVisible="False" Loaded="OptionsNavView_Loaded" OpenPaneLength="220" PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" ItemInvoked="OptionsNavView_ItemInvoked">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="General" Content="General" IsSelected="True">
                     <muxc:NavigationViewItem.Icon>

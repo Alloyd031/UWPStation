@@ -8,11 +8,10 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:hardwarepages="using:UWPStation.VMSettingsPages"
     mc:Ignorable="d"
-    Loaded="Page_Loaded"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <muxc:NavigationView x:Name="HardwareNavView" IsSettingsVisible="False" IsPaneOpen="False" OpenPaneLength="250" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" SelectionChanged="HardwareNavView_SelectionChanged">
+        <muxc:NavigationView x:Name="HardwareNavView" IsSettingsVisible="False" Loaded="HardwareNavView_Loaded" OpenPaneLength="220" PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" ItemInvoked="HardwareNavView_ItemInvoked">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="Memory" Content="Memory" IsSelected="True">
                     <muxc:NavigationViewItem.Icon>

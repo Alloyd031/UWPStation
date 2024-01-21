@@ -21,8 +21,8 @@
     
     <Grid x:Name="ContainerGrid" Width="910" Height="790">
         <StackPanel Orientation="Horizontal" Padding="10,0,10,0" VerticalAlignment="Top" Height="32" HorizontalAlignment="Left">
-            <FontIcon Glyph="&#xE713;" FontSize="14" VerticalAlignment="Center"/>
-            <TextBlock Text="Preferences" Margin="10,0,0,0" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center"/>
+            <FontIcon Glyph="&#xE713;" FontSize="16" VerticalAlignment="Center"/>
+            <TextBlock Text="Preferences" Margin="10,0,0,0" FontSize="14" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Button x:Name="CloseButton" Width="46" Height="32" Click="CloseButton_Click" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent">

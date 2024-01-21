@@ -123,7 +123,8 @@ namespace UWPStation
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             this.LibraryPanel.Visibility = Visibility.Collapsed;
-            this.TabsGrid.Margin = new Thickness (0, 72, 0, 0);
+            this.Splitter.Visibility = Visibility.Collapsed;
+            this.TabsGrid.Margin = new Thickness (0, 0, 0, 32);
             this.FolderView.Margin = new Thickness(0, 0, 0, 32);
 
             if (ShowHideLibrary.IsChecked == true)
@@ -137,14 +138,16 @@ namespace UWPStation
             if (this.LibraryPanel.Visibility == Visibility.Visible)
             {
                 this.LibraryPanel.Visibility = Visibility.Collapsed;
-                this.TabsGrid.Margin = new Thickness(0, 72, 0, 32);
+                this.Splitter.Visibility = Visibility.Collapsed;
+                this.TabsGrid.Margin = new Thickness(0, 0, 0, 32);
                 this.FolderView.Margin = new Thickness(0, 0, 0, 32);
                 ShowHideLibrary.IsChecked = false;
             }
             else
             {
                 this.LibraryPanel.Visibility = Visibility.Visible;
-                this.TabsGrid.Margin = new Thickness(200, 72, 0, 32);
+                this.Splitter.Visibility = Visibility.Visible;
+                this.TabsGrid.Margin = new Thickness(218, 0, 0, 32);
                 this.FolderView.Margin = new Thickness(202, 0, 0, 32);
                 ShowHideLibrary.IsChecked = true;
             }

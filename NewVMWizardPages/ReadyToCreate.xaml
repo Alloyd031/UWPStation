@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Width="520" Height="550"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
@@ -20,8 +20,8 @@
             <TextBlock Text="Creating VMs is not possible at this time." Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
         </Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
-            <Button x:Name="BackButton" Margin="0,0,10,0" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
-            <Button x:Name="FinishButton" Content="Finish" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="FinishButton_Click"/>
+            <Button x:Name="BackButton" FontSize="16" Margin="0,0,10,0" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
+            <Button x:Name="FinishButton" FontSize="16" Content="Finish" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="FinishButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>

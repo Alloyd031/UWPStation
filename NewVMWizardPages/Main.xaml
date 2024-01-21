@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Width="520" Height="550"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
@@ -16,11 +16,11 @@
             <TextBlock Text="What type of configuration you want?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,107,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <RadioButton x:Name="TypicalRadioButton" Content="Typical (Recommended)" FontWeight="Bold" VerticalAlignment="Top" IsChecked="True" HorizontalAlignment="Center" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="Create a UWPStation 0.1.x virtual machine in a few easy steps." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,32,0,0"/>
-            <RadioButton x:Name="CustomRadioButton" Content="Custom (Advanced)" FontWeight="Bold" VerticalAlignment="Top" Margin="124,56,0,0" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="Create a virtual machine with advanced options." FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,88,0,0"/>
+            <RadioButton x:Name="TypicalRadioButton" FontSize="16" Content="Typical (Recommended)" FontWeight="Bold" VerticalAlignment="Top" IsChecked="True" UseSystemFocusVisuals="False" HorizontalAlignment="Center"/>
+            <TextBlock Text="Create a UWPStation 0.3.x virtual machine in a few easy steps." TextWrapping="Wrap" FontSize="16" Width="330" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="11,32,0,0"/>
+            <RadioButton x:Name="CustomRadioButton" Content="Custom (Advanced)" FontSize="16" FontWeight="Bold" VerticalAlignment="Top" Margin="0,80,0,0" UseSystemFocusVisuals="False" HorizontalAlignment="Center"/>
+            <TextBlock Text="Create a virtual machine with advanced options." FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,112,0,0"/>
         </Grid>
-        <Button x:Name="NextButton" Margin="0,0,10,10" Content="Next" UseSystemFocusVisuals="False" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="NextButton_Click"/>
+        <Button x:Name="NextButton" Margin="0,0,10,10" Content="Next" FontSize="16" UseSystemFocusVisuals="False" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="NextButton_Click"/>
     </Grid>
 </Page>

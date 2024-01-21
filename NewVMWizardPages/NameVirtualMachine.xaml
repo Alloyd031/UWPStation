@@ -6,28 +6,28 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Width="520" Height="550"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE13E;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
             <TextBlock Text="Name the Virtual Machine" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75,0,0"/>
-            <TextBlock Text="What name would you like to use for this virtual machine?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="17" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,107,0,0"/>
+            <TextBlock Text="What name would you like to use for this virtual machine?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,107,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Virtual machine name:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox x:Name="OSName" Text="UWPFamilyOS" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,24,0,0" Width="337" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="Location:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,66,0,0"/>
-            <AutoSuggestBox Text="Some location" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" IsEnabled="False" Margin="0,85,0,0" Width="347" Height="44"/>
-            <Button Height="44" Width="44" Margin="352,85,0,0" IsEnabled="False" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
+            <TextBlock Text="Virtual machine name:" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="OSName" Text="UWPFamilyOS" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,26,0,0" Width="337" UseSystemFocusVisuals="False"/>
+            <TextBlock Text="Location:" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,66,0,0"/>
+            <AutoSuggestBox Text="Some location" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" VerticalContentAlignment="Center" IsEnabled="False" Margin="0,92,0,0" Width="392" Height="44"/>
+            <Button Height="44" Width="44" Margin="397,92,0,0" FontSize="16" IsEnabled="False" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
                 <FontIcon Glyph="&#xE11A;"/>
             </Button>
-            <TextBlock Text="The default location can be changed at Edit > Preferences." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,134,0,0"/>
+            <TextBlock Text="The default location can be changed at Edit > Preferences." FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,141,0,0"/>
         </Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
-            <Button x:Name="BackButton" Margin="0,0,10,0" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
-            <Button x:Name="NextButton" Content="Next" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click"/>
+            <Button x:Name="BackButton" Margin="0,0,10,0" FontSize="16" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
+            <Button x:Name="NextButton" Content="Next" FontSize="16" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>

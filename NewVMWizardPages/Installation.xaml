@@ -7,30 +7,30 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Width="520" Height="550"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE977;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
             <TextBlock Text="Guest Operating System Installation" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75,0,0"/>
-            <TextBlock Text="A virtual machine is like a physical computer; it needs an operating system. How will you install the operating system?" TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Width="350" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,107,0,0"/>
+            <TextBlock Text="A virtual machine is like a physical computer; it needs an operating system. How will you install the operating system?" TextAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" Width="390" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,107,0,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Install from:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton Content="Installer disc:" Margin="0,24,0,0" FontWeight="Bold" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
-            <ComboBox Text="No drives available" Margin="0,56,0,0" IsEnabled="False"/>
-            <RadioButton Content="Installer disc image file (iso):" Margin="0,93,0,0" FontWeight="Bold" VerticalAlignment="Top" IsChecked="True" UseSystemFocusVisuals="False"/>
-            <AutoSuggestBox Text="Some location" VerticalContentAlignment="Center" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,125,0,0" Width="345" Height="44"/>
-            <Button Height="44" Width="44" Margin="350,125,0,0" IsEnabled="False" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0">
+            <TextBlock Text="Install from:" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Content="Installer disc:" Margin="0,26,0,0" FontSize="16" FontWeight="Bold" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
+            <ComboBox Text="No drives available" Margin="0,58,0,0" FontSize="16" IsEnabled="False"/>
+            <RadioButton Content="Installer disc image file (iso):" FontSize="16" Margin="0,96,0,0" FontWeight="Bold" VerticalAlignment="Top" IsChecked="True" UseSystemFocusVisuals="False"/>
+            <AutoSuggestBox Text="Some location" VerticalContentAlignment="Center" FontSize="16" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,128,0,0" Width="390" Height="44"/>
+            <Button Height="44" Width="44" Margin="395,128,0,0" IsEnabled="False" FontSize="16" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">
                 <FontIcon Glyph="&#xE11A;"/>
             </Button>
-            <RadioButton x:Name="InstallLaterCheck" Content="I will install the operating system later." FontWeight="Bold" Margin="0,174,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="The virtual machine will be created with a blank hard disk." FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,206,0,0"/>
+            <RadioButton x:Name="InstallLaterCheck" Content="I will install the operating system later." FontWeight="Bold" FontSize="16" Margin="0,177,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
+            <TextBlock Text="The virtual machine will be created with a blank hard disk." FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,209,0,0"/>
         </Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
-            <Button x:Name="BackButton" Margin="0,0,10,0" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
-            <Button x:Name="NextButton" Content="Next" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click"/>
+            <Button x:Name="BackButton" Margin="0,0,10,0" FontSize="16" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
+            <Button x:Name="NextButton" Content="Next" FontSize="16" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>

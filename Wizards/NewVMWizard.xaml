@@ -19,7 +19,7 @@
         </ResourceDictionary>
     </ContentDialog.Resources>
 
-    <Grid x:Name="ContainerGrid" Width="480" Height="550">
+    <Grid x:Name="ContainerGrid" Width="520" Height="550">
         <Grid x:Name="TitlebarGrid" Height="32" VerticalAlignment="Top">
             <Button	x:Name="CloseButton" Width="46" Height="32" Background="Transparent" BorderBrush="Transparent" Click="CloseButton_Click" UseSystemFocusVisuals="False" HorizontalAlignment="Right">
                 <FontIcon Glyph="&#xE8BB;" FontSize="11"/>

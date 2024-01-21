@@ -7,30 +7,30 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Width="520" Height="550"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
         <Grid VerticalAlignment="Top">
             <FontIcon Glyph="&#xE770;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
             <TextBlock Text="Select a Guest Operating System" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75,0,0"/>
-            <TextBlock Text="Which operating system will be installed on this virtual machine?" Style="{StaticResource CaptionTextBlockStyle}" TextAlignment="Center" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,107,0,0"/>
+            <TextBlock Text="Which operating system will be installed on this virtual machine?" Style="{StaticResource CaptionTextBlockStyle}" TextAlignment="Center" TextWrapping="Wrap" Width="320" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,107,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Guest operating system" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="WindowsOS" x:Uid="1" FontWeight="Bold" Content="Microsoft Windows" IsChecked="True" Margin="0,24,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False" HorizontalAlignment="Center"/>
-            <RadioButton x:Name="LinuxOS" x:Uid="2" FontWeight="Bold" Content="Linux" Margin="0,56,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
-            <RadioButton x:Name="OtherOS" x:Uid="3" FontWeight="Bold" Content="Other" Margin="0,88,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="Version" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,130,0,0"/>
-            <ComboBox x:Name="OSSelectionBox" Text="UWPFamilyOS" Margin="0,149,0,0" IsEnabled="False">
+            <TextBlock Text="Guest operating system" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="WindowsOS" x:Uid="1" FontWeight="Bold" FontSize="16" Content="Microsoft Windows" IsChecked="True" Margin="0,24,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="LinuxOS" x:Uid="2" FontWeight="Bold" FontSize="16" Content="Linux" Margin="0,56,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
+            <RadioButton x:Name="OtherOS" x:Uid="3" FontWeight="Bold" FontSize="16" Content="Other" Margin="0,88,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
+            <TextBlock Text="Version" FontWeight="Bold" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="0,130,0,0"/>
+            <ComboBox x:Name="OSSelectionBox" Text="UWPFamilyOS" FontSize="16" Margin="1,156,0,0" IsEnabled="False">
                 <ComboBox.Items>
-                    <ComboBoxItem x:Name="UWPFamilyOS" Content="UWPFamilyOS" IsSelected="True"/>
+                    <ComboBoxItem x:Name="UWPFamilyOS" Content="UWPFamilyOS" IsSelected="True" FontSize="16"/>
                 </ComboBox.Items>
             </ComboBox>
         </Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
-            <Button x:Name="BackButton" Margin="0,0,10,0" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
-            <Button x:Name="NextButton" Content="Next" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click"/>
+            <Button x:Name="BackButton" FontSize="16" Margin="0,0,10,0" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
+            <Button x:Name="NextButton" FontSize="16" Content="Next" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>

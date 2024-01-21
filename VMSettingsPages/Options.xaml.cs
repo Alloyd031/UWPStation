@@ -83,7 +83,7 @@ namespace UWPStation.VMSettingsPages
                     break;
                 }
             }
-            OptionsFrame.Navigate(typeof(NotAvailable));
+            OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
         }
     }
 }

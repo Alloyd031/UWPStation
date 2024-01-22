@@ -19,10 +19,10 @@
 
     <Grid x:Name="ContainerGrid" Height="700" Width="750">
         <Pivot Padding="0">
-            <PivotItem Header="Hardware">
+            <PivotItem Header="Hardware" Margin="0">
                 <settingspages:Hardware/>
             </PivotItem>
-            <PivotItem Header="Options">
+            <PivotItem Header="Options" Margin="0">
                 <settingspages:Options/>
             </PivotItem>
         </Pivot>

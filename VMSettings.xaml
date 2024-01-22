@@ -18,34 +18,18 @@
     </ContentDialog.Resources>
 
     <Grid x:Name="ContainerGrid" Height="700" Width="750">
-        <muxc:TabView VerticalAlignment="Stretch" IsAddTabButtonVisible="False" CanReorderTabs="False">
-            <muxc:TabView.TabItems>
-                <muxc:TabViewItem x:Uid="HardwareTab" Header="Hardware" IsClosable="False" IsSelected="True">
-                    <muxc:TabViewItem.IconSource>
-                        <muxc:SymbolIconSource Symbol="Placeholder"/>
-                    </muxc:TabViewItem.IconSource>
-                    <settingspages:Hardware/>
-                </muxc:TabViewItem>
-                <muxc:TabViewItem x:Uid="OptionsTab" Header="Options" IsClosable="False">
-                    <muxc:TabViewItem.IconSource>
-                        <muxc:SymbolIconSource Symbol="Placeholder"/>
-                    </muxc:TabViewItem.IconSource>
-                    <settingspages:Options/>
-                </muxc:TabViewItem>
-            </muxc:TabView.TabItems>
-            <muxc:TabView.TabStripHeader>
-                <StackPanel Orientation="Horizontal" Padding="10,0,10,0" HorizontalAlignment="Left">
-                    <FontIcon Glyph="&#xE713;" FontSize="16" VerticalAlignment="Center"/>
-                    <TextBlock Text="VM Settings" Margin="10,0,0,0" Style="{StaticResource CaptionTextBlockStyle}" FontSize="14" VerticalAlignment="Center"/>
-                </StackPanel>
-            </muxc:TabView.TabStripHeader>
-            <muxc:TabView.TabStripFooter>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button x:Name="CloseButton" Width="46" Click="CloseButton_Click" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent">
-                        <FontIcon Glyph="&#xE8BB;" FontSize="11"/>
-                    </Button>
-                </StackPanel>
-            </muxc:TabView.TabStripFooter>
-        </muxc:TabView>
+        <Pivot Padding="0">
+            <PivotItem Header="Hardware">
+                <settingspages:Hardware/>
+            </PivotItem>
+            <PivotItem Header="Options">
+                <settingspages:Options/>
+            </PivotItem>
+        </Pivot>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button x:Name="CloseButton" Width="46" Height="32" Click="CloseButton_Click" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent">
+                <FontIcon Glyph="&#xE8BB;" FontSize="11"/>
+            </Button>
+        </StackPanel>
     </Grid>
 </ContentDialog>

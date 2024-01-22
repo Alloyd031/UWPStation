@@ -35,7 +35,7 @@
         <TextBox HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="113,52,0,0" Width="477" UseSystemFocusVisuals="False"/>
         <TextBlock Text="User name:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,136,0,0"/>
         <TextBox HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Width="477" UseSystemFocusVisuals="False" Margin="113,91,0,0"/>
-        <TextBlock Text="Password:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,98,0,0"/>
+        <TextBlock Text="Password:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,97,0,0"/>
         <TextBox HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="113,130,0,0" Width="477" UseSystemFocusVisuals="False"/>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
             <Button x:Name="ConnectButton" FontSize="16" Content="Connect" Margin="0,0,10,0" VerticalAlignment="Top" Click="ConnectButton_Click" UseSystemFocusVisuals="False" IsTabStop="False"/>

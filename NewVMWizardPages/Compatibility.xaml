@@ -7,14 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
-    mc:Ignorable="d" Width="520" Height="550"
+    mc:Ignorable="d" Width="550" Height="550"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
         <Grid VerticalAlignment="Top">
-            <FontIcon Glyph="&#xE930;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
-            <TextBlock Text="Choose the Virtual Machine Hardware Compatibility" Style="{StaticResource CaptionTextBlockStyle}" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75,0,0"/>
-            <TextBlock Text="Which hardware features are needed for this virtual machine?" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,105,0,0"/>
+            <TextBlock Text="Choose the Virtual Machine Hardware Compatibility" Style="{StaticResource CaptionTextBlockStyle}" FontSize="19" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+            <TextBlock Text="Which hardware features are needed for this virtual machine?" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,42,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Virtual machine hardware compabitility" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>

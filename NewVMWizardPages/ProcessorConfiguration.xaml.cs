@@ -12,20 +12,26 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using UWPStation.NewVMWizardPages;
 
-// The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
-namespace UWPStation.Dialogs
+namespace UWPStation.NewVMWizardPages
 {
-    public sealed partial class MessageLogDialog : ContentDialog
+    public sealed partial class ProcessorConfiguration : Page
     {
-        public MessageLogDialog()
+        public ProcessorConfiguration()
         {
             this.InitializeComponent();
         }
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            Hide();
+
+        }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+            }
         }
     }
 }

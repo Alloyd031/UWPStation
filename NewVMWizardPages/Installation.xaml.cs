@@ -30,7 +30,10 @@ namespace UWPStation.NewVMWizardPages
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.GoBack();
+            if (this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+            }
         }
     }
 }

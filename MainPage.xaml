@@ -237,67 +237,71 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <Grid x:Name="LibraryPanel" BorderBrush="Gray" MinWidth="200" Width="200" HorizontalAlignment="Left" Margin="0,0,0,32" BorderThickness="0,1,1,1">
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Padding="7,7,0,0">
-                        <TextBlock x:Uid="LibraryString" Style="{StaticResource CaptionTextBlockStyle}" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Library" TextAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,3,3,0">
-                        <Button x:Uid="HideLibraryString" Background="Transparent" BorderBrush="Transparent" Height="29" Width="29" ToolTipService.ToolTip="Hide Library" IsTabStop="False" Click="HideLibrary_Click" UseSystemFocusVisuals="False">
-                            <FontIcon Glyph="&#xE8BB;" FontSize="12" Margin="-15,-14,-14,-15"/>
-                        </Button>
-                    </StackPanel>
-                    <AutoSuggestBox x:Uid="SearchString" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="3,33,3,0" UseSystemFocusVisuals="False" IsTabStop="False"/>
-                    <muxc:TreeView x:Name="VMsAndItems" Margin="0,71,1,1" CanReorderItems="False" CanDragItems="False">
-                        <muxc:TreeView.RootNodes>
-                            <muxc:TreeViewNode Content="My Computer" IsExpanded="True">
-                                <muxc:TreeViewNode.Children>
-                                    <muxc:TreeViewNode Content="UWPFamilyOS"/>
-                                </muxc:TreeViewNode.Children>
-                            </muxc:TreeViewNode>
-                            <muxc:TreeViewNode Content="Shared VMs"/>
-                        </muxc:TreeView.RootNodes>
-                    </muxc:TreeView>
-                </Grid>
-            <sizers:GridSplitter ResizeBehavior="BasedOnAlignment" ResizeDirection="Auto" HorizontalAlignment="Left" Margin="207,0,0,32" Width="14">
+            <Grid x:Name="LibraryPanel" BorderBrush="Gray" MinWidth="200" Width="200" HorizontalAlignment="Left" Margin="0,0,0,32" BorderThickness="0,1,1,1" CornerRadius="0,4,4,0">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Padding="7,7,0,0">
+                    <TextBlock x:Uid="LibraryString" Style="{StaticResource CaptionTextBlockStyle}" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Library" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,3,3,0">
+                    <Button x:Uid="HideLibraryString" Background="Transparent" BorderBrush="Transparent" Height="29" Width="29" ToolTipService.ToolTip="Hide Library" IsTabStop="False" Click="HideLibrary_Click" UseSystemFocusVisuals="False">
+                        <FontIcon Glyph="&#xE8BB;" FontSize="12" Margin="-15,-14,-14,-15"/>
+                    </Button>
+                </StackPanel>
+                <AutoSuggestBox x:Uid="SearchString" VerticalAlignment="Top" QueryIcon="Find" PlaceholderText="Type here to search" Margin="3,33,3,0" UseSystemFocusVisuals="False" IsTabStop="False"/>
+                <muxc:TreeView x:Name="VMsAndItems" Margin="0,71,1,1" CanReorderItems="False" CanDragItems="False">
+                    <muxc:TreeView.RootNodes>
+                        <muxc:TreeViewNode Content="My Computer" IsExpanded="True">
+                            <muxc:TreeViewNode.Children>
+                                <muxc:TreeViewNode Content="UWPFamilyOS"/>
+                            </muxc:TreeViewNode.Children>
+                        </muxc:TreeViewNode>
+                        <muxc:TreeViewNode Content="Shared VMs"/>
+                    </muxc:TreeView.RootNodes>
+                </muxc:TreeView>
+            </Grid>
+            <sizers:GridSplitter x:Name="Splitter" ResizeBehavior="BasedOnAlignment" ResizeDirection="Auto" CornerRadius="4,4,4,4" HorizontalAlignment="Left" Margin="207,0,0,32" Width="12">
                 <sizers:GridSplitter.RenderTransform>
                     <TranslateTransform X="-7" />
                 </sizers:GridSplitter.RenderTransform>
             </sizers:GridSplitter>
-                <Grid x:Name="TabsGrid" Margin="214,0,0,32" BorderBrush="Gray" BorderThickness="1,1,0,1">
-            <muxc:TabView x:Name="TabsView" VerticalAlignment="Stretch" Padding="4" IsAddTabButtonVisible="False" TabWidthMode="SizeToContent">
-                <muxc:TabView.TabItems>
-                    <muxc:TabViewItem x:Uid="MyComputerTab" Header="My Computer">
-                        <muxc:TabViewItem.IconSource>
-                            <muxc:SymbolIconSource Symbol="Placeholder"/>
-                        </muxc:TabViewItem.IconSource>
-                        <pages:MyComputerPage/>
-                    </muxc:TabViewItem>
-                    <muxc:TabViewItem x:Uid="HomeTab" Header="Home" IsSelected="True">
-                        <muxc:TabViewItem.IconSource>
-                            <muxc:SymbolIconSource Symbol="Placeholder"/>
-                        </muxc:TabViewItem.IconSource>
-                        <pages:HomePage/>
-                    </muxc:TabViewItem>
-                    <muxc:TabViewItem x:Uid="SharedVMsTab" Header="Shared VMs">
-                        <muxc:TabViewItem.IconSource>
-                            <muxc:SymbolIconSource Symbol="Placeholder"/>
-                        </muxc:TabViewItem.IconSource>
-                        <pages:SharedVMsPage/>
-                    </muxc:TabViewItem>
-                    <muxc:TabViewItem x:Uid="VMTab" Header="UWPFamilyOS">
-                        <muxc:TabViewItem.IconSource>
-                            <muxc:SymbolIconSource Symbol="Placeholder"/>
-                        </muxc:TabViewItem.IconSource>
-                        <pages:VMPage/>
-                    </muxc:TabViewItem>
-                    <muxc:TabViewItem x:Uid="TestTab" Header="Test Page">
-                        <muxc:TabViewItem.IconSource>
-                            <muxc:SymbolIconSource Symbol="Placeholder"/>
-                        </muxc:TabViewItem.IconSource>
-                        <pages:TestPage/>
-                    </muxc:TabViewItem>
-                </muxc:TabView.TabItems>
-            </muxc:TabView>
+            <Grid x:Name="TabsGrid" Margin="212,0,0,32" BorderBrush="Gray" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="43*"/>
+                    <RowDefinition Height="852*"/>
+                </Grid.RowDefinitions>
+                <muxc:TabView x:Name="TabsView" VerticalAlignment="Stretch" Padding="4" IsAddTabButtonVisible="False" TabWidthMode="SizeToContent" Margin="1,1,0,1" Grid.RowSpan="2">
+                    <muxc:TabView.TabItems>
+                        <muxc:TabViewItem x:Uid="MyComputerTab" Header="My Computer">
+                            <muxc:TabViewItem.IconSource>
+                                <muxc:SymbolIconSource Symbol="Placeholder"/>
+                            </muxc:TabViewItem.IconSource>
+                            <pages:MyComputerPage/>
+                        </muxc:TabViewItem>
+                        <muxc:TabViewItem x:Uid="HomeTab" Header="Home" IsSelected="True">
+                            <muxc:TabViewItem.IconSource>
+                                <muxc:SymbolIconSource Symbol="Placeholder"/>
+                            </muxc:TabViewItem.IconSource>
+                            <pages:HomePage/>
+                        </muxc:TabViewItem>
+                        <muxc:TabViewItem x:Uid="SharedVMsTab" Header="Shared VMs">
+                            <muxc:TabViewItem.IconSource>
+                                <muxc:SymbolIconSource Symbol="Placeholder"/>
+                            </muxc:TabViewItem.IconSource>
+                            <pages:SharedVMsPage/>
+                        </muxc:TabViewItem>
+                        <muxc:TabViewItem x:Uid="VMTab" Header="UWPFamilyOS">
+                            <muxc:TabViewItem.IconSource>
+                                <muxc:SymbolIconSource Symbol="Placeholder"/>
+                            </muxc:TabViewItem.IconSource>
+                            <pages:VMPage/>
+                        </muxc:TabViewItem>
+                        <muxc:TabViewItem x:Uid="TestTab" Header="Test Page">
+                            <muxc:TabViewItem.IconSource>
+                                <muxc:SymbolIconSource Symbol="Placeholder"/>
+                            </muxc:TabViewItem.IconSource>
+                            <pages:TestPage/>
+                        </muxc:TabViewItem>
+                    </muxc:TabView.TabItems>
+                </muxc:TabView>
             </Grid>
         </Grid>
         <Grid x:Name="FolderView" Height="147" BorderBrush="#69A1BF" BorderThickness="1,1,1,1" VerticalAlignment="Bottom" Margin="218,0,0,32">

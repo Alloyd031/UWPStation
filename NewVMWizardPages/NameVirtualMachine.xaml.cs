@@ -23,14 +23,21 @@ namespace UWPStation.NewVMWizardPages
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.OSName.Text == "UWPFamilyOS")
+            if (Main.TypeCustom.IsChecked == true) 
+            {
+                this.Frame.Navigate(typeof(ProcessorConfiguration));
+            }
+            else
             {
                 this.Frame.Navigate(typeof(DiskCapacity));
             }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.GoBack();
+            if (this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+            }
         }
     }
 }

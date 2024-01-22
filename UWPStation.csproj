@@ -141,11 +141,14 @@
     <Compile Include="Dialogs\EnterKey.xaml.cs">
       <DependentUpon>EnterKey.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\MessageLogDialog.xaml.cs">
-      <DependentUpon>MessageLogDialog.xaml</DependentUpon>
+    <Compile Include="Dialogs\MessageLog.xaml.cs">
+      <DependentUpon>MessageLog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\RestoreSnapshot.xaml.cs">
       <DependentUpon>RestoreSnapshot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewVMWizardPages\ProcessorConfiguration.xaml.cs">
+      <DependentUpon>ProcessorConfiguration.xaml</DependentUpon>
     </Compile>
     <Compile Include="Preferences.xaml.cs">
       <DependentUpon>Preferences.xaml</DependentUpon>
@@ -171,14 +174,14 @@
     <Compile Include="Wizards\ScanForVMs.xaml.cs">
       <DependentUpon>ScanForVMs.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\SnapshotManagerDialog.xaml.cs">
-      <DependentUpon>SnapshotManagerDialog.xaml</DependentUpon>
+    <Compile Include="Dialogs\SnapshotManager.xaml.cs">
+      <DependentUpon>SnapshotManager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\SoftwareUpdatesDialog.xaml.cs">
-      <DependentUpon>SoftwareUpdatesDialog.xaml</DependentUpon>
+    <Compile Include="Dialogs\SoftwareUpdates.xaml.cs">
+      <DependentUpon>SoftwareUpdates.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\TakeSnapshotDialog.xaml.cs">
-      <DependentUpon>TakeSnapshotDialog.xaml</DependentUpon>
+    <Compile Include="Dialogs\TakeSnapshot.xaml.cs">
+      <DependentUpon>TakeSnapshot.xaml</DependentUpon>
     </Compile>
     <Compile Include="Wizards\NewVMWizard.xaml.cs">
       <DependentUpon>NewVMWizard.xaml</DependentUpon>
@@ -346,13 +349,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dialogs\MessageLogDialog.xaml">
+    <Page Include="Dialogs\MessageLog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\RestoreSnapshot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewVMWizardPages\ProcessorConfiguration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Preferences.xaml">
       <SubType>Designer</SubType>
@@ -386,15 +393,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dialogs\SnapshotManagerDialog.xaml">
+    <Page Include="Dialogs\SnapshotManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dialogs\SoftwareUpdatesDialog.xaml">
+    <Page Include="Dialogs\SoftwareUpdates.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dialogs\TakeSnapshotDialog.xaml">
+    <Page Include="Dialogs\TakeSnapshot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

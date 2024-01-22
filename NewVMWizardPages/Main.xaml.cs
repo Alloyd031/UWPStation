@@ -17,9 +17,13 @@ namespace UWPStation.NewVMWizardPages
 {
     public sealed partial class Main : Page
     {
+        public static RadioButton TypeCustom { get; set; }
+        public static RadioButton TypeTypical { get; set; }
         public Main()
         {
             this.InitializeComponent();
+            TypeCustom = CustomRadioButton;
+            TypeTypical = TypicalRadioButton;
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {

@@ -13,22 +13,17 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
-namespace UWPStation.NewVMWizardPages
+namespace UWPStation.Dialogs
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class FirmwareType : Page
+    public sealed partial class SnapshotManager : ContentDialog
     {
-        public FirmwareType()
+        public SnapshotManager()
         {
             this.InitializeComponent();
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.GoBack();
+            Hide();
         }
     }
 }

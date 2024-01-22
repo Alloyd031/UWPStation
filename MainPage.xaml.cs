@@ -99,7 +99,7 @@ namespace UWPStation
         }
         private async void MessageLog_Click(object sender, RoutedEventArgs e)
         {
-            MessageLogDialog dialog = new MessageLogDialog();
+            MessageLog dialog = new MessageLog();
             await dialog.ShowAsync();
         }
         private async void LicenseKey_Click(object sender, RoutedEventArgs e)
@@ -123,6 +123,7 @@ namespace UWPStation
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             this.LibraryPanel.Visibility = Visibility.Collapsed;
+            this.Splitter.Visibility = Visibility.Collapsed;
             this.TabsGrid.Margin = new Thickness (0, 0, 0, 32);
             this.FolderView.Margin = new Thickness(0, 0, 0, 32);
 
@@ -137,6 +138,7 @@ namespace UWPStation
             if (this.LibraryPanel.Visibility == Visibility.Visible)
             {
                 this.LibraryPanel.Visibility = Visibility.Collapsed;
+                this.Splitter.Visibility = Visibility.Collapsed;
                 this.TabsGrid.Margin = new Thickness(0, 0, 0, 32);
                 this.FolderView.Margin = new Thickness(0, 0, 0, 32);
                 ShowHideLibrary.IsChecked = false;
@@ -144,7 +146,8 @@ namespace UWPStation
             else
             {
                 this.LibraryPanel.Visibility = Visibility.Visible;
-                this.TabsGrid.Margin = new Thickness(218, 0, 0, 32);
+                this.Splitter.Visibility = Visibility.Visible;
+                this.TabsGrid.Margin = new Thickness(212, 0, 0, 32);
                 this.FolderView.Margin = new Thickness(202, 0, 0, 32);
                 ShowHideLibrary.IsChecked = true;
             }
@@ -156,17 +159,17 @@ namespace UWPStation
         }
         private async void SoftwareUpdates_Click(object sender, RoutedEventArgs e)
         {
-            SoftwareUpdatesDialog dialog = new SoftwareUpdatesDialog();
+            SoftwareUpdates dialog = new SoftwareUpdates();
             await dialog.ShowAsync();
         }
         private async void SnapshotManager_Click(object sender, RoutedEventArgs e)
         {
-            SnapshotManagerDialog dialog = new SnapshotManagerDialog();
+            SnapshotManager dialog = new SnapshotManager();
             await dialog.ShowAsync();
         }
         private async void TakeSnapshot_Click(object sender, RoutedEventArgs e)
         {
-            TakeSnapshotDialog dialog = new TakeSnapshotDialog();
+            TakeSnapshot dialog = new TakeSnapshot();
             await dialog.ShowAsync();
         }
         private async void ScanForVMs_Click(object sender, RoutedEventArgs e)
@@ -384,7 +387,7 @@ namespace UWPStation
         }
         private async void TakeVMSnapshot_Click(object sender, RoutedEventArgs e)
         {
-            TakeSnapshotDialog dialog = new TakeSnapshotDialog();
+            TakeSnapshot dialog = new TakeSnapshot();
             await dialog.ShowAsync();
         }
 
@@ -396,7 +399,7 @@ namespace UWPStation
 
         private async void VMSnapshotManager_Click(object sender, RoutedEventArgs e)
         {
-            SnapshotManagerDialog dialog = new SnapshotManagerDialog();
+            SnapshotManager dialog = new SnapshotManager();
             await dialog.ShowAsync();
         }
         private async void CaptureScreen_Click(object sender, RoutedEventArgs e)
@@ -446,7 +449,7 @@ namespace UWPStation
         }
         private async void VMMessageLog_Click(object sender, RoutedEventArgs e)
         {
-            MessageLogDialog dialog = new MessageLogDialog();
+            MessageLog dialog = new MessageLog();
             await dialog.ShowAsync();
         }
         private async void InstallUWPTools_Click(object sender, RoutedEventArgs e)

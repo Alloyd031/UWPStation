@@ -14,13 +14,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace UWPStation.Dialogs
 {
-    public sealed partial class SoftwareUpdatesDialog : ContentDialog
+    public sealed partial class SoftwareUpdates : ContentDialog
     {
-        public SoftwareUpdatesDialog()
+        public SoftwareUpdates()
         {
             this.InitializeComponent();
         }

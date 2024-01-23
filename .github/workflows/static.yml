@@ -28,21 +28,23 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    steps:
-      - name: Make msixbundle
-        id: bundler
-        uses: LanceMcCarthy/Action-MsixBundler@vX.X.X
-        with:
-        msix-folder: "C:\Projects\UWPStation"
-        msixbundle-filepath: "C:\Projects\UWPStation\UWPStation_0.3.0.0_x64_Debug.msixbundle"
-        msixbundle-version: "0.3.0.0"
-        enable-bundle-signing: true
-        certificate-path: ${{ steps.savepfx.outputs.cert_path }}
-        certificate-private-key: ${{ secrets.PFX_PRIVATE_KEY }}         
+    steps:       
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v4
+      - name: Make msixbundle
+        id: bundler
+        uses: LanceMcCarthy/Action-MsixBundler@v1.0.0
+        with:
+        msix-folder: "C:\Project\"
+        msixbundle-filepath: "C:\Project\UWPStation_0.3.0.0_x64.msixbundle"
+        msixbundle-version: "1.0.0.0"    
+      - name: Verify msixbundle File Path
+        shell: pwsh
+        run: |
+        $path_to_my_msix_bundle = ${{ steps.bundler.outputs.msixbundle_path }}"
+        Write-Output $path_to_my_msix_bundle
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

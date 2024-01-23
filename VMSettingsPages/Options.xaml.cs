@@ -26,51 +26,48 @@ namespace UWPStation.VMSettingsPages
         }
         private void OptionsNavView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
         {
-            TextBlock ItemContent = args.InvokedItem as TextBlock;
-            if (ItemContent != null)
+            var item = args.InvokedItemContainer;
+            switch (item.Name)
             {
-                switch (ItemContent.Tag)
-                {
                     case "General":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "Power":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "SharedFolders":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "Snapshots":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "NetworkAdapter":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "GuestIsolation":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "AccessControl":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "UWPTools":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "VNCConnections":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "Unity":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "ApplianceView":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "Autologin":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "Advanced":
-                        OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        OptionsFrame.Navigate(typeof(NotAvailable));
                         break;
-                }
             }
         }
         private void OptionsNavView_Loaded(object sender, RoutedEventArgs e)
@@ -83,7 +80,7 @@ namespace UWPStation.VMSettingsPages
                     break;
                 }
             }
-            OptionsFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+            OptionsFrame.Navigate(typeof(NotAvailable));
         }
     }
 }

@@ -29,8 +29,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: MSIX Bundler
-        uses: LanceMcCarthy/Action-MsixBundler@v1.0.1            
+      - name: Make msixbundle
+        id: bundler
+        uses: LanceMcCarthy/Action-MsixBundler@vX.X.X
+        with:
+        msix-folder: "C:\Projects\UWPStation"
+        msixbundle-filepath: "C:\Projects\UWPStation\UWPStation_0.3.0.0_x64_Debug.msixbundle"
+        msixbundle-version: "0.3.0.0"
+        enable-bundle-signing: true
+        certificate-path: ${{ steps.savepfx.outputs.cert_path }}
+        certificate-private-key: ${{ secrets.PFX_PRIVATE_KEY }}         
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UWPStation.PreferencesPages;
 using UWPStation.VMSettingsPages;
-using UWPStation.VMSettingsPages.VMSettingsHardware;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -35,54 +34,46 @@ namespace UWPStation
             switch (item.Name)
             {
                 case "Workspace":
-                    PreferencesFrame.Navigate(typeof(WorkspacePage));
+                    PreferencesFrame.Navigate(typeof(WorkspacePage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "Input":
-                    PreferencesFrame.Navigate(typeof(InputPage));
+                    PreferencesFrame.Navigate(typeof(InputPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "HotKeys":
-                    PreferencesFrame.Navigate(typeof(HotKeysPage));
+                    PreferencesFrame.Navigate(typeof(HotKeysPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "Display":
-                    PreferencesFrame.Navigate(typeof(DisplayPage));
+                    PreferencesFrame.Navigate(typeof(DisplayPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "Unity":
-                    PreferencesFrame.Navigate(typeof(UnityPage));
+                    PreferencesFrame.Navigate(typeof(UnityPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "USB":
-                    PreferencesFrame.Navigate(typeof(USBPage));
+                    PreferencesFrame.Navigate(typeof(USBPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "Updates":
-                    PreferencesFrame.Navigate(typeof(UpdatesPage));
+                    PreferencesFrame.Navigate(typeof(UpdatesPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "Feedback":
-                    PreferencesFrame.Navigate(typeof(FeedbackPage));
+                    PreferencesFrame.Navigate(typeof(FeedbackPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "Memory":
-                    PreferencesFrame.Navigate(typeof(MemoryPage));
+                    PreferencesFrame.Navigate(typeof(MemoryPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "Priority":
-                    PreferencesFrame.Navigate(typeof(PriorityPage));
+                    PreferencesFrame.Navigate(typeof(PriorityPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "Devices":
-                    PreferencesFrame.Navigate(typeof(DevicesPage));
+                    PreferencesFrame.Navigate(typeof(DevicesPage), null, new SuppressNavigationTransitionInfo());
                     break;
                 case "AppLanguage":
-                    PreferencesFrame.Navigate(typeof(LanguagePage));
+                    PreferencesFrame.Navigate(typeof(LanguagePage), null, new SuppressNavigationTransitionInfo());
                     break;
             }
         }
-        private void NavigationView_Loaded(object sender, RoutedEventArgs e)
+        private void ContentDialog_Loaded(object sender, RoutedEventArgs e)
         {
-            foreach (Microsoft.UI.Xaml.Controls.NavigationViewItemBase item in PreferencesNavView.MenuItems)
-            {
-                if (item is Microsoft.UI.Xaml.Controls.NavigationViewItem && item.Tag?.ToString() == "Workspace")
-                {
-                    PreferencesNavView.SelectedItem = item;
-                    break;
-                }
-            }
-            PreferencesFrame.Navigate(typeof(WorkspacePage));
+            PreferencesFrame.Navigate(typeof(WorkspacePage), null, new SuppressNavigationTransitionInfo());
         }
     }
 }

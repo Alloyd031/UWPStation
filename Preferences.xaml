@@ -8,6 +8,7 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
+    Loaded="ContentDialog_Loaded"
     Style="{StaticResource DefaultContentDialogStyle}">
 
     <ContentDialog.Resources>
@@ -28,7 +29,7 @@
                 <FontIcon Glyph="&#xE8BB;" FontSize="11"/>
             </Button>
         </StackPanel>
-        <muxc:NavigationView x:Name="PreferencesNavView" IsSettingsVisible="False" Loaded="NavigationView_Loaded" PaneDisplayMode="Left" OpenPaneLength="250" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" ItemInvoked="NavigationView_ItemInvoked" Margin="0,32,0,0">
+        <muxc:NavigationView IsSettingsVisible="False" PaneDisplayMode="Left" OpenPaneLength="250" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" ItemInvoked="NavigationView_ItemInvoked" Margin="0,32,0,0">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="Workspace" Content="Workspace" IsSelected="True">
                     <muxc:NavigationViewItem.Icon>

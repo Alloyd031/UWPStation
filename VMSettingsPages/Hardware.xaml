@@ -11,7 +11,7 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <muxc:NavigationView x:Name="HardwareNavView" IsSettingsVisible="False" Loaded="HardwareNavView_Loaded" OpenPaneLength="220" PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" ItemInvoked="HardwareNavView_ItemInvoked">
+        <muxc:NavigationView x:Name="HardwareNavView" IsSettingsVisible="False" IsPaneOpen="False" Loaded="HardwareNavView_Loaded" OpenPaneLength="220" PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" ItemInvoked="HardwareNavView_ItemInvoked">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="Memory" Content="Memory" IsSelected="True">
                     <muxc:NavigationViewItem.Icon>

@@ -168,6 +168,12 @@
     <Compile Include="VMSettings.xaml.cs">
       <DependentUpon>VMSettings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VMSettingsPages\VMSettingsHardware\Memory.xaml.cs">
+      <DependentUpon>Memory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VMSettingsPages\VMSettingsHardware\Processors.xaml.cs">
+      <DependentUpon>Processors.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Wizards\ChangeHardwareCompatibility.xaml.cs">
       <DependentUpon>ChangeHardwareCompatibility.xaml</DependentUpon>
     </Compile>
@@ -382,6 +388,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VMSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMSettingsPages\VMSettingsHardware\Memory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMSettingsPages\VMSettingsHardware\Processors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

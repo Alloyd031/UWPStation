@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using UWPStation.VMSettingsPages.VMSettingsHardware;
 
 namespace UWPStation.VMSettingsPages
 {
@@ -25,36 +26,33 @@ namespace UWPStation.VMSettingsPages
         }
         private void HardwareNavView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
         {
-            TextBlock ItemContent = args.InvokedItem as TextBlock;
-            if (ItemContent != null)
+            var item = args.InvokedItemContainer;
+            switch (item.Name)
             {
-                switch (ItemContent.Tag)
-                {
                     case "Memory":
-                        HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        HardwareFrame.Navigate(typeof(Memory));
                         break;
                     case "Processors":
-                        HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        HardwareFrame.Navigate(typeof(Processors));
                         break;
                     case "HardDisk":
-                        HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        HardwareFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "CDDVD":
-                        HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        HardwareFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "NetworkAdapter":
-                        HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        HardwareFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "USBController":
-                        HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        HardwareFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "SoundCard":
-                        HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        HardwareFrame.Navigate(typeof(NotAvailable));
                         break;
                     case "Display":
-                        HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+                        HardwareFrame.Navigate(typeof(NotAvailable));
                         break;
-                }
             }
         }
         private void HardwareNavView_Loaded(object sender, RoutedEventArgs e)
@@ -67,7 +65,7 @@ namespace UWPStation.VMSettingsPages
                     break;
                 }
             }
-            HardwareFrame.Navigate(typeof(NotAvailable), new SuppressNavigationTransitionInfo());
+            HardwareFrame.Navigate(typeof(Memory));
         }
     }
 }
